@@ -1,0 +1,112 @@
+#N canvas 0 25 1272 692 10;
+#X obj 59 387 outlet~;
+#X obj 53 164 inlet~;
+#X obj 113 164 inlet~;
+#X obj 119 387 outlet~;
+#X obj 477 83 inlet params;
+#X obj 477 129 print PARAM_NOTFOUND;
+#X obj 477 105 tof/param route;
+#X obj 473 228 b;
+#X obj 474 257 tof/param gui;
+#N canvas 0 25 1272 692 eq3 0;
+#X obj 76 35 inlet~;
+#X obj 76 90 biquad~ 1.86972 -0.872325 0.000650245 0.00130049 0.000650245
+;
+#X text 195 69 lo x3;
+#X obj 76 110 biquad~ 1.86972 -0.872325 0.000650245 0.00130049 0.000650245
+;
+#X obj 76 130 biquad~ 1.86972 -0.872325 0.000650245 0.00130049 0.000650245
+;
+#X obj 204 182 biquad~ 1.36591 -0.385279 0.307361 0 -0.307361;
+#X text 339 162 mid x3;
+#X obj 204 202 biquad~ 1.36591 -0.385279 0.307361 0 -0.307361;
+#X obj 204 222 biquad~ 1.36591 -0.385279 0.307361 0 -0.307361;
+#X obj 346 273 biquad~ 1.63386 -0.729864 0.840931 -1.68186 0.840931
+;
+#X text 486 251 hi x2;
+#X obj 346 293 biquad~ 1.63386 -0.729864 0.840931 -1.68186 0.840931
+;
+#X obj 344 379 *~ 1;
+#X obj 202 379 *~ 1;
+#X obj 77 379 *~ 1;
+#X obj 129 482 outlet~;
+#X obj 99 327 inlet lo;
+#X obj 225 354 inlet mid;
+#X obj 365 356 inlet high;
+#X connect 0 0 1 0;
+#X connect 0 0 5 0;
+#X connect 0 0 9 0;
+#X connect 1 0 3 0;
+#X connect 3 0 4 0;
+#X connect 4 0 14 0;
+#X connect 5 0 7 0;
+#X connect 7 0 8 0;
+#X connect 8 0 13 0;
+#X connect 9 0 11 0;
+#X connect 11 0 12 0;
+#X connect 12 0 15 0;
+#X connect 13 0 15 0;
+#X connect 14 0 15 0;
+#X connect 16 0 14 1;
+#X connect 17 0 13 1;
+#X connect 18 0 12 1;
+#X restore 118 264 pd eq3;
+#N canvas 0 25 1272 692 eq3 0;
+#X obj 76 35 inlet~;
+#X obj 76 90 biquad~ 1.86972 -0.872325 0.000650245 0.00130049 0.000650245
+;
+#X text 195 69 lo x3;
+#X obj 76 110 biquad~ 1.86972 -0.872325 0.000650245 0.00130049 0.000650245
+;
+#X obj 76 130 biquad~ 1.86972 -0.872325 0.000650245 0.00130049 0.000650245
+;
+#X obj 204 182 biquad~ 1.36591 -0.385279 0.307361 0 -0.307361;
+#X text 339 162 mid x3;
+#X obj 204 202 biquad~ 1.36591 -0.385279 0.307361 0 -0.307361;
+#X obj 204 222 biquad~ 1.36591 -0.385279 0.307361 0 -0.307361;
+#X obj 346 273 biquad~ 1.63386 -0.729864 0.840931 -1.68186 0.840931
+;
+#X text 486 251 hi x2;
+#X obj 346 293 biquad~ 1.63386 -0.729864 0.840931 -1.68186 0.840931
+;
+#X obj 344 379 *~ 1;
+#X obj 202 379 *~ 1;
+#X obj 77 379 *~ 1;
+#X obj 129 482 outlet~;
+#X obj 99 327 inlet lo;
+#X obj 225 354 inlet mid;
+#X obj 365 356 inlet high;
+#X connect 0 0 1 0;
+#X connect 0 0 5 0;
+#X connect 0 0 9 0;
+#X connect 1 0 3 0;
+#X connect 3 0 4 0;
+#X connect 4 0 14 0;
+#X connect 5 0 7 0;
+#X connect 7 0 8 0;
+#X connect 8 0 13 0;
+#X connect 9 0 11 0;
+#X connect 11 0 12 0;
+#X connect 12 0 15 0;
+#X connect 13 0 15 0;
+#X connect 14 0 15 0;
+#X connect 16 0 14 1;
+#X connect 17 0 13 1;
+#X connect 18 0 12 1;
+#X restore 180 268 pd eq3;
+#X obj 210 94 tof/param /low 0 /g slider 0 1;
+#X obj 223 122 tof/param /mid 0 /g slider 0 1;
+#X obj 245 147 tof/param /high 0 /g slider 0 1;
+#X connect 1 0 9 0;
+#X connect 2 0 10 0;
+#X connect 4 0 6 0;
+#X connect 6 0 5 0;
+#X connect 7 0 8 0;
+#X connect 9 0 0 0;
+#X connect 10 0 3 0;
+#X connect 11 0 9 1;
+#X connect 11 0 10 1;
+#X connect 12 0 9 2;
+#X connect 12 0 10 2;
+#X connect 13 0 9 3;
+#X connect 13 0 10 3;

@@ -1,0 +1,73 @@
+#N canvas 0 25 1272 692 10;
+#X obj 63 258 mtl/out~;
+#X text 50 402 tags: fx~;
+#X text 239 222 <-Click on the propeties menu to display params;
+#X obj 354 10 cnv 15 200 40 empty empty empty 20 12 0 14 -232576 -66577
+0;
+#X text 414 11 PARAM ENABLED;
+#X obj 355 56 cnv 15 200 20 empty empty /qompader/ 2 12 0 8 -258401
+-262144 0;
+#X obj 355 79 hsl 100 15 0.8 8 0 0 /qompander/compander-factor /qompander/compader-factor_
+compader-factor 105 7 0 8 -262144 -1 -1 0 1;
+#X obj 355 97 hsl 100 15 -96 -20 0 0 /qompander/compander-point /qompander/compander-point_
+compander-point 105 7 0 8 -262144 -1 -1 5992 1;
+#X obj 355 115 hsl 100 15 7.3 1 0 0 /qompander/response-time /qompander/response-time_
+response-time 105 7 0 8 -262144 -1 -1 6757 1;
+#X obj 353 33 tof/open_help tof/param;
+#X obj 63 225 mtl/qompander~ /id qompander;
+#X text 127 350 [qompander~] quadrature compander;
+#X text 92 368 Katja Vetter 2010;
+#X text 49 384 www.katjaas.nl/compander/compander.html;
+#X text 50 349 Description:;
+#X text 48 367 Author:;
+#X obj 355 133 hsl 100 15 20 400 0 0 /qompander/recovery-time /qompander/recovery-time_
+recovery-time 105 7 0 8 -262144 -1 -1 2084 1;
+#N canvas 66 349 241 304 testsignals 0;
+#X obj 44 18 inlet;
+#X obj 173 23 inlet;
+#X obj 29 265 outlet~;
+#X obj 44 138 line~;
+#X obj 29 227 *~;
+#X obj 44 89 t b b;
+#X msg 74 166 0.25;
+#X obj 44 61 metro 500;
+#X obj 152 62 pink~;
+#X obj 152 119 *~ 0;
+#X obj 29 191 osc~ 100;
+#X obj 173 92 * 0.01;
+#X msg 44 113 1.1 \, 0 200;
+#X connect 0 0 7 0;
+#X connect 1 0 11 0;
+#X connect 3 0 4 1;
+#X connect 4 0 2 0;
+#X connect 5 0 12 0;
+#X connect 5 1 6 0;
+#X connect 6 0 10 1;
+#X connect 7 0 5 0;
+#X connect 8 0 9 0;
+#X connect 9 0 2 0;
+#X connect 10 0 4 0;
+#X connect 11 0 9 1;
+#X connect 12 0 3 0;
+#X restore 81 141 pd testsignals;
+#X obj 81 93 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0 1
+;
+#X obj 162 117 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+1;
+#X text 98 91 sine resonator 100 Hz;
+#X text 182 116 pink noise -40 dB;
+#X text 740 368 punch;
+#X text 739 450 suck;
+#X msg 653 427 \; factor 4 \; point -96 \; response 7.3 \; recovery
+200 \;;
+#X text 742 291 gate;
+#X msg 653 345 \; factor 4 \; point -70 \; response 3 \; recovery 20
+\;;
+#X msg 653 265 \; factor 3 \; point -20 \; response 7.3 \; recovery
+20 \;;
+#X connect 10 0 0 0;
+#X connect 10 1 0 1;
+#X connect 17 0 10 0;
+#X connect 17 0 10 1;
+#X connect 18 0 17 0;
+#X connect 19 0 17 1;

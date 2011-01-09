@@ -1,0 +1,77 @@
+#N canvas 78 139 628 426 10;
+#X text 113 231 metal;
+#X text 113 215 glass 2;
+#X text 113 152 wood;
+#X text 113 168 plastic;
+#X text 113 184 china;
+#X text 113 200 glass 1;
+#X text 113 136 cardboard;
+#X obj 92 142 vradio 15 1 0 7 empty empty empty 0 -6 0 8 -262144 -1
+-1 2;
+#X text 11 25 Comment: Taken from Andy Farnell's work.;
+#X text 11 3 Description: Filtering by material type.;
+#X obj 18 364 mtl/out~;
+#X text 12 45 tags: fx~;
+#X obj 17 81 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 1 1
+;
+#N canvas 6 212 450 300 generate~ 0;
+#X obj 32 213 osc~ 200;
+#X obj 32 89 metro 400;
+#X obj 32 175 mtof;
+#X obj 104 195 mtof;
+#X obj 32 132 + 20;
+#X obj 32 111 random 70;
+#X floatatom 83 69 5 0 0 0 - - -;
+#X obj 32 261 outlet~;
+#X obj 103 261 outlet~;
+#X obj 30 14 inlet;
+#X obj 104 175 mtl/closestNote 0 2 4 7 9;
+#X obj 104 234 *~;
+#X obj 31 234 *~;
+#X obj 104 214 osc~ 100;
+#X obj 32 155 mtl/closestNote 0 2 4 7 9;
+#X connect 0 0 12 0;
+#X connect 1 0 5 0;
+#X connect 2 0 0 0;
+#X connect 3 0 13 0;
+#X connect 4 0 10 0;
+#X connect 4 0 14 0;
+#X connect 5 0 4 0;
+#X connect 6 0 1 1;
+#X connect 9 0 1 0;
+#X connect 9 0 11 1;
+#X connect 9 0 12 1;
+#X connect 10 0 3 0;
+#X connect 11 0 8 0;
+#X connect 12 0 7 0;
+#X connect 13 0 11 0;
+#X connect 14 0 2 0;
+#X restore 17 106 pd generate~;
+#X obj 205 59 vsl 15 128 0 10000 0 0 empty empty empty 0 -9 0 10 -262144
+-1 -1 12700 1;
+#X msg 205 238 slope \$1;
+#X floatatom 205 215 5 0 10000 1 ms - -;
+#X msg 301 234 1679 2312 3200 5645 340;
+#X msg 308 276 109 230 352 413 10;
+#X text 268 82 1st inlet: signal;
+#X text 270 98 2nd inlet:;
+#X text 269 112 accepts either a float (0-6) and recalls one of the
+built-in settings;
+#X text 268 138 also accepts a list of 4 formant values followed by
+the cue.;
+#X obj 205 194 mtl/round;
+#X text 268 158 Eventually \, sending a slope message followed by a
+length in milliseconds will generate a ramp for each of the new formant
+values as well as the cue.;
+#X obj 17 314 mtl/material~;
+#X connect 7 0 25 1;
+#X connect 12 0 13 0;
+#X connect 13 0 25 0;
+#X connect 14 0 23 0;
+#X connect 15 0 25 1;
+#X connect 16 0 15 0;
+#X connect 17 0 25 1;
+#X connect 18 0 25 1;
+#X connect 23 0 16 0;
+#X connect 25 0 10 0;
+#X connect 25 0 10 1;

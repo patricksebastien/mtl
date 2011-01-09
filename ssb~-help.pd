@@ -1,0 +1,87 @@
+#N canvas 0 25 1272 692 10;
+#X obj 1 -21 cnv 15 690 30 empty empty single_sideband_modulation~
+2 12 1 14 -233017 -66577 0;
+#X obj 8 200 mtl/out~;
+#X obj 238 54 cnv 15 200 40 empty empty empty 20 12 0 14 -232576 -66577
+0;
+#X text 298 55 PARAM ENABLED;
+#X obj 235 181 cnv 15 200 20 empty empty /ssb/ 2 12 0 8 -258401 -262144
+0;
+#X obj 236 212 hsl 100 15 0 200 0 0 /ssb/frequency /ssb/frequency_
+frequency 105 7 0 8 -262144 -1 -1 5300 1;
+#X text 149 151 <-Click on the propeties menu to display params;
+#X text 547 101 tags: fx~;
+#X obj 237 77 tof/open_help tof/param;
+#X obj 21 61 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 1 1
+;
+#N canvas 0 25 1280 695 chord 0;
+#X obj 87 97 -~ 0.5;
+#X obj 87 146 clip~ -0.5 0.5;
+#X obj 87 169 cos~;
+#X obj 499 293 hip~ 5;
+#X obj 499 356 outlet~;
+#X obj 87 122 *~ 3;
+#X obj 87 74 phasor~ 220;
+#X obj 221 97 -~ 0.5;
+#X obj 221 146 clip~ -0.5 0.5;
+#X obj 221 169 cos~;
+#X obj 221 122 *~ 3;
+#X obj 356 100 -~ 0.5;
+#X obj 356 149 clip~ -0.5 0.5;
+#X obj 356 172 cos~;
+#X obj 356 125 *~ 3;
+#X obj 491 100 -~ 0.5;
+#X obj 491 149 clip~ -0.5 0.5;
+#X obj 491 172 cos~;
+#X obj 491 125 *~ 3;
+#X obj 221 74 phasor~ 251;
+#X obj 356 77 phasor~ 281;
+#X obj 491 77 phasor~ 311;
+#X text 147 32 test sound for phaser;
+#X obj 499 326 *~ 0.2;
+#X obj 626 78 inlet;
+#X connect 0 0 5 0;
+#X connect 1 0 2 0;
+#X connect 2 0 3 0;
+#X connect 3 0 23 0;
+#X connect 5 0 1 0;
+#X connect 6 0 0 0;
+#X connect 7 0 10 0;
+#X connect 8 0 9 0;
+#X connect 9 0 3 0;
+#X connect 10 0 8 0;
+#X connect 11 0 14 0;
+#X connect 12 0 13 0;
+#X connect 13 0 3 0;
+#X connect 14 0 12 0;
+#X connect 15 0 18 0;
+#X connect 16 0 17 0;
+#X connect 17 0 3 0;
+#X connect 18 0 16 0;
+#X connect 19 0 7 0;
+#X connect 20 0 11 0;
+#X connect 21 0 15 0;
+#X connect 23 0 4 0;
+#X connect 24 0 23 1;
+#X restore 21 92 pd chord;
+#X obj 7 153 mtl/ssb~ /id ssb;
+#X text 544 72 Description : Single Sideband Modulation;
+#X text 542 116 Author: Miller Pucket;
+#X text 544 130;
+#X text 530 153 The signal sideband modulator gives you only one sideband
+for each frequency in the input signal (whereas ring modulation gave
+both a positive and negative sideband). You can set the shift frequency
+positive to shift all frequencies upward \, or negative to shift them
+downwards.;
+#X text 529 233 The technique is to filter the input into two versions
+\, 90 degrees out of phase \, which can be interpreted as the real
+and imaginary part of a complex signal with positive frequencies only.
+You can then form the (complex) product of this with a (complex) sinusoid
+to modulate upward or downward in frequency.;
+#X text 529 329 The "Hilbert~" object is an abstraction in pd/extra.
+;
+#X connect 9 0 10 0;
+#X connect 10 0 11 1;
+#X connect 10 0 11 0;
+#X connect 11 0 1 0;
+#X connect 11 1 1 1;

@@ -1,0 +1,146 @@
+#N canvas 296 345 682 266 10;
+#X obj 21 1 inlet~;
+#X obj 109 -3 inlet~;
+#X obj 26 166 outlet~;
+#X obj 75 166 outlet~;
+#X obj 21 118 tof/crossfade~ 2;
+#X obj 499 -8 inlet params;
+#X obj 499 38 print PARAM_NOTFOUND;
+#X obj 194 -1 tof/param /wet 0 /g slider 0 1;
+#X obj 194 42 line~;
+#X msg 194 21 \$1 5;
+#X obj 499 14 tof/param route;
+#X obj 492 69 b;
+#X obj 493 98 tof/param gui;
+#N canvas 0 25 1259 679 octave-divider 0;
+#X obj 135 450 hip~ 5;
+#X text 1323 710 updated for Pd version 0.37;
+#X obj 172 155 fiddle~ 2048;
+#X obj 173 186 unpack;
+#X obj 166 290 osc~;
+#X obj 173 210 moses 1;
+#X obj 136 363 *~;
+#X obj 200 238 mtof;
+#X obj 228 264 *;
+#X obj 133 402 *~ 2;
+#N canvas 300 203 758 306 delay 0;
+#X obj 15 222 outlet~;
+#X obj 14 21 inlet~;
+#X obj 15 102 loadbang;
+#X obj 15 152 expr 1000*1024/$f1;
+#X obj 15 128 samplerate~;
+#X text 208 47 write to delay line which has enough memory to hold
+40 msec;
+#X text 125 128 get sample rate at load time;
+#X text 185 152 divide 1024 by sample rate to give time in seconds
+\; multiply by 1000 to convert to milliseconds.;
+#X text 168 197 read from the delay line at the calculater delay;
+#X text 317 268 1024-sample delay;
+#X obj 14 49 delwrite~ E03-del-g 40;
+#X obj 15 195 delread~ E03-del-g;
+#X connect 1 0 10 0;
+#X connect 2 0 4 0;
+#X connect 3 0 11 0;
+#X connect 4 0 3 0;
+#X connect 11 0 0 0;
+#X restore 86 162 pd delay;
+#X obj 173 109 inlet~;
+#X obj 136 483 outlet~;
+#X obj 415 452 hip~ 5;
+#X obj 452 157 fiddle~ 2048;
+#X obj 453 188 unpack;
+#X obj 426 341 osc~;
+#X obj 453 212 moses 1;
+#X obj 414 375 *~;
+#X obj 480 240 mtof;
+#X obj 446 290 *;
+#X obj 417 411 *~ 2;
+#X obj 453 111 inlet~;
+#X obj 416 485 outlet~;
+#X obj 280 27 tof/param /multiplier 100 /g slider 0 100;
+#X obj 269 126 / 100;
+#X text 713 34 OCTAVE DIVIDING VIA RING MODULATION;
+#X text 714 90 This patch demonstrates using ring modulation to alias
+a sound down one octave. The ring modulation itself ("osc~" and multiplier)
+is easy. (We step it up by a factor of 2 to balance the original better.)
+;
+#X text 716 156 Harder is getting the fundamental frequency of the
+original sound. We do this with the complicated "fiddle~" object \,
+which puts out a stream of analysis data for an incoming signal. The
+"2048" argument specifies the analysis window size. The analysis is
+most closely aligned with what the sound was doing at the middle of
+the window \, i.e. \, 1024 samples ago. The "pd delay" window delays
+the signal itself 1024 samples so it will be as tightly synchronized
+with the analysis data as possible. (If you're doing this on a real-time
+input \, you might drop the delay and settle for less perfect synchronization.)
+;
+#X text 716 328 About fiddle~ \, suffice it to say that the third outlet
+contains (pitch \, amplitude) pairs. We unpack the pitch and strip
+out any zeros (when fiddle~ fails to find a pitch it outputs zero but
+we'd rather stick with the most recent good one). This is converted
+from MIDI to Hertz \, and multiplied by 1/2 to control the modulation
+oscillator. (You can also try large-ish integers which leave the pitch
+intact but introduce funny formants.);
+#N canvas 300 203 758 306 delay2 0;
+#X obj 15 222 outlet~;
+#X obj 14 21 inlet~;
+#X obj 15 102 loadbang;
+#X obj 15 152 expr 1000*1024/$f1;
+#X obj 15 128 samplerate~;
+#X text 208 47 write to delay line which has enough memory to hold
+40 msec;
+#X text 125 128 get sample rate at load time;
+#X text 185 152 divide 1024 by sample rate to give time in seconds
+\; multiply by 1000 to convert to milliseconds.;
+#X text 168 197 read from the delay line at the calculater delay;
+#X text 317 268 1024-sample delay;
+#X obj 14 49 delwrite~ E03-del-d 40;
+#X obj 15 195 delread~ E03-del-d;
+#X connect 1 0 10 0;
+#X connect 2 0 4 0;
+#X connect 3 0 11 0;
+#X connect 4 0 3 0;
+#X connect 11 0 0 0;
+#X restore 366 164 pd delay2;
+#X connect 0 0 12 0;
+#X connect 2 2 3 0;
+#X connect 3 0 5 0;
+#X connect 4 0 6 1;
+#X connect 5 1 7 0;
+#X connect 6 0 9 0;
+#X connect 7 0 8 0;
+#X connect 8 0 4 0;
+#X connect 9 0 0 0;
+#X connect 10 0 6 0;
+#X connect 11 0 10 0;
+#X connect 11 0 2 0;
+#X connect 13 0 23 0;
+#X connect 14 2 15 0;
+#X connect 15 0 17 0;
+#X connect 16 0 18 1;
+#X connect 17 1 19 0;
+#X connect 18 0 21 0;
+#X connect 19 0 20 0;
+#X connect 20 0 16 0;
+#X connect 21 0 13 0;
+#X connect 22 0 30 0;
+#X connect 22 0 14 0;
+#X connect 24 0 25 0;
+#X connect 25 0 8 1;
+#X connect 25 0 20 1;
+#X connect 30 0 18 0;
+#X restore 56 69 pd octave-divider;
+#X connect 0 0 4 0;
+#X connect 0 0 13 0;
+#X connect 1 0 4 1;
+#X connect 1 0 13 1;
+#X connect 4 0 2 0;
+#X connect 4 1 3 0;
+#X connect 5 0 10 0;
+#X connect 7 0 9 0;
+#X connect 8 0 4 4;
+#X connect 9 0 8 0;
+#X connect 10 0 6 0;
+#X connect 11 0 12 0;
+#X connect 13 0 4 2;
+#X connect 13 1 4 3;

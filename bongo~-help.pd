@@ -1,0 +1,31 @@
+#N canvas 0 25 1272 692 10;
+#X text 87 100 Midi note.;
+#X msg 136 174 64 54;
+#X obj 135 453 mtl/out~;
+#X obj 227 70 mtl/piano 1;
+#X msg 18 172 30 127;
+#X msg 24 129 60 127;
+#X msg 89 120 65 127;
+#X msg 113 151 80 127;
+#X text 15 26 tags: synthesize~;
+#X obj 135 416 mtl/bongo~ /id bongo;
+#X obj 224 245 hsl 128 15 0 10 0 0 empty empty decay -2 -8 0 10 -262144
+-1 -1 0 1;
+#X obj 248 289 hsl 128 15 0 10 0 0 empty empty factor -2 -8 0 10 -262144
+-1 -1 0 1;
+#X obj 264 331 hsl 128 15 0 10 0 0 empty empty selectivity -2 -8 0
+10 -262144 -1 -1 0 1;
+#X text 14 52;
+#X text 14 73;
+#X text 15 8 Description: Generates some bongo sounds.;
+#X connect 1 0 9 0;
+#X connect 3 0 9 0;
+#X connect 4 0 9 0;
+#X connect 5 0 9 0;
+#X connect 6 0 9 0;
+#X connect 7 0 9 0;
+#X connect 9 0 2 0;
+#X connect 9 0 2 1;
+#X connect 10 0 9 1;
+#X connect 11 0 9 2;
+#X connect 12 0 9 3;

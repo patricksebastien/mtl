@@ -1,0 +1,79 @@
+#N canvas 36 25 930 683 10;
+#X obj 24 126 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+-1;
+#X text 22 22 description: Loads and stores soundfiles.;
+#X obj 23 623 mtl/out~;
+#X msg 78 284 0;
+#X msg 111 284 1;
+#X msg 145 285 2;
+#X obj 74 259 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+-1;
+#X text 97 260 bang: outputs the last loaded soundfile;
+#X text 181 281 float: outputs the previously loaded soundfile at that
+index;
+#X obj 149 512 cyclone/prepend set;
+#X obj 538 113 bng 15 250 50 0 empty empty save 17 7 0 10 -262144 -1
+-1;
+#X obj 613 130 bng 15 250 50 0 empty empty load 17 7 0 10 -262144 -1
+-1;
+#X obj 24 148 openpanel;
+#X msg 24 173 add \$1;
+#X obj 46 204 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+-1;
+#X obj 46 223 openpanel;
+#X obj 24 587 mtl/player~;
+#X obj 419 17 cnv 15 350 80 empty empty empty 20 12 0 14 -232576 -66577
+0;
+#X text 555 19 PARAM ENABLED;
+#X text 425 41 The list of loaded soundfiles can be saved and restored
+through the param system.;
+#X obj 538 154 tof/param file;
+#X text 104 222 "symbol": add the soundfile and output its data.;
+#X obj 490 75 tof/open_help tof/param;
+#X obj 234 347 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj 234 366 openpanel;
+#X msg 253 388 2;
+#X text 301 365 Inlet 2 will only output the soundfile data if it is
+already loaded. It will not load anything.;
+#X msg 187 315 dump;
+#X text 224 315 dump: dumps the contents out of the 5h outlet;
+#X obj 194 437 print dump;
+#X msg 149 545 sample 105992 44100 0-1106/0 1-1106/0 2 /home/tom/pd/loop0.wav
+;
+#X obj 24 386 mtl/sampleFiler /id sfi-help;
+#X text 23 38 tags: tables samples file~;
+#X text 23 58 [sampleFiler] can store and refer to an unlimited number
+of loaded soundfiles.;
+#X text 22 92 [sampleFiler] loads a soundfile once and keep it in memory.
+;
+#X text 78 165 "add" soundfile: adds the indicated soundfile without
+outputing the sample.;
+#X obj 26 504 t b a;
+#X floatatom 189 476 5 0 0 0 - - -;
+#X text 274 510 Outlet 1: sample length samplerate table-left table-right
+channels name;
+#X connect 0 0 12 0;
+#X connect 3 0 31 0;
+#X connect 4 0 31 0;
+#X connect 5 0 31 0;
+#X connect 6 0 31 0;
+#X connect 9 0 30 0;
+#X connect 10 0 20 0;
+#X connect 11 0 20 1;
+#X connect 12 0 13 0;
+#X connect 13 0 31 0;
+#X connect 14 0 15 0;
+#X connect 15 0 31 0;
+#X connect 16 0 2 0;
+#X connect 16 1 2 1;
+#X connect 23 0 24 0;
+#X connect 24 0 31 1;
+#X connect 25 0 31 1;
+#X connect 27 0 31 0;
+#X connect 31 0 9 0;
+#X connect 31 0 36 0;
+#X connect 31 1 37 0;
+#X connect 31 2 29 0;
+#X connect 36 0 16 0;
+#X connect 36 1 16 0;

@@ -1,0 +1,35 @@
+#N canvas 0 25 1280 695 10;
+#X obj 108 -426 wrap~;
+#X obj 108 -398 -~ 0.5;
+#X text 556 -15 updated for Pd version 0.39;
+#X text 426 -527 Splitting a sawtooth wave into even and odd harmonics
+;
+#X text 172 -409 180-degree-out-of-phase;
+#X text 175 -394 sawtooth;
+#X text 173 -370 form the sum and difference;
+#X obj 51 -358 +~;
+#X obj 87 -359 -~;
+#X text 431 -499 This patch splits a sawtooth wave into its even and
+odd harmonics. The wrap~ object is used to make the phased copy. Adding
+and subtracting this to and from the original gives the results shown
+and heard. (Listen to the two outputs separately \, then together.)
+;
+#X text 130 -291 output level;
+#X text 121 -215 for sum;
+#X text 123 -232 output level;
+#X text 128 -274 for difference;
+#X text 427 -419 This is a classic technique for gaining separate control
+over the even and odd harmonics in a synthetic sound. It can also be
+used conceptually to understand the harmonic content of a square wave
+in terms of that of a sawtooth \, or vice versa.;
+#X obj 101 -321 outlet~;
+#X obj 50 -247 outlet~;
+#X obj 52 -525 inlet~;
+#X connect 0 0 1 0;
+#X connect 1 0 7 1;
+#X connect 1 0 8 1;
+#X connect 7 0 16 0;
+#X connect 8 0 15 0;
+#X connect 17 0 0 0;
+#X connect 17 0 7 0;
+#X connect 17 0 8 0;

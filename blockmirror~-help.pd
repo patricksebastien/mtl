@@ -1,0 +1,24 @@
+#N canvas 0 25 1272 692 10;
+#X obj 97 158 *~ 0.5;
+#X obj 178 158 *~ 0.5;
+#X obj 96 225 mtl/out~;
+#X text 95 97 tags: fx~;
+#X text 299 184 <-Click on the propeties menu to display params;
+#X obj 413 80 cnv 15 200 40 empty empty empty 20 12 0 14 -232576 -66577
+0;
+#X text 473 81 PARAM ENABLED;
+#X obj 414 217 cnv 15 200 20 empty empty /blockmirror/ 2 12 0 8 -258401
+-262144 0;
+#X obj 414 240 hsl 100 15 0 1 0 0 /blockmirror/wet /blockmirror/wet_
+wet 105 7 0 8 -262144 -1 -1 2800 1;
+#X obj 413 104 tof/open_help tof/param;
+#X obj 96 183 mtl/blockmirror~ /id blockmirror;
+#X obj 96 134 osc~ 400;
+#X obj 179 133 osc~ 440;
+#X text 93 79 Description: blockmirror ( sigpack external );
+#X connect 0 0 10 0;
+#X connect 1 0 10 1;
+#X connect 10 0 2 0;
+#X connect 10 1 2 1;
+#X connect 11 0 0 0;
+#X connect 12 0 1 0;

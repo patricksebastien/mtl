@@ -1,0 +1,79 @@
+#N canvas 1217 157 985 676 10;
+#X floatatom 302 574 10 0 0 1 samples - -;
+#X obj 425 570 bng 15 250 50 0 empty empty stopped 0 -6 0 10 -262144
+-1 -1;
+#X msg 50 53 1;
+#X msg 94 93 2;
+#X msg 73 72 0;
+#X obj 24 15 bng 30 250 50 0 empty empty empty 0 -6 0 10 -258113 -1
+-1;
+#X text 56 21 Play at speed 1;
+#X text 79 49 Play at speed 1;
+#X text 104 68 Stop;
+#X text 122 94 Play at speed 2;
+#X text 209 556 Progress;
+#X msg 138 160 1 0.5;
+#X text 181 154 Play at speed 1 from halfway;
+#X obj 20 586 mtl/out~;
+#X text 13 -23 tags: tables play~;
+#X obj 176 500 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+1;
+#X obj 201 575 mtl/nbx~;
+#X text 195 496 Loop (stops looping when the end is reached);
+#X msg 105 116 -0.5;
+#X text 139 115 Play backwards at speed 0.5;
+#X text 221 189 Play backwards from 1/2 of the table;
+#X text 134 138 ------------ offset ------------;
+#X text 26 -5 ------------ playback ------------;
+#X text 13 -38 Description: Plays tables and soundfiles.;
+#X text 505 489 Arguments (in any order): The name of the an external
+table and the loop flag.;
+#X obj 190 346 openpanel;
+#X obj 190 326 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X msg 164 219 1 0.25 0.75;
+#X msg 171 242 1 0.75 0.25;
+#X msg 160 189 -1 0.5;
+#X text 246 216 Play from 1/4 to 3/4 of the table;
+#X text 249 238 Play from 3/4 to 1/4 of the table;
+#X text 211 325 You can load a sound file in the internal stereo tables
+;
+#X obj 198 419 openpanel;
+#X obj 197 395 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X msg 189 367 read \$1;
+#X msg 176 291 sample length samplerate table-left table-right;
+#X text 174 268 ------------ sample/file management ------------;
+#X obj 198 456 mtl/sampleFiler;
+#X text 214 391 Load and select stored samples in sampleFiler;
+#X msg 271 420 0;
+#X msg 306 420 1;
+#X text 250 342 (send a bang afterwards to play the loaded/selected
+file);
+#X text 331 418 (send a bang afterwards to play the loaded/selected
+file);
+#X obj 21 511 mtl/player~ 0;
+#X connect 2 0 44 0;
+#X connect 3 0 44 0;
+#X connect 4 0 44 0;
+#X connect 5 0 44 0;
+#X connect 11 0 44 0;
+#X connect 15 0 44 1;
+#X connect 18 0 44 0;
+#X connect 25 0 35 0;
+#X connect 26 0 25 0;
+#X connect 27 0 44 0;
+#X connect 28 0 44 0;
+#X connect 29 0 44 0;
+#X connect 33 0 38 0;
+#X connect 34 0 33 0;
+#X connect 35 0 44 0;
+#X connect 36 0 44 0;
+#X connect 38 0 44 0;
+#X connect 40 0 38 0;
+#X connect 41 0 38 0;
+#X connect 44 0 13 0;
+#X connect 44 1 13 1;
+#X connect 44 2 16 0;
+#X connect 44 3 0 0;
+#X connect 44 4 1 0;

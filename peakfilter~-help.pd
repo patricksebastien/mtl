@@ -1,0 +1,62 @@
+#N canvas 0 0 1272 717 10;
+#X obj -226 190 mtl/out~;
+#X text -222 57 tags: fx~;
+#X text -77 156 <-Click on the propeties menu to display params;
+#X obj 201 41 cnv 15 200 40 empty empty empty 20 12 0 14 -232576 -66577
+0;
+#X text 261 42 PARAM ENABLED;
+#X obj 203 175 cnv 15 200 20 empty empty /peakfilter/ 2 12 0 8 -258401
+-262144 0;
+#X obj 203 198 hsl 100 15 0 1 0 0 /peakfilter/wet /peakfilter/wet_
+wet 105 7 0 8 -262144 -1 -1 9900 1;
+#X obj 200 64 tof/open_help tof/param;
+#X obj -228 89 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 1
+1;
+#N canvas 5 185 450 300 generate~ 0;
+#X obj 32 213 osc~ 200;
+#X obj 32 89 metro 400;
+#X obj 32 175 mtof;
+#X obj 104 195 mtof;
+#X obj 32 132 + 20;
+#X obj 32 111 random 70;
+#X floatatom 83 69 5 0 0 0 - - -;
+#X obj 32 261 outlet~;
+#X obj 103 261 outlet~;
+#X obj 30 14 inlet;
+#X obj 104 175 mtl/closestNote 0 2 4 7 9;
+#X obj 104 234 *~;
+#X obj 31 234 *~;
+#X obj 104 214 osc~ 100;
+#X obj 32 155 mtl/closestNote 0 2 4 7 9;
+#X connect 0 0 12 0;
+#X connect 1 0 5 0;
+#X connect 2 0 0 0;
+#X connect 3 0 13 0;
+#X connect 4 0 10 0;
+#X connect 4 0 14 0;
+#X connect 5 0 4 0;
+#X connect 6 0 1 1;
+#X connect 9 0 1 0;
+#X connect 9 0 11 1;
+#X connect 9 0 12 1;
+#X connect 10 0 3 0;
+#X connect 11 0 8 0;
+#X connect 12 0 7 0;
+#X connect 13 0 11 0;
+#X connect 14 0 2 0;
+#X restore -228 114 pd generate~;
+#X text -227 17 Description:;
+#X obj -230 158 mtl/peakfilter~ /id peakfilter;
+#X text -153 18 Peakfilter;
+#X obj 203 217 hsl 100 15 0 1 0 0 /peakfilter/resonance /peakfilter/resonance_
+resonance 105 7 0 8 -262144 -1 -1 8900 1;
+#X obj 203 236 hsl 100 15 0 1 0 0 /peakfilter/cutoff /peakfilter/cutoff_
+cutoff 105 7 0 8 -262144 -1 -1 5500 1;
+#X text -230 31 taken from 3.audio.examples/H12.peaking.pd and modified
+;
+#X text -222 45 by Roman (net-pd);
+#X connect 8 0 9 0;
+#X connect 9 0 11 0;
+#X connect 9 1 11 1;
+#X connect 11 0 0 0;
+#X connect 11 1 0 1;

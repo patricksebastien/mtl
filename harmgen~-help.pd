@@ -1,0 +1,73 @@
+#N canvas 0 25 1272 692 10;
+#X obj 15 334 mtl/out~;
+#X text 14 31 tags: fx~;
+#X obj 19 90 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0 1
+;
+#N canvas 5 185 450 300 generate~ 0;
+#X obj 32 213 osc~ 200;
+#X obj 32 89 metro 400;
+#X obj 32 175 mtof;
+#X obj 104 195 mtof;
+#X obj 32 132 + 20;
+#X obj 32 111 random 70;
+#X floatatom 83 69 5 0 0 0 - - -;
+#X obj 32 261 outlet~;
+#X obj 103 261 outlet~;
+#X obj 30 14 inlet;
+#X obj 104 175 mtl/closestNote 0 2 4 7 9;
+#X obj 104 234 *~;
+#X obj 31 234 *~;
+#X obj 104 214 osc~ 100;
+#X obj 32 155 mtl/closestNote 0 2 4 7 9;
+#X connect 0 0 12 0;
+#X connect 1 0 5 0;
+#X connect 2 0 0 0;
+#X connect 3 0 13 0;
+#X connect 4 0 10 0;
+#X connect 4 0 14 0;
+#X connect 5 0 4 0;
+#X connect 6 0 1 1;
+#X connect 9 0 1 0;
+#X connect 9 0 11 1;
+#X connect 9 0 12 1;
+#X connect 10 0 3 0;
+#X connect 11 0 8 0;
+#X connect 12 0 7 0;
+#X connect 13 0 11 0;
+#X connect 14 0 2 0;
+#X restore 19 115 pd generate~;
+#X text 171 245 <-Click on the propeties menu to display params;
+#X obj 307 18 cnv 15 200 40 empty empty empty 20 12 0 14 -232576 -66577
+0;
+#X text 367 19 PARAM ENABLED;
+#X obj 689 167 cnv 15 200 20 empty empty /harmgen/ 2 12 0 8 -258401
+-262144 0;
+#X obj 306 41 tof/open_help tof/param;
+#X obj 692 195 hsl 128 15 -1 1 0 0 /harmgen/mag1 /harmgen/mag1_ magnitude1
+137 7 0 10 -262144 -1 -1 6350 1;
+#X obj 18 247 mtl/harmgen~ /id harmgen;
+#X obj 692 217 hsl 128 15 -1 1 0 0 /harmgen/mag2 /harmgen/mag2_ magnitude2
+137 7 0 10 -262144 -1 -1 6350 1;
+#X obj 692 238 hsl 128 15 -1 1 0 0 /harmgen/mag3 /harmgen/mag3_ magnitude3
+137 7 0 10 -262144 -1 -1 6350 1;
+#X obj 692 259 hsl 128 15 -1 1 0 0 /harmgen/mag4 /harmgen/mag4_ magnitude4
+137 7 0 10 -262144 -1 -1 6350 1;
+#X obj 692 281 hsl 128 15 -1 1 0 0 /harmgen/mag5 /harmgen/mag5_ magnitude5
+137 7 0 10 -262144 -1 -1 6350 1;
+#X obj 693 301 hsl 128 15 -1 1 0 0 /harmgen/mag6 /harmgen/mag6_ magnitude6
+137 7 0 10 -262144 -1 -1 6350 1;
+#X obj 693 322 hsl 128 15 -1 1 0 0 /harmgen/mag7 /harmgen/mag7_ magnitude7
+137 7 0 10 -262144 -1 -1 6350 1;
+#X obj 693 343 hsl 128 15 -1 1 0 0 /harmgen/mag8 /harmgen/mag8_ magnitude8
+137 7 0 10 -262144 -1 -1 6350 1;
+#X obj 693 364 hsl 128 15 -1 1 0 0 /harmgen/mag9 /harmgen/mag9_ magnitude9
+137 7 0 10 -262144 -1 -1 6350 1;
+#X obj 693 386 hsl 128 15 -1 1 0 0 /harmgen/mag10 /harmgen/mag10_ magnitude10
+137 7 0 10 -262144 -1 -1 6350 1;
+#X text 15 8 Description: Harmgen ( sigpack external );
+#X text 235 615;
+#X connect 2 0 3 0;
+#X connect 3 0 10 0;
+#X connect 3 0 10 1;
+#X connect 10 0 0 0;
+#X connect 10 1 0 1;

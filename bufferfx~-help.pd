@@ -1,0 +1,52 @@
+#N canvas 0 0 1272 717 10;
+#X obj -226 190 mtl/out~;
+#X text -230 59 tags: fx~;
+#X text -57 156 <-Click on the propeties menu to display params;
+#X obj 201 41 cnv 15 200 40 empty empty empty 20 12 0 14 -232576 -66577
+0;
+#X text 261 42 PARAM ENABLED;
+#X obj 203 175 cnv 15 200 20 empty empty /bufferfx/ 2 12 0 8 -258401
+-262144 0;
+#X obj 205 201 hsl 100 15 0 1 0 0 /bufferfx/wet /bufferfx/wet_ wet
+105 7 0 8 -262144 -1 -1 9900 1;
+#X obj 200 64 tof/open_help tof/param;
+#X obj -228 89 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 1
+1;
+#N canvas 0 0 1280 720 generate~ 0;
+#X obj 90 124 metro 400;
+#X floatatom 146 75 5 0 0 0 - - -;
+#X obj 44 311 outlet~;
+#X obj 115 311 outlet~;
+#X obj 97 42 inlet;
+#X obj 37 255 mtl/kick808~;
+#X msg 31 224 trigger;
+#X obj 137 257 mtl/blip~;
+#X msg 140 232 55 127;
+#X text 54 124 comment;
+#X obj 94 157 random 2;
+#X obj 87 190 select 0 1;
+#X connect 0 0 10 0;
+#X connect 1 0 0 1;
+#X connect 4 0 0 0;
+#X connect 5 0 2 0;
+#X connect 5 0 3 0;
+#X connect 6 0 5 0;
+#X connect 7 0 2 0;
+#X connect 7 0 3 0;
+#X connect 8 0 7 0;
+#X connect 10 0 11 0;
+#X connect 11 0 6 0;
+#X connect 11 1 8 0;
+#X restore -228 114 pd generate~;
+#X text -232 24 Description:;
+#X obj -228 159 mtl/bufferfx~ /id bufferfx;
+#X text -155 26 Bufferfx;
+#X obj 205 220 hsl 100 15 30 1000 0 0 /bufferfx/update /bufferfx/update_
+update 105 7 0 8 -262144 -1 -1 9100 1;
+#X obj 204 239 hsl 100 15 3 70 0 0 /bufferfx/length /bufferfx/length_
+length 105 7 0 8 -262144 -1 -1 500 1;
+#X connect 8 0 9 0;
+#X connect 9 0 11 0;
+#X connect 9 1 11 1;
+#X connect 11 0 0 0;
+#X connect 11 1 0 1;

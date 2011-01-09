@@ -1,0 +1,43 @@
+#N canvas 0 25 1272 692 10;
+#X obj 125 256 *~ 0.5;
+#X obj 221 255 *~ 0.5;
+#X obj 125 315 mtl/out~;
+#X text 449 125 tags: fx~;
+#X obj 124 209 osc~ 110;
+#X obj 220 199 osc~ 110;
+#X text 303 283 <-Click on the propeties menu to display params;
+#X obj 420 178 cnv 15 200 40 empty empty empty 20 12 0 14 -232576 -66577
+0;
+#X text 480 179 PARAM ENABLED;
+#X obj 422 312 cnv 15 200 20 empty empty /noisegate/ 2 12 0 8 -258401
+-262144 0;
+#X obj 422 335 hsl 100 15 0 100 0 0 /noisegate/thresold /noisegate/thresold_
+thresold 105 7 0 8 -262144 -1 -1 9900 1;
+#X obj 422 353 hsl 100 15 0 1000 0 0 /noisegate/attack /noisegate/attack_
+attack 105 7 0 8 -262144 -1 -1 290 1;
+#X obj 419 201 tof/open_help tof/param;
+#X obj 124 284 mtl/noisegate~ /id noisegate;
+#X obj 422 371 hsl 100 15 0 1000 0 0 /noisegate/decay /noisegate/decay_
+decay 105 7 0 8 -262144 -1 -1 2090 1;
+#X text 449 91 Description: Noisegate;
+#X obj 192 73 loadbang;
+#X obj 182 155 random 100;
+#X obj 182 175 / 100;
+#X floatatom 198 226 5 0 0 0 - - -;
+#X obj 289 152 random 100;
+#X obj 289 172 / 100;
+#X floatatom 295 224 5 0 0 0 - - -;
+#X connect 0 0 13 0;
+#X connect 1 0 13 1;
+#X connect 4 0 0 0;
+#X connect 5 0 1 0;
+#X connect 13 0 2 0;
+#X connect 13 1 2 1;
+#X connect 16 0 17 0;
+#X connect 16 0 20 0;
+#X connect 17 0 18 0;
+#X connect 18 0 0 1;
+#X connect 18 0 19 0;
+#X connect 20 0 21 0;
+#X connect 21 0 1 1;
+#X connect 21 0 22 0;

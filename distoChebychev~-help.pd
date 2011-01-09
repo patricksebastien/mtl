@@ -1,0 +1,77 @@
+#N canvas 0 25 1272 692 10;
+#X obj 22 280 mtl/out~;
+#X text 17 31 tags: fx~;
+#X obj 19 90 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 1 1
+;
+#N canvas 5 185 450 300 generate~ 0;
+#X obj 32 213 osc~ 200;
+#X obj 32 89 metro 400;
+#X obj 32 175 mtof;
+#X obj 104 195 mtof;
+#X obj 32 132 + 20;
+#X obj 32 111 random 70;
+#X floatatom 83 69 5 0 0 0 - - -;
+#X obj 32 261 outlet~;
+#X obj 103 261 outlet~;
+#X obj 30 14 inlet;
+#X obj 104 175 mtl/closestNote 0 2 4 7 9;
+#X obj 104 234 *~;
+#X obj 31 234 *~;
+#X obj 104 214 osc~ 100;
+#X obj 32 155 mtl/closestNote 0 2 4 7 9;
+#X connect 0 0 12 0;
+#X connect 1 0 5 0;
+#X connect 2 0 0 0;
+#X connect 3 0 13 0;
+#X connect 4 0 10 0;
+#X connect 4 0 14 0;
+#X connect 5 0 4 0;
+#X connect 6 0 1 1;
+#X connect 9 0 1 0;
+#X connect 9 0 11 1;
+#X connect 9 0 12 1;
+#X connect 10 0 3 0;
+#X connect 11 0 8 0;
+#X connect 12 0 7 0;
+#X connect 13 0 11 0;
+#X connect 14 0 2 0;
+#X restore 19 115 pd generate~;
+#X text 268 248 <-Click on the propeties menu to display params;
+#X obj 307 18 cnv 15 200 40 empty empty empty 20 12 0 14 -232576 -66577
+0;
+#X text 367 19 PARAM ENABLED;
+#X obj 652 118 cnv 15 200 20 empty empty /disto-Chebychev/ 2 12 0 8
+-258401 -262144 0;
+#X obj 306 41 tof/open_help tof/param;
+#X obj 656 146 hsl 128 15 0 10 0 0 /disto-Chebychev/amp0 /disto-Chebychev/amp0_
+amp0 137 7 0 10 -262144 -1 -1 2970 1;
+#X obj 656 169 hsl 128 15 0 10 0 0 /disto-Chebychev/amp1 /disto-Chebychev/amp1_
+amp1 137 7 0 10 -262144 -1 -1 7270 1;
+#X obj 656 190 hsl 128 15 0 10 0 0 /disto-Chebychev/amp2 /disto-Chebychev/amp2_
+amp2 137 7 0 10 -262144 -1 -1 7270 1;
+#X obj 655 210 hsl 128 15 0 10 0 0 /disto-Chebychev/amp3 /disto-Chebychev/amp3_
+amp3 137 7 0 10 -262144 -1 -1 8670 1;
+#X obj 654 230 hsl 128 15 0 10 0 0 /disto-Chebychev/amp4 /disto-Chebychev/amp4_
+amp4 137 7 0 10 -262144 -1 -1 1270 1;
+#X obj 655 251 hsl 128 15 0 10 0 0 /disto-Chebychev/amp5 /disto-Chebychev/amp5_
+amp5 137 7 0 10 -262144 -1 -1 8970 1;
+#X obj 654 272 hsl 128 15 0 10 0 0 /disto-Chebychev/amp6 /disto-Chebychev/amp6_
+amp6 137 7 0 10 -262144 -1 -1 1270 1;
+#X obj 654 293 hsl 128 15 0 10 0 0 /disto-Chebychev/amp7 /disto-Chebychev/amp7_
+amp7 137 7 0 10 -262144 -1 -1 7570 1;
+#X obj 654 315 hsl 128 15 0 10 0 0 /disto-Chebychev/amp8 /disto-Chebychev/amp8_
+amp8 137 7 0 10 -262144 -1 -1 4370 1;
+#X obj 654 336 hsl 128 15 0 10 0 0 /disto-Chebychev/amp9 /disto-Chebychev/amp9_
+amp9 137 7 0 10 -262144 -1 -1 9270 1;
+#X obj 653 356 hsl 128 15 0 10 0 0 /disto-Chebychev/amp10 /disto-Chebychev/amp10_
+amp10 137 7 0 10 -262144 -1 -1 8770 1;
+#X obj 652 376 hsl 128 15 0 10 0 0 /disto-Chebychev/amp11 /disto-Chebychev/amp11_
+amp11 137 7 0 10 -262144 -1 -1 8070 1;
+#X text 15 8 Description: Chebychev distorsion;
+#X text 903 218 comment;
+#X obj 20 247 mtl/distoChebychev~ /id disto-Chebychev;
+#X connect 2 0 3 0;
+#X connect 3 0 23 0;
+#X connect 3 0 23 1;
+#X connect 23 0 0 0;
+#X connect 23 1 0 1;

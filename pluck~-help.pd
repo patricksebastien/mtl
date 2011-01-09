@@ -1,0 +1,24 @@
+#N canvas 392 212 853 534 10;
+#X text 235 240 Midi note.;
+#X msg 284 314 64 54;
+#X obj 230 391 mtl/out~;
+#X obj 41 99 mtl/piano 1;
+#X msg 166 312 30 127;
+#X msg 172 269 60 127;
+#X msg 237 260 65 127;
+#X msg 261 291 80 127;
+#X text 15 26 tags: synthesize~;
+#X obj 471 324 hsl 100 15 0 50 0 0 /pluck/feedback /pluck/feedback_
+feedback 105 7 0 8 -262144 -1 -1 9100 1;
+#X obj 468 296 cnv 15 200 20 empty empty /pluck~/ 2 12 0 8 -258401
+-262144 0;
+#X text 15 8 Description: Generates some pluck sounds.;
+#X obj 230 354 mtl/pluck~ /id pluck;
+#X connect 1 0 12 0;
+#X connect 3 0 12 0;
+#X connect 4 0 12 0;
+#X connect 5 0 12 0;
+#X connect 6 0 12 0;
+#X connect 7 0 12 0;
+#X connect 12 0 2 0;
+#X connect 12 0 2 1;
