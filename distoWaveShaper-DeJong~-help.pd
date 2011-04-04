@@ -1,0 +1,41 @@
+#N canvas 0 0 1272 714 10;
+#X obj 50 109 *~ 0.5;
+#X obj 134 110 *~ 0.5;
+#X obj 51 179 mtl/out~;
+#X obj 51 85 osc~ 110;
+#X obj 134 85 osc~ 110;
+#X obj 24 233 cyclone/Scope~ 130 130 256 3 128 -1 1 0 0 0 0 102 255
+51 135 135 135 0;
+#X obj 215 233 cyclone/Scope~ 130 130 256 3 128 -1 1 0 0 0 0 102 255
+51 135 135 135 0;
+#X text 720 108 tags: fx~;
+#X obj 310 59 cnv 15 200 40 empty empty empty 20 12 0 14 -232576 -66577
+0;
+#X text 370 60 PARAM ENABLED;
+#X obj 376 214 cnv 15 200 20 empty empty /distoWaveShaper-DeJong/ 2
+12 0 8 -258401 -262144 0;
+#X obj 377 236 hsl 100 15 0 1 0 0 /distoWaveShaper-DeJong/wet /distoWaveShaper-DeJong/wet_
+wet 105 7 0 8 -262144 -1 -1 6600 1;
+#X obj 377 255 hsl 100 15 -1 1 0 0 /distoWaveShaper-DeJong/amount /distoWaveShaper-DeJong/amount_
+amount 105 7 0 8 -262144 -1 -1 2850 1;
+#X text 319 124 comment;
+#X obj 335 79 tof/open_help tof/param;
+#X text 719 93 Author: Bram de Jong;
+#X text 719 78 Description: a lofi distortion;
+#X text 719 127 where x (in [-1..1] will be distorted and a is a distortion
+parameter that goes from 1 to infinity The equation is valid for positive
+and negativ values. If a is 1 \, it results in a slight distortion
+and with bigger a's the signal get's more funky. A good thing about
+the shaper is that feeding it with bigger-than-one values \, doesn't
+create strange fx. The maximum this function will reach is 1.2 for
+a=1. omment;
+#X obj 53 146 mtl/distoWaveShaper-DeJong~ /id distoWaveShaper-DeJong
+;
+#X connect 0 0 5 0;
+#X connect 0 0 18 0;
+#X connect 1 0 18 1;
+#X connect 3 0 0 0;
+#X connect 4 0 1 0;
+#X connect 18 0 2 0;
+#X connect 18 1 2 1;
+#X connect 18 1 6 0;
