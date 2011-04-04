@@ -1,0 +1,24 @@
+#N canvas 0 0 1272 714 10;
+#X obj -226 190 mtl/out~;
+#X text -230 59 tags: fx~;
+#X obj 201 41 cnv 15 200 40 empty empty empty 20 12 0 14 -232576 -66577
+0;
+#X text 261 42 PARAM ENABLED;
+#X obj 203 175 cnv 15 200 20 empty empty /purereverb4/ 2 12 0 8 -258401
+-262144 0;
+#X obj 209 204 hsl 100 15 0 1 0 0 /purereverb4/wet /purereverb4/wet_
+wet 105 7 0 8 -262144 -1 -1 8400 1;
+#X obj 200 64 tof/open_help tof/param;
+#X text -232 24 Description:;
+#X obj -228 114 mtl/rain~ /id rain;
+#X obj 210 224 hsl 100 15 0 1 0 0 /purereverb4/dampgen /purereverb4/dampgen_
+dampgen 105 7 0 8 -262144 -1 -1 5300 1;
+#X obj 211 245 hsl 100 15 0 1 0 0 /purereverb4/feedback /purereverb4/feedback_
+feedback 105 7 0 8 -262144 -1 -1 7000 1;
+#X text -41 156 <-Click on the propeties menu to display params;
+#X text -155 24 PureReverb4;
+#X obj -229 158 mtl/purereverb4~ /id purereverb4;
+#X connect 8 0 13 0;
+#X connect 8 0 13 1;
+#X connect 13 0 0 0;
+#X connect 13 1 0 1;
