@@ -1,0 +1,94 @@
+#N canvas 0 0 1272 714 10;
+#X obj -226 190 mtl/out~;
+#X text -230 59 tags: fx~;
+#X text -77 156 <-Click on the propeties menu to display params;
+#X obj 201 41 cnv 15 200 40 empty empty empty 20 12 0 14 -232576 -66577
+0;
+#X text 261 42 PARAM ENABLED;
+#X obj 203 175 cnv 15 200 20 empty empty /dubdel/ 2 12 0 8 -258401
+-262144 0;
+#X obj 203 198 hsl 100 15 0 1 0 0 /dubdel/wet /dubdel/wet_ wet 105
+7 0 8 -262144 -1 -1 5600 1;
+#X obj 200 64 tof/open_help tof/param;
+#X obj -228 89 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 1
+1;
+#N canvas 5 185 450 300 generate~ 0;
+#X obj 32 213 osc~ 200;
+#X obj 32 89 metro 400;
+#X obj 32 175 mtof;
+#X obj 104 195 mtof;
+#X obj 32 132 + 20;
+#X obj 32 111 random 70;
+#X floatatom 83 69 5 0 0 0 - - -;
+#X obj 32 261 outlet~;
+#X obj 103 261 outlet~;
+#X obj 30 14 inlet;
+#X obj 104 175 mtl/closestNote 0 2 4 7 9;
+#X obj 104 234 *~;
+#X obj 31 234 *~;
+#X obj 104 214 osc~ 100;
+#X obj 32 155 mtl/closestNote 0 2 4 7 9;
+#X connect 0 0 12 0;
+#X connect 1 0 5 0;
+#X connect 2 0 0 0;
+#X connect 3 0 13 0;
+#X connect 4 0 10 0;
+#X connect 4 0 14 0;
+#X connect 5 0 4 0;
+#X connect 6 0 1 1;
+#X connect 9 0 1 0;
+#X connect 9 0 11 1;
+#X connect 9 0 12 1;
+#X connect 10 0 3 0;
+#X connect 11 0 8 0;
+#X connect 12 0 7 0;
+#X connect 13 0 11 0;
+#X connect 14 0 2 0;
+#X restore -228 114 pd generate~;
+#X text -232 24 Description:;
+#X obj 203 216 hsl 100 15 0 127 0 0 /dubdel/bpitch /dubdel/bpitch_
+bpitch 105 7 0 8 -262144 -1 -1 1689 1;
+#X obj 203 234 hsl 100 15 0 1 0 0 /dubdel/feedback /dubdel/feedback_
+feedback 105 7 0 8 -262144 -1 -1 3700 1;
+#X obj 203 253 hsl 100 15 0 1000 0 0 /dubdel/bq /dubdel/bq_ bq 105
+7 0 8 -262144 -1 -1 7750 1;
+#X obj 203 271 hsl 100 15 0 1000 0 0 /dubdel/basedur /dubdel/basedur_
+basedur 105 7 0 8 -262144 -1 -1 6850 1;
+#X obj 203 290 hsl 100 15 0 10 0 0 /dubdel/dell /dubdel/dell_ dell
+105 7 0 8 -262144 -1 -1 4100 1;
+#X obj 203 308 hsl 100 15 0 10 0 0 /dubdel/delr /dubdel/delr_ delr
+105 7 0 8 -262144 -1 -1 4900 1;
+#X text -154 20 dubdel;
+#X text 479 158 e_dubdel - beat synchronized pingpong or dub delay
+;
+#N canvas 537 164 740 697 REFERENCE 0;
+#X text 114 161 Argument 0: name for state saving (required);
+#X text 114 141 Summary: beat synchronized pingpong or dub delay;
+#X text 114 121 Name: e_dubdel;
+#X text 114 181 Inlet 0: left audio signal to apply effect on;
+#X text 114 201 Inlet 1: right audio signal to apply effect on;
+#X text 114 332 Outlet 0: left audio signal.;
+#X text 114 352 Outlet 1: right audio signal.;
+#X text 115 393 Description: e_dubdel is a pingpong delay line with
+a bandpass filter in the delay path. Left and right delay times are
+set using in reference to a base duration to ease beat synchronization.
+Just set the time of your beats and use the dell and delr methods to
+set beat divisions. The feedback is applied to both delay paths.;
+#X text 122 529 Tags: delay \, effect \, pingpong;
+#X text 114 371 Outlet 2: on "save" \, the current state is reported
+here.;
+#X text 114 221 Inlet 2: Many method messages. dry <x>: dry/wet mix
+\, 0=all dry. bq <freq>: frequency of bandpass filter in delay path.
+bpitch <pitch>: bandpass pitch in midi units (0-127). basedur <time>:
+reference delay duration in msec. dell <divisor>: delay divisor left
+\, actual delay will be basedur/dell. delr <divisor>: delay divisor
+right \, actual delay will be basedur/delr. feedback <amount>: delay
+feedback. save: report current settings to last outlet.;
+#X coords 0 -1 1 1 450 450 1 100 100;
+#X restore 474 181 pd REFERENCE;
+#X obj -230 158 mtl/dubdel~ /id dubdel;
+#X connect 8 0 9 0;
+#X connect 9 0 20 0;
+#X connect 9 1 20 1;
+#X connect 20 0 0 0;
+#X connect 20 1 0 1;

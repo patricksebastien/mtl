@@ -1,0 +1,114 @@
+#N canvas 0 0 1272 714 10;
+#X obj 46 658 outlet~;
+#X obj 106 658 outlet~;
+#X obj 1073 79 inlet params;
+#X obj 243 563 tof/param /wet 0 /g slider 0 1;
+#X obj 1073 125 print PARAM_NOTFOUND;
+#X obj 46 633 tof/crossfade~ 2;
+#X msg 280 593 \$1 5;
+#X obj 280 617 line~;
+#X obj 1073 101 tof/param route;
+#X obj 1078 10 b;
+#X obj 1079 39 tof/param gui;
+#X text 676 150 e_dubdel - beat synchronized pingpong or dub delay
+;
+#N canvas 537 164 740 697 REFERENCE 0;
+#X text 114 161 Argument 0: name for state saving (required);
+#X text 114 141 Summary: beat synchronized pingpong or dub delay;
+#X text 114 121 Name: e_dubdel;
+#X text 114 181 Inlet 0: left audio signal to apply effect on;
+#X text 114 201 Inlet 1: right audio signal to apply effect on;
+#X text 114 332 Outlet 0: left audio signal.;
+#X text 114 352 Outlet 1: right audio signal.;
+#X text 115 393 Description: e_dubdel is a pingpong delay line with
+a bandpass filter in the delay path. Left and right delay times are
+set using in reference to a base duration to ease beat synchronization.
+Just set the time of your beats and use the dell and delr methods to
+set beat divisions. The feedback is applied to both delay paths.;
+#X text 122 529 Tags: delay \, effect \, pingpong;
+#X text 114 371 Outlet 2: on "save" \, the current state is reported
+here.;
+#X text 114 221 Inlet 2: Many method messages. dry <x>: dry/wet mix
+\, 0=all dry. bq <freq>: frequency of bandpass filter in delay path.
+bpitch <pitch>: bandpass pitch in midi units (0-127). basedur <time>:
+reference delay duration in msec. dell <divisor>: delay divisor left
+\, actual delay will be basedur/dell. delr <divisor>: delay divisor
+right \, actual delay will be basedur/delr. feedback <amount>: delay
+feedback. save: report current settings to last outlet.;
+#X coords 0 -1 1 1 450 450 1 100 100;
+#X restore 687 175 pd REFERENCE;
+#X obj 328 192 mtof;
+#X obj 403 388 r \$0-basedur;
+#X obj 33 11 inlet~;
+#X obj 114 10 inlet~;
+#X obj 330 441 swap 1000;
+#X obj 152 438 swap 1000;
+#X obj 330 469 /;
+#X obj 119 475 /;
+#X floatatom 343 491 5 0 0 0 - - -;
+#X floatatom 131 497 5 0 0 0 - - -;
+#X obj 113 302 bp~ 5400 2;
+#X obj 469 320 bp~ 5400 2;
+#X obj 508 264 / 2;
+#X obj 153 249 / 2;
+#X text 538 264 because of 2 delaylines;
+#X obj 469 297 *~ 0.1;
+#X obj 114 279 *~ 0.1;
+#X obj 330 509 vd~ \$0-dubby-r;
+#X obj 119 514 vd~ \$0-dubby-l;
+#X obj 360 415 t b a;
+#X obj 192 412 t b a;
+#X obj 461 353 delwrite~ \$0-dubby-r 6000;
+#X obj 113 348 delwrite~ \$0-dubby-l 6000;
+#X obj 359 81 tof/param /bq 500 /g slider 0 1000;
+#X obj 270 18 tof/param /bpitch 64 /g slider 0 127;
+#X obj 304 48 tof/param /feedback 0 /g slider 0 1;
+#X obj 221 279 tof/param /basedur 500 /g slider 0 1000;
+#X obj 105 384 tof/param /dell 0 /g slider 0 10;
+#X obj 330 389 tof/param /delr 0 /g slider 0 10;
+#X connect 2 0 8 0;
+#X connect 3 0 6 0;
+#X connect 5 0 0 0;
+#X connect 5 1 1 0;
+#X connect 6 0 7 0;
+#X connect 7 0 5 4;
+#X connect 8 0 4 0;
+#X connect 9 0 10 0;
+#X connect 13 0 23 1;
+#X connect 13 0 24 1;
+#X connect 14 0 32 0;
+#X connect 15 0 35 0;
+#X connect 15 0 5 0;
+#X connect 16 0 34 0;
+#X connect 16 0 5 1;
+#X connect 17 0 19 0;
+#X connect 17 1 19 1;
+#X connect 18 0 20 0;
+#X connect 18 1 20 1;
+#X connect 19 0 21 0;
+#X connect 19 0 30 0;
+#X connect 20 0 22 0;
+#X connect 20 0 31 0;
+#X connect 23 0 35 0;
+#X connect 24 0 34 0;
+#X connect 25 0 28 1;
+#X connect 26 0 29 1;
+#X connect 28 0 24 0;
+#X connect 29 0 23 0;
+#X connect 30 0 29 0;
+#X connect 30 0 5 3;
+#X connect 31 0 28 0;
+#X connect 31 0 5 2;
+#X connect 32 0 17 0;
+#X connect 32 1 17 1;
+#X connect 33 0 18 0;
+#X connect 33 1 18 1;
+#X connect 36 0 24 2;
+#X connect 36 0 23 2;
+#X connect 37 0 13 0;
+#X connect 38 0 26 0;
+#X connect 38 0 25 0;
+#X connect 39 0 32 0;
+#X connect 39 0 33 0;
+#X connect 40 0 18 0;
+#X connect 41 0 17 0;
