@@ -1,0 +1,29 @@
+#N canvas 0 0 1272 714 10;
+#X obj -226 190 mtl/out~;
+#X text 544 264 tags: fx~;
+#X text 90 158 <-Click on the propeties menu to display params;
+#X obj 201 41 cnv 15 200 40 empty empty empty 20 12 0 14 -232576 -66577
+0;
+#X text 261 42 PARAM ENABLED;
+#X obj 212 222 cnv 15 200 20 empty empty /stereo-field-rotation/ 2
+12 0 8 -258401 -262144 0;
+#X obj 215 245 hsl 100 15 0 180 0 0 /stereo-field-rotation/width /stereo-field-rotation/width_
+width 105 7 0 8 -262144 -1 -1 5500 1;
+#X text 540 224 Description:;
+#X text 541 237 taken from music-dsp;
+#X text 544 251 by Michael Gruhn;
+#X text 616 223 Stereo-Width-Control;
+#X obj 236 61 tof/open_help tof/param;
+#X text 545 284 This work is hereby placed in the public domain for
+all purposes \, including use in commercial applications. 'width' is
+the stretch factor of the stereo field: width < 1: decrease in stereo
+width width = 1: no change width > 1: increase in stereo width width
+= 0: mono Code : // calculate scale coefficient coef_S = width*0.5
+\; // then do this per sample m = (in_left + in_right)*0.5 \; s = (in_right
+- in_left )*coef_S \; out_left = m - s \; out_right = m + s \;;
+#X obj -228 114 osc~ 250;
+#X obj -231 158 mtl/stereo-field-rotation~ /id stereo-field-rotation
+;
+#X connect 13 0 14 0;
+#X connect 14 0 0 0;
+#X connect 14 1 0 1;
