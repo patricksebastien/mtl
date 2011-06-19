@@ -11,7 +11,7 @@
 #X text 788 145 tags: fx~;
 #X obj 771 69 tof/open_help tof/param;
 #X obj 463 387 hsl 100 15 0 1 0 0 /doubling/wet /doubling/wet_ wet
-105 7 0 8 -262144 -1 -1 6400 1;
+105 7 0 8 -262144 -1 -1 0 1;
 #X obj 137 54 openpanel;
 #X obj 137 34 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
 -1;
@@ -22,13 +22,12 @@
 file);
 #X obj 34 25 bng 30 250 50 0 empty empty empty 0 -6 0 10 -258113 -1
 -1;
-#X obj 70 208 atl/doubling~ /id doubling;
 #X obj 463 409 hsl 100 15 1 200 0 0 /doubling/amplitude /doubling/amplitude_
-amplitude 105 7 0 8 -262144 -1 -1 9200 1;
+amplitude 105 7 0 8 -262144 -1 -1 0 1;
 #X obj 464 429 hsl 100 15 0 1 0 0 /doubling/frequency /doubling/frequency_
-frequency 105 7 0 8 -262144 -1 -1 8200 1;
+frequency 105 7 0 8 -262144 -1 -1 0 1;
 #X obj 463 450 hsl 100 15 1 5 0 0 /doubling/offset /doubling/offset_
-offset 105 7 0 8 -262144 -1 -1 1100 1;
+offset 105 7 0 8 -262144 -1 -1 0 1;
 #X obj 912 113 cnv 15 250 536 empty empty empty 20 12 0 14 -228992
 -66577 0;
 #X text 915 139 RIF dont on fait varier le retard \,;
@@ -59,15 +58,16 @@ offset 105 7 0 8 -262144 -1 -1 1100 1;
 #X text 832 199 .;
 #X text 793 120 doubling;
 #X obj 81 146 mtl/player~ 0;
-#X obj 161 110 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 1
+#X obj 161 110 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
 1;
 #X text 179 113 Loop (stops looping when the end is reached);
+#X obj 70 208 mtl/doubling~ /id doubling;
 #X connect 9 0 12 0;
 #X connect 10 0 9 0;
-#X connect 12 0 47 0;
-#X connect 14 0 47 0;
-#X connect 15 0 1 0;
-#X connect 15 1 1 1;
-#X connect 47 0 15 0;
-#X connect 47 0 15 1;
-#X connect 48 0 47 1;
+#X connect 12 0 46 0;
+#X connect 14 0 46 0;
+#X connect 46 0 49 0;
+#X connect 46 0 49 1;
+#X connect 47 0 46 1;
+#X connect 49 0 1 0;
+#X connect 49 1 1 1;
