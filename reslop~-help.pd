@@ -1,0 +1,67 @@
+#N canvas 0 1 1272 692 10;
+#X obj 1 -21 cnv 15 690 30 empty empty reslop~ 2 12 1 14 -233017 -66577
+0;
+#X obj 51 374 mtl/out~;
+#X obj 513 139 cnv 15 200 40 empty empty empty 20 12 0 14 -232576 -66577
+0;
+#X text 573 140 PARAM ENABLED;
+#X obj 269 398 cnv 15 200 20 empty empty /reslop/ 2 12 0 8 -258401
+-262144 0;
+#X text 218 326 <-Click on the propeties menu to display params;
+#X text 509 221 tags: fx~;
+#X obj 512 162 tof/open_help tof/param;
+#X obj 270 428 hsl 100 15 0 1 0 0 /reslop/wet /reslop/wet_ wet 105
+7 0 8 -262144 -1 -1 0 1;
+#X text 553 275 .;
+#X obj 271 448 hsl 100 15 0 100 0 0 /reslop/frequency /reslop/frequency_
+frequency 105 7 0 8 -262144 -1 -1 0 1;
+#X obj 271 468 hsl 100 15 0 100 0 0 /reslop/q /reslop/q_ q 105 7 0
+8 -262144 -1 -1 0 1;
+#X text 508 200 reslop;
+#X text 509 243 Rjdj;
+#X obj 75 169 vline~;
+#X obj 93 231 noise~;
+#X obj 75 253 *~;
+#X obj 75 96 bng 24 250 50 0 empty empty empty 17 7 0 10 -4034 -1 -1
+;
+#X msg 75 134 0.8 10 \, 0 20 10;
+#X obj 314 74 vsl 15 100 0 100 0 0 empty empty q_(peakiness) 0 -9 1
+10 -262144 -1 -1 0 1;
+#X floatatom 314 211 5 0 0 0 - - -;
+#X obj 216 47 vsl 15 128 0 100 0 0 empty empty lowpass_frequency 0
+-9 1 10 -262144 -1 -1 0 1;
+#X floatatom 216 214 8 0 0 0 - - -;
+#X msg 314 237 /q \$1;
+#N canvas 0 90 827 710 REFERENCE 0;
+#X text 114 121 Name: e_reslop;
+#X text 114 141 Summary: Resonant lowpass filter.;
+#X text 114 244 Inlet 0: Audio input signal;
+#X text 114 314 Outlet 0: Audio output signal;
+#X text 114 264 Inlet 1: Control messages - 'freq <float>' Cut-off
+frequency \, 'q <float>' Q \, 'dry <float>' Dry/Wet mix (dry = 0).
+;
+#X text 114 354 Description: A resonant lowpass filter with variable
+cut-off frequency \, q and mix level.;
+#X text 114 524 Tags: Audio \, Filter;
+#X text 114 181 Argument 1: <symbol> Unique id - must be different
+to any other instances of the object.;
+#X text 113 164 Argument 0: <float> Default frequency;
+#X text 35 169 .;
+#X coords 0 -1 1 1 450 450 1 100 100;
+#X restore 769 114 pd REFERENCE;
+#X msg 216 239 /frequency \$1;
+#X obj 50 327 mtl/reslop~ 2000 /id reslop;
+#X connect 14 0 16 0;
+#X connect 15 0 16 1;
+#X connect 16 0 26 0;
+#X connect 16 0 26 1;
+#X connect 17 0 18 0;
+#X connect 18 0 14 0;
+#X connect 19 0 20 0;
+#X connect 20 0 23 0;
+#X connect 21 0 22 0;
+#X connect 22 0 25 0;
+#X connect 23 0 26 2;
+#X connect 25 0 26 2;
+#X connect 26 0 1 0;
+#X connect 26 1 1 1;

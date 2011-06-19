@@ -1,0 +1,128 @@
+#N canvas 0 0 1272 685 10;
+#X obj 135 474 outlet~;
+#X obj 184 474 outlet~;
+#X obj 159 282 tof/crossfade~ 2;
+#X obj 1019 221 inlet params;
+#X obj 1019 267 print PARAM_NOTFOUND;
+#X obj 629 95 tof/param /wet 0 /g slider 0 1;
+#X obj 326 251 line~;
+#X msg 326 230 \$1 5;
+#X obj 1019 243 tof/param route;
+#X obj 1012 298 b;
+#X obj 1013 327 tof/param gui;
+#X obj 119 71 inlet~;
+#X obj 165 71 inlet~;
+#N canvas 0 0 1272 714 reslop 0;
+#X obj 127 50 inlet~;
+#X obj 219 177 vcf~ 10;
+#X obj 265 264 * 1;
+#X obj 265 204 * 1;
+#X obj 265 324 * 1;
+#N canvas 172 83 586 377 LICENSE-GPL 0;
+#X text 57 88 This program is free software: you can redistribute it
+and/or modify it under the terms of the GNU General Public License
+as published by the Free Software Foundation \, either version 3 of
+the License \, or (at your option) any later version.;
+#X text 58 168 This program is distributed in the hope that it will
+be useful \, but WITHOUT ANY WARRANTY \; without even the implied warranty
+of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU
+General Public License for more details.;
+#X text 57 261 You should have received a copy of the GNU General Public
+License along with this program. If not \, see <http://www.gnu.org/licenses/>.
+;
+#X text 61 54 Copyright (C) 2009 \, Reality Jockey Ltd.;
+#X text 60 325 See the file LICENSE.txt for the full license text.
+;
+#X restore 454 45 pd LICENSE-GPL;
+#X obj 310 70 t f f f f;
+#X obj 244 40 inlet freq;
+#X obj 346 35 inlet q;
+#X obj 217 417 outlet~;
+#X obj 219 234 lop~ \$1;
+#X obj 218 295 lop~ \$1;
+#X obj 219 354 lop~ \$1;
+#X obj 238 119 sig~ \$1;
+#X connect 0 0 1 0;
+#X connect 1 0 10 0;
+#X connect 2 0 11 1;
+#X connect 3 0 10 1;
+#X connect 4 0 12 1;
+#X connect 6 0 13 0;
+#X connect 6 1 3 0;
+#X connect 6 2 2 0;
+#X connect 6 3 4 0;
+#X connect 7 0 6 0;
+#X connect 8 0 1 2;
+#X connect 10 0 11 0;
+#X connect 11 0 12 0;
+#X connect 12 0 9 0;
+#X connect 13 0 1 1;
+#X restore 200 171 pd reslop;
+#X obj 240 21 tof/param /frequency 0 /g slider 0 100;
+#X obj 392 66 tof/param /q 0 /g slider 0 100;
+#N canvas 0 0 1272 714 reslop 0;
+#X obj 127 50 inlet~;
+#X obj 219 177 vcf~ 10;
+#X obj 265 264 * 1;
+#X obj 265 204 * 1;
+#X obj 265 324 * 1;
+#N canvas 172 83 586 377 LICENSE-GPL 0;
+#X text 57 88 This program is free software: you can redistribute it
+and/or modify it under the terms of the GNU General Public License
+as published by the Free Software Foundation \, either version 3 of
+the License \, or (at your option) any later version.;
+#X text 58 168 This program is distributed in the hope that it will
+be useful \, but WITHOUT ANY WARRANTY \; without even the implied warranty
+of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU
+General Public License for more details.;
+#X text 57 261 You should have received a copy of the GNU General Public
+License along with this program. If not \, see <http://www.gnu.org/licenses/>.
+;
+#X text 61 54 Copyright (C) 2009 \, Reality Jockey Ltd.;
+#X text 60 325 See the file LICENSE.txt for the full license text.
+;
+#X restore 454 45 pd LICENSE-GPL;
+#X obj 310 70 t f f f f;
+#X obj 244 40 inlet freq;
+#X obj 346 35 inlet q;
+#X obj 217 417 outlet~;
+#X obj 242 120 sig~ \$1;
+#X obj 219 234 lop~ \$1;
+#X obj 219 294 lop~ \$1;
+#X obj 217 355 lop~ \$1;
+#X connect 0 0 1 0;
+#X connect 1 0 11 0;
+#X connect 2 0 12 1;
+#X connect 3 0 11 1;
+#X connect 4 0 13 1;
+#X connect 6 0 10 0;
+#X connect 6 1 3 0;
+#X connect 6 2 2 0;
+#X connect 6 3 4 0;
+#X connect 7 0 6 0;
+#X connect 8 0 1 2;
+#X connect 10 0 1 1;
+#X connect 11 0 12 0;
+#X connect 12 0 13 0;
+#X connect 13 0 9 0;
+#X restore 281 173 pd reslop;
+#X obj 277 69 mtof;
+#X connect 2 0 0 0;
+#X connect 2 1 1 0;
+#X connect 3 0 8 0;
+#X connect 5 0 7 0;
+#X connect 6 0 2 4;
+#X connect 7 0 6 0;
+#X connect 8 0 4 0;
+#X connect 9 0 10 0;
+#X connect 11 0 2 0;
+#X connect 11 0 13 0;
+#X connect 12 0 2 1;
+#X connect 12 0 16 0;
+#X connect 13 0 2 2;
+#X connect 14 0 17 0;
+#X connect 15 0 13 2;
+#X connect 15 0 16 2;
+#X connect 16 0 2 3;
+#X connect 17 0 16 1;
+#X connect 17 0 13 1;
