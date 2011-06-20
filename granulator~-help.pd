@@ -1,0 +1,151 @@
+#N canvas 0 1 1251 692 10;
+#X obj -138 -25 cnv 15 690 30 empty empty granulator~ 2 12 1 14 -233017
+-66577 0;
+#X obj -134 119 mtl/out~;
+#X obj 332 113 cnv 15 200 40 empty empty empty 20 12 0 14 -232576 -66577
+0;
+#X text 354 117 PARAM ENABLED;
+#X obj 51 139 cnv 15 200 20 empty empty /granulator/ 2 12 0 8 -258401
+-262144 0;
+#X text 54 71 <-Click on the propeties menu to display params;
+#X text 623 89 tags: fx~;
+#X obj 331 136 tof/open_help tof/param;
+#X obj 54 165 hsl 100 15 0 1 0 0 /granulator/wet /granulator/wet_ wet
+105 7 0 8 -262144 -1 -1 9900 1;
+#X text 689 -10 .;
+#X obj 54 186 hsl 100 15 1 100 0 0 /granulator/ctr-amp /granulator/ctr-amp_
+amp 105 7 0 8 -262144 -1 -1 7900 1;
+#X obj 53 206 hsl 100 15 1 100 0 0 /granulator/rng-amp /granulator/rng-amp_
+rng_amp 105 7 0 8 -262144 -1 -1 0 1;
+#X obj 54 225 hsl 100 15 0 100 0 0 /granulator/ctr-pan /granulator/ctr-pan_
+pan 105 7 0 8 -262144 -1 -1 9900 1;
+#X obj 53 245 hsl 100 15 0 100 0 0 /granulator/rng-pan /granulator/rng-pan_
+rng_pan 105 7 0 8 -262144 -1 -1 0 1;
+#X obj 53 264 hsl 100 15 -1200 1200 0 0 /granulator/ctr-trn /granulator/ctr-trn_
+trn 105 7 0 8 -262144 -1 -1 4950 1;
+#X obj 52 284 hsl 100 15 -1200 1200 0 0 /granulator/rng-trn /granulator/rng-trn_
+rng_trn 105 7 0 8 -262144 -1 -1 4950 1;
+#X obj 52 304 hsl 100 15 10 500 0 0 /granulator/ctr-dur /granulator/ctr-dur_
+dur 105 7 0 8 -262144 -1 -1 0 1;
+#X obj 51 324 hsl 100 15 10 500 0 0 /granulator/rng-dur /granulator/rng-dur_
+rng_dur 105 7 0 8 -262144 -1 -1 0 1;
+#X obj 51 345 hsl 100 15 5 500 0 0 /granulator/ctr-iot /granulator/ctr-iot_
+iot 105 7 0 8 -262144 -1 -1 0 1;
+#X obj 51 365 hsl 100 15 5 500 0 0 /granulator/rng-iot /granulator/rng-iot_
+rng_iot 105 7 0 8 -262144 -1 -1 0 1;
+#X obj 51 385 hsl 100 15 2 98 0 0 /granulator/ctr-shp /granulator/ctr-shp_
+shp 105 7 0 8 -262144 -1 -1 1856 1;
+#X obj 51 405 hsl 100 15 2 98 0 0 /granulator/rng-shp /granulator/rng-shp_
+rng_shp 105 7 0 8 -262144 -1 -1 0 1;
+#X obj 51 425 hsl 100 15 2 98 0 0 /granulator/ctr-skw /granulator/ctr-skw_
+skw 105 7 0 8 -262144 -1 -1 1856 1;
+#X obj 51 445 hsl 100 15 2 98 0 0 /granulator/rng-skw /granulator/rng-skw_
+rng_skw 105 7 0 8 -262144 -1 -1 0 1;
+#X obj 50 466 hsl 100 15 0.1 8000 0 0 /granulator/ctr-dlt /granulator/ctr-dlt_
+dlt 105 7 0 8 -262144 -1 -1 0 1;
+#X obj 50 486 hsl 100 15 0.1 8000 0 0 /granulator/rng-dlt /granulator/rng-dlt_
+rng_dlt 105 7 0 8 -262144 -1 -1 0 1;
+#X obj 51 506 hsl 100 15 0 95 0 0 /granulator/fb-lvl /granulator/fb-lvl_
+feeback_level 105 7 0 8 -262144 -1 -1 0 1;
+#X text 621 -20 dlgranulator~;
+#X text 620 9 with a three-stage line segment envelope;
+#X text 620 23 transposition in cents;
+#X text 621 36 iot = interonset time;
+#X text 623 -5 a variable-length delay-line granulator after Ross Bencina
+;
+#X text 622 49 multiple instances possible - try cascading them;
+#X text 722 -20 by david golightly 2/2005;
+#X text 625 75 pulse-train synthesis;
+#X text 624 63 extremely short durs & iots (< 4 ms) result in;
+#X text 260 225 graincloud;
+#X text 252 335 pulsetrain;
+#X text 246 451 pitchshifter w/artifacts;
+#X obj 50 526 hsl 100 15 1 16 0 0 /granulator/nvoices /granulator/nvoices_
+voices 105 7 0 8 -262144 -1 -1 9900 1;
+#X obj 255 317 s preset;
+#X obj 37 43 r preset;
+#X msg 255 242 /ctr-amp 20 \, /rng-amp 50 \, /ctr-pan 0 \, /rng-pan
+100 \, /ctr-trn 0 \, /rng-trn 4800 \, /ctr-dur 50 \, /rng-dur 20 \,
+/ctr-iot 10 \, /rng-iot 20 \, /ctr-shp 20 \, /rng-shp 10 \, /ctr-skw
+20 \, /rng-skw 10 \, /ctr-dlt 0.1 \, /rng-dlt 0.1 \, /fb-lvl 0 \, /nvoices
+10;
+#X obj 251 430 s preset;
+#X msg 250 354 /ctr-amp 80 \, /rng-amp 0.1 \, /ctr-pan 500 \, /rng-pan
+0 \, /ctr-trn 0 \, /rng-trn 0 \, /ctr-dur 5.677 \, /rng-dur 0.01 \,
+/ctr-iot 2.292 \, /rng-iot 0.01 \, /ctr-shp 20 \, /rng-shp 0 \, /ctr-skw
+20 \, /rng-skw 0 \, /ctr-dlt 0.1 \, /rng-dlt 0.1 \, /fb-lvl 0 \, /nvoices
+16;
+#X obj 248 544 s preset;
+#X msg 248 468 /ctr-amp 80 \, /rng-amp 0.1 \, /ctr-pan 50 \, /rng-pan
+0 \, /ctr-trn 1200 \, /rng-trn 0 \, /ctr-dur 20 \, /rng-dur 0.1 \,
+/ctr-iot 6.25 \, /rng-iot 0.1 \, /ctr-shp 1 \, /rng-shp 1 \, /ctr-skw
+50 \, /rng-skw 1 \, /ctr-dlt 0.1 \, /rng-dlt 0.1 \, /fb-lvl 0 \, /nvoices
+16;
+#X obj -133 18 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 1
+1;
+#N canvas 5 185 450 300 generate~ 0;
+#X obj 32 213 osc~ 200;
+#X obj 32 89 metro 400;
+#X obj 32 175 mtof;
+#X obj 104 195 mtof;
+#X obj 32 132 + 20;
+#X obj 32 111 random 70;
+#X floatatom 83 69 5 0 0 0 - - -;
+#X obj 32 261 outlet~;
+#X obj 103 261 outlet~;
+#X obj 30 14 inlet;
+#X obj 104 175 mtl/closestNote 0 2 4 7 9;
+#X obj 104 234 *~;
+#X obj 31 234 *~;
+#X obj 104 214 osc~ 100;
+#X obj 32 155 mtl/closestNote 0 2 4 7 9;
+#X connect 0 0 12 0;
+#X connect 1 0 5 0;
+#X connect 2 0 0 0;
+#X connect 3 0 13 0;
+#X connect 4 0 10 0;
+#X connect 4 0 14 0;
+#X connect 5 0 4 0;
+#X connect 6 0 1 1;
+#X connect 9 0 1 0;
+#X connect 9 0 11 1;
+#X connect 9 0 12 1;
+#X connect 10 0 3 0;
+#X connect 11 0 8 0;
+#X connect 12 0 7 0;
+#X connect 13 0 11 0;
+#X connect 14 0 2 0;
+#X restore -126 45 pd generate~;
+#X text 626 108 granulator~ patch for puredata v 0.62 by david golightly
+2/2005 contains: the patch: dlgranulator~.pd abstractions used by the
+patch: bounded_rand.pd grainpiston~.pd davigoli@hotmail.com how to
+use: granulator~ is a delay-line granulator which enables granulation
+of incoming sounds in realtime by altering the following parameters:
+amp pan trn - transposition of grain in cents dur - duration of grain
+in ms iot - interonset time (time between successive grains) in ms
+The envelope is a 3-stage line segment (ASR) using cosine smoothing
+and controlled by the following parameters: shp - % of the envelope
+used by the S portion skw - % of time (A+R) used by A. Higher values
+of skw will have an upwards ramp /| shape \, and lower values will
+have a sharper attack | An envelope with shp=1 and skw=50 is a quasi-gaussian
+shape. dlt - Point in the delay line from which grains are read \,
+up to 8000 ms. fb - feedback level (amount of dlgranulator's output
+which is fed back into the delay line). voices - highest number of
+possible simultaneous grains (currently max. 16). The actual number
+of grains is determined by dur & iot as well. each parameter (except
+fb & voices) is controlled by 2 faders: the left fader controls the
+center value \, and the right fader controls the range of possible
+values. Each parameter is chosen at random from within those boundaries.
+You can send messages to change parameters by wiring a message box
+to the left outlet of the patch. See the demo (granulator.pd) for example
+parameter change messages. PLEASE feel free to e-mail me with questions
+or problems!omment;
+#X obj -134 72 mtl/granulator~ /id granulator;
+#X connect 41 0 50 1;
+#X connect 42 0 40 0;
+#X connect 44 0 43 0;
+#X connect 46 0 45 0;
+#X connect 47 0 48 0;
+#X connect 48 0 50 0;
+#X connect 50 0 1 0;
+#X connect 50 1 1 1;
