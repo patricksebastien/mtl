@@ -1,0 +1,31 @@
+#N canvas 0 1 1272 692 10;
+#X obj 1 -21 cnv 15 690 30 empty empty automatic-gain-control~ 2 12
+1 14 -233017 -66577 0;
+#X obj 70 255 mtl/out~;
+#X obj 122 427 cnv 15 200 40 empty empty empty 20 12 0 14 -232576 -66577
+0;
+#X text 182 428 PARAM ENABLED;
+#X obj 300 255 cnv 15 200 20 empty empty /automatic-gain-control/ 2
+12 0 8 -258401 -262144 0;
+#X text 298 213 <-Click on the propeties menu to display params;
+#X obj 121 450 tof/open_help tof/param;
+#X obj 81 146 *~ 4;
+#X obj 51 89 osc~ 250;
+#X obj 153 17 vsl 15 128 0 10 0 0 empty empty empty 0 -9 0 10 -262144
+-1 -1 0 1;
+#X text 734 145 automatic-gain-control;
+#X text 735 155 comment;
+#X text 735 167 tags: fx~;
+#X text 734 178 author = Rjdj;
+#X text 731 200 Summary: automatic gain control for RjDj;
+#X text 727 215 Inlet 0: signal in;
+#X text 727 232 Outlet 0: signal out;
+#X text 728 248 Description: e_agc tries to automatically figure out
+the best gain settings for the RjDj device you're running.;
+#X obj 70 208 mtl/automatic-gain-control~ /id agc;
+#X connect 7 0 18 0;
+#X connect 7 0 18 1;
+#X connect 8 0 7 0;
+#X connect 9 0 7 1;
+#X connect 18 0 1 0;
+#X connect 18 1 1 1;
