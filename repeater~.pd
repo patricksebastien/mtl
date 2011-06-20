@@ -1,0 +1,173 @@
+#N canvas 0 0 1272 685 10;
+#X obj 129 341 outlet~;
+#X obj 178 341 outlet~;
+#X obj 139 270 tof/crossfade~ 2;
+#X obj 1019 221 inlet params;
+#X obj 1019 267 print PARAM_NOTFOUND;
+#X obj 629 95 tof/param /wet 0 /g slider 0 1;
+#X obj 508 244 line~;
+#X msg 508 223 \$1 5;
+#X obj 1019 243 tof/param route;
+#X obj 1012 298 b;
+#X obj 1013 327 tof/param gui;
+#X obj 86 25 inlet~;
+#X obj 132 25 inlet~;
+#N canvas 0 0 1272 714 repeater 0;
+#X obj 162 188 inlet~;
+#X obj 224 333 *~;
+#X obj 242 309 vline~;
+#X msg 243 286 1 10 \, 0 10 \$1;
+#X obj 330 495 *~;
+#X obj 348 470 vline~;
+#X obj 349 309 pack 200 1;
+#X obj 330 522 delwrite~ \$0-del 1000;
+#X obj 328 342 delread~ \$0-del;
+#X msg 349 446 0 \, \$2 10 \$1;
+#X obj 384 150 min 1;
+#X obj 385 170 max 0;
+#X msg 526 518 0 10;
+#X obj 481 405 * 0;
+#X obj 526 498 del;
+#X obj 526 476 t b f;
+#X obj 481 425 moses 1;
+#X obj 340 234 t f f;
+#X obj 498 384 - 1;
+#N canvas 172 83 586 377 LICENSE-GPL 0;
+#X text 57 88 This program is free software: you can redistribute it
+and/or modify it under the terms of the GNU General Public License
+as published by the Free Software Foundation \, either version 3 of
+the License \, or (at your option) any later version.;
+#X text 58 168 This program is distributed in the hope that it will
+be useful \, but WITHOUT ANY WARRANTY \; without even the implied warranty
+of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU
+General Public License for more details.;
+#X text 57 261 You should have received a copy of the GNU General Public
+License along with this program. If not \, see <http://www.gnu.org/licenses/>.
+;
+#X text 61 54 Copyright (C) 2009 \, Reality Jockey Ltd.;
+#X text 60 325 See the file LICENSE.txt for the full license text.
+;
+#X restore 542 29 pd LICENSE-GPL;
+#X obj 146 537 outlet~;
+#X obj 264 140 inlet float;
+#X obj 380 110 inlet feedback;
+#X obj 488 124 inlet num;
+#X connect 0 0 1 0;
+#X connect 1 0 7 0;
+#X connect 1 0 20 0;
+#X connect 2 0 1 1;
+#X connect 3 0 2 0;
+#X connect 4 0 7 0;
+#X connect 5 0 4 1;
+#X connect 6 0 9 0;
+#X connect 8 0 4 0;
+#X connect 8 0 20 0;
+#X connect 9 0 5 0;
+#X connect 10 0 11 0;
+#X connect 11 0 6 1;
+#X connect 12 0 5 0;
+#X connect 13 0 16 0;
+#X connect 14 0 12 0;
+#X connect 15 0 14 0;
+#X connect 15 1 14 1;
+#X connect 16 1 15 0;
+#X connect 17 0 13 0;
+#X connect 17 1 6 0;
+#X connect 18 0 13 1;
+#X connect 21 0 3 0;
+#X connect 21 0 8 0;
+#X connect 21 0 17 0;
+#X connect 22 0 10 0;
+#X connect 23 0 18 0;
+#X restore 217 176 pd repeater;
+#N canvas 0 0 1272 714 repeater 0;
+#X obj 162 188 inlet~;
+#X obj 224 333 *~;
+#X obj 242 309 vline~;
+#X msg 243 286 1 10 \, 0 10 \$1;
+#X obj 330 495 *~;
+#X obj 348 470 vline~;
+#X obj 349 309 pack 200 1;
+#X obj 330 522 delwrite~ \$0-del 1000;
+#X obj 328 342 delread~ \$0-del;
+#X msg 349 446 0 \, \$2 10 \$1;
+#X obj 384 150 min 1;
+#X obj 385 170 max 0;
+#X msg 526 518 0 10;
+#X obj 481 405 * 0;
+#X obj 526 498 del;
+#X obj 526 476 t b f;
+#X obj 481 425 moses 1;
+#X obj 340 234 t f f;
+#X obj 498 384 - 1;
+#N canvas 172 83 586 377 LICENSE-GPL 0;
+#X text 57 88 This program is free software: you can redistribute it
+and/or modify it under the terms of the GNU General Public License
+as published by the Free Software Foundation \, either version 3 of
+the License \, or (at your option) any later version.;
+#X text 58 168 This program is distributed in the hope that it will
+be useful \, but WITHOUT ANY WARRANTY \; without even the implied warranty
+of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU
+General Public License for more details.;
+#X text 57 261 You should have received a copy of the GNU General Public
+License along with this program. If not \, see <http://www.gnu.org/licenses/>.
+;
+#X text 61 54 Copyright (C) 2009 \, Reality Jockey Ltd.;
+#X text 60 325 See the file LICENSE.txt for the full license text.
+;
+#X restore 542 29 pd LICENSE-GPL;
+#X obj 146 537 outlet~;
+#X obj 264 140 inlet float;
+#X obj 380 110 inlet feedback;
+#X obj 488 124 inlet num;
+#X connect 0 0 1 0;
+#X connect 1 0 7 0;
+#X connect 1 0 20 0;
+#X connect 2 0 1 1;
+#X connect 3 0 2 0;
+#X connect 4 0 7 0;
+#X connect 5 0 4 1;
+#X connect 6 0 9 0;
+#X connect 8 0 4 0;
+#X connect 8 0 20 0;
+#X connect 9 0 5 0;
+#X connect 10 0 11 0;
+#X connect 11 0 6 1;
+#X connect 12 0 5 0;
+#X connect 13 0 16 0;
+#X connect 14 0 12 0;
+#X connect 15 0 14 0;
+#X connect 15 1 14 1;
+#X connect 16 1 15 0;
+#X connect 17 0 13 0;
+#X connect 17 1 6 0;
+#X connect 18 0 13 1;
+#X connect 21 0 3 0;
+#X connect 21 0 8 0;
+#X connect 21 0 17 0;
+#X connect 22 0 10 0;
+#X connect 23 0 18 0;
+#X restore 312 180 pd repeater;
+#X obj 287 24 tof/param /float 0 /g slider 0 1000;
+#X obj 314 51 tof/param /feedback 0 /g slider 0 1;
+#X obj 339 73 tof/param /num 0 /g slider 0 64;
+#X connect 2 0 0 0;
+#X connect 2 1 1 0;
+#X connect 3 0 8 0;
+#X connect 5 0 7 0;
+#X connect 6 0 2 4;
+#X connect 7 0 6 0;
+#X connect 8 0 4 0;
+#X connect 9 0 10 0;
+#X connect 11 0 2 0;
+#X connect 11 0 13 0;
+#X connect 12 0 2 1;
+#X connect 12 0 14 0;
+#X connect 13 0 2 2;
+#X connect 14 0 2 3;
+#X connect 15 0 13 1;
+#X connect 15 0 14 1;
+#X connect 16 0 13 2;
+#X connect 16 0 14 2;
+#X connect 17 0 13 3;
+#X connect 17 0 14 3;

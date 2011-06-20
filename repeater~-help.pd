@@ -1,0 +1,50 @@
+#N canvas 0 1 1272 692 10;
+#X obj 1 -21 cnv 15 690 30 empty empty repeater~ 2 12 1 14 -233017
+-66577 0;
+#X obj 51 374 mtl/out~;
+#X obj 513 139 cnv 15 200 40 empty empty empty 20 12 0 14 -232576 -66577
+0;
+#X text 573 140 PARAM ENABLED;
+#X obj 269 398 cnv 15 200 20 empty empty /repeater/ 2 12 0 8 -258401
+-262144 0;
+#X text 226 326 <-Click on the propeties menu to display params;
+#X text 509 221 tags: fx~;
+#X obj 512 162 tof/open_help tof/param;
+#X obj 270 428 hsl 100 15 0 1 0 0 /repeater/wet /repeater/wet_ wet
+105 7 0 8 -262144 -1 -1 0 1;
+#X text 553 275 .;
+#X text 509 243 Rjdj;
+#X text 508 200 repeater;
+#X obj 270 449 hsl 100 15 0 1 0 0 /repeater/feedback /repeater/feedback_
+feedback 105 7 0 8 -262144 -1 -1 0 1;
+#X obj 270 470 hsl 100 15 0 1000 0 0 /repeater/float /repeater/float_
+float 105 7 0 8 -262144 -1 -1 0 1;
+#X obj 269 491 hsl 100 15 0 64 0 0 /repeater/num /repeater/num_ num
+105 7 0 8 -262144 -1 -1 0 1;
+#X obj 75 253 osc~ 250;
+#N canvas 161 72 722 672 REFERENCE 0;
+#X text 114 135 Summary: repeat a chunks of the incoming signal.;
+#X text 114 115 Name: e_repeater;
+#X text 114 155 Argument 0: name for state saving \, required.;
+#X text 113 174 Inlet 0: audio signal to repeat;
+#X text 112 274 Outlet 0: repeated audio signal.;
+#X text 112 198 Inlet 1: float: sets length of the chunk repeated in
+ms and triggers new recording \, maximung length is 1000 ms. feedback
+<float>: feedback level \, if 1 the chunk gets repeated endlessly.
+dry <float>: dry/wet control - dry signal is 1 \, all wet signal is
+0 (default). num <float>: number of repetitions \, default or 0 is
+endless.;
+#X text 112 302 Description: e_repeater samples up to 1 second of the
+incoming audio signal and repeats it as many times as specified with
+the "num" parameter. Each repetition is attenuated by the value of
+the "feedback" parameter.;
+#X text 114 578 Tags: delay \, repetition \, echo;
+#X coords 0 -1 1 1 450 500 1 100 100;
+#X restore 776 73 pd REFERENCE;
+#X text 778 39 e_repeater - repeat a chunks of the incoming signal.
+;
+#X obj 50 327 mtl/repeater~ /id repeater;
+#X connect 15 0 18 0;
+#X connect 15 0 18 1;
+#X connect 18 0 1 0;
+#X connect 18 1 1 1;
