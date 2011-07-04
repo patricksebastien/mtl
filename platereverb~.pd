@@ -16,7 +16,7 @@
 #X obj 509 93 inlet~;
 #X obj 504 380 outlet~;
 #X obj 595 383 outlet~;
-#N canvas 0 0 1272 714 input_diffusion 1;
+#N canvas 0 0 1272 714 input_diffusion 0;
 #X obj 30 60 inlet~;
 #X obj 29 295 outlet~;
 #N canvas 393 22 574 578 allpass 0;
@@ -223,7 +223,7 @@
 #X connect 7 0 4 1;
 #X connect 7 0 5 1;
 #X restore 510 269 pd input_diffusion;
-#N canvas 0 0 1272 714 reverberation_tank 0;
+#N canvas 0 0 1272 714 reverberation_tank 1;
 #X obj 532 153 inlet~;
 #X obj 413 240 +~;
 #X obj 840 257 +~;
@@ -598,11 +598,6 @@
 #X obj 71 42 tof/param /decay_diffusion1 1 /g slider 0 1;
 #X obj 65 169 tof/param /decay_diffusion2 1 /g slider 0 1;
 #X obj 60 403 tof/param /excursion 5 /g slider 0 5;
-#X obj 149 80 print decay_diffusion1;
-#X obj 113 231 print decay_diffusion1;
-#X obj 112 327 print damping;
-#X obj 116 477 print excursion;
-#X obj 648 261 print decay;
 #X connect 0 0 1 1;
 #X connect 0 0 2 0;
 #X connect 1 0 11 0;
@@ -625,15 +620,10 @@
 #X connect 23 0 10 1;
 #X connect 23 0 7 1;
 #X connect 23 0 8 1;
-#X connect 23 0 36 0;
 #X connect 28 0 26 0;
-#X connect 28 0 34 0;
 #X connect 29 0 24 0;
-#X connect 29 0 32 0;
 #X connect 30 0 25 0;
-#X connect 30 0 33 0;
 #X connect 31 0 27 0;
-#X connect 31 0 35 0;
 #X restore 510 299 pd reverberation_tank;
 #N canvas 0 0 1272 714 predelay 0;
 #X obj 97 19 inlet~;

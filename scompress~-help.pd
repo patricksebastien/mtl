@@ -45,5 +45,6 @@ connect input signal to this inlet).;
 #X obj 70 208 mtl/scompress~ /id scompress;
 #X connect 16 0 17 0;
 #X connect 16 0 17 1;
+#X connect 16 0 17 2;
 #X connect 17 0 1 0;
 #X connect 17 1 1 1;

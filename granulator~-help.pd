@@ -11,14 +11,14 @@
 #X text 623 89 tags: fx~;
 #X obj 331 136 tof/open_help tof/param;
 #X obj 54 165 hsl 100 15 0 1 0 0 /granulator/wet /granulator/wet_ wet
-105 7 0 8 -262144 -1 -1 9900 1;
+105 7 0 8 -262144 -1 -1 0 1;
 #X text 689 -10 .;
 #X obj 54 186 hsl 100 15 1 100 0 0 /granulator/ctr-amp /granulator/ctr-amp_
-amp 105 7 0 8 -262144 -1 -1 7900 1;
+amp 105 7 0 8 -262144 -1 -1 0 1;
 #X obj 53 206 hsl 100 15 1 100 0 0 /granulator/rng-amp /granulator/rng-amp_
 rng_amp 105 7 0 8 -262144 -1 -1 0 1;
 #X obj 54 225 hsl 100 15 0 100 0 0 /granulator/ctr-pan /granulator/ctr-pan_
-pan 105 7 0 8 -262144 -1 -1 9900 1;
+pan 105 7 0 8 -262144 -1 -1 0 1;
 #X obj 53 245 hsl 100 15 0 100 0 0 /granulator/rng-pan /granulator/rng-pan_
 rng_pan 105 7 0 8 -262144 -1 -1 0 1;
 #X obj 53 264 hsl 100 15 -1200 1200 0 0 /granulator/ctr-trn /granulator/ctr-trn_
@@ -34,11 +34,11 @@ iot 105 7 0 8 -262144 -1 -1 0 1;
 #X obj 51 365 hsl 100 15 5 500 0 0 /granulator/rng-iot /granulator/rng-iot_
 rng_iot 105 7 0 8 -262144 -1 -1 0 1;
 #X obj 51 385 hsl 100 15 2 98 0 0 /granulator/ctr-shp /granulator/ctr-shp_
-shp 105 7 0 8 -262144 -1 -1 1856 1;
+shp 105 7 0 8 -262144 -1 -1 0 1;
 #X obj 51 405 hsl 100 15 2 98 0 0 /granulator/rng-shp /granulator/rng-shp_
 rng_shp 105 7 0 8 -262144 -1 -1 0 1;
 #X obj 51 425 hsl 100 15 2 98 0 0 /granulator/ctr-skw /granulator/ctr-skw_
-skw 105 7 0 8 -262144 -1 -1 1856 1;
+skw 105 7 0 8 -262144 -1 -1 0 1;
 #X obj 51 445 hsl 100 15 2 98 0 0 /granulator/rng-skw /granulator/rng-skw_
 rng_skw 105 7 0 8 -262144 -1 -1 0 1;
 #X obj 50 466 hsl 100 15 0.1 8000 0 0 /granulator/ctr-dlt /granulator/ctr-dlt_
@@ -61,7 +61,7 @@ feeback_level 105 7 0 8 -262144 -1 -1 0 1;
 #X text 252 335 pulsetrain;
 #X text 246 451 pitchshifter w/artifacts;
 #X obj 50 526 hsl 100 15 1 16 0 0 /granulator/nvoices /granulator/nvoices_
-voices 105 7 0 8 -262144 -1 -1 9900 1;
+voices 105 7 0 8 -262144 -1 -1 0 1;
 #X obj 255 317 s preset;
 #X obj 37 43 r preset;
 #X msg 255 242 /ctr-amp 20 \, /rng-amp 50 \, /ctr-pan 0 \, /rng-pan
@@ -81,7 +81,7 @@ voices 105 7 0 8 -262144 -1 -1 9900 1;
 /ctr-iot 6.25 \, /rng-iot 0.1 \, /ctr-shp 1 \, /rng-shp 1 \, /ctr-skw
 50 \, /rng-skw 1 \, /ctr-dlt 0.1 \, /rng-dlt 0.1 \, /fb-lvl 0 \, /nvoices
 16;
-#X obj -133 18 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 1
+#X obj -133 18 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
 1;
 #N canvas 5 185 450 300 generate~ 0;
 #X obj 32 213 osc~ 200;
