@@ -1,0 +1,50 @@
+#N canvas 0 30 1358 659 10;
+#X text 12 7 c_lfo - message rate LFO with various waveforms;
+#N canvas 147 47 1101 659 REFERENCE 0;
+#X text 114 142 Summary: message rate LFO with various waveforms;
+#X text 114 121 Name: c_lfo;
+#X text 113 174 Argument 0: name (required!);
+#X text 113 195 Argument 1: freq;
+#X text 113 216 Argument 2: updates;
+#X text 113 237 Argument 3: waveform;
+#X text 113 258 Inlet 0: frequency;
+#X text 113 313 Outlet 0: message based LFO signal between 0 and 1
+;
+#X text 113 279 Inlet 1: messages: phase <f> \, updates <f> \, freq
+<f> \, on <f> \, waveform <symbol>;
+#X text 113 528 Tags: lfo oscillator messages;
+#X text 112 348 Description: c_lfo generates message oscillators in
+various waveforms. The first inlet accepts a float to set the frequency
+of the LFO. If the frequency is 0 \, the lfo will be turned off \,
+frequencies unequal to 0 will turn it on. To manually switch on or
+off the LFO \, send an "on 0/1" message to he second inlet. The second
+inlet also accepts other messages to change various internals. Supported
+waveforms are saw (default) \, square \, sine and tri (trigangle) waveforms.
+They all extend from 0 to 1 It's possible to set the update period
+in milliseconds by sendung "updates <num>" to the last inlet \, default
+is 10 msec. To set the phase of the LFO use a "phase <num>" message
+to the second inlet.;
+#X coords 0 -1 1 1 450 450 1 100 100;
+#X restore -407 73 pd REFERENCE;
+#X obj 253 143 cnv 15 200 20 empty empty /lfo/ 2 12 0 8 -258401 -262144
+0;
+#X obj 81 258 mtl/lfo /id lfo;
+#X obj 107 337 hsl 128 15 0 1 0 0 empty empty empty -2 -8 0 10 -262144
+-1 -1 9988 1;
+#X obj 255 173 tgl 15 0 /lfo/on /lfo/on_ on 17 7 0 10 -262144 -1 -1
+1 1;
+#X obj 258 192 hsl 128 15 1 1000 0 0 /lfo/frequency /lfo/frequency_
+frequency 135 10 0 10 -262144 -1 -1 814 1;
+#X obj 258 211 hsl 128 15 1 1000 0 0 /lfo/updates /lfo/updates_ updates
+135 10 0 10 -262144 -1 -1 0 1;
+#X obj 258 230 hsl 128 15 0 1 0 0 /lfo/phase /lfo/phase_ phase 135
+10 0 10 -262144 -1 -1 0 1;
+#X msg 110 201 /waveform saw;
+#X msg 110 178 /waveform tri;
+#X msg 110 155 /waveform sine;
+#X msg 110 222 /waveform square;
+#X connect 3 0 4 0;
+#X connect 9 0 3 0;
+#X connect 10 0 3 0;
+#X connect 11 0 3 0;
+#X connect 12 0 3 0;

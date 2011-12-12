@@ -1,0 +1,11 @@
+#N canvas 0 25 1016 684 10;
+#X obj 317 159 cnv 15 200 20 empty empty /and/ 2 12 0 8 -258401 -262144
+0;
+#X obj 317 187 tgl 15 0 /and/porte1 /and/porte1_ porte-1 17 7 0 10 -262144
+-1 -1 0 1;
+#X obj 317 206 tgl 15 0 /and/porte2 /and/porte2_ porte-2 17 7 0 10 -262144
+-1 -1 0 1;
+#X obj 72 290 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+1;
+#X obj 71 248 mtl/and /id and;
+#X connect 4 0 3 0;

@@ -1,0 +1,47 @@
+#N canvas 0 30 1366 663 10;
+#X text 979 91 hard.off@gmail.com 2008;
+#X text 914 69 rough pd re-creation of dfx 'buffer override' plugin
+;
+#X obj 505 261 mtl/buffery~ /id buffery;
+#X obj 505 296 mtl/out~;
+#X obj 821 240 hsl 100 15 0 1 0 0 /buffery/wet /buffery/wet_ wet 105
+7 0 8 -262144 -1 -1 9900 1;
+#X obj 819 207 cnv 15 200 20 empty empty /buffery/ 2 12 0 8 -258401
+-262144 0;
+#X obj 822 259 hsl 100 15 0 1 0 0 /buffery/xval /buffery/xval_ xval
+105 7 0 8 -262144 -1 -1 7800 1;
+#X obj 822 278 hsl 100 15 0 1 0 0 /buffery/yval /buffery/yval_ yval
+105 7 0 8 -262144 -1 -1 400 1;
+#X obj 819 299 tgl 15 0 /buffery/xsync /buffery/xsync_ xsync 17 7 0
+10 -262144 -1 -1 1 1;
+#X obj 819 320 tgl 15 0 /buffery/ysync /buffery/ysync_ ysync 17 7 0
+10 -262144 -1 -1 1 1;
+#X obj 819 340 tgl 15 0 /buffery/gate /buffery/gate_ gate 17 7 0 10
+-262144 -1 -1 1 1;
+#X obj 823 361 hsl 100 15 0 255 0 0 /buffery/bpm /buffery/bpm_ bpm
+105 7 0 8 -262144 -1 -1 6259 1;
+#X obj 819 389 bng 15 250 50 0 /buffery/click /buffery/click_ Syn-click
+17 7 0 10 -262144 -1 -1;
+#X obj 526 47 openpanel;
+#X obj 526 27 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+-1;
+#X text 547 26 You can load a sound file in the internal stereo tables
+;
+#X msg 525 68 read \$1;
+#X text 586 43 (send a bang afterwards to play the loaded/selected
+file);
+#X msg 509 157 bang;
+#X obj 524 226 mtl/player~ 1;
+#X obj 522 104 t b a;
+#X connect 2 0 3 0;
+#X connect 2 1 3 1;
+#X connect 13 0 16 0;
+#X connect 14 0 13 0;
+#X connect 16 0 20 0;
+#X connect 18 0 19 0;
+#X connect 19 0 2 0;
+#X connect 19 1 2 1;
+#X connect 19 4 12 0;
+#X connect 20 0 18 0;
+#X connect 20 1 19 0;
+#X coords 0 0 1 1 402 40 0;

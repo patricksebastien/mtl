@@ -1,0 +1,17 @@
+#N canvas 0 25 1016 659 10;
+#X obj 104 163 tof/param /porte 0 /g tgl;
+#X obj 84 200 != 1;
+#X obj 73 251 outlet non;
+#X obj 81 30 cnv 15 32 25 empty empty NON 4 12 0 14 -1 -262144 0;
+#X obj 79 122 inlet porte;
+#X obj 632 196 inlet params;
+#X obj 632 242 print PARAM_NOTFOUND;
+#X obj 632 218 tof/param route;
+#X obj 625 273 b;
+#X obj 626 302 tof/param gui;
+#X connect 0 0 1 0;
+#X connect 1 0 2 0;
+#X connect 4 0 1 0;
+#X connect 5 0 7 0;
+#X connect 7 0 6 0;
+#X connect 8 0 9 0;

@@ -1,0 +1,19 @@
+#N canvas 0 25 1272 659 10;
+#X obj 42 181 notein;
+#X obj 33 57 mtl/piano 1;
+#X obj 29 472 mtl/out~;
+#X obj 42 210 pack;
+#X text 437 560 updated for Pd version 0.39;
+#X obj 388 217 hsl 100 15 0 1 0 0 /detuned3Osc/detuneA /detuned3Osc/detuneA_
+detuneA 105 7 0 8 -262144 -1 -1 5800 1;
+#X obj 385 189 cnv 15 200 20 empty empty /detuned3Osc~/ 2 12 0 8 -258401
+-262144 0;
+#X obj 33 442 mtl/detuned3Osc~ /id detuned3Osc;
+#X obj 389 236 hsl 100 15 0 1 0 0 /detuned3Osc/detuneB /detuned3Osc/detuneB_
+detuneB 105 7 0 8 -262144 -1 -1 700 1;
+#X connect 0 0 3 0;
+#X connect 0 1 3 1;
+#X connect 1 0 7 0;
+#X connect 3 0 7 0;
+#X connect 7 0 2 0;
+#X connect 7 0 2 1;

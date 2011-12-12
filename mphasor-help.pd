@@ -1,0 +1,43 @@
+#N canvas 0 30 1358 659 10;
+#X obj 354 213 hsl 128 15 0 1 0 0 empty empty 0...1 10 7 1 10 -262144
+-1 -1 0 1;
+#X obj 297 265 timer;
+#X obj 297 243 t b b;
+#X floatatom 297 289 5 0 0 0 - - -;
+#X floatatom 351 177 5 0 0 0 - - -;
+#N canvas 550 144 695 621 REFERENCE 0;
+#X text 114 121 Name: c_mphasor;
+#X text 114 141 Summary: message rate phasor object;
+#X text 114 379 Tags: lfo \, oscillator \, messages;
+#X text 115 178 Argument 0: freq in Hz;
+#X text 115 198 Argument 1: update period (msec);
+#X text 115 297 Outlet 0: phasor messages;
+#X text 115 218 Inlet 0: float number sets frequency in Hz \, negative
+frequencies give falling ramp. on 0/1: switch on or off. - updates
+NUM: set update period in milliseconds (minimum 2ms);
+#X text 115 264 Inlet 1: set and output phase like in [phasor~]. Range
+is 0-1 \, values outside this are wrapped around.;
+#X text 115 329 Description: Generates a message rate sawtooth ramp
+between 0...1 with variable frequency and update period.;
+#X coords 0 -1 1 1 450 450 1 100 100;
+#X restore -195 63 pd REFERENCE;
+#X text -184 27 c_mphasor - message rate phasor object;
+#X text 358 417 c_mphasor can be used to make a sinewave LFO \, too.
+;
+#X obj 741 56 cnv 15 200 20 empty empty /mphasor/ 2 12 0 8 -258401
+-262144 0;
+#X obj 744 89 tgl 15 0 /mphasor/on /mphasor/on_ on 17 7 0 10 -262144
+-1 -1 0 1;
+#X obj 747 108 hsl 128 15 1 1000 0 0 /mphasor/frequency /mphasor/frequency_
+frequency 135 10 0 10 -262144 -1 -1 114 1;
+#X obj 747 127 hsl 128 15 1 1000 0 0 /mphasor/updates /mphasor/updates_
+updates 135 10 0 10 -262144 -1 -1 0 1;
+#X obj 747 146 hsl 128 15 0 1 0 0 /mphasor/phase /mphasor/phase_ phase
+135 10 0 10 -262144 -1 -1 0 1;
+#X obj 351 147 mtl/mphasor /id mphasor;
+#X connect 1 0 3 0;
+#X connect 2 0 1 0;
+#X connect 2 1 1 1;
+#X connect 4 0 0 0;
+#X connect 13 0 4 0;
+#X connect 13 0 2 0;

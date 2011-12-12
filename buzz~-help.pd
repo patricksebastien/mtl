@@ -1,0 +1,17 @@
+#N canvas 0 25 1272 659 10;
+#X obj 42 181 notein;
+#X obj 33 57 mtl/piano 1;
+#X obj 29 472 mtl/out~;
+#X obj 42 210 pack;
+#X text 437 560 updated for Pd version 0.39;
+#X obj 388 217 hsl 100 15 1 100 0 0 /buzz/harmonics /buzz/harmonics_
+harmonics 105 7 0 8 -262144 -1 -1 0 1;
+#X obj 385 189 cnv 15 200 20 empty empty /buzz~/ 2 12 0 8 -258401 -262144
+0;
+#X obj 31 443 mtl/buzz~ /id buzz;
+#X connect 0 0 3 0;
+#X connect 0 1 3 1;
+#X connect 1 0 7 0;
+#X connect 3 0 7 0;
+#X connect 7 0 2 0;
+#X connect 7 0 2 1;

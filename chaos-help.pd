@@ -1,0 +1,49 @@
+#N canvas 0 25 1016 659 10;
+#X obj 317 159 cnv 15 200 20 empty empty /chaos/ 2 12 0 8 -258401 -262144
+0;
+#X obj 320 206 hsl 128 15 3 4 0 0 /chaos/p /chaos/p_ P -2 -8 0 10 -262144
+-1 -1 0 1;
+#X obj 71 248 mtl/chaos /id chaos;
+#X obj 61 208 metro 500;
+#X obj 77 313 hsl 128 15 0 1 0 0 empty empty empty -2 -8 0 10 -262144
+-1 -1 0 1;
+#X obj 68 157 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+1;
+#X obj 328 266 cnv 15 60 30 empty empty empty 20 12 0 14 -24198 -66577
+0;
+#N canvas 314 68 448 175 Help 0;
+#X text 30 27 n+1;
+#X text 103 27 n;
+#X text 157 26 n;
+#X text 61 22 = P * X * (1 - X );
+#X text 12 21 - X;
+#X text 191 21 chaotique si 0 < X < 1 et 3.57 < P < 4;
+#X text 11 73 - En faisant varier P de 3 à 4 \, on passe d'une oscillation
+régulière \, stable \, à une variation chaotique... La limite est P
+= 3.57. C'est le "scénario de Feigenbaum".;
+#X obj 33 48 pddplink http://fr.wikipedia.org/wiki/Image:Diagramme_de_bifurcation.png
+;
+#X obj 30 118 pddplink http://fr.wikipedia.org/wiki/Théorie_du_chaos
+;
+#X obj 29 133 pddplink http://en.wikipedia.org/wiki/Chaos_theory;
+#X restore 335 273 pd Help;
+#X text 331 310 13 4 2011;
+#X obj 404 269 cnv 15 41 30 empty empty empty 20 12 0 14 -24198 -66577
+0;
+#N canvas 350 196 308 136 ?? 0;
+#X obj -9 87 cnv 15 300 38 empty empty empty 20 12 0 14 -224896 -66577
+0;
+#X obj -9 10 cnv 18 300 70 empty empty ARGOPdMiniModules 1 10 1 14
+-4033 -1 1.04858e+06;
+#X obj 9 29 cnv 10 10 10 empty empty Gerard 0 5 1 9 -4033 -1 1.04858e+06
+;
+#X obj 40 29 cnv 10 10 10 empty empty Paresys 0 5 1 9 -4033 -1 1.04858e+06
+;
+#X text -8 89 Construit sous / Build under Pd 0.42.5-extended;
+#X obj 39 105 pddplink http://puredata.info/downloads;
+#X obj 3 42 pddplink http://pagesperso-orange.fr/Paresys/ARGOPd/;
+#X obj 3 57 pddplink http://gerard.paresys.free.fr/ARGOPd/;
+#X restore 408 275 pd ??;
+#X connect 2 0 4 0;
+#X connect 3 0 2 0;
+#X connect 5 0 3 0;
