@@ -1,6 +1,6 @@
-#N canvas 469 177 588 450 10;
+#N canvas 467 182 588 450 10;
 #X obj 128 196 nbx 5 14 -1e+37 1e+37 0 0 empty empty right 0 -8 0 10
--262144 -1 -1 96.9143 256;
+-262144 -1 -1 96.916 256;
 #X obj 16 135 *~;
 #X obj 33 114 osc~ 2;
 #X obj 104 135 *~;
@@ -27,7 +27,7 @@
 #X connect 4 0 2 0;
 #X restore 28 163 pd env;
 #X obj 40 197 nbx 5 14 -1e+37 1e+37 0 0 empty empty left 0 -8 0 10
--262144 -1 -1 95.5452 256;
+-262144 -1 -1 97.0219 256;
 #X obj 43 256 bonk~;
 #X obj 143 255 bonk~;
 #X text 189 255 only an idea;
@@ -41,7 +41,6 @@
 #X text 13 10 Description: a noise gate (cut off volume below the threshold).
 useful for removing noise from an incoming signal or making breakbeat.
 ;
-#X text 13 53 tags: mix~;
 #X obj 69 320 mtl/out~ 30;
 #X obj 301 252 cnv 15 200 20 empty empty /gatenoise/ 2 12 0 8 -258401
 -262144 0;
@@ -68,6 +67,7 @@ automatic+- 105 7 0 8 -262144 -1 -1 4950 1;
 0;
 #X text 358 169 PARAM ENABLED;
 #X obj 297 192 tof/open_help tof/param;
+#X text 13 53 tags: fx~;
 #X connect 1 0 7 0;
 #X connect 1 0 15 0;
 #X connect 2 0 1 1;
@@ -86,5 +86,5 @@ automatic+- 105 7 0 8 -262144 -1 -1 4950 1;
 #X connect 15 0 18 0;
 #X connect 15 1 10 0;
 #X connect 15 1 18 1;
-#X connect 16 0 21 1;
-#X connect 17 0 21 0;
+#X connect 16 0 20 1;
+#X connect 17 0 20 0;

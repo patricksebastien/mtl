@@ -1,4 +1,4 @@
-#N canvas 0 25 1016 659 10;
+#N canvas 1 82 1016 659 10;
 #X obj 317 159 cnv 15 200 20 empty empty /chaos/ 2 12 0 8 -258401 -262144
 0;
 #X obj 320 206 hsl 128 15 3 4 0 0 /chaos/p /chaos/p_ P -2 -8 0 10 -262144
@@ -11,7 +11,7 @@
 1;
 #X obj 328 266 cnv 15 60 30 empty empty empty 20 12 0 14 -24198 -66577
 0;
-#N canvas 314 68 448 175 Help 0;
+#N canvas 312 82 448 175 Help 0;
 #X text 30 27 n+1;
 #X text 103 27 n;
 #X text 157 26 n;
@@ -27,10 +27,9 @@ régulière \, stable \, à une variation chaotique... La limite est P
 ;
 #X obj 29 133 pddplink http://en.wikipedia.org/wiki/Chaos_theory;
 #X restore 335 273 pd Help;
-#X text 331 310 13 4 2011;
 #X obj 404 269 cnv 15 41 30 empty empty empty 20 12 0 14 -24198 -66577
 0;
-#N canvas 350 196 308 136 ?? 0;
+#N canvas 348 229 308 136 ?? 0;
 #X obj -9 87 cnv 15 300 38 empty empty empty 20 12 0 14 -224896 -66577
 0;
 #X obj -9 10 cnv 18 300 70 empty empty ARGOPdMiniModules 1 10 1 14
@@ -44,6 +43,8 @@ régulière \, stable \, à une variation chaotique... La limite est P
 #X obj 3 42 pddplink http://pagesperso-orange.fr/Paresys/ARGOPd/;
 #X obj 3 57 pddplink http://gerard.paresys.free.fr/ARGOPd/;
 #X restore 408 275 pd ??;
+#X text 325 348 tags: random;
+#X text 331 310 XXXXXXXX;
 #X connect 2 0 4 0;
 #X connect 3 0 2 0;
 #X connect 5 0 3 0;

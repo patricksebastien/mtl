@@ -3,27 +3,23 @@ adc~ mix~
 bag behavior lists math
 boids/boids2d behavior
 boids/boids3d behavior
+b patch
 change math routing data
 choice behavior
-clip math
 clip~ math~
+clip math
 cputime timing
 creb/dist~ fx~
 creb/ead~ control~
 creb/ear~ control~
 creb/fdn~ fx~
+cyclone/active patch
 cyclone/Append lists symbols routing
 cyclone/Borax midi
 cyclone/Bucket lists routing
-cyclone/Clip lists
-cyclone/Histo data
-cyclone/MouseState ui
-cyclone/Scope~ info~
-cyclone/Snapshot~ info~ conversion
-cyclone/TogEdge routing
-cyclone/active patch
-cyclone/capture info data
 cyclone/capture~ info~ data
+cyclone/capture info data
+cyclone/Clip lists
 cyclone/coll data file
 cyclone/curve~ control~
 cyclone/cycle routing
@@ -31,10 +27,12 @@ cyclone/decide random
 cyclone/delay~ fx~
 cyclone/drunk random
 cyclone/funnel routing
+cyclone/Histo data
 cyclone/match lists
 cyclone/midiformat midi
 cyclone/midiparse midi
 cyclone/mousefilter ui
+cyclone/MouseState ui
 cyclone/mtr sequencing
 cyclone/onebang initialization routing
 cyclone/overdrive~ fx~
@@ -42,11 +40,14 @@ cyclone/pong~ control~
 cyclone/prepend lists symbols routing
 cyclone/prob behavior
 cyclone/record~ file~ record~
+cyclone/Scope~ info~
 cyclone/seq midi
+cyclone/Snapshot~ info~ conversion
 cyclone/sprintf symbols
 cyclone/substitute symbols
 cyclone/sustain midi
 cyclone/thresh lists
+cyclone/TogEdge routing
 cyclone/tosymbol symbols conversion
 cyclone/trapezoid~ control~
 cyclone/urn random
@@ -65,12 +66,12 @@ flatspace/entry ui symbols
 ftom conversion
 ggee/image ui
 ggee/moog~ fx~
-hcs/ISOdate timing
-hcs/ISOtime timing
 hcs/canvas_name tools
 hcs/colorpanel ui
 hcs/file_type file
 hcs/folder_list file
+hcs/ISOdate timing
+hcs/ISOtime timing
 hcs/noquit patch
 hcs/screensize tools
 hcs/split_path file
@@ -81,7 +82,6 @@ iemguts/canvasargs tools
 iemguts/canvasindex tools
 iemguts/canvasobjectposition tools
 iemguts/canvasposition tools
-b patch
 iemlib/dollarg initialization patch
 iemlib/fade~ control~
 iemlib/iem_anything data
@@ -92,10 +92,9 @@ iemlib/modulo_counter counter
 iemlib/mp3play~ play~
 iemlib/soundfile_info file~ info~
 int data math
-line timing
 line~ control~
 line~ timing
-list lists 
+line timing
 list-abs/list-abs lists
 list-abs/list-accum lists
 list-abs/list-centroid lists
@@ -104,6 +103,7 @@ list-abs/list-delete lists
 list-abs/list-fifo lists
 list-abs/list-mean lists
 list-abs/list-rev lists
+list lists 
 loadbang initialization
 makefilename file symbols
 mapping/breakpoint math
@@ -111,7 +111,6 @@ mapping/exponential_curve math
 mapping/smooth math
 mapping/timeroll info
 markex/counter counter
-max math
 maxlib/arbran random behavior
 maxlib/arraycopy tables
 maxlib/average math
@@ -128,9 +127,10 @@ maxlib/temperature info
 maxlib/timebang timing
 maxlib/wrap math
 max~ math~
+max math
 metro timing sequencing
-min math
 min~ math~
+min math
 mjlib/morse conversion
 mjlib/n2m midi
 moocow/any2string conversion
@@ -167,8 +167,8 @@ savepanel file ui
 select routing
 send routing
 send routing
-sigpack/vowel~ fx~
 sig~ control~
+sigpack/vowel~ fx~
 smlib/threshold routing
 soundfiler tables file~
 spigot routing
@@ -180,8 +180,8 @@ textfile text file sequencing
 timer timing
 tof/argument initialization patch
 tof/arguments initialization patch
-tof/breakpoints ui timing
 tof/breakpoints~ ui control~
+tof/breakpoints ui timing
 tof/common~ mix~
 tof/crossfade~ mix~
 tof/folderpanel file
@@ -202,8 +202,8 @@ unpack lists
 until looping
 value data
 vline~ timing
-wrap math
 wrap~ math~
+wrap math
 writesf~ file~ record~
 zexy/list2symbol conversion symbols lists
 zexy/makesymbol symbols

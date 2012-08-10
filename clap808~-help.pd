@@ -1,4 +1,4 @@
-#N canvas 1126 234 738 360 10;
+#N canvas 627 239 738 360 10;
 #X obj 82 180 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
 1;
 #X obj 13 66 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
@@ -19,7 +19,7 @@ beatmachine;
 #X text 340 161 arg1: gain (0-127) / default = 100;
 #X obj 13 159 mtl/clap808~;
 #X obj 13 264 mtl/out~;
-#X text 17 36 tags: synthesize~;
+#X text 11 29 tags: synthesize~;
 #X connect 1 0 13 0;
 #X connect 13 0 14 0;
 #X connect 13 0 14 1;

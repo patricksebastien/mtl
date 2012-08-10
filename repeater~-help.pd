@@ -1,4 +1,4 @@
-#N canvas 0 1 1272 692 10;
+#N canvas 1 82 1272 661 10;
 #X obj 1 -21 cnv 15 690 30 empty empty repeater~ 2 12 1 14 -233017
 -66577 0;
 #X obj 51 374 mtl/out~;
@@ -7,14 +7,12 @@
 #X text 573 140 PARAM ENABLED;
 #X obj 269 398 cnv 15 200 20 empty empty /repeater/ 2 12 0 8 -258401
 -262144 0;
-#X text 226 326 <-Click on the propeties menu to display params;
+#X text 218 326 <-Click on the propeties menu to display params;
 #X text 509 221 tags: fx~;
 #X obj 512 162 tof/open_help tof/param;
 #X obj 270 428 hsl 100 15 0 1 0 0 /repeater/wet /repeater/wet_ wet
 105 7 0 8 -262144 -1 -1 0 1;
 #X text 553 275 .;
-#X text 509 243 Rjdj;
-#X text 508 200 repeater;
 #X obj 270 449 hsl 100 15 0 1 0 0 /repeater/feedback /repeater/feedback_
 feedback 105 7 0 8 -262144 -1 -1 0 1;
 #X obj 270 470 hsl 100 15 0 1000 0 0 /repeater/float /repeater/float_
@@ -44,7 +42,9 @@ the "feedback" parameter.;
 #X text 778 39 e_repeater - repeat a chunks of the incoming signal.
 ;
 #X obj 50 327 mtl/repeater~ /id repeater;
-#X connect 15 0 18 0;
-#X connect 15 0 18 1;
-#X connect 18 0 1 0;
-#X connect 18 1 1 1;
+#X text 508 243 Author: Rjdj;
+#X text 508 200 Description: repeater;
+#X connect 13 0 16 0;
+#X connect 13 0 16 1;
+#X connect 16 0 1 0;
+#X connect 16 1 1 1;

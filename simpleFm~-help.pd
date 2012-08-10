@@ -1,4 +1,4 @@
-#N canvas 0 25 1272 692 10;
+#N canvas 1 82 1272 658 10;
 #X obj 42 181 notein;
 #X floatatom 351 271 5 0 0 0 - - -;
 #X floatatom 392 271 5 0 0 0 - - -;
@@ -32,12 +32,12 @@
 #X connect 8 0 3 0;
 #X restore 313 300 pd adsr;
 #X obj 111 182 hsl 128 15 0 1 0 0 empty empty ratio -2 -8 0 10 -262144
--1 -1 2900 1;
+-1 -1 0 1;
 #X obj 24 355 mtl/simpleFm~ /id simpleFm;
 #X obj 141 227 hsl 128 15 0 1 0 0 empty empty fine -2 -8 0 10 -262144
--1 -1 12600 1;
+-1 -1 0 1;
 #X obj 163 265 hsl 128 15 0 1 0 0 empty empty amount -2 -8 0 10 -262144
--1 -1 2300 1;
+-1 -1 0 1;
 #X text 27 10 Description: SimpleFm~;
 #X connect 0 0 8 0;
 #X connect 0 1 8 1;

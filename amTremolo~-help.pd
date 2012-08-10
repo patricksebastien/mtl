@@ -1,21 +1,21 @@
-#N canvas 0 25 1272 692 10;
+#N canvas 1 82 1272 661 10;
 #X obj 125 315 mtl/out~;
-#X text 449 125 tags: fx~;
-#X text 399 280 <-Click on the propeties menu to display params;
-#X obj 420 178 cnv 15 200 40 empty empty empty 20 12 0 14 -232576 -66577
+#X text 448 110 tags: fx~;
+#X text 302 282 <-Click on the propeties menu to display params;
+#X obj 744 131 cnv 15 200 40 empty empty empty 20 12 0 14 -232576 -66577
 0;
-#X text 480 179 PARAM ENABLED;
+#X text 778 129 PARAM ENABLED;
 #X obj 422 312 cnv 15 200 20 empty empty /amTremolo/ 2 12 0 8 -258401
 -262144 0;
 #X obj 425 341 hsl 100 15 0 1 0 0 /amTremolo/freq /amTremolo/freq_
-frequency 105 7 0 8 -262144 -1 -1 7700 1;
-#X obj 419 201 tof/open_help tof/param;
+frequency 105 7 0 8 -262144 -1 -1 0 1;
+#X obj 743 154 tof/open_help tof/param;
 #X obj 124 284 mtl/amTremolo~ /id amTremolo;
 #X text 448 91 Description: amTremolo;
 #X obj 425 359 hsl 100 15 0 1 0 0 /amTremolo/phase /amTremolo/phase
-phase 105 7 0 8 -262144 -1 -1 2900 1;
+phase 105 7 0 8 -262144 -1 -1 0 1;
 #X obj 425 377 hsl 100 15 0 1 0 0 /amTremolo/depth /amTremolo/depth_
-depth 105 7 0 8 -262144 -1 -1 8800 1;
+depth 105 7 0 8 -262144 -1 -1 0 1;
 #X obj 133 187 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
 1;
 #N canvas 0 25 1280 695 chord 0;

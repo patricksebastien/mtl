@@ -1,8 +1,8 @@
-#N canvas 1401 74 629 562 10;
+#N canvas 149 80 629 562 10;
 #X msg 225 224 6 1 0 0 1 0 0 1;
 #X floatatom 37 158 5 0 0 0 - - -;
 #X obj 36 88 loadbang;
-#X msg 37 448 1 0 1 1 0 0 0 0;
+#X msg 37 448 0 0 0 0 1 0 0 0;
 #N canvas 1281 181 761 308 randomize 0;
 #X obj 136 23 inlet;
 #X obj 136 253 outlet;
@@ -191,6 +191,7 @@
 1;
 #X obj 37 203 mtl/seq8x8;
 #X obj 36 132 mtl/clkSlave 1 8;
+#X msg 231 254 4 0 0 0 0 0 0 0 0;
 #X connect 0 0 16 1;
 #X connect 1 0 16 0;
 #X connect 2 0 15 0;
@@ -204,3 +205,4 @@
 #X connect 16 0 5 0;
 #X connect 16 0 12 0;
 #X connect 17 0 1 0;
+#X connect 18 0 16 1;

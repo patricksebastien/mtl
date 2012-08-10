@@ -1,4 +1,4 @@
-#N canvas 511 406 639 339 10;
+#N canvas 509 404 639 339 10;
 #X text 14 52 Comment: Taken from Andy Farnell's work.;
 #X text 15 8 Description: Generates some bell sounds.;
 #X text 14 73 Migh need a bit of "tuning".;

@@ -1,4 +1,4 @@
-#N canvas 0 25 1272 692 10;
+#N canvas 1 82 1272 661 10;
 #X obj 15 334 mtl/out~;
 #X text 15 33 tags: fx~;
 #X obj 19 90 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0 1
@@ -47,7 +47,7 @@
 137 7 0 10 -262144 -1 -1 0 1;
 #X obj 18 246 mtl/wavewrap~ /id wavewrap;
 #X text 16 8 Description: Wavewrap ( sigpack external );
-#X text 669 123;
+#X text 669 124 XXXXXXX;
 #X connect 2 0 3 0;
 #X connect 3 0 10 0;
 #X connect 3 0 10 1;

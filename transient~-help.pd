@@ -1,4 +1,4 @@
-#N canvas 0 25 1272 692 10;
+#N canvas 1 82 1272 661 10;
 #X obj 15 334 mtl/out~;
 #X text 17 33 tags: fx~;
 #X obj 19 90 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0 1
@@ -44,12 +44,12 @@
 -262144 0;
 #X obj 306 41 tof/open_help tof/param;
 #X obj 264 157 hsl 128 15 -1 1 0 0 /transient/attack /transient/attack_
-attack 137 7 0 10 -262144 -1 -1 2150 1;
+attack 137 7 0 10 -262144 -1 -1 6350 1;
 #X obj 18 247 mtl/transient~ /id transient;
 #X obj 265 181 hsl 128 15 -1 1 0 0 /transient/sustain /transient/sustain_
-sustain 137 7 0 10 -262144 -1 -1 9450 1;
+sustain 137 7 0 10 -262144 -1 -1 6350 1;
 #X text 15 8 Description: Transient ( sigpack external );
-#X text 580 421;
+#X text 580 421 XXXXXXXX;
 #X connect 2 0 3 0;
 #X connect 3 0 10 0;
 #X connect 3 0 10 1;

@@ -1,10 +1,10 @@
-#N canvas 393 218 305 333 10;
+#N canvas 391 251 305 333 10;
 #X obj 49 113 hsl 128 15 0 1 0 0 empty empty empty -2 -6 0 8 -262144
--1 -1 12700 1;
+-1 -1 0 1;
 #X obj 86 146 hsl 128 15 0 1 0 0 empty empty empty -2 -6 0 8 -262144
--1 -1 12700 1;
+-1 -1 0 1;
 #X obj 124 177 hsl 128 15 0 1 0 0 empty empty empty -2 -6 0 8 -262144
--1 -1 11800 1;
+-1 -1 0 1;
 #X text 9 26 Comment: Taken from Andy Farnell's work.;
 #X text 9 7 Description: Generates some crunchy clapping.;
 #X obj 46 203 mtl/applause~;

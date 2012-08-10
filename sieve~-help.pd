@@ -1,4 +1,4 @@
-#N canvas 0 25 1272 692 10;
+#N canvas 1 82 1272 661 10;
 #X obj 15 334 mtl/out~;
 #X text 14 32 tags: fx~;
 #X obj 19 90 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0 1
@@ -49,7 +49,7 @@
 #X obj 274 161 hradio 15 1 0 2 /sieve/mode /sieve/mode_ mode 35 7 0
 10 -262144 -1 -1 0;
 #X text 15 8 Description: Sieve ( sigpack external );
-#X text 612 454;
+#X text 612 454 XXXXXXX;
 #X connect 2 0 3 0;
 #X connect 3 0 10 0;
 #X connect 3 0 10 1;

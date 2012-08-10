@@ -1,4 +1,4 @@
-#N canvas 0 25 1272 692 10;
+#N canvas 1 82 1272 661 10;
 #X obj 1 -21 cnv 15 690 30 empty empty robot~ 2 12 1 14 -233017 -66577
 0;
 #X obj 70 255 mtl/out~;
@@ -29,15 +29,15 @@ tracking 105 7 0 8 -262144 -1 -1 0 1;
 file);
 #X obj 34 25 bng 30 250 50 0 empty empty empty 0 -6 0 10 -258113 -1
 -1;
-#X text 793 120 robots;
-#X text 788 167 unknow author;
-#X text 832 199 comment;
 #X obj 69 208 mtl/robot~ /id robot;
-#X connect 12 0 22 0;
-#X connect 12 0 22 1;
+#X text 793 120 Description: robots;
+#X text 788 167 Author: unknown;
+#X text 832 199 XXXXXXXXX;
+#X connect 12 0 19 0;
+#X connect 12 0 19 1;
 #X connect 13 0 16 0;
 #X connect 14 0 13 0;
 #X connect 16 0 12 0;
 #X connect 18 0 12 0;
-#X connect 22 0 1 0;
-#X connect 22 1 1 1;
+#X connect 19 0 1 0;
+#X connect 19 1 1 1;

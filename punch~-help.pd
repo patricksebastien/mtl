@@ -1,4 +1,4 @@
-#N canvas 170 114 720 484 10;
+#N canvas 168 119 720 484 10;
 #X obj 121 105 *~ 0.2;
 #X obj 121 68 osc~ 60;
 #X text -20 11 Description: Boost the input signal to it's maximum
@@ -13,7 +13,7 @@ amplitude while never clipping.;
 51 135 135 135 0;
 #X obj 151 149 mtl/punch~;
 #X floatatom 244 145 5 0 0 0 - - -;
-#X text -19 40 tags: mix~;
+#X text -19 40 tags: fx~;
 #X connect 0 0 7 0;
 #X connect 0 0 9 0;
 #X connect 1 0 0 0;

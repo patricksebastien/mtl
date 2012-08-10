@@ -1,4 +1,4 @@
-#N canvas 0 25 1272 659 10;
+#N canvas 1 84 1272 659 10;
 #X obj 42 181 notein;
 #X obj 33 57 mtl/piano 1;
 #X obj 29 472 mtl/out~;
@@ -7,6 +7,7 @@
 #X obj 385 189 cnv 15 200 20 empty empty /chimes~/ 2 12 0 8 -258401
 -262144 0;
 #X obj 33 442 mtl/chimes~ /id chimes;
+#X text 431 535 tags: instrument~;
 #X connect 0 0 3 0;
 #X connect 0 1 3 1;
 #X connect 1 0 6 0;

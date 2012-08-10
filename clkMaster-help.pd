@@ -1,4 +1,4 @@
-#N canvas 1066 151 977 551 10;
+#N canvas 25 95 977 551 10;
 #X obj 270 225 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
 -1 -1;
 #X text 288 224 Beat indicator;
@@ -13,26 +13,46 @@
 #X text 24 31 Description: synchronizes all [clkSlave] abstractions
 that share the same "top" patch.;
 #X obj 46 208 mtl/clkMaster 120;
-#X floatatom 49 401 5 0 0 0 - - -;
-#X obj 47 341 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
--1;
 #X floatatom 512 412 5 0 0 0 - - -;
 #X obj 512 339 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
 -1 -1;
-#X obj 47 374 mtl/clkSlave 4 16;
 #X text 27 59 tags: timing sequencing;
 #X text 466 165 You must then send the external sync signal to [clkMaster]'s
 right inlet. See [clkUPDin]'s help for an example.;
-#X text 64 339 <- Bang to start playing a 16 step loop with 4 steps
-per beat.;
-#X obj 512 376 mtl/clkSlave 1 32;
 #X text 537 334 <- Bang to start playing a 32 step loop with one step
 per beat.;
+#X obj 136 459 hradio 15 1 0 16 empty empty empty 0 -8 0 10 -262144
+-1 -1 4;
+#X obj 445 475 hradio 15 1 0 32 empty empty empty 0 -8 0 10 -262144
+-1 -1 9;
+#X msg 197 307 play;
+#X msg 273 299 stop;
+#X floatatom 49 401 5 0 0 0 - - -;
+#X obj 47 341 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+-1;
+#X text 64 339 <- Bang to start playing a 16 step loop with 4 steps
+per beat.;
+#X obj 512 376 mtl/clkSlave 4 16;
+#X msg 569 289 quantization \$1;
+#X obj 570 264 mtl/clk-quantization-help;
+#X msg 164 291 quantization \$1;
+#X obj 165 266 mtl/clk-quantization-help;
+#X obj 47 374 mtl/clkSlave 7 16;
 #X connect 2 0 10 0;
 #X connect 10 0 4 0;
 #X connect 10 1 5 0;
 #X connect 10 2 0 0;
-#X connect 12 0 15 0;
-#X connect 14 0 19 0;
-#X connect 15 0 11 0;
-#X connect 19 0 13 0;
+#X connect 12 0 23 0;
+#X connect 18 0 23 0;
+#X connect 18 0 28 0;
+#X connect 19 0 23 0;
+#X connect 19 0 28 0;
+#X connect 20 0 16 0;
+#X connect 21 0 28 0;
+#X connect 23 0 11 0;
+#X connect 23 0 17 0;
+#X connect 24 0 23 0;
+#X connect 25 0 24 0;
+#X connect 26 0 28 0;
+#X connect 27 0 26 0;
+#X connect 28 0 20 0;

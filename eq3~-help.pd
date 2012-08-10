@@ -1,7 +1,7 @@
-#N canvas 0 25 1272 692 10;
+#N canvas 1 82 1272 661 10;
 #X obj -25 177 mtl/out~;
-#X text -29 46 tags: fx~;
-#X text 163 143 <-Click on the propeties menu to display params;
+#X text -29 26 tags: fx~;
+#X text 85 143 <-Click on the propeties menu to display params;
 #X obj 270 40 cnv 15 200 40 empty empty empty 20 12 0 14 -232576 -66577
 0;
 #X text 330 41 PARAM ENABLED;
@@ -13,7 +13,7 @@
 #X obj 272 216 hsl 100 15 0 1 0 0 /eq3/mid /eq3/mid mid 105 7 0 8 -262144
 -1 -1 0 1;
 #X obj 272 234 hsl 100 15 0 1 0 0 /eq3/low /eq3/low_ low 105 7 0 8
--262144 -1 -1 500 1;
+-262144 -1 -1 0 1;
 #X obj -26 146 mtl/eq3~ /id eq3;
 #X obj 6 66 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0 1
 ;

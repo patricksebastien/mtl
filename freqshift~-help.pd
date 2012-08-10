@@ -1,4 +1,4 @@
-#N canvas 0 25 1272 692 10;
+#N canvas 1 82 1272 661 10;
 #X obj 15 334 mtl/out~;
 #X text 15 32 tags: fx~;
 #X obj 19 90 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0 1
@@ -48,7 +48,7 @@
 shift 137 7 0 10 -262144 -1 -1 0 1;
 #X obj 185 338 mtl/out~;
 #X text 15 8 Description: Freqshift ( sigpack external );
-#X text 569 295;
+#X text 568 295 XXXXXX;
 #X connect 2 0 3 0;
 #X connect 3 0 9 0;
 #X connect 3 0 9 1;

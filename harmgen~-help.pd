@@ -1,4 +1,4 @@
-#N canvas 0 25 1272 692 10;
+#N canvas 1 82 1272 661 10;
 #X obj 15 334 mtl/out~;
 #X text 14 31 tags: fx~;
 #X obj 19 90 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0 1
@@ -65,7 +65,7 @@
 #X obj 693 386 hsl 128 15 -1 1 0 0 /harmgen/mag10 /harmgen/mag10_ magnitude10
 137 7 0 10 -262144 -1 -1 6350 1;
 #X text 15 8 Description: Harmgen ( sigpack external );
-#X text 235 615;
+#X text 235 615 XXXXXXX;
 #X connect 2 0 3 0;
 #X connect 3 0 10 0;
 #X connect 3 0 10 1;

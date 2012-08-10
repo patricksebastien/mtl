@@ -1,4 +1,4 @@
-#N canvas 0 25 1016 684 10;
+#N canvas 1 82 1016 661 10;
 #X obj 317 159 cnv 15 200 20 empty empty /full_adder/ 2 12 0 8 -258401
 -262144 0;
 #X obj 317 187 tgl 15 0 /full_adder/porte1 /full_adder/porte1_ porte-1
@@ -18,6 +18,8 @@
 carry_in 17 7 0 10 -262144 -1 -1 0 1;
 #X obj 241 185 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
 1;
+#X text 498 460 Author: Emoc;
+#X text 501 477 tags: logic;
 #X connect 4 0 7 0;
 #X connect 5 0 7 1;
 #X connect 7 0 3 0;

@@ -1,7 +1,7 @@
-#N canvas 0 25 1272 692 10;
+#N canvas 1 82 1272 661 10;
 #X obj 22 280 mtl/out~;
-#X text 26 48 tags: fx~;
-#X obj 19 90 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 1 1
+#X text 14 25 tags: fx~;
+#X obj 19 90 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0 1
 ;
 #N canvas 5 185 450 300 generate~ 0;
 #X obj 32 213 osc~ 200;
@@ -45,11 +45,11 @@
 #X obj 306 41 tof/open_help tof/param;
 #X obj 22 247 mtl/decimate~ /id decimate;
 #X obj 331 120 hsl 128 15 0 1 0 0 /decimate/ratio /decimate/ratio_
-ratio 145 7 0 10 -262144 -1 -1 4000 1;
+ratio 145 7 0 10 -262144 -1 -1 12700 1;
 #X obj 332 143 hsl 128 15 0 32 0 0 /decimate/bits /decimate/bits_ bits
-145 7 0 10 -262144 -1 -1 3400 1;
+145 7 0 10 -262144 -1 -1 12700 1;
 #X text 15 8 Description: Decimate ( sigpack external );
-#X text 14 29;
+#X text 474 421 XXXXXXX;
 #X connect 2 0 3 0;
 #X connect 3 0 9 0;
 #X connect 3 0 9 1;

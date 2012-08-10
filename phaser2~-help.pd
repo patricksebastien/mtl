@@ -1,4 +1,4 @@
-#N canvas 0 0 1272 714 10;
+#N canvas 1 82 1272 661 10;
 #X obj -226 190 mtl/out~;
 #X text -230 59 tags: fx~;
 #X text -77 156 <-Click on the propeties menu to display params;
@@ -46,7 +46,6 @@
 #X connect 14 0 2 0;
 #X restore -228 114 pd generate~;
 #X text -232 24 Description:;
-#X obj -230 158 atl/phaser2~ /id phaser2;
 #X text -155 25 Phaser;
 #X obj 211 224 hsl 100 15 0 1 0 0 /phaser2/fbdelay /phaser2/fbdelay_
 fbdelay 105 7 0 8 -262144 -1 -1 0 1;
@@ -58,8 +57,9 @@ feedback 105 7 0 8 -262144 -1 -1 0 1;
 105 7 0 8 -262144 -1 -1 0 1;
 #X obj 213 308 hsl 100 15 0 1 0 0 /phaser2/depth /phaser2/depth_ depth
 105 7 0 8 -262144 -1 -1 0 1;
+#X obj -230 158 mtl/phaser2~ /id phaser2;
 #X connect 8 0 9 0;
-#X connect 9 0 11 0;
-#X connect 9 1 11 1;
-#X connect 11 0 0 0;
-#X connect 11 1 0 1;
+#X connect 9 0 17 0;
+#X connect 9 1 17 1;
+#X connect 17 0 0 0;
+#X connect 17 1 0 1;

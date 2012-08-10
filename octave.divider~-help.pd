@@ -1,4 +1,4 @@
-#N canvas 0 25 1272 692 10;
+#N canvas 1 82 1272 661 10;
 #X obj 1 -21 cnv 15 690 30 empty empty chorus~ 2 12 1 14 -233017 -66577
 0;
 #X obj 8 200 mtl/out~;
@@ -20,9 +20,9 @@ wet 105 7 0 8 -262144 -1 -1 0 1;
 #X text 541 116 Author: Miller Pucket;
 #X obj 35 19 osc~ 440;
 #X obj 38 91 *~;
-#X text 544 130 comment;
 #X text 543 72 Description : E03 Octave Dividing via ring multiplication
 ;
+#X text 618 416 XXXXXXXX;
 #X connect 10 0 14 1;
 #X connect 11 0 1 0;
 #X connect 11 1 1 1;

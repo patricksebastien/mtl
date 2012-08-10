@@ -1,4 +1,4 @@
-#N canvas 0 25 1272 692 10;
+#N canvas 1 82 1272 661 10;
 #X obj 1 -21 cnv 15 690 30 empty empty tremolo~ 2 12 1 14 -233017 -66577
 0;
 #X obj 70 255 mtl/out~;
@@ -16,7 +16,6 @@
 -66577 0;
 #X text 788 167 Romain Vuillet;
 #X text 832 199 .;
-#X text 793 120 tremolo;
 #X obj 81 146 osc~ 250;
 #X obj 463 407 hsl 100 15 0 1 0 0 /tremolo/amplitude /tremolo/amplitude_
 amplitude 105 7 0 8 -262144 -1 -1 0 1;
@@ -39,7 +38,8 @@ signalcontrol 105 7 0 8 -262144 -1 -1 0 1;
 #X text 922 359 enveloppe sinusoidale a une enve-;
 #X text 922 374 loppe de modulation presque carree;
 #X obj 70 208 mtl/tremolo~ /id tremolo;
-#X connect 13 0 31 0;
-#X connect 13 0 31 1;
-#X connect 31 0 1 0;
-#X connect 31 1 1 1;
+#X text 776 126 Description: tremolo;
+#X connect 12 0 30 0;
+#X connect 12 0 30 1;
+#X connect 30 0 1 0;
+#X connect 30 1 1 1;

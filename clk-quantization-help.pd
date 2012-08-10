@@ -1,4 +1,4 @@
-#N canvas 1255 177 701 554 10;
+#N canvas 517 174 701 554 10;
 #X text 44 47 There are four methods of synchronizing a clkSlave to
 its clkMaster:;
 #X msg 157 224 none;

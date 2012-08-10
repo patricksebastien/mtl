@@ -1,16 +1,16 @@
-#N canvas 0 25 1272 692 10;
+#N canvas 1 82 1272 661 10;
 #X obj 125 315 mtl/out~;
 #X text 449 125 tags: fx~;
-#X text 399 280 <-Click on the propeties menu to display params;
+#X text 348 282 <-Click on the propeties menu to display params;
 #X obj 420 178 cnv 15 200 40 empty empty empty 20 12 0 14 -232576 -66577
 0;
 #X text 480 179 PARAM ENABLED;
 #X obj 422 312 cnv 15 200 20 empty empty /bodyresonance/ 2 12 0 8 -258401
 -262144 0;
 #X obj 422 335 hsl 100 15 0 1 0 0 /bodyresonance/wet /bodyresonance/wet_
-wet 105 7 0 8 -262144 -1 -1 9700 1;
+wet 105 7 0 8 -262144 -1 -1 0 1;
 #X obj 422 353 hsl 100 15 0 1 0 0 /bodyresonance/size /bodyresonance/size_
-size 105 7 0 8 -262144 -1 -1 400 1;
+size 105 7 0 8 -262144 -1 -1 0 1;
 #X obj 419 201 tof/open_help tof/param;
 #X obj 124 284 mtl/bodyresonance~ /id bodyresonance;
 #X text 448 91 Description: Bodyresonance;

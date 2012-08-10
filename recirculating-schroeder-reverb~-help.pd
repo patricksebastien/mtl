@@ -1,4 +1,4 @@
-#N canvas 0 25 1272 692 10;
+#N canvas 1 82 1272 661 10;
 #X obj 1 -21 cnv 15 690 30 empty empty recirculating-schroeder-reverb~
 2 12 1 14 -233017 -66577 0;
 #X obj 8 200 mtl/out~;
@@ -67,10 +67,10 @@
 ;
 #X text 706 59 Description : Reverb extract from the book Designing
 Sound by Andy Farnell Page 85;
-#X text 705 117 comment;
 #X obj 406 279 hsl 100 15 0 1 0 0 /recirculating-schroeder-reverb/wet
 /recirculating-schroeder-reverb/wet- wet 105 7 0 8 -262144 -1 -1 0
 1;
+#X text 760 321 XXXXXXXXXXX;
 #X connect 9 0 10 0;
 #X connect 10 0 11 0;
 #X connect 11 0 1 0;

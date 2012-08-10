@@ -1,4 +1,4 @@
-#N canvas 0 30 1358 659 10;
+#N canvas 1 82 1358 659 10;
 #X obj 354 213 hsl 128 15 0 1 0 0 empty empty 0...1 10 7 1 10 -262144
 -1 -1 0 1;
 #X obj 297 265 timer;
@@ -35,6 +35,7 @@ updates 135 10 0 10 -262144 -1 -1 0 1;
 #X obj 747 146 hsl 128 15 0 1 0 0 /mphasor/phase /mphasor/phase_ phase
 135 10 0 10 -262144 -1 -1 0 1;
 #X obj 351 147 mtl/mphasor /id mphasor;
+#X text 357 434 tags: control;
 #X connect 1 0 3 0;
 #X connect 2 0 1 0;
 #X connect 2 1 1 1;

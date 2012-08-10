@@ -1,4 +1,4 @@
-#N canvas 0 25 1272 692 10;
+#N canvas 1 82 1272 661 10;
 #X obj 15 334 mtl/out~;
 #X text 15 27 tags: fx~;
 #X obj 19 90 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0 1
@@ -44,10 +44,10 @@
 -262144 0;
 #X obj 306 41 tof/open_help tof/param;
 #X obj 276 159 hsl 128 15 -1 1 0 0 /saturate/thresold /saturate/thresold_
-thresold 137 7 0 10 -262144 -1 -1 750 1;
+thresold 137 7 0 10 -262144 -1 -1 6350 1;
 #X obj 18 247 mtl/saturate~ /id saturate;
 #X text 15 8 Description: Saturate ( sigpack external );
-#X text 555 316;
+#X text 554 315 XXXXXXXXXX;
 #X connect 2 0 3 0;
 #X connect 3 0 10 0;
 #X connect 3 0 10 1;

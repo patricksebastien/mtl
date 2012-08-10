@@ -1,4 +1,4 @@
-#N canvas 268 196 748 500 10;
+#N canvas 264 206 748 500 10;
 #X obj 27 269 mtl/out~;
 #X obj 309 182 hsl 100 15 0 1 0 0 /aliaser/wet /aliaser/wet_ wet 105
 7 0 8 -262144 -1 -1 0 1;
@@ -11,9 +11,10 @@
 #X text 314 269 from a pd patch by Patrick Valiquet on the pd-list
 ;
 #X obj 310 201 hsl 100 15 0 8 0 0 /aliaser/overlap /aliaser/overlap_
-overlap 105 7 0 8 -262144 -1 -1 0 1;
+overlap 105 7 0 8 -262144 -1 -1 1237 1;
 #X obj 310 219 hsl 100 15 0 8 0 0 /aliaser/resample /aliaser/resample_
-overlap 105 7 0 8 -262144 -1 -1 0 1;
+overlap 105 7 0 8 -262144 -1 -1 1237 1;
+#X text 324 310 tags: fx~;
 #X connect 3 0 0 0;
 #X connect 3 1 0 1;
 #X connect 4 0 3 0;
