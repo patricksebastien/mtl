@@ -85,7 +85,6 @@ feedback. save: report current settings to last outlet.;
 #X coords 0 -1 1 1 450 450 1 100 100;
 #X restore 474 181 pd REFERENCE;
 #X obj -230 158 mtl/dubdel~ /id dubdel;
-#X text -64 389 XXXXXXXXXX;
 #X text -232 24 Description: dubdel;
 #X connect 8 0 9 0;
 #X connect 9 0 18 0;

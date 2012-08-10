@@ -49,7 +49,6 @@ level 137 7 0 10 -262144 -1 -1 0 1;
 #X obj 279 262 hsl 128 15 0 1 0 0 /valverect/distorsion /valverect/distorsion_
 distorsion 137 7 0 10 -262144 -1 -1 0 1;
 #X text 15 8 Description: Valverect ( sigpack external );
-#X text 582 410 XXXXX;
 #X connect 2 0 3 0;
 #X connect 3 0 10 0;
 #X connect 3 0 10 1;

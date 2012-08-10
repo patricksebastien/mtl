@@ -44,7 +44,6 @@ régulière \, stable \, à une variation chaotique... La limite est P
 #X obj 3 57 pddplink http://gerard.paresys.free.fr/ARGOPd/;
 #X restore 408 275 pd ??;
 #X text 325 348 tags: random;
-#X text 331 310 XXXXXXXX;
 #X connect 2 0 4 0;
 #X connect 3 0 2 0;
 #X connect 5 0 3 0;

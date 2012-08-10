@@ -22,7 +22,6 @@ wet 105 7 0 8 -262144 -1 -1 0 1;
 #X obj 38 91 *~;
 #X text 543 72 Description : E03 Octave Dividing via ring multiplication
 ;
-#X text 618 416 XXXXXXXX;
 #X connect 10 0 14 1;
 #X connect 11 0 1 0;
 #X connect 11 1 1 1;

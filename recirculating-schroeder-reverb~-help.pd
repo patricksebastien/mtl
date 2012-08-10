@@ -70,7 +70,6 @@ Sound by Andy Farnell Page 85;
 #X obj 406 279 hsl 100 15 0 1 0 0 /recirculating-schroeder-reverb/wet
 /recirculating-schroeder-reverb/wet- wet 105 7 0 8 -262144 -1 -1 0
 1;
-#X text 760 321 XXXXXXXXXXX;
 #X connect 9 0 10 0;
 #X connect 10 0 11 0;
 #X connect 11 0 1 0;

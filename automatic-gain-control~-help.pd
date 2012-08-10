@@ -22,7 +22,6 @@
 #X text 687 210 Description: e_agc tries to automatically figure out
 the best gain settings for the RjDj device you're running.;
 #X obj 70 208 mtl/automatic-gain-control~ /id agc;
-#X text 890 74 XXXXXXXXX;
 #X connect 7 0 17 0;
 #X connect 7 0 17 1;
 #X connect 8 0 7 0;

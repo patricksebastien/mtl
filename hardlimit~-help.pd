@@ -51,7 +51,6 @@ wet_mix 137 7 0 10 -262144 -1 -1 0 1;
 #X obj 278 284 hsl 128 15 0 1 0 0 /hardlimit/residue_mix /hardlimit/residue_mix_
 residue_mix 137 7 0 10 -262144 -1 -1 0 1;
 #X text 15 8 Description: Hardlimit ( sigpack external );
-#X text 731 190 XXXXXXXXX;
 #X connect 2 0 3 0;
 #X connect 3 0 10 0;
 #X connect 3 0 10 1;

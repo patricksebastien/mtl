@@ -32,7 +32,6 @@ file);
 #X obj 69 208 mtl/robot~ /id robot;
 #X text 793 120 Description: robots;
 #X text 788 167 Author: unknown;
-#X text 832 199 XXXXXXXXX;
 #X connect 12 0 19 0;
 #X connect 12 0 19 1;
 #X connect 13 0 16 0;

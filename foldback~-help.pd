@@ -49,7 +49,6 @@
 #X obj 275 256 hradio 15 1 0 2 /foldback/pos /foldback/pos_ positive
 50 7 0 10 -262144 -1 -1 0;
 #X text 15 8 Description: Foldback ( sigpack external );
-#X text 659 215 XXXXXX;
 #X connect 2 0 3 0;
 #X connect 3 0 10 0;
 #X connect 3 0 10 1;

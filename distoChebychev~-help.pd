@@ -69,7 +69,6 @@ amp10 137 7 0 10 -262144 -1 -1 1270 1;
 amp11 137 7 0 10 -262144 -1 -1 1270 1;
 #X text 15 8 Description: Chebychev distorsion;
 #X obj 20 247 mtl/distoChebychev~ /id disto-Chebychev;
-#X text 903 218 XXXXXXX;
 #X connect 2 0 3 0;
 #X connect 3 0 22 0;
 #X connect 3 0 22 1;

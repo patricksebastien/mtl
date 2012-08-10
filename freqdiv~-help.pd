@@ -47,7 +47,6 @@
 denominate 140 7 0 10 -262144 -1 -1 0;
 #X obj 19 247 mtl/freqdiv~ /id freqdiv;
 #X text 15 8 Description: Freqdiv ( sigpack external );
-#X text 534 356 XXXXXXX;
 #X connect 2 0 3 0;
 #X connect 3 0 10 0;
 #X connect 3 0 10 1;

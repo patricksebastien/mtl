@@ -65,7 +65,6 @@
 #X obj 693 386 hsl 128 15 -1 1 0 0 /harmgen/mag10 /harmgen/mag10_ magnitude10
 137 7 0 10 -262144 -1 -1 6350 1;
 #X text 15 8 Description: Harmgen ( sigpack external );
-#X text 235 615 XXXXXXX;
 #X connect 2 0 3 0;
 #X connect 3 0 10 0;
 #X connect 3 0 10 1;

@@ -49,7 +49,6 @@
 50 7 0 10 -262144 -1 -1 0;
 #X obj 19 247 mtl/foldover~ /id foldover;
 #X text 15 8 Description: Foldover ( sigpack external );
-#X text 662 281 XXXXXX;
 #X connect 2 0 3 0;
 #X connect 3 0 11 0;
 #X connect 3 0 11 1;

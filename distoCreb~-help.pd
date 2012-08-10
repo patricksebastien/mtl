@@ -47,7 +47,6 @@
 pre-gain 135 7 0 10 -262144 -1 -1 0 1;
 #X text 15 8 Description: Dist;
 #X obj 20 247 mtl/distoCreb~ /id dist;
-#X text 691 125 XXXXXXX;
 #X connect 2 0 3 0;
 #X connect 3 0 11 0;
 #X connect 3 0 11 1;

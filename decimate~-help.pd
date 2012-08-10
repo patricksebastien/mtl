@@ -49,7 +49,6 @@ ratio 145 7 0 10 -262144 -1 -1 12700 1;
 #X obj 332 143 hsl 128 15 0 32 0 0 /decimate/bits /decimate/bits_ bits
 145 7 0 10 -262144 -1 -1 12700 1;
 #X text 15 8 Description: Decimate ( sigpack external );
-#X text 474 421 XXXXXXX;
 #X connect 2 0 3 0;
 #X connect 3 0 9 0;
 #X connect 3 0 9 1;

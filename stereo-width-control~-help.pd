@@ -25,7 +25,6 @@ width width = 1: no change width > 1: increase in stereo width width
 - in_left )*coef_S \; out_left = m - s \; out_right = m + s \;;
 #X obj -230 158 mtl/stereo-width-control~ /id stereo-width-control
 ;
-#X text 153 444 XXXXXXXX;
 #X connect 12 0 15 0;
 #X connect 13 0 15 1;
 #X connect 15 0 0 0;

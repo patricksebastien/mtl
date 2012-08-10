@@ -29,7 +29,6 @@ in terms of that of a sawtooth \, or vice versa.;
 #X obj 29 329 *~;
 #X obj 32 259 mtl/sawor~ /id sawor;
 #X obj 21 92 mtl/piano 1;
-#X text 543 96 XXXXXXXXX;
 #X connect 8 0 15 1;
 #X connect 14 0 1 0;
 #X connect 14 1 1 1;

@@ -74,7 +74,6 @@ Sound by Andy Farnell Page 84;
 #X connect 24 0 23 1;
 #X restore 21 92 pd chord;
 #X obj 8 153 mtl/chorus~ /id chorus;
-#X text 576 250 XXXXXXXXXXX;
 #X connect 14 0 15 0;
 #X connect 15 0 16 1;
 #X connect 15 0 16 0;

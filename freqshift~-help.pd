@@ -48,7 +48,6 @@
 shift 137 7 0 10 -262144 -1 -1 0 1;
 #X obj 185 338 mtl/out~;
 #X text 15 8 Description: Freqshift ( sigpack external );
-#X text 568 295 XXXXXX;
 #X connect 2 0 3 0;
 #X connect 3 0 9 0;
 #X connect 3 0 9 1;

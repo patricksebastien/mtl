@@ -61,7 +61,6 @@ are 180 degrees out of phase at the two taps and cancel. Even harmonics
 get through - so the sound goes up an octave \, without denaturing
 the timbre as a speed-up would.;
 #X text 624 72 G06 OCTAVE DOUBLING VIA VARIABLE COMB FILTER;
-#X text 427 503 XXXXXXXX;
 #X connect 9 0 1 0;
 #X connect 9 1 1 1;
 #X connect 10 0 11 0;

@@ -49,7 +49,6 @@
 #X obj 274 161 hradio 15 1 0 2 /sieve/mode /sieve/mode_ mode 35 7 0
 10 -262144 -1 -1 0;
 #X text 15 8 Description: Sieve ( sigpack external );
-#X text 612 454 XXXXXXX;
 #X connect 2 0 3 0;
 #X connect 3 0 10 0;
 #X connect 3 0 10 1;

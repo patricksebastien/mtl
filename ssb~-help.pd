@@ -79,7 +79,6 @@ You can then form the (complex) product of this with a (complex) sinusoid
 to modulate upward or downward in frequency.;
 #X text 529 329 The "Hilbert~" object is an abstraction in pd/extra.
 ;
-#X text 406 499 XXXXXXXXXXX;
 #X connect 9 0 10 0;
 #X connect 10 0 11 1;
 #X connect 10 0 11 0;

@@ -47,7 +47,6 @@
 137 7 0 10 -262144 -1 -1 6350 1;
 #X obj 18 247 mtl/shape~ /id shape;
 #X text 15 8 Description: Shape ( sigpack external );
-#X text 550 391 xXXXXXXXX;
 #X connect 2 0 3 0;
 #X connect 3 0 10 0;
 #X connect 3 0 10 1;

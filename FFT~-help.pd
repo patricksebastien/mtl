@@ -52,7 +52,6 @@ FFT-overlap 75 7 0 10 -262144 -1 -1 0;
 #X obj 22 247 mtl/FFT~ /id FFT;
 #X text 15 8 Description: FFT;
 #X text 14 45 Author: Gerard Paresys;
-#X text 671 172 XXXXXXXX;
 #X connect 2 0 3 0;
 #X connect 3 0 13 0;
 #X connect 3 0 13 1;

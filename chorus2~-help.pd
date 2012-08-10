@@ -50,7 +50,6 @@
 frequency 105 7 0 8 -262144 -1 -1 0 1;
 #X obj 203 234 hsl 100 15 0 10 0 0 /chorus2/modulation /chorus2/modulation_
 modulation 105 7 0 8 -262144 -1 -1 0 1;
-#X text 46 84 XXXXXXXXXX;
 #X text -232 24 Description: Chorus;
 #X connect 8 0 9 0;
 #X connect 9 0 10 0;
