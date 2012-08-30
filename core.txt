@@ -252,6 +252,7 @@ mtl/phaser~ fx~
 mtl/phi math
 mtl/piano ui midi
 mtl/pingpong~ fx~
+mtl/pitchFollower info~
 mtl/pitchShift~ fx~
 mtl/pitchshift2~ fx~
 mtl/platereverb~ fx~
@@ -288,7 +289,12 @@ mtl/saturate~ fx~
 mtl/sawor~ instrument~
 mtl/scaleSmart math
 mtl/scompress~ fx~
+mtl/seq-1x16-nbx sequencing
+mtl/seq1x16 sequencing
+mtl/seq1x16-midi-nbx sequencing MIDI
 mtl/seq1x8 sequencing
+mtl/seq1x8-midi-nbx sequencing MIDI
+mtl/seq1x8-nbx sequencing
 mtl/seq8x8 sequencing
 mtl/shaper~ fx~
 mtl/shape~ fx~
