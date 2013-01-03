@@ -1,4 +1,4 @@
-#N canvas 282 148 807 512 10;
+#N canvas 280 153 807 512 10;
 #X declare -lib Gem;
 #X declare -lib Gem;
 #X text 6 -12 Description: Controls the Gem window.;

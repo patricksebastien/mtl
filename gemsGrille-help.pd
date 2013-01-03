@@ -1,0 +1,24 @@
+#N canvas 1 82 619 661 10;
+#X declare -lib Gem;
+#X declare -lib Gem;
+#X text 37 118 Description: multiple cropping and mapping;
+#X text 36 133 tags: gems;
+#X obj 391 11 import Gem;
+#X obj 31 68 cnv 15 400 40 empty empty empty 20 12 0 14 -250209 -66577
+0;
+#X obj 41 77 cnv 15 380 20 empty empty empty 20 12 0 14 -262144 -66577
+0;
+#X text 236 197 <= gestion de la fenêtre gem;
+#X obj 47 199 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+1;
+#X obj 300 191 cnv 15 200 20 empty empty /gemsGrille/ 2 12 0 8 -254305
+-262144 0;
+#X obj 302 215 tgl 15 0 /gemsGrille/on /gemsGrille/on_ On 17 7 0 10
+-262144 -1 -1 1 1;
+#X text 44 77 [gemsGrille] : Affichage d"une grille dans la fenÃªtre
+GEM;
+#X obj 39 298 mtl/gemsGrille;
+#X obj 42 261 mtl/gemsWin /dimen 640 480;
+#X text 34 148 author : raphael isdant http://www.raphaelisdant.fr
+;
+#X connect 6 0 11 0;

@@ -1,29 +1,28 @@
-#N canvas 0 0 1272 714 10;
+#N canvas 1 82 1272 661 10;
 #X obj 136 564 outlet~;
 #X obj 185 564 outlet~;
 #X obj 160 372 tof/crossfade~ 2;
 #X obj 1015 106 inlet params;
 #X obj 1015 152 print PARAM_NOTFOUND;
-#X obj 452 218 tof/param /wet 0 /g slider 0 1;
-#X obj 485 264 line~;
-#X msg 485 243 \$1 5;
+#X obj 318 261 tof/param /wet 0 /g slider 0 1;
+#X obj 351 307 line~;
+#X msg 351 286 \$1 5;
 #X obj 1015 128 tof/param route;
 #X obj 1008 183 b;
 #X obj 1009 212 tof/param gui;
 #X obj 70 72 inlet~;
-#X obj 327 102 tof/param /seqscaler 0.4 /g slider 0.01 1;
+#X obj 392 154 tof/param /seqscaler 0.4 /g slider 0.01 1;
 #X obj 251 52 tof/param /directiononoffr 1 /g toggle 0 1;
-#X obj 413 126 tof/param /seqstartr 6 /g slider 3 21;
-#X obj 204 28 tof/param /resetverb 1 /g bang 0 1;
+#X obj 478 178 tof/param /seqstartr 6 /g slider 3 21;
 #X obj 500 404 cnv 15 200 193 empty empty fibonacci-verb 20 12 1 16
 -170496 -66577 0;
 #N canvas 0 0 450 300 (subpatch) 0;
 #X array \$0-fibs 16 float 3;
-#A 0 0.178885 0.25126 0.580165 1.23798 2.42796 4.47903 7.92336 13.622
-22.9682 38.2163 63.0139 103.263 168.512 274.213 445.366 722.422;
+#A 0 0.178885 29.3075 48.7641 80.4057 131.763 215.021 349.896 568.287
+921.811 1493.98 2048 2048 2048 2048 2048 2048;
 #X coords 0 0 16 2048 160 160 1;
 #X restore 519 436 graph;
-#N canvas 0 0 1272 714 delay-network 1;
+#N canvas 1 82 1272 661 delay-network 0;
 #X msg 82 57 reset;
 #X obj 70 90 fdn~ 16 80000;
 #N canvas 0 0 1272 714 makedelaylines 0;
@@ -114,7 +113,7 @@
 #X connect 6 0 0 0;
 #X connect 7 0 2 0;
 #X restore 183 201 pd delay-network;
-#N canvas 669 500 450 300 fibseqgen 0;
+#N canvas 665 443 450 300 fibseqgen 0;
 #N canvas 0 0 450 300 fibclosed 0;
 #X obj 141 205 pow;
 #X obj 141 179 float 1.61803;
@@ -193,9 +192,13 @@
 #X connect 12 0 13 0;
 #X connect 15 0 5 0;
 #X connect 16 0 8 0;
-#X restore 323 156 pd fibseqgen;
+#X restore 388 208 pd fibseqgen;
 #X obj 756 251 cnv 15 100 60 empty empty empty 20 12 0 14 -233017 -66577
 0;
+#X obj 204 28 tof/param /resetverb /g bng;
+#X obj 273 96 t b b b;
+#X msg 325 136 6;
+#X msg 289 136 0.4;
 #X connect 2 0 0 0;
 #X connect 2 1 1 0;
 #X connect 3 0 8 0;
@@ -205,12 +208,17 @@
 #X connect 8 0 4 0;
 #X connect 9 0 10 0;
 #X connect 11 0 2 0;
-#X connect 11 0 18 0;
+#X connect 11 0 17 0;
 #X connect 11 0 2 1;
-#X connect 12 0 19 0;
-#X connect 13 0 18 2;
-#X connect 14 0 19 1;
-#X connect 15 0 18 1;
-#X connect 18 0 2 2;
-#X connect 18 1 2 3;
+#X connect 12 0 18 0;
+#X connect 13 0 17 2;
+#X connect 14 0 18 1;
+#X connect 17 0 2 2;
+#X connect 17 1 2 3;
+#X connect 20 0 21 0;
+#X connect 21 0 17 1;
+#X connect 21 1 23 0;
+#X connect 21 2 22 0;
+#X connect 22 0 18 1;
+#X connect 23 0 18 0;
 #X coords 0 -1 1 1 200 200 1 500 400;

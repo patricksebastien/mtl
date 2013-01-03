@@ -1,7 +1,7 @@
-#N canvas 656 22 540 465 10;
+#N canvas 654 82 540 465 10;
 #X declare -lib Gem;
 #X obj 21 179 gemhead;
-#X obj 22 65 tgl 15 0 empty empty empty 0 -6 0 8 -262144 -1 -1 1 1
+#X obj 22 65 tgl 15 0 empty empty empty 0 -6 0 8 -262144 -1 -1 0 1
 ;
 #X obj 161 188 bng 15 250 50 0 empty empty empty 0 -6 0 8 -262144 -1
 -1;
