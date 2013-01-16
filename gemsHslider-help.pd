@@ -1,0 +1,150 @@
+#N canvas 1 82 657 661 10;
+#X declare -lib Gem;
+#X declare -lib Gem;
+#X obj 18 -58 cnv 15 400 40 empty empty empty 20 12 0 14 -254305 -66577
+0;
+#X obj 28 -49 cnv 15 380 20 empty empty empty 20 12 0 14 -262144 -66577
+0;
+#X obj 330 -47 tgl 15 1 empty empty empty 17 7 0 10 -262144 -1 -1 0
+1;
+#X obj 353 -47 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+1;
+#X obj 17 224 cnv 15 400 100 empty empty empty 20 12 0 14 -254305 -66577
+0;
+#X floatatom 31 273 5 0 0 0 - - -;
+#X text 47 223 arguments:;
+#X obj 116 277 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+1;
+#X obj 202 277 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+1;
+#X text 28 288 sortie;
+#X text 28 300 entre [0-1];
+#X text 110 302 la zone;
+#X text 111 291 souris dans;
+#X text 196 293 clic dans;
+#X text 196 304 la zone;
+#X text 47 235 nom \, posX \, posY \, tailleX \, tailleY;
+#X text 264 292 TOUCHE "<" = DEPLACEMENT;
+#X text 282 303 + clic droit = TAILLE;
+#X text 504 331 <= gestion de la fenêtre gem;
+#X obj 174 119 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+1;
+#X obj 439 -46 cnv 15 200 20 empty empty /gemsHslider/ 2 12 0 8 -258401
+-262144 0;
+#X obj 12 66 mtl/gemsMouse;
+#X obj 436 108 cnv 15 200 90 empty empty empty 20 12 0 14 -233017 -66577
+0;
+#X text 436 105 couleur de fond inactif (RVBA);
+#X obj 445 124 hsl 128 15 0 100 0 0 /gemsHslider/bcolorR /gemsHslider/bcolorR_
+bcolorR 135 10 0 10 -262144 -1 -1 6350 1;
+#X obj 445 143 hsl 128 15 0 100 0 0 /gemsHslider/bcolorV /gemsHslider/bcolorV_
+bcolorV 135 10 0 10 -262144 -1 -1 6350 1;
+#X obj 445 162 hsl 128 15 0 100 0 0 /gemsHslider/bcolorB /gemsHslider/bcolorB_
+bcolorB 135 10 0 10 -262144 -1 -1 6350 1;
+#X obj 445 181 hsl 128 15 0 100 0 0 /gemsHslider/bcolorA /gemsHslider/bcolorA_
+bcolorA 135 10 0 10 -262144 -1 -1 6350 1;
+#X obj 437 205 cnv 15 200 90 empty empty empty 20 12 0 14 -233017 -66577
+0;
+#X text 438 201 couleur du texte (RVBA);
+#X obj 445 219 hsl 128 15 0 100 0 0 /gemsHslider/tcolorR /gemsHslider/tcolorR_
+tcolorR 135 10 0 10 -262144 -1 -1 12700 1;
+#X obj 445 238 hsl 128 15 0 100 0 0 /gemsHslider/tcolorV /gemsHslider/tcolorV_
+tcolorV 135 10 0 10 -262144 -1 -1 12700 1;
+#X obj 445 257 hsl 128 15 0 100 0 0 /gemsHslider/tcolorB /gemsHslider/tcolorB_
+tcolorB 135 10 0 10 -262144 -1 -1 12700 1;
+#X obj 445 276 hsl 128 15 0 100 0 0 /gemsHslider/tcolorA /gemsHslider/tcolorA_
+tcolorA 135 10 0 10 -262144 -1 -1 12700 1;
+#X obj 438 302 cnv 15 200 90 empty empty empty 20 12 0 14 -233017 -66577
+0;
+#X text 440 298 couleur du contour (RVBA);
+#X obj 445 316 hsl 128 15 0 100 0 0 /gemsHslider/wcolorR /gemsHslider/wcolorR_
+wcolorR 135 10 0 10 -262144 -1 -1 12700 1;
+#X obj 445 335 hsl 128 15 0 100 0 0 /gemsHslider/wcolorV /gemsHslider/wcolorV_
+wcolorV 135 10 0 10 -262144 -1 -1 12700 1;
+#X obj 445 354 hsl 128 15 0 100 0 0 /gemsHslider/wcolorB /gemsHslider/wcolorB_
+wcolorB 135 10 0 10 -262144 -1 -1 12700 1;
+#X obj 445 373 hsl 128 15 0 100 0 0 /gemsHslider/wcolorA /gemsHslider/wcolorA_
+wcolorA 135 10 0 10 -262144 -1 -1 12700 1;
+#X obj 169 141 mtl/gemsWin /dimen 640 480;
+#X obj 437 397 cnv 15 200 60 empty empty empty 20 12 0 14 -204786 -66577
+0;
+#X obj 451 415 hsl 128 15 0 160 0 0 /gemsHslider/width /gemsHslider/width_
+width 135 10 0 10 -262144 -1 -1 79 1;
+#X obj 451 433 hsl 128 15 0 150 0 0 /gemsHslider/tsize /gemsHslider/tsize_
+tsize 135 10 0 10 -262144 -1 -1 254 1;
+#X text 441 394 Label;
+#X obj 437 13 cnv 15 200 90 empty empty empty 20 12 0 14 -261234 -66577
+0;
+#X obj 444 20 hsl 128 15 -160 160 0 0 /gemsHslider/positionX /gemsHslider/positionX_
+positionX 135 10 0 10 -262144 -1 -1 6350 1;
+#X obj 445 41 hsl 128 15 -160 160 0 0 /gemsHslider/positionY /gemsHslider/positionY_
+positionY 135 10 0 10 -262144 -1 -1 6350 1;
+#X obj 445 61 hsl 128 15 0 160 0 0 /gemsHslider/sizeX /gemsHslider/sizeX_
+sizeX 135 10 0 10 -262144 -1 -1 397 1;
+#X obj 445 81 hsl 128 15 0 160 0 0 /gemsHslider/sizeY /gemsHslider/sizeY_
+sizeY 135 10 0 10 -262144 -1 -1 397 1;
+#X obj 438 -21 cnv 15 200 30 empty empty empty 20 12 0 14 -191407 -66577
+0;
+#X obj 444 -14 tgl 15 0 /gemsHslider/on /gemsHslider/on_ On 17 7 0
+10 -262144 -1 -1 0 1;
+#X obj 478 -14 tgl 15 0 /gemsHslider/drag /gemsHslider/drag_ Drag 17
+7 0 10 -262144 -1 -1 0 1;
+#X obj 582 -14 bng 15 250 50 0 /gemsHslider/reset /gemsHslider/reset_
+Reset 17 7 0 10 -262144 -1 -1;
+#X text 10 9 tags: gems;
+#X text 11 24 author : raphael isdant http://www.raphaelisdant.fr;
+#X obj 440 -70 import Gem;
+#N canvas 345 316 403 304 communication 0;
+#X obj -5 -6 cnv 15 400 300 empty empty empty 20 12 0 14 -260758 -66577
+0;
+#X obj 3 2 cnv 15 380 20 empty empty empty 20 12 0 14 -262144 -66577
+0;
+#X obj 18 95 hsl 50 15 0 1 0 0 empty empty empty -2 -8 0 10 -262144
+-1 -1 0 1;
+#X obj 141 211 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+1;
+#X obj 281 212 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+1;
+#X text 276 228 clic dans la zone;
+#X text 141 225 souris dans la zone;
+#X obj 14 223 hsl 50 15 0 1 0 0 empty empty empty -2 -8 0 10 -262144
+-1 -1 0 1;
+#X floatatom 11 250 5 0 0 0 - - -;
+#X text 5 40 ____________________________________________________________
+;
+#X text 7 167 ____________________________________________________________
+;
+#X text 8 268 état du hslider;
+#X obj 307 91 hsl 50 15 0 1 0 0 empty empty empty -2 -8 0 10 -262144
+-1 -1 0 1;
+#X text 8 164 RECEPTION (GLOBALE);
+#X text 9 3 Envoi / réception des messages suivant le NOM DE L'OBJET:
+;
+#X obj 15 117 s banane-vslider;
+#X obj 11 190 r banane-value;
+#X obj 141 190 r banane-zone;
+#X obj 281 190 r banane-clic;
+#X obj 304 113 s banane;
+#X obj 169 93 hsl 50 15 0 1 0 0 empty empty empty -2 -8 0 10 -262144
+-1 -1 0 1;
+#X obj 166 115 s vslider;
+#X text 14 131 Local;
+#X text 165 132 type;
+#X text 300 132 globale;
+#X text 6 36 ENVOI (LOCAL/TYPE/GLOBALE);
+#X connect 2 0 15 0;
+#X connect 7 0 8 0;
+#X connect 12 0 19 0;
+#X connect 16 0 7 0;
+#X connect 17 0 3 0;
+#X connect 18 0 4 0;
+#X connect 20 0 21 0;
+#X restore 299 249 pd communication;
+#X obj 31 253 gemsHslider banane -1 1 1 1;
+#X text 11 -6 Description: HSlider in the Gem window.;
+#X text 31 -49 [gemsHslider] : gestion d'un Hslider dans gem;
+#X connect 19 0 40 0;
+#X connect 21 0 58 0;
+#X connect 58 0 5 0;
+#X connect 58 1 7 0;
+#X connect 58 2 8 0;

@@ -1,0 +1,95 @@
+#N canvas 1 82 657 661 10;
+#X declare -lib Gem;
+#X declare -lib Gem;
+#X obj 18 -58 cnv 15 400 40 empty empty empty 20 12 0 14 -254305 -66577
+0;
+#X obj 28 -49 cnv 15 380 20 empty empty empty 20 12 0 14 -262144 -66577
+0;
+#X obj 330 -47 tgl 15 1 empty empty empty 17 7 0 10 -262144 -1 -1 0
+1;
+#X obj 353 -47 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+1;
+#X obj 17 224 cnv 15 400 100 empty empty empty 20 12 0 14 -254305 -66577
+0;
+#X floatatom 31 273 5 0 0 0 - - -;
+#X text 47 223 arguments:;
+#X text 28 288 sortie;
+#X text 28 300 entre [0-1];
+#X text 47 235 nom \, posX \, posY \, tailleX \, tailleY;
+#X text 264 292 TOUCHE "<" = DEPLACEMENT;
+#X text 282 303 + clic droit = TAILLE;
+#X obj 174 119 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+1;
+#X obj 439 -46 cnv 15 200 20 empty empty /gemsVu/ 2 12 0 8 -258401
+-262144 0;
+#X obj 12 66 mtl/gemsMouse;
+#X obj 169 141 mtl/gemsWin /dimen 640 480;
+#X obj 437 13 cnv 15 200 60 empty empty empty 20 12 0 14 -261234 -66577
+0;
+#X obj 444 20 hsl 128 15 -160 160 0 0 /gemsVu/positionX /gemsVu/positionX_
+positionX 135 10 0 10 -262144 -1 -1 6350 1;
+#X obj 445 41 hsl 128 15 -160 160 0 0 /gemsVu/positionY /gemsVu/positionY_
+positionY 135 10 0 10 -262144 -1 -1 6350 1;
+#X obj 438 -21 cnv 15 200 30 empty empty empty 20 12 0 14 -191407 -66577
+0;
+#X obj 444 -14 tgl 15 0 /gemsVu/on /gemsVu/on_ On 17 7 0 10 -262144
+-1 -1 1 1;
+#X obj 478 -14 tgl 15 0 /gemsVu/drag /gemsVu/drag_ Drag 17 7 0 10 -262144
+-1 -1 0 1;
+#X obj 582 -14 bng 15 250 50 0 /gemsVu/reset /gemsVu/reset_ Reset 17
+7 0 10 -262144 -1 -1;
+#X text 10 9 tags: gems;
+#X text 11 24 author : raphael isdant http://www.raphaelisdant.fr;
+#X obj 440 -70 import Gem;
+#X obj 31 253 gemsVu trompette -1 1 1 1;
+#X obj 195 200 osc~ 440;
+#X obj 57 193 hsl 128 15 0 1 0 0 empty empty empty -2 -8 0 10 -262144
+-1 -1 3200 1;
+#X obj 137 372 dac~;
+#N canvas 345 316 403 304 communication 0;
+#X obj -5 -6 cnv 15 400 300 empty empty empty 20 12 0 14 -260758 -66577
+0;
+#X obj 3 2 cnv 15 380 20 empty empty empty 20 12 0 14 -262144 -66577
+0;
+#X obj 18 95 hsl 50 15 0 1 0 0 empty empty empty -2 -8 0 10 -262144
+-1 -1 0 1;
+#X obj 14 223 hsl 50 15 0 1 0 0 empty empty empty -2 -8 0 10 -262144
+-1 -1 1235 1;
+#X floatatom 11 250 5 0 0 0 - - -;
+#X text 5 40 ____________________________________________________________
+;
+#X text 7 167 ____________________________________________________________
+;
+#X text 8 268 état du hslider;
+#X obj 307 91 hsl 50 15 0 1 0 0 empty empty empty -2 -8 0 10 -262144
+-1 -1 0 1;
+#X text 8 164 RECEPTION (GLOBALE);
+#X text 9 3 Envoi / réception des messages suivant le NOM DE L'OBJET:
+;
+#X obj 169 93 hsl 50 15 0 1 0 0 empty empty empty -2 -8 0 10 -262144
+-1 -1 0 1;
+#X text 14 131 Local;
+#X text 165 132 type;
+#X text 300 132 globale;
+#X text 6 36 ENVOI (LOCAL/TYPE/GLOBALE);
+#X obj 15 117 s trompette-vu;
+#X obj 166 115 s vu;
+#X obj 304 113 s trompette;
+#X obj 11 190 r trompette-value;
+#X connect 2 0 16 0;
+#X connect 3 0 4 0;
+#X connect 8 0 18 0;
+#X connect 11 0 17 0;
+#X connect 19 0 3 0;
+#X restore 307 258 pd communication;
+#X obj 522 -14 tgl 15 0 /gemsVu/mute /gemsVu/mute_ Mute 17 7 0 10 -262144
+-1 -1 0 1;
+#X text 31 -49 [gemsVu] : gestion d'un Vu dans gem;
+#X text 11 -6 Description: Vu in the Gem window.;
+#X connect 12 0 15 0;
+#X connect 14 0 26 0;
+#X connect 26 0 5 0;
+#X connect 26 1 29 0;
+#X connect 26 1 29 1;
+#X connect 27 0 26 1;
+#X connect 28 0 26 0;
