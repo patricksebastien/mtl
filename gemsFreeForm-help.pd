@@ -1,0 +1,142 @@
+#N canvas 19 82 679 661 10;
+#X declare -lib Gem;
+#X declare -lib Gem;
+#X obj 33 19 cnv 15 400 40 empty empty empty 20 12 0 14 -254305 -66577
+0;
+#X obj 43 28 cnv 15 380 20 empty empty empty 20 12 0 14 -262144 -66577
+0;
+#X obj 345 30 tgl 15 1 empty empty empty 17 7 0 10 -262144 -1 -1 0
+1;
+#X obj 368 30 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+1;
+#X obj -9 301 cnv 15 450 100 empty empty empty 20 12 0 14 -254305 -66577
+0;
+#X text 21 301 arguments:;
+#X obj 90 355 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+1;
+#X obj 176 355 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+1;
+#X text 84 380 la zone;
+#X text 85 369 souris dans;
+#X text 170 371 clic dans;
+#X text 170 382 la zone;
+#X text 21 313 nom \, posX \, posY \, tailleX \, tailleY;
+#X text 518 406 <= gestion de la fenêtre gem;
+#X obj 144 123 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 1
+1;
+#X obj 454 31 cnv 15 200 20 empty empty /gemsFreeForm/ 2 12 0 8 -258401
+-262144 0;
+#X obj 27 143 mtl/gemsMouse;
+#X obj 451 185 cnv 15 200 90 empty empty empty 20 12 0 14 -233017 -66577
+0;
+#X text 451 182 couleur de fond inactif (RVBA);
+#X obj 460 201 hsl 128 15 0 100 0 0 /gemsFreeForm/bcolorR /gemsFreeForm/bcolorR_
+bcolorR 135 10 0 10 -262144 -1 -1 6350 1;
+#X obj 460 220 hsl 128 15 0 100 0 0 /gemsFreeForm/bcolorV /gemsFreeForm/bcolorV_
+bcolorV 135 10 0 10 -262144 -1 -1 6350 1;
+#X obj 460 239 hsl 128 15 0 100 0 0 /gemsFreeForm/bcolorB /gemsFreeForm/bcolorB_
+bcolorB 135 10 0 10 -262144 -1 -1 6350 1;
+#X obj 460 258 hsl 128 15 0 100 0 0 /gemsFreeForm/bcolorA /gemsFreeForm/bcolorA_
+bcolorA 135 10 0 10 -262144 -1 -1 6350 1;
+#X obj 451 280 cnv 15 200 90 empty empty empty 20 12 0 14 -233017 -66577
+0;
+#X text 452 276 couleur du texte (RVBA);
+#X obj 459 294 hsl 128 15 0 100 0 0 /gemsFreeForm/tcolorR /gemsFreeForm/tcolorR_
+tcolorR 135 10 0 10 -262144 -1 -1 12700 1;
+#X obj 459 313 hsl 128 15 0 100 0 0 /gemsFreeForm/tcolorV /gemsFreeForm/tcolorV_
+tcolorV 135 10 0 10 -262144 -1 -1 12700 1;
+#X obj 459 332 hsl 128 15 0 100 0 0 /gemsFreeForm/tcolorB /gemsFreeForm/tcolorB_
+tcolorB 135 10 0 10 -262144 -1 -1 12700 1;
+#X obj 459 351 hsl 128 15 0 100 0 0 /gemsFreeForm/tcolorA /gemsFreeForm/tcolorA_
+tcolorA 135 10 0 10 -262144 -1 -1 12700 1;
+#X obj 452 377 cnv 15 200 90 empty empty empty 20 12 0 14 -233017 -66577
+0;
+#X text 454 373 couleur du contour (RVBA);
+#X obj 459 391 hsl 128 15 0 100 0 0 /gemsFreeForm/wcolorR /gemsFreeForm/wcolorR_
+wcolorR 135 10 0 10 -262144 -1 -1 12400 1;
+#X obj 459 410 hsl 128 15 0 100 0 0 /gemsFreeForm/wcolorV /gemsFreeForm/wcolorV_
+wcolorV 135 10 0 10 -262144 -1 -1 12700 1;
+#X obj 459 429 hsl 128 15 0 100 0 0 /gemsFreeForm/wcolorB /gemsFreeForm/wcolorB_
+wcolorB 135 10 0 10 -262144 -1 -1 12700 1;
+#X obj 459 448 hsl 128 15 0 100 0 0 /gemsFreeForm/wcolorA /gemsFreeForm/wcolorA_
+wcolorA 135 10 0 10 -262144 -1 -1 12700 1;
+#X obj 139 145 mtl/gemsWin /dimen 640 480;
+#X obj 451 472 cnv 15 200 60 empty empty empty 20 12 0 14 -204786 -66577
+0;
+#X obj 465 490 hsl 128 15 0 160 0 0 /gemsFreeForm/width /gemsFreeForm/width_
+width 135 10 0 10 -262144 -1 -1 8379 1;
+#X obj 465 508 hsl 128 15 0 150 0 0 /gemsFreeForm/tsize /gemsFreeForm/tsize_
+tsize 135 10 0 10 -262144 -1 -1 600 1;
+#X text 455 469 Label;
+#X obj 452 90 cnv 15 200 90 empty empty empty 20 12 0 14 -261234 -66577
+0;
+#X obj 459 97 hsl 128 15 -160 160 0 0 /gemsFreeForm/positionX /gemsFreeForm/positionX_
+positionX 135 10 0 10 -262144 -1 -1 6350 1;
+#X obj 460 118 hsl 128 15 -160 160 0 0 /gemsFreeForm/positionY /gemsFreeForm/positionY_
+positionY 135 10 0 10 -262144 -1 -1 6350 1;
+#X obj 460 138 hsl 128 15 0 160 0 0 /gemsFreeForm/sizeX /gemsFreeForm/sizeX_
+sizeX 135 10 0 10 -262144 -1 -1 397 1;
+#X obj 460 158 hsl 128 15 0 160 0 0 /gemsFreeForm/sizeY /gemsFreeForm/sizeY_
+sizeY 135 10 0 10 -262144 -1 -1 397 1;
+#X obj 453 56 cnv 15 200 30 empty empty empty 20 12 0 14 -191407 -66577
+0;
+#X obj 459 63 tgl 15 0 /gemsFreeForm/on /gemsFreeForm/on_ On 17 7 0
+10 -262144 -1 -1 1 1;
+#X obj 493 63 tgl 15 0 /gemsFreeForm/drag /gemsFreeForm/drag_ Drag
+17 7 0 10 -262144 -1 -1 0 1;
+#X obj 597 63 bng 15 250 50 0 /gemsFreeForm/reset /gemsFreeForm/reset_
+Reset 17 7 0 10 -262144 -1 -1;
+#X text 25 86 tags: gems;
+#X text 26 101 author : raphael isdant http://www.raphaelisdant.fr
+;
+#X obj 455 7 import Gem;
+#X obj 271 214 pix_video;
+#X text 274 252 texture ID;
+#X obj 271 195 gemhead;
+#X obj 271 233 pix_texture;
+#X obj 5 331 mtl/gemsFreeForm quadra;
+#X text 0 367 position des;
+#X text 0 379 points;
+#X obj 2 356 print;
+#X text 233 343 des 4 points dans un fichier;
+#X text 233 353 texte portant le nom de l'objet;
+#X text 233 367 (exemple ici: "quadra");
+#X text 46 28 [gemsFreeForm] : gestion d'un FreeForm dans gem;
+#X text 26 71 Description: FreeForm in the Gem window.;
+#N canvas 959 123 403 205 communication 1;
+#X obj -5 -6 cnv 15 400 200 empty empty empty 20 12 0 14 -260758 -66577
+0;
+#X obj 142 131 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+1;
+#X obj 282 132 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+1;
+#X obj 3 2 cnv 15 380 20 empty empty empty 20 12 0 14 -262144 -66577
+0;
+#X text 275 90 clic dans la zone;
+#X text 141 89 souris dans la zone;
+#X text 9 88 état du bouton;
+#X floatatom 12 150 5 0 0 0 - - -;
+#X text 9 3 Envoi / réception des messages suivant le nom de l'objet:
+;
+#X obj 12 130 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+1;
+#X obj 12 38 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+-1;
+#X obj 12 110 r quadra-value;
+#X obj 142 109 r quadra-zone;
+#X obj 282 110 r quadra-clic;
+#X obj 9 61 s quadra-freeform;
+#X connect 9 0 7 0;
+#X connect 10 0 14 0;
+#X connect 11 0 9 0;
+#X connect 12 0 1 0;
+#X connect 13 0 2 0;
+#X restore 280 316 pd communication;
+#X connect 14 0 35 0;
+#X connect 16 0 56 0;
+#X connect 52 0 55 0;
+#X connect 54 0 52 0;
+#X connect 55 1 56 1;
+#X connect 56 0 59 0;
+#X connect 56 1 6 0;
+#X connect 56 2 7 0;
