@@ -1,0 +1,24 @@
+#N canvas 266 201 748 500 10;
+#X obj 27 269 mtl/out~;
+#X obj 309 182 hsl 100 15 0 1 0 0 /octave-harmoniser/wet /aliaser/wet_/octave-harmoniser/wet_
+wet 105 7 0 8 -262144 -1 -1 0 1;
+#X obj 307 149 cnv 15 200 20 empty empty /octave-harmoniser/ 2 12 0
+8 -258401 -262144 0;
+#X obj 72 166 osc~ 400;
+#X floatatom 75 111 5 0 0 0 - - -;
+#X obj 310 201 hsl 100 15 1 2 0 0 /octave-harmoniser/speed /octave-harmoniser/speed_
+speed 105 7 0 8 -262144 -1 -1 0 1;
+#X text 330 305 Time-domain harmonizer with fixed intervals: one octave
+down and one octave up. You'll notice delay on these tones. Delay times
+can be regulated to an extent with the 'speed' slider.;
+#X text 330 363 In exchange for the noticable delay \, this harmonizer
+does not suffer from 'rough tones' \, there is only a very subtile
+amplitude modulation associated with the speed setting.;
+#X text 331 425 Katja Vetter jan 2012 http://www.katjaas.nl;
+#X obj 27 234 mtl/octave-harmoniser~ /id octave-harmoniser;
+#X connect 3 0 9 0;
+#X connect 3 0 9 1;
+#X connect 4 0 3 0;
+#X connect 9 0 0 0;
+#X connect 9 1 0 1;
+#X coords 0 0 1 1 402 40 0;
