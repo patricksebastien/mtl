@@ -127,6 +127,7 @@ mtl/distoTanh~ fx~
 mtl/distoWaveShaper-DeJong~ fx~
 mtl/distoWaveShaper-Jon-Watte~ fx~
 mtl/distoWaveShaper-Tarrabia~ fx~
+mtl/distorsion~ fx~
 mtl/distro8bit~ fx~
 mtl/dodeca musical
 mtl/doubleClick ui
@@ -167,11 +168,17 @@ mtl/gBrowser ui
 mtl/gateNoise~ fx~
 mtl/gemsAlphaMode gems
 mtl/gemsAverageColor gems
+mtl/gemsBang gems
 mtl/gemsCropMap gems
 mtl/gemsCuber gems
 mtl/gemsDuplicate gems
 mtl/gemsFeedback gems
+mtl/gemsFreeForm gems
+mtl/gemsGrille gems
+mtl/gemsHslider gems
 mtl/gemsImages gems
+mtl/gemsInfo gems
+mtl/gemsKnob gems
 mtl/gemsLines gems
 mtl/gemsLoop gems
 mtl/gemsMouse gems
@@ -179,8 +186,13 @@ mtl/gemsMovies gems
 mtl/gemsPolygon gems
 mtl/gemsScaleToPix gems
 mtl/gemsStretch gems
+mtl/gemsTable gems
+mtl/gemsToggle gems
+mtl/gemsVslider gems
+mtl/gemsVu gems
 mtl/gemsWheel gems
 mtl/gemsWin gems
+mtl/gemsXYPad gems
 mtl/granularLive~ fx~
 mtl/granulator~ fx~
 mtl/gunGas~ synthesize~
@@ -291,9 +303,14 @@ mtl/scaleSmart math
 mtl/scompress~ fx~
 mtl/seq-1x16-nbx sequencing
 mtl/seq1x16 sequencing
+mtl/seq1x16-midi sequencing
 mtl/seq1x16-midi-nbx sequencing MIDI
+mtl/seq1x16-midi-vslider sequencing
+mtl/seq1x16-nbx sequencing
 mtl/seq1x8 sequencing
+mtl/seq1x8-midi sequencing
 mtl/seq1x8-midi-nbx sequencing MIDI
+mtl/seq1x8-midi-vslider sequencing
 mtl/seq1x8-nbx sequencing
 mtl/seq8x8 sequencing
 mtl/shaper~ fx~
