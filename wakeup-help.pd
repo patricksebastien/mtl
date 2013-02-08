@@ -1,5 +1,5 @@
 #N canvas 1 82 1364 661 10;
-#X obj 227 270 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 1
+#X obj 227 270 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
 1;
 #X symbolatom 314 270 10 0 0 0 - - -;
 #X text 384 270 <- current time;
@@ -8,15 +8,15 @@
 #X obj 590 130 cnv 15 200 20 empty empty /wakeup/ 2 12 0 8 -258401
 -262144 0;
 #X obj 590 153 tgl 15 0 /wakeup/on /wakeup/on_ on 17 7 0 8 -262144
--166441 -1 1 1;
+-166441 -1 0 1;
 #X obj 589 172 nbx 5 14 0 23 0 0 /wakeup/hour /wakeup/hour_ hour 50
-8 0 8 -262144 -1 -1 23 256;
+8 0 8 -262144 -1 -1 0 256;
 #X obj 589 190 nbx 5 14 0 60 0 0 /wakeup/min /wakeup/min_ min 50 8
-0 8 -262144 -1 -1 5 256;
+0 8 -262144 -1 -1 0 256;
 #X obj 233 202 mtl/wakeup;
-#X text 72 60 tags : tools;
 #X text 74 7 it's time to wake up \; ------------- \; Return 1 when
 it's time to wake up \; author : jerome abel \, JKP;
+#X text 72 60 tags: tools;
 #X connect 4 0 9 0;
 #X connect 9 0 0 0;
 #X connect 9 1 1 0;

@@ -21,8 +21,8 @@ minfrom 50 8 0 8 -262144 -1 -1 0 256;
 hourto 50 8 0 8 -262144 -1 -1 0 256;
 #X obj 504 206 nbx 5 14 0 59 0 0 /opening_hours/minto /opening_hours/minto_
 minto 50 8 0 8 -262144 -1 -1 0 256;
-#X text 74 64 author : Jérôme Abel http://jeromeabel.net/ tags :
-tools;
+#X text 74 64 author : Jérôme Abel http://jeromeabel.net/;
+#X text 74 79 tags: tools;
 #X connect 0 0 7 0;
 #X connect 7 0 1 0;
 #X connect 7 1 2 0;

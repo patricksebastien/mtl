@@ -253,6 +253,7 @@ mtl/octava musical
 mtl/octave.divider~ fx~
 mtl/octave.doubler~ fx~
 mtl/oldRecord~ synthesize~
+mtl/opening_hours tools
 mtl/or logic
 mtl/out~ mix~
 mtl/oversat~ fx~
@@ -354,6 +355,7 @@ mtl/vdirac~ synthesize~
 mtl/vibrato~ fx~
 mtl/vocoder~ fx~
 mtl/vu~ info~
+mtl/wakeup tools
 mtl/wave-shaper~ fx~
 mtl/wavedistort~ fx~
 mtl/wavewrap~ fx~
