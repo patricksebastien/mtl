@@ -1,0 +1,27 @@
+#N canvas 1 82 1364 661 10;
+#X obj 897 30 loadbang;
+#X msg 338 499 45 45 45 45 1 1 1 1 18 20 18 1 1 1 0 1;
+#X text 860 117 Right inlet sets pattern;
+#X floatatom 238 165 5 0 0 0 - - -;
+#X obj 337 473 cyclone/prepend set;
+#X text 16 38 tags: sequencing;
+#X obj 239 95 loadbang;
+#X obj 240 117 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 1
+1;
+#X obj 348 14 mtl/clkMaster 120;
+#X obj 238 139 mtl/clkSlave 2 16;
+#X text 12 23 Description: An 16 step beat sequencer.;
+#X floatatom 181 499 5 0 0 0 - - -;
+#X msg 822 137 45 45 45 45 1 1 1 1 18 20 18 1 1 1 1 1;
+#X obj 137 244 mtl/seq1x16-nbx-circle;
+#X text 14 55 inspired from the ArgoPd library http://paresys.pagesperso-orange.fr/ARGOPd/index.html
+;
+#X connect 0 0 12 0;
+#X connect 3 0 13 0;
+#X connect 4 0 1 0;
+#X connect 6 0 7 0;
+#X connect 7 0 9 0;
+#X connect 9 0 3 0;
+#X connect 12 0 13 1;
+#X connect 13 0 11 0;
+#X connect 13 1 4 0;

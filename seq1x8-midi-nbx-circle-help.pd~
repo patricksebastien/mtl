@@ -1,0 +1,32 @@
+#N canvas 1 84 699 659 10;
+#X obj 517 48 loadbang;
+#X text 522 307 Right outlet outputs the current pattern on every modification
+;
+#X msg 514 409 78 93 95 -1 104 102 95 106;
+#X text 531 82 Right inlet sets pattern;
+#X floatatom 238 165 5 0 0 0 - - -;
+#X obj 513 383 cyclone/prepend set;
+#X obj 348 14 mtl/clkMaster 120;
+#X obj 239 95 loadbang;
+#X obj 240 117 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 1
+1;
+#X obj 238 139 mtl/clkSlave 2 8;
+#X obj 211 476 mtl/beep~ /id beep;
+#X obj 237 514 dac~;
+#X msg 503 100 78 93 95 -1 104 102 95 106;
+#X text 23 24 Description: An 8 step beat MIDI sequencer.;
+#X text 23 40 tags: sequencing MIDI;
+#X obj 192 302 atl/seq1x8-midi-nbx-circle;
+#X text 22 54 inspired from the ArgoPd library http://paresys.pagesperso-orange.fr/ARGOPd/index.html
+;
+#X connect 0 0 12 0;
+#X connect 4 0 15 0;
+#X connect 5 0 2 0;
+#X connect 7 0 8 0;
+#X connect 8 0 9 0;
+#X connect 9 0 4 0;
+#X connect 10 0 11 0;
+#X connect 10 0 11 1;
+#X connect 12 0 15 1;
+#X connect 15 0 10 0;
+#X connect 15 1 5 0;
