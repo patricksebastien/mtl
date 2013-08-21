@@ -1,4 +1,4 @@
-#N canvas 296 345 682 266 10;
+#N canvas 294 350 682 266 10;
 #X obj 21 1 inlet~;
 #X obj 109 -3 inlet~;
 #X obj 26 166 outlet~;
@@ -12,7 +12,7 @@
 #X obj 499 14 tof/param route;
 #X obj 492 69 b;
 #X obj 493 98 tof/param gui;
-#N canvas 0 25 1259 679 octave-divider 0;
+#N canvas 1 82 1259 661 octave-divider 1;
 #X obj 135 450 hip~ 5;
 #X text 1323 710 updated for Pd version 0.37;
 #X obj 172 155 fiddle~ 2048;
@@ -23,7 +23,7 @@
 #X obj 200 238 mtof;
 #X obj 228 264 *;
 #X obj 133 402 *~ 2;
-#N canvas 300 203 758 306 delay 0;
+#N canvas 296 213 758 306 delay 0;
 #X obj 15 222 outlet~;
 #X obj 14 21 inlet~;
 #X obj 15 102 loadbang;
@@ -36,8 +36,8 @@
 \; multiply by 1000 to convert to milliseconds.;
 #X text 168 197 read from the delay line at the calculater delay;
 #X text 317 268 1024-sample delay;
-#X obj 14 49 delwrite~ E03-del-g 40;
-#X obj 15 195 delread~ E03-del-g;
+#X obj 14 49 delwrite~ \$0-E03-del-g 40;
+#X obj 15 195 delread~ \$0-E03-del-g;
 #X connect 1 0 10 0;
 #X connect 2 0 4 0;
 #X connect 3 0 11 0;
@@ -81,7 +81,7 @@ we'd rather stick with the most recent good one). This is converted
 from MIDI to Hertz \, and multiplied by 1/2 to control the modulation
 oscillator. (You can also try large-ish integers which leave the pitch
 intact but introduce funny formants.);
-#N canvas 300 203 758 306 delay2 0;
+#N canvas 298 208 758 306 delay2 1;
 #X obj 15 222 outlet~;
 #X obj 14 21 inlet~;
 #X obj 15 102 loadbang;
@@ -94,8 +94,8 @@ intact but introduce funny formants.);
 \; multiply by 1000 to convert to milliseconds.;
 #X text 168 197 read from the delay line at the calculater delay;
 #X text 317 268 1024-sample delay;
-#X obj 14 49 delwrite~ E03-del-d 40;
-#X obj 15 195 delread~ E03-del-d;
+#X obj 14 49 delwrite~ \$0-E03-del-d 40;
+#X obj 15 195 delread~ \$0-E03-del-d;
 #X connect 1 0 10 0;
 #X connect 2 0 4 0;
 #X connect 3 0 11 0;

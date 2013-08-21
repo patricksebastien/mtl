@@ -58,7 +58,7 @@
 #X text 519 503 <= gestion de la fenêtre gem;
 #X obj 189 196 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
 1;
-#X obj 454 31 cnv 15 200 20 empty empty /gemsToggle/ 2 12 0 8 -258401
+#X obj 454 31 cnv 15 200 20 empty empty /biscuit/ 2 12 0 8 -258401
 -262144 0;
 #X obj 101 247 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
 -1 -1;
@@ -69,79 +69,79 @@
 #X obj 451 185 cnv 15 200 90 empty empty empty 20 12 0 14 -233017 -66577
 0;
 #X text 451 182 couleur de fond inactif (RVBA);
-#X obj 460 201 hsl 128 15 0 100 0 0 /gemsToggle/bcolorR /gemsToggle/bcolorR_
+#X obj 460 201 hsl 128 15 0 100 0 0 /biscuit/bcolorR /biscuit/bcolorR_
 bcolorR 135 10 0 10 -262144 -1 -1 6350 1;
-#X obj 460 220 hsl 128 15 0 100 0 0 /gemsToggle/bcolorV /gemsToggle/bcolorV_
+#X obj 460 220 hsl 128 15 0 100 0 0 /biscuit/bcolorV /biscuit/bcolorV_
 bcolorV 135 10 0 10 -262144 -1 -1 6350 1;
-#X obj 460 239 hsl 128 15 0 100 0 0 /gemsToggle/bcolorB /gemsToggle/bcolorB_
+#X obj 460 239 hsl 128 15 0 100 0 0 /biscuit/bcolorB /biscuit/bcolorB_
 bcolorB 135 10 0 10 -262144 -1 -1 6350 1;
-#X obj 460 258 hsl 128 15 0 100 0 0 /gemsToggle/bcolorA /gemsToggle/bcolorA_
+#X obj 460 258 hsl 128 15 0 100 0 0 /biscuit/bcolorA /biscuit/bcolorA_
 bcolorA 135 10 0 10 -262144 -1 -1 6350 1;
 #X obj 452 281 cnv 15 200 90 empty empty empty 20 12 0 14 -233017 -66577
 0;
 #X text 453 277 couleur de fond actif (RVBA);
-#X obj 460 297 hsl 128 15 0 100 0 0 /gemsToggle/bcolor2R /gemsToggle/bcolor2R_
+#X obj 460 297 hsl 128 15 0 100 0 0 /biscuit/bcolor2R /biscuit/bcolor2R_
 bcolor2R 135 10 0 10 -262144 -1 -1 3175 1;
-#X obj 460 315 hsl 128 15 0 100 0 0 /gemsToggle/bcolor2V /gemsToggle/bcolor2V_
+#X obj 460 315 hsl 128 15 0 100 0 0 /biscuit/bcolor2V /biscuit/bcolor2V_
 bcolor2V 135 10 0 10 -262144 -1 -1 3175 1;
-#X obj 460 333 hsl 128 15 0 100 0 0 /gemsToggle/bcolor2B /gemsToggle/bcolor2B_
+#X obj 460 333 hsl 128 15 0 100 0 0 /biscuit/bcolor2B /biscuit/bcolor2B_
 bcolor2B 135 10 0 10 -262144 -1 -1 3175 1;
-#X obj 460 351 hsl 128 15 0 100 0 0 /gemsToggle/bcolor2A /gemsToggle/bcolor2A_
+#X obj 460 351 hsl 128 15 0 100 0 0 /biscuit/bcolor2A /biscuit/bcolor2A_
 bcolor2A 135 10 0 10 -262144 -1 -1 3175 1;
 #X obj 452 377 cnv 15 200 90 empty empty empty 20 12 0 14 -233017 -66577
 0;
 #X text 453 373 couleur du texte (RVBA);
-#X obj 460 391 hsl 128 15 0 100 0 0 /gemsToggle/tcolorR /gemsToggle/tcolorR_
+#X obj 460 391 hsl 128 15 0 100 0 0 /biscuit/tcolorR /biscuit/tcolorR_
 tcolorR 135 10 0 10 -262144 -1 -1 12700 1;
-#X obj 460 410 hsl 128 15 0 100 0 0 /gemsToggle/tcolorV /gemsToggle/tcolorV_
+#X obj 460 410 hsl 128 15 0 100 0 0 /biscuit/tcolorV /biscuit/tcolorV_
 tcolorV 135 10 0 10 -262144 -1 -1 12700 1;
-#X obj 460 429 hsl 128 15 0 100 0 0 /gemsToggle/tcolorB /gemsToggle/tcolorB_
+#X obj 460 429 hsl 128 15 0 100 0 0 /biscuit/tcolorB /biscuit/tcolorB_
 tcolorB 135 10 0 10 -262144 -1 -1 12700 1;
-#X obj 460 448 hsl 128 15 0 100 0 0 /gemsToggle/tcolorA /gemsToggle/tcolorA_
+#X obj 460 448 hsl 128 15 0 100 0 0 /biscuit/tcolorA /biscuit/tcolorA_
 tcolorA 135 10 0 10 -262144 -1 -1 12700 1;
 #X obj 453 474 cnv 15 200 90 empty empty empty 20 12 0 14 -233017 -66577
 0;
 #X text 455 470 couleur du contour (RVBA);
-#X obj 460 488 hsl 128 15 0 100 0 0 /gemsToggle/wcolorR /gemsToggle/wcolorR_
+#X obj 460 488 hsl 128 15 0 100 0 0 /biscuit/wcolorR /biscuit/wcolorR_
 wcolorR 135 10 0 10 -262144 -1 -1 12700 1;
-#X obj 460 507 hsl 128 15 0 100 0 0 /gemsToggle/wcolorV /gemsToggle/wcolorV_
+#X obj 460 507 hsl 128 15 0 100 0 0 /biscuit/wcolorV /biscuit/wcolorV_
 wcolorV 135 10 0 10 -262144 -1 -1 12700 1;
-#X obj 460 526 hsl 128 15 0 100 0 0 /gemsToggle/wcolorB /gemsToggle/wcolorB_
+#X obj 460 526 hsl 128 15 0 100 0 0 /biscuit/wcolorB /biscuit/wcolorB_
 wcolorB 135 10 0 10 -262144 -1 -1 12700 1;
-#X obj 460 545 hsl 128 15 0 100 0 0 /gemsToggle/wcolorA /gemsToggle/wcolorA_
+#X obj 460 545 hsl 128 15 0 100 0 0 /biscuit/wcolorA /biscuit/wcolorA_
 wcolorA 135 10 0 10 -262144 -1 -1 12700 1;
 #X obj 184 218 mtl/gemsWin /dimen 640 480;
 #X obj 452 569 cnv 15 200 60 empty empty empty 20 12 0 14 -204786 -66577
 0;
-#X obj 466 587 hsl 128 15 0 160 0 0 /gemsToggle/width /gemsToggle/width_
+#X obj 466 587 hsl 128 15 0 160 0 0 /biscuit/width /biscuit/width_
 width 135 10 0 10 -262144 -1 -1 79 1;
-#X obj 466 605 hsl 128 15 0 150 0 0 /gemsToggle/tsize /gemsToggle/tsize_
+#X obj 466 605 hsl 128 15 0 150 0 0 /biscuit/tsize /biscuit/tsize_
 tsize 135 10 0 10 -262144 -1 -1 254 1;
 #X text 456 566 Label;
 #X obj 452 90 cnv 15 200 90 empty empty empty 20 12 0 14 -261234 -66577
 0;
-#X obj 459 97 hsl 128 15 -160 160 0 0 /gemsToggle/positionX /gemsToggle/positionX_
+#X obj 459 97 hsl 128 15 -160 160 0 0 /biscuit/positionX /biscuit/positionX_
 positionX 135 10 0 10 -262144 -1 -1 6350 1;
-#X obj 460 118 hsl 128 15 -160 160 0 0 /gemsToggle/positionY /gemsToggle/positionY_
+#X obj 460 118 hsl 128 15 -160 160 0 0 /biscuit/positionY /biscuit/positionY_
 positionY 135 10 0 10 -262144 -1 -1 6350 1;
-#X obj 460 138 hsl 128 15 0 160 0 0 /gemsToggle/sizeX /gemsToggle/sizeX_
+#X obj 460 138 hsl 128 15 0 160 0 0 /biscuit/sizeX /biscuit/sizeX_
 sizeX 135 10 0 10 -262144 -1 -1 397 1;
-#X obj 460 158 hsl 128 15 0 160 0 0 /gemsToggle/sizeY /gemsToggle/sizeY_
+#X obj 460 158 hsl 128 15 0 160 0 0 /biscuit/sizeY /biscuit/sizeY_
 sizeY 135 10 0 10 -262144 -1 -1 397 1;
 #X obj 453 56 cnv 15 200 30 empty empty empty 20 12 0 14 -191407 -66577
 0;
-#X obj 459 63 tgl 15 0 /gemsToggle/on /gemsToggle/on_ On 17 7 0 10
+#X obj 459 63 tgl 15 0 /biscuit/on /biscuit/on_ On 17 7 0 10 -262144
+-1 -1 0 1;
+#X obj 493 63 tgl 15 0 /biscuit/drag /biscuit/drag_ Drag 17 7 0 10
 -262144 -1 -1 0 1;
-#X obj 493 63 tgl 15 0 /gemsToggle/drag /gemsToggle/drag_ Drag 17 7
-0 10 -262144 -1 -1 0 1;
-#X obj 597 63 bng 15 250 50 0 /gemsToggle/reset /gemsToggle/reset_
-Reset 17 7 0 10 -262144 -1 -1;
+#X obj 597 63 bng 15 250 50 0 /biscuit/reset /biscuit/reset_ Reset
+17 7 0 10 -262144 -1 -1;
 #X text 26 71 Description: Toggle in the Gem window.;
 #X text 25 86 tags: gems;
 #X text 26 101 author : raphael isdant http://www.raphaelisdant.fr
 ;
 #X obj 455 7 import Gem;
-#X obj 46 330 mtl/gemsToggle biscuit -1 1 1 1;
+#X obj 46 330 mtl/gemsToggle /id biscuit -1 1 1 1;
 #X connect 20 0 50 0;
 #X connect 22 0 68 0;
 #X connect 23 0 68 0;
