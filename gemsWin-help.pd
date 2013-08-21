@@ -1,4 +1,4 @@
-#N canvas 280 153 807 512 10;
+#N canvas 276 155 807 512 10;
 #X declare -lib Gem;
 #X declare -lib Gem;
 #X text 6 -12 Description: Controls the Gem window.;
@@ -20,7 +20,7 @@ help for more information).;
 #X text 5 3 tags: gems;
 #X obj 63 408 cube;
 #X obj 63 354 gemhead;
-#X obj 13 50 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0 1
+#X obj 13 50 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 1 1
 ;
 #X msg 84 48 /dimen 640 480;
 #X text 433 158 /dimen Width Height: sets the Gem window dimension.
@@ -46,22 +46,24 @@ help for more information).;
 #X obj 580 286 cnv 15 200 20 empty empty /gemsWin/ 2 12 0 8 -258401
 -262144 0;
 #X obj 580 329 nbx 5 14 -1e+37 1e+37 0 0 /gemsWin/w /gemsWin/w_ w 50
-8 0 8 -262144 -1 -1 0 256;
+8 0 8 -262144 -1 -1 320 256;
 #X obj 580 347 nbx 5 14 -1e+37 1e+37 0 0 /gemsWin/h /gemsWin/h_ h 50
-8 0 8 -262144 -1 -1 0 256;
+8 0 8 -262144 -1 -1 240 256;
 #X obj 580 365 nbx 5 14 -1e+37 1e+37 0 0 /gemsWin/y /gemsWin/y_ y 50
 8 0 8 -262144 -1 -1 0 256;
 #X obj 580 383 nbx 5 14 -1e+37 1e+37 0 0 /gemsWin/x /gemsWin/x_ x 50
 8 0 8 -262144 -1 -1 0 256;
 #X obj 580 401 tgl 15 0 /gemsWin/lighting /gemsWin/lighting_ lighting
-17 7 0 8 -262144 -166441 -1 0 1;
+17 7 0 8 -262144 -166441 -1 1 1;
 #X obj 580 419 nbx 5 14 -1e+37 1e+37 0 0 /gemsWin/fps /gemsWin/fps_
-fps 50 8 0 8 -262144 -1 -1 0 256;
+fps 50 8 0 8 -262144 -1 -1 20 256;
 #X obj 580 437 tgl 15 0 /gemsWin/border /gemsWin/border_ border 17
-7 0 8 -262144 -166441 -1 0 1;
+7 0 8 -262144 -166441 -1 1 1;
 #X obj 580 455 nbx 5 14 -1e+37 1e+37 0 0 /gemsWin/anti-aliasing /gemsWin/anti-aliasing_
 anti-aliasing 50 8 0 8 -262144 -1 -1 0 256;
 #X obj 580 311 tgl 15 0 /gemsWin/create /gemsWin/create_ create 17
+7 0 8 -262144 -166441 -1 1 1;
+#X obj 580 473 tgl 15 0 /gemsWin/cursor /gemsWin/cursor_ cursor 17
 7 0 8 -262144 -166441 -1 0 1;
 #X connect 12 0 11 0;
 #X connect 13 0 33 0;

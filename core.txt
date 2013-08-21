@@ -142,6 +142,8 @@ mtl/dubdel~ fx~
 mtl/echoBp~ fx~
 mtl/echoRobot~ fx~
 mtl/echoVd~ fx~
+mtl/envelope-generator control
+mtl/envelope-generator~ control~
 mtl/eq3~ fx~
 mtl/eq~ fx~
 mtl/even-odd~ fx~
@@ -267,6 +269,7 @@ mtl/piano ui midi
 mtl/pingpong~ fx~
 mtl/pitchFollower info~
 mtl/pitchShift~ fx~
+mtl/pitchTracker~ info~
 mtl/pitchshift2~ fx~
 mtl/platereverb~ fx~
 mtl/player~ tables play~
@@ -303,15 +306,21 @@ mtl/sawor~ instrument~
 mtl/scaleSmart math
 mtl/scompress~ fx~
 mtl/seq-1x16-nbx sequencing
+mtl/seq1x16-circle sequencing
 mtl/seq1x16 sequencing
 mtl/seq1x16-midi sequencing
+mtl/seq1x16-midi-nbx-circle sequencing MIDI
 mtl/seq1x16-midi-nbx sequencing MIDI
 mtl/seq1x16-midi-vslider sequencing
+mtl/seq1x16-nbx-circle sequencing
 mtl/seq1x16-nbx sequencing
+mtl/seq1x8-circle sequencing
 mtl/seq1x8 sequencing
 mtl/seq1x8-midi sequencing
+mtl/seq1x8-midi-nbx-circle sequencing MIDI
 mtl/seq1x8-midi-nbx sequencing MIDI
 mtl/seq1x8-midi-vslider sequencing
+mtl/seq1x8-nbx-circle sequencing
 mtl/seq1x8-nbx sequencing
 mtl/seq8x8 sequencing
 mtl/shaper~ fx~
