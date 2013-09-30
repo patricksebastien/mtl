@@ -8,15 +8,19 @@
 #X msg 89 120 65 127;
 #X msg 113 151 80 127;
 #X obj 135 416 mtl/bongo~ /id bongo;
-#X obj 224 245 hsl 128 15 0 10 0 0 empty empty decay -2 -8 0 10 -262144
--1 -1 0 1;
-#X obj 248 289 hsl 128 15 0 10 0 0 empty empty factor -2 -8 0 10 -262144
--1 -1 0 1;
-#X obj 264 331 hsl 128 15 0 10 0 0 empty empty selectivity -2 -8 0
-10 -262144 -1 -1 0 1;
-#X text 14 73 comment;
 #X text 15 8 Description: Generates some bongo sounds.;
 #X text 15 26 tags: instrument~;
+#X text 14 73 comment;
+#X obj 646 276 cnv 15 200 20 empty empty /bongo/ 2 12 0 8 -258401 -262144
+0;
+#X obj 649 303 hsl 128 15 0 10 0 0 /bongo/decay /bongo/decay_ decay
+135 10 0 10 -262144 -1 -1 0 1;
+#X obj 650 322 hsl 128 15 0 10 0 0 /bongo/factor /bongo/factor_ factor
+135 10 0 10 -262144 -1 -1 0 1;
+#X obj 650 341 hsl 128 15 0 10 0 0 /bongo/selectivity /bongo/selectivity_
+selectivity 135 10 0 10 -262144 -1 -1 0 1;
+#X obj 253 245 notein;
+#X obj 257 294 pack;
 #X connect 1 0 8 0;
 #X connect 3 0 8 0;
 #X connect 4 0 8 0;
@@ -25,6 +29,6 @@
 #X connect 7 0 8 0;
 #X connect 8 0 2 0;
 #X connect 8 0 2 1;
-#X connect 9 0 8 1;
-#X connect 10 0 8 2;
-#X connect 11 0 8 3;
+#X connect 16 0 17 0;
+#X connect 16 1 17 1;
+#X connect 17 0 8 0;

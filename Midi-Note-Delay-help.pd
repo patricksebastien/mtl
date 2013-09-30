@@ -1,0 +1,18 @@
+#N canvas 1 82 1364 661 10;
+#X obj 33 57 mtl/piano 1;
+#X obj 51 395 mtl/out~;
+#X obj 61 339 pack;
+#X obj 52 366 mtl/buzz~;
+#X text 28 10 Description: Midi Note-Delay;
+#X text 28 24 tags: midi;
+#X obj 83 205 mtl/Midi-Note-Delay /id Note-Delay;
+#X obj 406 261 cnv 15 200 20 empty empty /Note-Delay/ 2 12 0 8 -258401
+-262144 0;
+#X obj 410 289 hsl 100 15 1 10000 0 0 /Note-Delay/delay /Note-Delay/delay_
+delay 105 7 0 8 -262144 -1 -1 1900 1;
+#X connect 0 0 3 0;
+#X connect 2 0 3 0;
+#X connect 3 0 1 0;
+#X connect 3 0 1 1;
+#X connect 6 0 2 0;
+#X connect 6 1 2 1;

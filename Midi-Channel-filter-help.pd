@@ -1,0 +1,20 @@
+#N canvas 1 82 1364 661 10;
+#X obj 33 57 mtl/piano 1;
+#X obj 51 395 mtl/out~;
+#X obj 61 339 pack;
+#X obj 52 366 mtl/buzz~;
+#X text 28 10 Description: Midi Controller filter;
+#X text 28 24 tags: midi;
+#X obj 83 205 mtl/Midi-Channel-filter /id Channel-Filter;
+#X obj 406 261 cnv 15 200 20 empty empty /Channel-Filter/ 2 12 0 8
+-258401 -262144 0;
+#X floatatom 101 297 5 0 0 0 - - -;
+#X obj 410 289 hsl 100 15 1 16 0 0 /Channel-Filter/channel /Channel-Filter/channel_
+channel 105 7 0 8 -262144 -1 -1 1800 1;
+#X connect 0 0 3 0;
+#X connect 2 0 3 0;
+#X connect 3 0 1 0;
+#X connect 3 0 1 1;
+#X connect 6 0 8 0;
+#X connect 6 0 2 0;
+#X connect 6 1 2 1;

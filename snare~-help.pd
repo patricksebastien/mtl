@@ -1,0 +1,29 @@
+#N canvas 1 82 1364 661 10;
+#X obj 26 143 mtl/out~;
+#X obj 19 77 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+-1;
+#X text 16 40 tags: synthesize~;
+#X obj 249 141 hsl 100 15 0 1 0 0 /snare/pitch /snare/pitch_ pitch
+105 7 0 8 -262144 -1 -1 0 1;
+#X obj 246 112 cnv 15 200 20 empty empty /snare/ 2 12 0 8 -258401 -262144
+0;
+#X obj 25 110 mtl/snare~ /id snare;
+#X obj 250 161 hsl 100 15 0 1 0 0 /snare/noise /snare/noise_ noise
+105 7 0 8 -262144 -1 -1 0 1;
+#X obj 250 181 hsl 100 15 0 1 0 0 /snare/bandpass /snare/bandpass_
+bandpass 105 7 0 8 -262144 -1 -1 0 1;
+#X obj 251 201 hsl 100 15 0 1 0 0 /snare/bandpassQ /snare/bandpassQ_
+bandpassQ 105 7 0 8 -262144 -1 -1 0 1;
+#X obj 251 221 hsl 100 15 0 1 0 0 /snare/decay /snare/decay_ decay
+105 7 0 8 -262144 -1 -1 0 1;
+#X obj 252 241 hsl 100 15 0 1 0 0 /snare/bodyDecay /snare/bodyDecay_
+bodyDecay 105 7 0 8 -262144 -1 -1 0 1;
+#X obj 252 261 hsl 100 15 0 1 0 0 /snare/lowpass /snare/lowpass_ lowpass
+105 7 0 8 -262144 -1 -1 0 1;
+#X obj 252 280 hsl 100 15 0 1 0 0 /snare/xfade /snare/xfade_ xfade
+105 7 0 8 -262144 -1 -1 0 1;
+#X text 16 10 Description : snare;
+#X text 16 25 Comment: Based on HardOff's work.;
+#X connect 1 0 5 0;
+#X connect 5 0 0 0;
+#X connect 5 0 0 1;

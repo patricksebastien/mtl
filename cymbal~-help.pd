@@ -1,0 +1,23 @@
+#N canvas 1 82 1364 661 10;
+#X obj 26 143 mtl/out~;
+#X obj 26 87 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+-1;
+#X text 15 24 tags: synthesize~;
+#X obj 249 140 hsl 100 15 0 1 0 0 /cymbal/hipass /cymbal/hipass_ hipass
+105 7 0 8 -262144 -1 -1 4950 1;
+#X obj 246 112 cnv 15 200 20 empty empty /cymbal/ 2 12 0 8 -258401
+-262144 0;
+#X obj 25 111 mtl/cymbal~ /id cymbal;
+#X text 16 10 Description : cymbal by stefan "ichabod" ichabod@gmail.com
+;
+#X obj 250 160 hsl 100 15 0 1 0 0 /cymbal/hipass2 /cymbal/hipass2_
+hipass2 105 7 0 8 -262144 -1 -1 4950 1;
+#X obj 251 180 hsl 100 15 0 1 0 0 /cymbal/filters /cymbal/filters_
+filters 105 7 0 8 -262144 -1 -1 4950 1;
+#X obj 251 200 hsl 100 15 0 1 0 0 /cymbal/duration /cymbal/duration_
+duration 105 7 0 8 -262144 -1 -1 4950 1;
+#X obj 251 220 hsl 100 15 0 1 0 0 /cymbal/pitch /cymbal/pitch_ pitch
+105 7 0 8 -262144 -1 -1 4950 1;
+#X connect 1 0 5 0;
+#X connect 5 0 0 0;
+#X connect 5 0 0 1;

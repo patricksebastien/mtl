@@ -23,74 +23,73 @@
 #X text 47 235 nom \, posX \, posY \, tailleX \, tailleY;
 #X text 264 292 TOUCHE "<" = DEPLACEMENT;
 #X text 282 303 + clic droit = TAILLE;
-#X obj 174 119 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 1
+#X obj 174 119 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
 1;
-#X obj 439 -46 cnv 15 200 20 empty empty /gemsXYPad/ 2 12 0 8 -258401
+#X obj 439 -46 cnv 15 200 20 empty empty /bambi/ 2 12 0 8 -258401
 -262144 0;
 #X obj 12 66 mtl/gemsMouse;
 #X obj 436 108 cnv 15 200 90 empty empty empty 20 12 0 14 -233017 -66577
 0;
 #X text 436 105 couleur de fond inactif (RVBA);
-#X obj 445 124 hsl 128 15 0 100 0 0 /gemsXYPad/bcolorR /gemsXYPad/bcolorR_
-bcolorR 135 10 0 10 -262144 -1 -1 8650 1;
-#X obj 445 143 hsl 128 15 0 100 0 0 /gemsXYPad/bcolorV /gemsXYPad/bcolorV_
-bcolorV 135 10 0 10 -262144 -1 -1 8350 1;
-#X obj 445 162 hsl 128 15 0 100 0 0 /gemsXYPad/bcolorB /gemsXYPad/bcolorB_
-bcolorB 135 10 0 10 -262144 -1 -1 8150 1;
-#X obj 445 181 hsl 128 15 0 100 0 0 /gemsXYPad/bcolorA /gemsXYPad/bcolorA_
-bcolorA 135 10 0 10 -262144 -1 -1 7750 1;
+#X obj 445 124 hsl 128 15 0 100 0 0 /bambi/bcolorR /bambi/bcolorR_
+bcolorR 135 10 0 10 -262144 -1 -1 6350 1;
+#X obj 445 143 hsl 128 15 0 100 0 0 /bambi/bcolorV /bambi/bcolorV_
+bcolorV 135 10 0 10 -262144 -1 -1 6350 1;
+#X obj 445 162 hsl 128 15 0 100 0 0 /bambi/bcolorB /bambi/bcolorB_
+bcolorB 135 10 0 10 -262144 -1 -1 6350 1;
+#X obj 445 181 hsl 128 15 0 100 0 0 /bambi/bcolorA /bambi/bcolorA_
+bcolorA 135 10 0 10 -262144 -1 -1 6350 1;
 #X obj 437 205 cnv 15 200 90 empty empty empty 20 12 0 14 -233017 -66577
 0;
 #X text 438 201 couleur du texte (RVBA);
-#X obj 445 219 hsl 128 15 0 100 0 0 /gemsXYPad/tcolorR /gemsXYPad/tcolorR_
-tcolorR 135 10 0 10 -262144 -1 -1 8900 1;
-#X obj 445 238 hsl 128 15 0 100 0 0 /gemsXYPad/tcolorV /gemsXYPad/tcolorV_
-tcolorV 135 10 0 10 -262144 -1 -1 9900 1;
-#X obj 445 257 hsl 128 15 0 100 0 0 /gemsXYPad/tcolorB /gemsXYPad/tcolorB_
-tcolorB 135 10 0 10 -262144 -1 -1 10200 1;
-#X obj 445 276 hsl 128 15 0 100 0 0 /gemsXYPad/tcolorA /gemsXYPad/tcolorA_
-tcolorA 135 10 0 10 -262144 -1 -1 10200 1;
+#X obj 445 219 hsl 128 15 0 100 0 0 /bambi/tcolorR /bambi/tcolorR_
+tcolorR 135 10 0 10 -262144 -1 -1 12700 1;
+#X obj 445 238 hsl 128 15 0 100 0 0 /bambi/tcolorV /bambi/tcolorV_
+tcolorV 135 10 0 10 -262144 -1 -1 12700 1;
+#X obj 445 257 hsl 128 15 0 100 0 0 /bambi/tcolorB /bambi/tcolorB_
+tcolorB 135 10 0 10 -262144 -1 -1 12700 1;
+#X obj 445 276 hsl 128 15 0 100 0 0 /bambi/tcolorA /bambi/tcolorA_
+tcolorA 135 10 0 10 -262144 -1 -1 12700 1;
 #X obj 438 302 cnv 15 200 90 empty empty empty 20 12 0 14 -233017 -66577
 0;
 #X text 440 298 couleur du contour (RVBA);
-#X obj 445 316 hsl 128 15 0 100 0 0 /gemsXYPad/wcolorR /gemsXYPad/wcolorR_
-wcolorR 135 10 0 10 -262144 -1 -1 9300 1;
-#X obj 445 335 hsl 128 15 0 100 0 0 /gemsXYPad/wcolorV /gemsXYPad/wcolorV_
+#X obj 445 316 hsl 128 15 0 100 0 0 /bambi/wcolorR /bambi/wcolorR_
+wcolorR 135 10 0 10 -262144 -1 -1 12700 1;
+#X obj 445 335 hsl 128 15 0 100 0 0 /bambi/wcolorV /bambi/wcolorV_
 wcolorV 135 10 0 10 -262144 -1 -1 12700 1;
-#X obj 445 354 hsl 128 15 0 100 0 0 /gemsXYPad/wcolorB /gemsXYPad/wcolorB_
+#X obj 445 354 hsl 128 15 0 100 0 0 /bambi/wcolorB /bambi/wcolorB_
 wcolorB 135 10 0 10 -262144 -1 -1 12700 1;
-#X obj 445 373 hsl 128 15 0 100 0 0 /gemsXYPad/wcolorA /gemsXYPad/wcolorA_
+#X obj 445 373 hsl 128 15 0 100 0 0 /bambi/wcolorA /bambi/wcolorA_
 wcolorA 135 10 0 10 -262144 -1 -1 12700 1;
 #X obj 169 141 mtl/gemsWin /dimen 640 480;
 #X obj 440 403 cnv 15 200 60 empty empty empty 20 12 0 14 -204786 -66577
 0;
-#X obj 453 421 hsl 128 15 0 160 0 0 /gemsXYPad/width /gemsXYPad/width_
+#X obj 453 421 hsl 128 15 0 160 0 0 /bambi/width /bambi/width_
 width 135 10 0 10 -262144 -1 -1 79 1;
-#X obj 453 439 hsl 128 15 0 150 0 0 /gemsXYPad/tsize /gemsXYPad/tsize_
+#X obj 453 439 hsl 128 15 0 150 0 0 /bambi/tsize /bambi/tsize_
 tsize 135 10 0 10 -262144 -1 -1 254 1;
 #X text 443 400 Label;
 #X obj 437 13 cnv 15 200 90 empty empty empty 20 12 0 14 -261234 -66577
 0;
-#X obj 444 20 hsl 128 15 -160 160 0 0 /gemsXYPad/positionX /gemsXYPad/positionX_
+#X obj 444 20 hsl 128 15 -160 160 0 0 /bambi/positionX /bambi/positionX_
 positionX 135 10 0 10 -262144 -1 -1 6350 1;
-#X obj 445 41 hsl 128 15 -160 160 0 0 /gemsXYPad/positionY /gemsXYPad/positionY_
+#X obj 445 41 hsl 128 15 -160 160 0 0 /bambi/positionY /bambi/positionY_
 positionY 135 10 0 10 -262144 -1 -1 6350 1;
-#X obj 445 61 hsl 128 15 0 160 0 0 /gemsXYPad/sizeX /gemsXYPad/sizeX_
+#X obj 445 61 hsl 128 15 0 160 0 0 /bambi/sizeX /bambi/sizeX_
 sizeX 135 10 0 10 -262144 -1 -1 397 1;
-#X obj 445 81 hsl 128 15 0 160 0 0 /gemsXYPad/sizeY /gemsXYPad/sizeY_
+#X obj 445 81 hsl 128 15 0 160 0 0 /bambi/sizeY /bambi/sizeY_
 sizeY 135 10 0 10 -262144 -1 -1 397 1;
 #X obj 438 -21 cnv 15 200 30 empty empty empty 20 12 0 14 -191407 -66577
 0;
-#X obj 444 -14 tgl 15 0 /gemsXYPad/on /gemsXYPad/on_ On 17 7 0 10 -262144
--1 -1 1 1;
-#X obj 478 -14 tgl 15 0 /gemsXYPad/drag /gemsXYPad/drag_ Drag 17 7
+#X obj 444 -14 tgl 15 0 /bambi/on /bambi/on_ On 17 7 0 10 -262144
+-1 -1 0 1;
+#X obj 478 -14 tgl 15 0 /bambi/drag /bambi/drag_ Drag 17 7
 0 10 -262144 -1 -1 0 1;
-#X obj 582 -14 bng 15 250 50 0 /gemsXYPad/reset /gemsXYPad/reset_ Reset
+#X obj 582 -14 bng 15 250 50 0 /bambi/reset /bambi/reset_ Reset
 17 7 0 10 -262144 -1 -1;
 #X text 10 9 tags: gems;
 #X text 11 24 author : raphael isdant http://www.raphaelisdant.fr;
 #X obj 440 -70 import Gem;
-#X obj 31 253 gemsXYPad bambi -1 1 1 1;
 #N canvas 425 275 403 304 communication 0;
 #X obj -5 -6 cnv 15 400 300 empty empty empty 20 12 0 14 -260758 -66577
 0;
@@ -143,10 +142,11 @@ sizeY 135 10 0 10 -262144 -1 -1 397 1;
 #X floatatom 33 321 5 0 0 0 - - -;
 #X text 31 -49 [gemsXYPad] : gestion d'un XYPad dans gem;
 #X text 11 -6 Description: Pad in the Gem window.;
+#X obj 31 253 gemsXYPad /id bambi -1 1 1 1;
 #X connect 15 0 36 0;
-#X connect 17 0 53 0;
-#X connect 53 0 57 0;
-#X connect 53 1 6 0;
-#X connect 53 2 7 0;
-#X connect 57 0 59 0;
-#X connect 57 1 58 0;
+#X connect 17 0 61 0;
+#X connect 56 0 58 0;
+#X connect 56 1 57 0;
+#X connect 61 0 56 0;
+#X connect 61 1 6 0;
+#X connect 61 2 7 0;

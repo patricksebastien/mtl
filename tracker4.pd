@@ -1,4 +1,4 @@
-#N canvas 1188 91 1005 683 10;
+#N canvas 77 82 1005 661 10;
 #N canvas 0 66 993 659 maxtrix 0;
 #X obj 94 42 + 1;
 #X obj 31 3 inlet;
@@ -1058,7 +1058,7 @@
 #X obj 96 -191 t f f;
 #X obj 11 140 send pd-\$0tracker;
 #X obj 750 371 print pmdtl/tracker4;
-#N canvas 93 197 451 279 \$0tracker 0;
+#N canvas 89 207 451 279 \$0tracker 0;
 #X symbolatom 388 22 4 0 0 0 - #0<11<0 #0>11>0;
 #X symbolatom 358 22 4 0 0 0 - #0<10<0 #0>10>0;
 #X symbolatom 328 22 4 0 0 0 - #0<9<0 #0>9>0;
@@ -1253,7 +1253,7 @@
 #X symbolatom 50 232 4 0 0 0 - #0<0<15 #0>0>15;
 #X obj 421 24 vsl 15 219 0 1 0 0 \$0scroll \$0set_scroll empty 0 -8
 0 10 -1 -1 -1 0 0;
-#X obj 2 148 cnv 7 7 14 empty \$0prog empty 20 12 0 14 -258053 -1 0
+#X obj 2 22 cnv 7 7 14 empty \$0prog empty 20 12 0 14 -258053 -1 0
 ;
 #X obj 40 250 nbx 3 15 0 999 0 0 \$0ask_pattern \$0nbx_pattern pattern
 38 7 0 10 -1 -262144 -1 0 256;
@@ -1268,7 +1268,7 @@
 #X obj 156 250 nbx 3 15 16 999 0 0 \$0change_length \$0nbx_length size
 38 7 0 10 -1 -262144 -1 16 256;
 #X obj 39 3 tgl 15 0 \$0play \$0nbx_play play 17 7 0 10 -1 -262144
--1 1 1;
+-1 0 1;
 #X floatatom 10 4 3 0 0 0 - #0nbx_event -;
 #X obj 35 22 cnv 3 3 14 empty empty empty 20 12 0 14 -258113 -66577
 0;
@@ -1305,7 +1305,7 @@
 #X obj 10 232 nbx 3 14 -1e+37 1e+37 0 0 empty \$0n15 empty 0 -8 0 10
 -262144 -1 -261689 15 256;
 #X obj 107 3 hradio 15 1 0 3 \$0trigS \$0trigR (match/beat/none) 48
-8 0 10 -262144 -1 -1 0;
+8 0 10 -262144 -1 -1 1;
 #X restore 56 353 pd \$0tracker;
 #N canvas 0 0 1028 714 \$0receives 0;
 #X obj 0 0 r \$0>0>0;
@@ -2088,6 +2088,7 @@
 #X obj 751 339 spigot;
 #X obj 543 -158 route pattern quantization debug;
 #X obj 768 73 ./clkSlave 4;
+#X obj 885 89 print dd;
 #X connect 0 0 4 0;
 #X connect 2 0 47 0;
 #X connect 3 0 41 0;
@@ -2134,6 +2135,7 @@
 #X connect 47 3 53 0;
 #X connect 48 0 49 0;
 #X connect 49 0 54 0;
+#X connect 49 0 55 0;
 #X connect 52 0 42 0;
 #X connect 53 0 13 0;
 #X connect 53 1 45 0;

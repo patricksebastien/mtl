@@ -1,0 +1,27 @@
+#N canvas 1 82 1364 661 10;
+#X obj 26 143 mtl/out~;
+#X obj 26 87 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+-1;
+#X text 19 45 tags: synthesize~;
+#X obj 249 140 hsl 100 15 0 1 0 0 /bassdrum/decay /bassdrum/decay_
+decay 105 7 0 8 -262144 -1 -1 0 1;
+#X obj 246 112 cnv 15 200 20 empty empty /bassdrum/ 2 12 0 8 -258401
+-262144 0;
+#X obj 25 111 mtl/bassdrum~ /id bassdrum;
+#X obj 249 160 hsl 100 15 0 1 0 0 /bassdrum/freq1 /bassdrum/freq1_
+freq1 105 7 0 8 -262144 -1 -1 0 1;
+#X obj 249 181 hsl 100 15 0 1 0 0 /bassdrum/freq2 /bassdrum/freq2_
+freq2 105 7 0 8 -262144 -1 -1 0 1;
+#X obj 249 201 hsl 100 15 0 1 0 0 /bassdrum/curvetime /bassdrum/curvetime_
+curvetime 105 7 0 8 -262144 -1 -1 0 1;
+#X obj 248 221 hsl 100 15 0 1 0 0 /bassdrum/noizelevel /bassdrum/noizelevel_
+noizelevel 105 7 0 8 -262144 -1 -1 0 1;
+#X obj 248 241 hsl 100 15 0 1 0 0 /bassdrum/square /bassdrum/square_
+square 105 7 0 8 -262144 -1 -1 0 1;
+#X obj 248 261 hsl 100 15 0 1 0 0 /bassdrum/lowpass /bassdrum/lowpass_
+lowpass 105 7 0 8 -262144 -1 -1 0 1;
+#X text 19 11 Description : bass drum;
+#X text 18 27 Comment: Based on Hardoff's work.;
+#X connect 1 0 5 0;
+#X connect 5 0 0 0;
+#X connect 5 0 0 1;

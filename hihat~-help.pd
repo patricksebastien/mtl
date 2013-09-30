@@ -1,0 +1,35 @@
+#N canvas 1 82 1364 661 10;
+#X obj 26 143 mtl/out~;
+#X obj 26 87 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+-1;
+#X text 16 40 tags: synthesize~;
+#X obj 249 141 hsl 100 15 0 1 0 0 /hihat/pitch /hihat/pitch_ pitch
+105 7 0 8 -262144 -1 -1 4950 1;
+#X obj 246 112 cnv 15 200 20 empty empty /hihat/ 2 12 0 8 -258401 -262144
+0;
+#X obj 25 110 mtl/hihat~ /id hihat;
+#X obj 249 160 hsl 100 15 0 1 0 0 /hihat/ratioA /hihat/ratioA_ ratioA
+105 7 0 8 -262144 -1 -1 4950 1;
+#X obj 249 179 hsl 100 15 0 1 0 0 /hihat/ratioB /hihat/ratioB_ ratioB
+105 7 0 8 -262144 -1 -1 4950 1;
+#X obj 249 198 hsl 100 15 0 1 0 0 /hihat/noise /hihat/noise_ noise
+105 7 0 8 -262144 -1 -1 4950 1;
+#X obj 248 216 hsl 100 15 0 1 0 0 /hihat/noisepitch /hihat/noisepitch_
+noisepitch 105 7 0 8 -262144 -1 -1 4950 1;
+#X obj 248 235 hsl 100 15 0 1 0 0 /hihat/snap /hihat/snap_ snap 105
+7 0 8 -262144 -1 -1 4950 1;
+#X obj 249 254 hsl 100 15 0 1 0 0 /hihat/attack /hihat/attack_ attack
+105 7 0 8 -262144 -1 -1 4950 1;
+#X obj 249 273 hsl 100 15 0 1 0 0 /hihat/release /hihat/release_ release
+105 7 0 8 -262144 -1 -1 4950 1;
+#X obj 248 291 hsl 100 15 0 1 0 0 /hihat/filter /hihat/filter_ filter
+105 7 0 8 -262144 -1 -1 4950 1;
+#X obj 248 310 hsl 100 15 0 1 0 0 /hihat/filterQ /hihat/filterQ_ filterQ
+105 7 0 8 -262144 -1 -1 4950 1;
+#X obj 248 328 hsl 100 15 0 1 0 0 /hihat/lowpass /hihat/lowpass_ lowpass
+105 7 0 8 -262144 -1 -1 4950 1;
+#X text 16 10 Description : hihat;
+#X text 16 25 Comment: Based on Hardoff's work.;
+#X connect 1 0 5 0;
+#X connect 5 0 0 0;
+#X connect 5 0 0 1;

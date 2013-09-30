@@ -14,9 +14,9 @@
 #X obj 672 258 tof/param route;
 #X obj 665 313 b;
 #X obj 666 342 tof/param gui;
-#X obj 117 385 atl/or /id \$0-or;
-#X obj 49 328 atl/half_adder /id \$0-half_adder;
-#X obj 204 356 atl/half_adder /id \$0-half_adder-1;
+#X obj 117 385 mtl/or /id \$0-or;
+#X obj 49 328 mtl/half_adder /id \$0-half_adder;
+#X obj 204 356 mtl/half_adder /id \$0-half_adder-1;
 #X connect 0 0 15 0;
 #X connect 1 0 15 1;
 #X connect 2 0 15 0;

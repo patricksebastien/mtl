@@ -1,4 +1,4 @@
-#N canvas 1 82 1272 659 10;
+#N canvas 1 84 1272 659 10;
 #X obj 138 32 inlet frequency;
 #X obj 133 627 outlet~;
 #X obj 846 159 inlet params;
@@ -6,7 +6,7 @@
 #X obj 846 181 tof/param route;
 #X obj 842 304 b;
 #X obj 843 333 tof/param gui;
-#X obj 163 97 unpack f f;
+#X obj 162 70 unpack f f;
 #X obj 200 594 *~;
 #X obj 153 259 *~ 0;
 #X obj 251 126 moses 1;
@@ -54,12 +54,13 @@
 #X obj 100 282 sig~ 0.25;
 #X obj 272 537 mtl/adsr~ /id \$0-adsr;
 #X obj 163 150 sig~;
-#X obj 256 57 tof/param /harmonics 12 /g slider 1 100;
+#X obj 256 60 tof/param /harmonics 12 /g slider 1 100;
+#X obj 167 110 mtof;
 #X connect 0 0 7 0;
 #X connect 2 0 4 0;
 #X connect 4 0 3 0;
 #X connect 5 0 6 0;
-#X connect 7 0 40 0;
+#X connect 7 0 42 0;
 #X connect 7 1 39 0;
 #X connect 8 0 1 0;
 #X connect 9 0 36 0;
@@ -92,3 +93,4 @@
 #X connect 39 0 8 1;
 #X connect 40 0 15 0;
 #X connect 41 0 10 0;
+#X connect 42 0 40 0;

@@ -30,24 +30,26 @@ to the second inlet.;
 0;
 #X obj 81 258 mtl/lfo /id lfo;
 #X obj 107 337 hsl 128 15 0 1 0 0 empty empty empty -2 -8 0 10 -262144
--1 -1 0 1;
+-1 -1 12700 1;
 #X obj 255 173 tgl 15 0 /lfo/on /lfo/on_ on 17 7 0 10 -262144 -1 -1
 0 1;
 #X obj 258 192 hsl 128 15 1 1000 0 0 /lfo/frequency /lfo/frequency_
-frequency 135 10 0 10 -262144 -1 -1 0 1;
+frequency 135 10 0 10 -262144 -1 -1 114 1;
 #X obj 258 211 hsl 128 15 1 1000 0 0 /lfo/updates /lfo/updates_ updates
 135 10 0 10 -262144 -1 -1 0 1;
 #X obj 258 230 hsl 128 15 0 1 0 0 /lfo/phase /lfo/phase_ phase 135
 10 0 10 -262144 -1 -1 0 1;
-#X msg 110 201 /waveform saw;
-#X msg 110 178 /waveform tri;
-#X msg 110 155 /waveform sine;
-#X msg 110 222 /waveform square;
 #X text 294 417 tags: musical;
 #X obj 96 381 outlet;
+#X msg 110 155 /waveform_sine;
+#X msg 110 178 /waveform_tri;
+#X msg 110 201 /waveform_saw;
+#X msg 110 222 /waveform_square;
+#X msg 104 123 /waveform sine;
 #X connect 3 0 4 0;
-#X connect 4 0 14 0;
-#X connect 9 0 3 0;
-#X connect 10 0 3 0;
+#X connect 4 0 10 0;
 #X connect 11 0 3 0;
 #X connect 12 0 3 0;
+#X connect 13 0 3 0;
+#X connect 14 0 3 0;
+#X connect 15 0 3 0;

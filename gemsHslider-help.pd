@@ -29,67 +29,67 @@
 #X text 504 331 <= gestion de la fenêtre gem;
 #X obj 174 119 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
 1;
-#X obj 439 -46 cnv 15 200 20 empty empty /gemsHslider/ 2 12 0 8 -258401
+#X obj 439 -46 cnv 15 200 20 empty empty /banane/ 2 12 0 8 -258401
 -262144 0;
 #X obj 12 66 mtl/gemsMouse;
 #X obj 436 108 cnv 15 200 90 empty empty empty 20 12 0 14 -233017 -66577
 0;
 #X text 436 105 couleur de fond inactif (RVBA);
-#X obj 445 124 hsl 128 15 0 100 0 0 /gemsHslider/bcolorR /gemsHslider/bcolorR_
+#X obj 445 124 hsl 128 15 0 100 0 0 /banane/bcolorR /banane/bcolorR_
 bcolorR 135 10 0 10 -262144 -1 -1 6350 1;
-#X obj 445 143 hsl 128 15 0 100 0 0 /gemsHslider/bcolorV /gemsHslider/bcolorV_
+#X obj 445 143 hsl 128 15 0 100 0 0 /banane/bcolorV /banane/bcolorV_
 bcolorV 135 10 0 10 -262144 -1 -1 6350 1;
-#X obj 445 162 hsl 128 15 0 100 0 0 /gemsHslider/bcolorB /gemsHslider/bcolorB_
+#X obj 445 162 hsl 128 15 0 100 0 0 /banane/bcolorB /banane/bcolorB_
 bcolorB 135 10 0 10 -262144 -1 -1 6350 1;
-#X obj 445 181 hsl 128 15 0 100 0 0 /gemsHslider/bcolorA /gemsHslider/bcolorA_
+#X obj 445 181 hsl 128 15 0 100 0 0 /banane/bcolorA /banane/bcolorA_
 bcolorA 135 10 0 10 -262144 -1 -1 6350 1;
 #X obj 437 205 cnv 15 200 90 empty empty empty 20 12 0 14 -233017 -66577
 0;
 #X text 438 201 couleur du texte (RVBA);
-#X obj 445 219 hsl 128 15 0 100 0 0 /gemsHslider/tcolorR /gemsHslider/tcolorR_
+#X obj 445 219 hsl 128 15 0 100 0 0 /banane/tcolorR /banane/tcolorR_
 tcolorR 135 10 0 10 -262144 -1 -1 12700 1;
-#X obj 445 238 hsl 128 15 0 100 0 0 /gemsHslider/tcolorV /gemsHslider/tcolorV_
+#X obj 445 238 hsl 128 15 0 100 0 0 /banane/tcolorV /banane/tcolorV_
 tcolorV 135 10 0 10 -262144 -1 -1 12700 1;
-#X obj 445 257 hsl 128 15 0 100 0 0 /gemsHslider/tcolorB /gemsHslider/tcolorB_
+#X obj 445 257 hsl 128 15 0 100 0 0 /banane/tcolorB /banane/tcolorB_
 tcolorB 135 10 0 10 -262144 -1 -1 12700 1;
-#X obj 445 276 hsl 128 15 0 100 0 0 /gemsHslider/tcolorA /gemsHslider/tcolorA_
+#X obj 445 276 hsl 128 15 0 100 0 0 /banane/tcolorA /banane/tcolorA_
 tcolorA 135 10 0 10 -262144 -1 -1 12700 1;
 #X obj 438 302 cnv 15 200 90 empty empty empty 20 12 0 14 -233017 -66577
 0;
 #X text 440 298 couleur du contour (RVBA);
-#X obj 445 316 hsl 128 15 0 100 0 0 /gemsHslider/wcolorR /gemsHslider/wcolorR_
+#X obj 445 316 hsl 128 15 0 100 0 0 /banane/wcolorR /banane/wcolorR_
 wcolorR 135 10 0 10 -262144 -1 -1 12700 1;
-#X obj 445 335 hsl 128 15 0 100 0 0 /gemsHslider/wcolorV /gemsHslider/wcolorV_
+#X obj 445 335 hsl 128 15 0 100 0 0 /banane/wcolorV /banane/wcolorV_
 wcolorV 135 10 0 10 -262144 -1 -1 12700 1;
-#X obj 445 354 hsl 128 15 0 100 0 0 /gemsHslider/wcolorB /gemsHslider/wcolorB_
+#X obj 445 354 hsl 128 15 0 100 0 0 /banane/wcolorB /banane/wcolorB_
 wcolorB 135 10 0 10 -262144 -1 -1 12700 1;
-#X obj 445 373 hsl 128 15 0 100 0 0 /gemsHslider/wcolorA /gemsHslider/wcolorA_
+#X obj 445 373 hsl 128 15 0 100 0 0 /banane/wcolorA /banane/wcolorA_
 wcolorA 135 10 0 10 -262144 -1 -1 12700 1;
 #X obj 169 141 mtl/gemsWin /dimen 640 480;
 #X obj 437 397 cnv 15 200 60 empty empty empty 20 12 0 14 -204786 -66577
 0;
-#X obj 451 415 hsl 128 15 0 160 0 0 /gemsHslider/width /gemsHslider/width_
+#X obj 451 415 hsl 128 15 0 160 0 0 /banane/width /banane/width_
 width 135 10 0 10 -262144 -1 -1 79 1;
-#X obj 451 433 hsl 128 15 0 150 0 0 /gemsHslider/tsize /gemsHslider/tsize_
+#X obj 451 433 hsl 128 15 0 150 0 0 /banane/tsize /banane/tsize_
 tsize 135 10 0 10 -262144 -1 -1 254 1;
 #X text 441 394 Label;
 #X obj 437 13 cnv 15 200 90 empty empty empty 20 12 0 14 -261234 -66577
 0;
-#X obj 444 20 hsl 128 15 -160 160 0 0 /gemsHslider/positionX /gemsHslider/positionX_
+#X obj 444 20 hsl 128 15 -160 160 0 0 /banane/positionX /banane/positionX_
 positionX 135 10 0 10 -262144 -1 -1 6350 1;
-#X obj 445 41 hsl 128 15 -160 160 0 0 /gemsHslider/positionY /gemsHslider/positionY_
+#X obj 445 41 hsl 128 15 -160 160 0 0 /banane/positionY /banane/positionY_
 positionY 135 10 0 10 -262144 -1 -1 6350 1;
-#X obj 445 61 hsl 128 15 0 160 0 0 /gemsHslider/sizeX /gemsHslider/sizeX_
+#X obj 445 61 hsl 128 15 0 160 0 0 /banane/sizeX /banane/sizeX_
 sizeX 135 10 0 10 -262144 -1 -1 397 1;
-#X obj 445 81 hsl 128 15 0 160 0 0 /gemsHslider/sizeY /gemsHslider/sizeY_
+#X obj 445 81 hsl 128 15 0 160 0 0 /banane/sizeY /banane/sizeY_
 sizeY 135 10 0 10 -262144 -1 -1 397 1;
 #X obj 438 -21 cnv 15 200 30 empty empty empty 20 12 0 14 -191407 -66577
 0;
-#X obj 444 -14 tgl 15 0 /gemsHslider/on /gemsHslider/on_ On 17 7 0
+#X obj 444 -14 tgl 15 0 /banane/on /banane/on_ On 17 7 0
 10 -262144 -1 -1 0 1;
-#X obj 478 -14 tgl 15 0 /gemsHslider/drag /gemsHslider/drag_ Drag 17
+#X obj 478 -14 tgl 15 0 /banane/drag /banane/drag_ Drag 17
 7 0 10 -262144 -1 -1 0 1;
-#X obj 582 -14 bng 15 250 50 0 /gemsHslider/reset /gemsHslider/reset_
+#X obj 582 -14 bng 15 250 50 0 /banane/reset /banane/reset_
 Reset 17 7 0 10 -262144 -1 -1;
 #X text 10 9 tags: gems;
 #X text 11 24 author : raphael isdant http://www.raphaelisdant.fr;
@@ -108,7 +108,7 @@ Reset 17 7 0 10 -262144 -1 -1;
 #X text 276 228 clic dans la zone;
 #X text 141 225 souris dans la zone;
 #X obj 14 223 hsl 50 15 0 1 0 0 empty empty empty -2 -8 0 10 -262144
--1 -1 0 1;
+-1 -1 1756 1;
 #X floatatom 11 250 5 0 0 0 - - -;
 #X text 5 40 ____________________________________________________________
 ;
@@ -140,11 +140,11 @@ Reset 17 7 0 10 -262144 -1 -1;
 #X connect 18 0 4 0;
 #X connect 20 0 21 0;
 #X restore 299 249 pd communication;
-#X obj 31 253 gemsHslider banane -1 1 1 1;
 #X text 11 -6 Description: HSlider in the Gem window.;
 #X text 31 -49 [gemsHslider] : gestion d'un Hslider dans gem;
+#X obj 31 253 gemsHslider /id banane -1 1 1 1;
 #X connect 19 0 40 0;
-#X connect 21 0 58 0;
-#X connect 58 0 5 0;
-#X connect 58 1 7 0;
-#X connect 58 2 8 0;
+#X connect 21 0 60 0;
+#X connect 60 0 5 0;
+#X connect 60 1 7 0;
+#X connect 60 2 8 0;

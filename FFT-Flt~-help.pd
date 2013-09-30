@@ -1,0 +1,41 @@
+#N canvas 1 82 1272 661 10;
+#X obj 22 280 mtl/out~;
+#X text 15 50 tags: fx~;
+#X text 214 243 <-Click on the propeties menu to display params;
+#X obj 307 18 cnv 15 200 40 empty empty empty 20 12 0 14 -232576 -66577
+0;
+#X text 367 19 PARAM ENABLED;
+#X obj 306 41 tof/open_help tof/param;
+#X text 14 29 Author: Gerard Paresys;
+#X obj 605 99 cnv 15 200 20 empty empty /FFT-Flt/ 2 12 0 8 -258401
+-262144 0;
+#X obj 612 134 hsl 100 15 1 10000 0 0 /FFT-Flt/frequency /FFT-Flt/frequency_
+frequency 105 7 0 8 -262144 -1 -1 5200 1;
+#X obj 611 157 hradio 15 1 0 11 /FFT-Flt/FFT-size /FFT-Flt/FFT-size_
+FFT-size 175 7 0 10 -262144 -1 -1 3;
+#X obj 612 180 hradio 15 1 0 4 /FFT-Flt/FFT-overlap /FFT-Flt/FFT-overlap_
+FFT-overlap 75 7 0 10 -262144 -1 -1 3;
+#X obj 22 247 mtl/FFT-Flt~ /id FFT-Flt;
+#X obj 219 117 openpanel;
+#X obj 219 97 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+-1;
+#X text 240 96 You can load a sound file in the internal stereo tables
+;
+#X msg 218 138 read \$1;
+#X obj 162 48 bng 30 250 50 0 empty empty empty 0 -6 0 10 -258113 -1
+-1;
+#X msg 135 82 1;
+#X obj 182 202 mtl/player~ 0;
+#X obj 271 163 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 1
+1;
+#X text 15 8 Description: FFT Flt;
+#X connect 11 0 0 0;
+#X connect 11 1 0 1;
+#X connect 12 0 15 0;
+#X connect 13 0 12 0;
+#X connect 15 0 18 0;
+#X connect 16 0 18 0;
+#X connect 17 0 18 0;
+#X connect 18 0 11 0;
+#X connect 18 1 11 1;
+#X connect 19 0 18 1;

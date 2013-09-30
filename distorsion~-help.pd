@@ -12,7 +12,7 @@
 #X obj 343 291 hsl 100 15 0 100 0 0 /distorsion/a /distorsion/a_ a
 105 7 0 8 -262144 -1 -1 7800 1;
 #X obj 337 135 tof/open_help tof/param;
-#X obj 17 184 atl/distorsion~ /id distorsion;
+#X obj 17 184 mtl/distorsion~ /id distorsion;
 #X text 11 5 Description: f(x) = ax^3 + bx^2 + cx + d;
 #X text 11 23 Author: Unknown;
 #X obj 343 309 hsl 100 15 0 100 0 0 /distorsion/b /distorsion/b_ b

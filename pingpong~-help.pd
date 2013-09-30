@@ -45,7 +45,7 @@ feedback2 105 7 0 8 -262144 -1 -1 0 1;
 x-feedback1 105 7 0 8 -262144 -1 -1 0 1;
 #X obj 465 538 hsl 100 15 0 1 0 0 /pingpong/x-feedback2 /pingpong/x-feedback2_
 x-feedback2 105 7 0 8 -262144 -1 -1 0 1;
-#X obj 57 327 atl/pingpong~ /id pingpong;
+#X obj 57 327 mtl/pingpong~ /id pingpong;
 #N canvas 60 83 827 710 REFERENCE 0;
 #X text 114 501 See also:;
 #X text 114 121 Name: e_pingpong;

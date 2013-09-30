@@ -1,4 +1,4 @@
-#N canvas 0 0 1272 714 10;
+#N canvas 1 82 1272 661 10;
 #X obj 136 564 outlet~;
 #X obj 185 564 outlet~;
 #X obj 160 372 tof/crossfade~ 2;
@@ -149,7 +149,6 @@
 #X connect 29 0 21 1;
 #X connect 29 0 26 1;
 #X restore 260 209 pd spectralxfade;
-#X obj 347 122 tof/param /mfirst 0 /g toggle 0 1;
 #N canvas 0 0 450 300 (subpatch) 0;
 #X array \$0-hann 4096 float 1;
 #A 0 0 4.70877e-06 9.41753e-06 1.41263e-05 1.88351e-05 2.3514e-05 2.82228e-05
@@ -685,6 +684,7 @@
 2.34842e-05 1.88053e-05 1.40965e-05 9.38773e-06 4.70877e-06;
 #X coords 0 1 4095 0 300 100 1;
 #X restore 398 417 graph;
+#X obj 347 122 tof/param /mfirst 0 /g tgl;
 #X connect 2 0 0 0;
 #X connect 2 1 1 0;
 #X connect 3 0 8 0;
@@ -703,5 +703,5 @@
 #X connect 13 0 15 2;
 #X connect 14 0 2 2;
 #X connect 15 0 2 3;
-#X connect 16 0 14 3;
-#X connect 16 0 15 3;
+#X connect 17 0 14 3;
+#X connect 17 0 15 3;

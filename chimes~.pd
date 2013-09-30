@@ -1,4 +1,4 @@
-#N canvas 0 25 1272 659 10;
+#N canvas 1 82 1272 659 10;
 #X obj 138 32 inlet frequency;
 #X obj 133 627 outlet~;
 #X obj 846 159 inlet params;
@@ -6,7 +6,7 @@
 #X obj 846 181 tof/param route;
 #X obj 842 304 b;
 #X obj 843 333 tof/param gui;
-#X obj 163 97 unpack f f;
+#X obj 162 58 unpack f f;
 #X obj 200 594 *~;
 #X obj 993 216 print;
 #X text 269 511 <- reverse toggle (fills in discontinuity);
@@ -23,12 +23,13 @@
 #X obj 238 252 *~ 7.701;
 #X obj 186 253 *~ 4.939;
 #X obj 234 351 *~ 0.2;
+#X obj 162 99 mtof;
 #X connect 0 0 7 0;
 #X connect 2 0 4 0;
 #X connect 2 0 9 0;
 #X connect 4 0 3 0;
 #X connect 5 0 6 0;
-#X connect 7 0 12 0;
+#X connect 7 0 24 0;
 #X connect 7 1 11 0;
 #X connect 8 0 1 0;
 #X connect 11 0 8 1;
@@ -48,3 +49,4 @@
 #X connect 21 0 16 0;
 #X connect 22 0 15 0;
 #X connect 23 0 8 0;
+#X connect 24 0 12 0;

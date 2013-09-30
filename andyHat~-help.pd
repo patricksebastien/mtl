@@ -1,0 +1,29 @@
+#N canvas 1 82 1364 661 10;
+#X obj 26 143 mtl/out~;
+#X obj 26 87 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+-1;
+#X text 19 45 tags: synthesize~;
+#X obj 249 140 hsl 100 15 0 1 0 0 /andyHat/decay /andyHat/decay_ decay
+105 7 0 8 -262144 -1 -1 0 1;
+#X obj 246 112 cnv 15 200 20 empty empty /andyHat/ 2 12 0 8 -258401
+-262144 0;
+#X obj 26 111 mtl/andyHat~ /id andyHat;
+#X text 348 11 use the source.;
+#X text 336 29 www.obiwannabe.co.uk;
+#X text 16 11 Description : fm hihat \, again care of obiwannabe.;
+#X obj 249 159 hsl 100 15 0 1 0 0 /andyHat/mod1 /andyHat/mod1_ mod1
+105 7 0 8 -262144 -1 -1 0 1;
+#X obj 248 180 hsl 100 15 0 1 0 0 /andyHat/mod2 /andyHat/mod2_ mod2
+105 7 0 8 -262144 -1 -1 0 1;
+#X obj 248 200 hsl 100 15 0 1 0 0 /andyHat/env /andyHat/env_ env 105
+7 0 8 -262144 -1 -1 0 1;
+#X obj 248 220 hsl 100 15 0 1 0 0 /andyHat/fmamount /andyHat/fmAmount_
+fmAmount 105 7 0 8 -262144 -1 -1 0 1;
+#X obj 248 240 hsl 100 15 0 1 0 0 /andyHat/base /andyHat/base_ base
+105 7 0 8 -262144 -1 -1 0 1;
+#X obj 248 259 hsl 100 15 0 1 0 0 /andyHat/feedback /andyHat/feedback_
+feedback 105 7 0 8 -262144 -1 -1 0 1;
+#X text 18 26 Comment: Based on Andy Farnell's work.;
+#X connect 1 0 5 0;
+#X connect 5 0 0 0;
+#X connect 5 0 0 1;

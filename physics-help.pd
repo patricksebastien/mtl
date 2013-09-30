@@ -1,0 +1,36 @@
+#N canvas 1 82 1364 661 10;
+#X obj 244 374 vsl 15 128 0 127 0 0 empty empty empty 0 -8 0 8 -262144
+-1 -1 0 0;
+#X obj 244 182 vsl 15 128 0 127 0 0 empty empty empty 0 -8 0 8 -262144
+-1 -1 0 0;
+#X text 238 100 from pmpd : this filter simulate physic caracteristic
+like elasticity and gravity...;
+#X text 185 259 Try >>>;
+#X msg 287 303 setK 300 \, setD 300 \, setD2 5;
+#X text 751 196 default :;
+#X text 239 86 physics :;
+#X obj 164 122 tgl 15 0 empty \$0-onoff-in empty 17 7 0 10 -257985
+-1 -1 0 1;
+#X obj 164 163 random 127;
+#X obj 164 142 metro 700;
+#X text 415 330 << or choose with arguments;
+#X text 814 157 4 :elastic tight \; 3 :super loose elastic \; 2 :follow
+and slowdown \; 1 :elastic loose \; 0 :superelastic \;;
+#X text 460 300 << or pmpd message;
+#X obj 660 97 cnv 15 200 20 empty empty physics 2 12 0 8 -258401 -262144
+0;
+#X obj 661 127 hradio 15 1 0 5 /physics/presets /physics/presets_ presets
+135 10 0 10 -262144 -1 -1 0;
+#X obj 244 328 mtl/physics /id physics;
+#X text 307 234 1st inlet : data \; 2nd inlet : you can send a pmpd
+message to the objet.;
+#X text 293 147 comment;
+#X text 763 343 tags: control;
+#X text 762 328 Comment: Based on Jerome Abel's work.;
+#X text 761 309 Description: Physics;
+#X connect 1 0 15 0;
+#X connect 4 0 15 1;
+#X connect 7 0 9 0;
+#X connect 8 0 1 0;
+#X connect 9 0 8 0;
+#X connect 15 0 0 0;

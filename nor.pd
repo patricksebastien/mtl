@@ -5,9 +5,9 @@
 #X obj 267 166 inlet porte2;
 #X obj 159 46 cnv 15 56 25 empty empty NON-ET 4 12 0 14 -1 -262144
 0;
-#X obj 173 288 atl/or /id \$0-or;
+#X obj 173 288 mtl/or /id \$0-or;
 #X obj 160 356 outlet nor;
-#X obj 172 316 atl/not /id \$0-not;
+#X obj 172 316 mtl/not /id \$0-not;
 #X obj 642 206 inlet params;
 #X obj 642 252 print PARAM_NOTFOUND;
 #X obj 642 228 tof/param route;

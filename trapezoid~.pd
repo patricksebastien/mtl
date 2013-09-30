@@ -1,4 +1,4 @@
-#N canvas 0 25 1272 692 10;
+#N canvas 1 82 1272 661 10;
 #X obj 182 255 wrap~;
 #X obj 182 277 -~ 0.5;
 #X obj 182 233 -~;
@@ -28,7 +28,7 @@
 #X obj 846 181 tof/param route;
 #X obj 842 304 b;
 #X obj 843 333 tof/param gui;
-#X obj 75 117 unpack f f;
+#X obj 74 72 unpack f f;
 #X obj 94 153 sig~;
 #X obj 260 448 mtl/adsr~ /id adsr;
 #X obj 188 555 *~;
@@ -39,6 +39,7 @@
 #X obj 440 148 tof/param /amp-2 0 /g slider 50 100;
 #X obj 561 172 tof/param /phase-3 0 /g slider 50 100;
 #X obj 669 239 tof/param /amp-3 50 /g slider 0 100;
+#X obj 82 112 mtof;
 #X connect 0 0 1 0;
 #X connect 1 0 5 0;
 #X connect 2 0 0 0;
@@ -67,7 +68,7 @@
 #X connect 24 0 33 0;
 #X connect 26 0 25 0;
 #X connect 27 0 28 0;
-#X connect 29 0 30 0;
+#X connect 29 0 40 0;
 #X connect 29 1 31 0;
 #X connect 30 0 21 0;
 #X connect 31 0 32 1;
@@ -78,3 +79,4 @@
 #X connect 37 0 10 0;
 #X connect 38 0 15 0;
 #X connect 39 0 16 0;
+#X connect 40 0 30 0;
