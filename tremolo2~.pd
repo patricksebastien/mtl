@@ -1,4 +1,4 @@
-#N canvas 618 196 1272 685 10;
+#N canvas 614 198 1272 685 10;
 #X obj 159 308 outlet~;
 #X obj 208 308 outlet~;
 #X obj 159 282 tof/crossfade~ 2;
@@ -63,9 +63,6 @@
 #X connect 27 0 15 1;
 #X restore 200 171 pd tremolo;
 #X obj 288 47 tof/param /frequency 0 /g slider 0.5 25;
-#X obj 261 30 hsl 128 15 1 21 1 0 empty empty empty -2 -8 0 10 -262144
--1 -1 0 1;
-#X obj 258 51 - 1;
 #X obj 318 83 tof/param /depth 0 /g slider 0 0.5;
 #N canvas 534 495 1272 714 tremolo 0;
 #X obj 251 90 osc~;
@@ -117,7 +114,10 @@
 #X connect 27 0 18 0;
 #X connect 27 0 15 1;
 #X restore 276 170 pd tremolo;
-#X obj 258 9 tof/param /shape 0 /g slider 0 21;
+#X obj 233 66 hsl 128 15 1 20 1 0 empty empty empty -2 -8 0 10 -262144
+-1 -1 0 1;
+#X obj 230 44 - 1;
+#X obj 230 19 tof/param /shape 0 /g slider 2 21;
 #X connect 2 0 0 0;
 #X connect 2 1 1 0;
 #X connect 3 0 8 0;
@@ -129,14 +129,14 @@
 #X connect 11 0 2 0;
 #X connect 11 0 13 0;
 #X connect 12 0 2 1;
-#X connect 12 0 18 0;
+#X connect 12 0 16 0;
 #X connect 13 0 2 2;
 #X connect 14 0 13 2;
-#X connect 14 0 18 2;
-#X connect 15 0 16 0;
-#X connect 16 0 13 1;
-#X connect 16 0 18 1;
-#X connect 17 0 13 3;
-#X connect 17 0 18 3;
-#X connect 18 0 2 3;
-#X connect 19 0 15 0;
+#X connect 14 0 16 2;
+#X connect 15 0 13 3;
+#X connect 15 0 16 3;
+#X connect 16 0 2 3;
+#X connect 17 0 13 1;
+#X connect 17 0 16 1;
+#X connect 18 0 17 0;
+#X connect 19 0 18 0;
