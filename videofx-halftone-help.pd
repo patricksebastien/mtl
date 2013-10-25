@@ -1,4 +1,4 @@
-#N canvas 174 87 875 621 10;
+#N canvas 172 88 875 621 10;
 #X declare -lib Gem;
 #X text 103 384 [pix_halftone] draws the input using the patterns of
 dots or diamonds that are found in newspaper photographs.;
@@ -37,7 +37,7 @@ smooth 65 10 0 10 -262144 -1 -1 0 256;
 #X obj 125 298 pix_texture;
 #X text 567 314 Comment: Based on Jerome Abel's work.;
 #X text 566 295 Description: VideoFx-Halftone;
-#X text 568 329 tags: gems \, video;
+#X text 568 329 tags: gems;
 #X connect 9 0 10 0;
 #X connect 11 0 14 0;
 #X connect 12 0 14 1;

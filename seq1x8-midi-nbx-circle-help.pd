@@ -1,4 +1,4 @@
-#N canvas 1 84 699 659 10;
+#N canvas 1 85 699 659 10;
 #X obj 517 48 loadbang;
 #X msg 514 409 78 93 95 -1 104 102 95 106;
 #X text 531 82 Right inlet sets pattern;
@@ -13,18 +13,18 @@
 #X obj 237 514 dac~;
 #X msg 503 100 78 93 95 -1 104 102 95 106;
 #X text 23 24 Description: An 8 step beat MIDI sequencer.;
-#X text 23 40 tags: sequencing MIDI;
 #X obj 192 302 mtl/seq1x8-midi-nbx-circle;
 #X text 22 54 inspired from the ArgoPd library http://paresys.pagesperso-orange.fr/ARGOPd/index.html
 ;
+#X text 23 40 tags: sequencing;
 #X connect 0 0 11 0;
-#X connect 3 0 14 0;
+#X connect 3 0 13 0;
 #X connect 4 0 1 0;
 #X connect 6 0 7 0;
 #X connect 7 0 8 0;
 #X connect 8 0 3 0;
 #X connect 9 0 10 0;
 #X connect 9 0 10 1;
-#X connect 11 0 14 1;
-#X connect 14 0 9 0;
-#X connect 14 1 4 0;
+#X connect 11 0 13 1;
+#X connect 13 0 9 0;
+#X connect 13 1 4 0;

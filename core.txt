@@ -14,12 +14,25 @@ mtl/3dPanTilt 3d
 mtl/3dRotate 3d
 mtl/3dScale 3d
 mtl/3dSubtract 3d
+mtl/FFT-BrickWallFilter~ fx~
+mtl/FFT-Flt~ fx~
+mtl/FFT-NoiseGate~ fx~
+mtl/FFT-Shift~ fx~
+mtl/FFT-Stretch~ fx~
 mtl/FFTComp~ fx~
 mtl/FFTExpander~ fx~
 mtl/FFT~ fx~
+mtl/Midi-Channel-filter midi
+mtl/Midi-Channel-learner midi
+mtl/Midi-Channeliser midi
+mtl/Midi-Controller-learner midi
+mtl/Midi-Controller-learner~ midi
+mtl/Midi-Note-Delay midi
+mtl/Midi-Note-Range-filter midi
 mtl/VCR ui
 mtl/absolute~ fx~
 mtl/additive~ instrument~
+mtl/adsr control
 mtl/adsr~ control~
 mtl/aliaser~ fx~
 mtl/alindx~ fx~
@@ -56,11 +69,13 @@ mtl/ambiWxyuvpqToMono~ ambisonic
 mtl/ambiWxyzToMono~ ambisonic
 mtl/ambient~ synthesize~
 mtl/and logic
+mtl/andyHat~ synthesize~
 mtl/applause~ synthesize~
 mtl/arpeggio musical
 mtl/asciiToPd conversion
 mtl/automatic-gain-control~ fx~
 mtl/aux~ mix~
+mtl/bassdrum~ synthesize~
 mtl/beep~ instrument~
 mtl/bell~ synthesize~
 mtl/benchmark tools
@@ -109,6 +124,7 @@ mtl/cranks~ synthesize~
 mtl/cues timing
 mtl/cues~ timing
 mtl/cycle5 musical
+mtl/cymbal~ synthesize~
 mtl/decimate~ fx~
 mtl/degreeToChord musical
 mtl/degreeToRadian conversion
@@ -204,6 +220,8 @@ mtl/hald_adder logic
 mtl/hardlimit~ fx~
 mtl/harmgen~ fx~
 mtl/hexToDec conversion
+mtl/hightom~ synthesize~
+mtl/hihat~ synthesize~
 mtl/hissing~ synthesize~
 mtl/hold~ control~
 mtl/hsv ui
@@ -229,10 +247,12 @@ mtl/listCutUp lists
 mtl/listDelay lists timing
 mtl/listJump lists musical
 mtl/listOp lists math
+mtl/lowtom~ synthesize~
 mtl/mToHarm
 mtl/mToSpeed conversion
 mtl/main~ mix~
 mtl/makeLabel ui
+mtl/mapcurve control
 mtl/material~ fx~
 mtl/modf math
 mtl/mphasor control
@@ -250,6 +270,7 @@ mtl/noteClose midi
 mtl/noteFloat midi
 mtl/noteSplit midi
 mtl/noteToName musical
+mtl/numToNote conversion
 mtl/numToRgb conversion
 mtl/octava musical
 mtl/octave.divider~ fx~
@@ -265,6 +286,7 @@ mtl/phase-distorsion~ instrument~
 mtl/phaser2~ fx~
 mtl/phaser~ fx~
 mtl/phi math
+mtl/physics control
 mtl/piano ui midi
 mtl/pingpong~ fx~
 mtl/pitchFollower info~
@@ -285,6 +307,7 @@ mtl/radianToDegree conversion
 mtl/rain~ synthesize~
 mtl/randomFile random
 mtl/randomFloat random
+mtl/randomLetter random
 mtl/recirculating-schroeder-reverb~ fx~
 mtl/rect-down~ fx~
 mtl/rect-up~ fx~
@@ -309,16 +332,16 @@ mtl/seq-1x16-nbx sequencing
 mtl/seq1x16-circle sequencing
 mtl/seq1x16 sequencing
 mtl/seq1x16-midi sequencing
-mtl/seq1x16-midi-nbx-circle sequencing MIDI
-mtl/seq1x16-midi-nbx sequencing MIDI
+mtl/seq1x16-midi-nbx-circle sequencing
+mtl/seq1x16-midi-nbx sequencing
 mtl/seq1x16-midi-vslider sequencing
 mtl/seq1x16-nbx-circle sequencing
 mtl/seq1x16-nbx sequencing
 mtl/seq1x8-circle sequencing
 mtl/seq1x8 sequencing
 mtl/seq1x8-midi sequencing
-mtl/seq1x8-midi-nbx-circle sequencing MIDI
-mtl/seq1x8-midi-nbx sequencing MIDI
+mtl/seq1x8-midi-nbx-circle sequencing
+mtl/seq1x8-midi-nbx sequencing
 mtl/seq1x8-midi-vslider sequencing
 mtl/seq1x8-nbx-circle sequencing
 mtl/seq1x8-nbx sequencing
@@ -337,6 +360,7 @@ mtl/smpToMem conversion
 mtl/smpToMs conversion
 mtl/smpToTime conversion
 mtl/smpteToFrames conversion
+mtl/snare~ synthesize~
 mtl/sometimes random
 mtl/soundFreqToWave conversion
 mtl/soundWaveToFreq conversion
@@ -357,11 +381,15 @@ mtl/transient~ fx~
 mtl/transpose musical
 mtl/trapezoid~ instrument~
 mtl/tremolo~ fx~
+mtl/tremolo~2 fx~
 mtl/ugurphase~ fx~
 mtl/valueChange routing
 mtl/valverect~ fx~
 mtl/vdirac~ synthesize~
 mtl/vibrato~ fx~
+mtl/videofx-halftone gems
+mtl/videofx-lumaoffset gems
+mtl/videofx-multi gems
 mtl/vocoder~ fx~
 mtl/vu~ info~
 mtl/wakeup tools
