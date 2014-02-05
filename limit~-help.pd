@@ -1,4 +1,4 @@
-#N canvas 524 286 454 286 10;
+#N canvas 520 288 454 286 10;
 #X floatatom 65 144 0 0 0 2 left - -;
 #X floatatom 151 144 0 0 0 2 right - -;
 #X floatatom 106 127 0 0 0 2 both - -;
@@ -74,10 +74,11 @@
 #X text 235 83 without a limiter~;
 #X obj 14 7 cnv 15 380 60 empty empty empty 20 12 0 14 -233017 -66577
 0;
-#X text 20 9 description: a limiter (10ms buffer).;
 #X obj 66 215 mtl/out~;
 #X obj 239 215 mtl/out~;
-#X text 21 47 tags: fx~;
+#X text 20 44 tags: fx~;
+#X text 20 9 description: a limiter (50ms buffer / 64 samples delayed)
+;
 #X connect 0 0 3 0;
 #X connect 1 0 3 1;
 #X connect 2 0 0 0;
@@ -88,7 +89,7 @@
 #X connect 5 0 7 1;
 #X connect 6 0 4 0;
 #X connect 6 0 5 0;
-#X connect 7 0 14 0;
-#X connect 7 1 14 1;
-#X connect 8 0 13 0;
-#X connect 8 1 13 1;
+#X connect 7 0 13 0;
+#X connect 7 1 13 1;
+#X connect 8 0 12 0;
+#X connect 8 1 12 1;
