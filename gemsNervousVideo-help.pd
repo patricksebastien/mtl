@@ -1,0 +1,39 @@
+#N canvas 397 82 922 661 10;
+#X declare -lib Gem;
+#X declare -lib Gem;
+#X text 30 71 Description: A more advanced video feedback loop using
+snapshots of the rendering window.;
+#X obj 286 100 tgl 15 0 empty empty empty 0 -6 0 10 -262144 -1 -1 0
+1;
+#X text 30 100 tags: gems;
+#X obj 286 130 mtl/gemsWin /dimen 320 240;
+#X text 271 307 Argument 1: feedback amount;
+#X obj 390 79 import Gem;
+#X obj 34 20 cnv 15 400 40 empty empty empty 20 12 0 14 -254305 -66577
+0;
+#X obj 46 29 cnv 15 380 20 empty empty empty 20 12 0 14 -262144 -66577
+0;
+#X obj 381 30 tgl 15 1 empty empty empty 17 7 0 10 -262144 -1 -1 0
+1;
+#X obj 404 30 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+1;
+#X obj 555 107 cnv 15 200 20 empty empty /gemsNervousVideo/ 2 12 0
+8 -258401 -262144 0;
+#X obj 551 139 cnv 15 300 150 /banane/ empty empty 20 12 0 14 -261234
+-66577 0;
+#X obj 563 165 hsl 128 15 0 127 0 0 /banane/feedback-amount /banane/feedback-amount_
+feedback-amount 135 10 0 10 -262144 -1 -1 1000 1;
+#X obj 560 143 tgl 15 0 /banane/feedback-onoff /banane/feedback-onoff_
+feedback_on/off 17 7 0 10 -262144 -1 -1 0 1;
+#X obj 107 209 gemhead;
+#X obj 107 243 pix_video;
+#X obj 105 388 rectangle 4 3;
+#X obj 105 364 pix_texture;
+#X text 49 28 [gemsNervousVideo];
+#X text 128 153 comment;
+#X obj 98 308 mtl/gemsNervousVideo /id banane;
+#X connect 1 0 3 0;
+#X connect 14 0 15 0;
+#X connect 15 0 20 0;
+#X connect 17 0 16 0;
+#X connect 20 0 17 0;
