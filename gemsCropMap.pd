@@ -1,4 +1,5 @@
-#N canvas 18 25 991 686 10;
+#N canvas 0 82 1366 662 10;
+#N canvas 0 82 1366 662 traitement 0;
 #X obj 49 154 separator;
 #X obj 52 178 t a b;
 #X obj 52 224 t a b;
@@ -120,3 +121,20 @@
 #X connect 48 0 9 0;
 #X connect 49 0 0 0;
 #X connect 50 0 3 0;
+#X restore 186 205 pd traitement;
+#X obj 958 113 inlet params;
+#X obj 958 159 print PARAM_NOTFOUND;
+#X obj 958 135 tof/param route;
+#X obj 961 184 b;
+#X obj 962 213 tof/param gui;
+#X obj 188 61 inlet;
+#X obj 187 251 outlet;
+#X obj 270 102 tof/param /nombreX 0 /g slider 0 100;
+#X obj 291 126 tof/param /nombreY 0 /g slider 0 100;
+#X connect 0 0 7 0;
+#X connect 1 0 3 0;
+#X connect 3 0 2 0;
+#X connect 4 0 5 0;
+#X connect 6 0 0 0;
+#X connect 8 0 0 1;
+#X connect 9 0 0 2;
