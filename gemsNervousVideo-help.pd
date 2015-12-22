@@ -1,4 +1,4 @@
-#N canvas 397 82 922 661 10;
+#N canvas 393 82 922 661 10;
 #X declare -lib Gem;
 #X declare -lib Gem;
 #X text 30 71 Description: A more advanced video feedback loop using
@@ -7,7 +7,6 @@ snapshots of the rendering window.;
 1;
 #X text 30 100 tags: gems;
 #X obj 286 130 mtl/gemsWin /dimen 320 240;
-#X text 271 307 Argument 1: feedback amount;
 #X obj 390 79 import Gem;
 #X obj 34 20 cnv 15 400 40 empty empty empty 20 12 0 14 -254305 -66577
 0;
@@ -30,10 +29,11 @@ feedback_on/off 17 7 0 10 -262144 -1 -1 0 1;
 #X obj 105 388 rectangle 4 3;
 #X obj 105 364 pix_texture;
 #X text 49 28 [gemsNervousVideo];
-#X text 128 153 comment;
-#X obj 98 308 mtl/gemsNervousVideo /id banane;
+#X obj 98 308 mtl/gemsNervousVideo /id banane 1 10;
+#X text 339 306 Argument 2: feedback amount;
+#X text 339 292 Argument 2: feedback amount;
 #X connect 1 0 3 0;
-#X connect 14 0 15 0;
-#X connect 15 0 20 0;
-#X connect 17 0 16 0;
-#X connect 20 0 17 0;
+#X connect 13 0 14 0;
+#X connect 14 0 18 0;
+#X connect 16 0 15 0;
+#X connect 18 0 16 0;

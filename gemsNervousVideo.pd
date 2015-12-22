@@ -9,7 +9,7 @@
 #X obj 272 118 tof/param /feedback-amount 10 /g slider 0 127;
 #X text 595 231 buffer;
 #X obj 596 253 pix_buffer \$0-stockage 128;
-#N canvas 1 102 481 366 buffer 0;
+#N canvas 1 82 1351 661 buffer 1;
 #X obj 286 113 t a b;
 #X obj 39 105 t a b;
 #X obj 66 162 + 1;
@@ -48,6 +48,10 @@
 #X connect 16 0 3 0;
 #X restore 157 324 pd buffer;
 #X obj 155 381 outlet;
+#X obj 225 38 loadbang;
+#X obj 224 64 \$3;
+#X obj 302 186 loadbang;
+#X obj 301 210 \$4;
 #X connect 0 0 2 0;
 #X connect 2 0 1 0;
 #X connect 3 0 4 0;
@@ -55,3 +59,7 @@
 #X connect 6 0 10 0;
 #X connect 7 0 10 2;
 #X connect 10 0 11 0;
+#X connect 12 0 13 0;
+#X connect 13 0 10 1;
+#X connect 14 0 15 0;
+#X connect 15 0 10 2;
