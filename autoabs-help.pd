@@ -1,0 +1,137 @@
+#N canvas 316 82 1041 661 10;
+#X msg 393 70 tata.avi;
+#X msg 479 70 toto.mkv;
+#X msg 553 72 tutu.jpg;
+#X obj 117 129 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+1;
+#X obj 215 128 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+1;
+#X obj 165 129 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+1;
+#X obj 272 130 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+1;
+#X obj 70 130 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+1;
+#X obj 67 222 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+-1;
+#X obj 117 221 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj 169 224 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X floatatom 88 354 5 0 0 0 - - -;
+#X floatatom 154 354 5 0 0 0 - - -;
+#X floatatom 213 355 5 0 0 0 - - -;
+#X floatatom 268 353 5 0 0 0 - - -;
+#X obj 217 226 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj 268 226 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj 401 356 print ALL;
+#X obj 473 357 print tata;
+#X obj 551 359 print tutu;
+#X obj 632 360 print toto;
+#X msg 398 250 tata va bien;
+#X msg 381 219 tete a toto;
+#X msg 519 225 tutu pointu;
+#X obj 390 170 print rgx;
+#X text 682 99 arg : name of object/abstraction;
+#X text 717 128 arguments for each object created;
+#X text 717 114 number of arguments by objet;
+#X msg 472 223 tata o;
+#X msg 469 197 tutu haha;
+#X text 686 142 !don't save in the autopatch!;
+#X text 685 155 Test and enjoy;
+#X obj 26 353 print all;
+#X floatatom 52 508 5 0 0 0 - - -;
+#X floatatom 115 508 5 0 0 0 - - -;
+#X floatatom 174 509 5 0 0 0 - - -;
+#X floatatom 239 510 5 0 0 0 - - -;
+#X floatatom 53 441 5 0 0 0 - - -;
+#X floatatom 114 445 5 0 0 0 - - -;
+#X obj 640 668 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+1;
+#X obj 663 758 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X floatatom 704 762 5 0 0 0 - - -;
+#X obj 700 670 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X floatatom 586 665 5 0 0 0 - - -;
+#X obj 583 768 print change;
+#X floatatom 478 757 5 0 0 0 - - -;
+#X floatatom 422 755 5 0 0 0 - - -;
+#X floatatom 363 752 5 0 0 0 - - -;
+#X floatatom 363 673 5 0 0 0 - - -;
+#X floatatom 416 673 5 0 0 0 - - -;
+#X floatatom 469 672 5 0 0 0 - - -;
+#X floatatom 530 671 5 0 0 0 - - -;
+#X floatatom 760 762 5 0 0 0 - - -;
+#X floatatom 807 764 5 0 0 0 - - -;
+#X floatatom 519 757 5 0 0 0 - - -;
+#X text 197 714 mix autochain/autoabs;
+#X obj 366 705 autochain autoabs 3 max 1 70 max 1 100 min 1 200 > 1
+150 change 1 0 metro 1 100 counter 1 10 * 1 2.5 + 1 300;
+#X msg 595 269 toto yes;
+#X obj 682 31 cnv 15 200 20 empty empty /autoabs/ 2 12 0 8 -258401
+-262144 0;
+#X text 680 69 Author: Arno Courcelle 2014;
+#X text 681 84 tags: tool;
+#X obj 66 173 mtl/autoabs metro 1 500 2000 80 10000;
+#X obj 390 120 mtl/autoabs rgx 1 .avi .mov .mkv;
+#X obj 402 301 mtl/autoabs router 1 tata tutu toto;
+#X obj 32 284 mtl/autoabs counter 2 0 10 20 50 10 100 30 31;
+#X obj 52 468 mtl/autoabs min 1 100 70 40 20;
+#X connect 0 0 62 0;
+#X connect 1 0 62 0;
+#X connect 2 0 62 0;
+#X connect 3 0 61 1;
+#X connect 4 0 61 3;
+#X connect 5 0 61 2;
+#X connect 6 0 61 4;
+#X connect 7 0 61 0;
+#X connect 21 0 63 0;
+#X connect 22 0 63 0;
+#X connect 23 0 63 2;
+#X connect 28 0 63 1;
+#X connect 29 0 63 1;
+#X connect 37 0 65 0;
+#X connect 38 0 65 1;
+#X connect 39 0 56 5;
+#X connect 42 0 56 6;
+#X connect 43 0 56 4;
+#X connect 48 0 56 0;
+#X connect 49 0 56 1;
+#X connect 50 0 56 2;
+#X connect 51 0 56 3;
+#X connect 56 0 47 0;
+#X connect 56 1 46 0;
+#X connect 56 2 45 0;
+#X connect 56 3 54 0;
+#X connect 56 4 44 0;
+#X connect 56 5 40 0;
+#X connect 56 6 41 0;
+#X connect 56 7 52 0;
+#X connect 56 8 53 0;
+#X connect 57 0 63 3;
+#X connect 61 0 8 0;
+#X connect 61 1 9 0;
+#X connect 61 1 64 1;
+#X connect 61 2 10 0;
+#X connect 61 2 64 2;
+#X connect 61 3 15 0;
+#X connect 61 3 64 3;
+#X connect 61 4 16 0;
+#X connect 61 4 64 4;
+#X connect 62 0 24 0;
+#X connect 63 0 17 0;
+#X connect 63 1 18 0;
+#X connect 63 2 19 0;
+#X connect 63 3 20 0;
+#X connect 64 0 32 0;
+#X connect 64 1 11 0;
+#X connect 64 2 12 0;
+#X connect 64 3 13 0;
+#X connect 64 4 14 0;
+#X connect 65 0 33 0;
+#X connect 65 1 34 0;
+#X connect 65 2 35 0;
+#X connect 65 3 36 0;
