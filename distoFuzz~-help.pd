@@ -1,4 +1,4 @@
-#N canvas 207 261 620 423 10;
+#N canvas 0 82 1366 662 10;
 #X obj 50 109 *~ 0.5;
 #X obj 134 110 *~ 0.5;
 #X text 10 28 Author: netpd;
@@ -13,10 +13,7 @@
 51 135 135 135 0;
 #X text 11 43 tags: fx~;
 #X obj 51 146 mtl/distoFuzz~ /id fuzz;
-#X text 199 144 <-Click on the propeties menu to display params;
-#X obj 310 59 cnv 15 200 40 empty empty empty 20 12 0 14 -232576 -66577
-0;
-#X text 370 60 PARAM ENABLED;
+#X text 226 146 <-Click on the propeties menu to display params;
 #X obj 377 213 cnv 15 200 20 empty empty /fuzz/ 2 12 0 8 -258401 -262144
 0;
 #X obj 377 236 hsl 100 15 0 1 0 0 /fuzz/wet /fuzz/wet_ wet 105 7 0
@@ -33,7 +30,6 @@
 105 7 0 8 -262144 -1 -1 4950 1;
 #X obj 377 326 hsl 100 15 0 1 0 0 /fuzz/postgain /fuzz/postgain_ postgain
 105 7 0 8 -262144 -1 -1 4950 1;
-#X obj 309 84 tof/open_help tof/param;
 #X connect 0 0 7 0;
 #X connect 0 0 10 0;
 #X connect 1 0 10 1;

@@ -1,30 +1,27 @@
-#N canvas 281 304 590 372 10;
+#N canvas 0 82 1366 662 10;
 #X obj 15 211 mtl/out~;
 #X text 12 40 tags: fx~;
-#X msg 145 160 /wet \$1;
-#X floatatom 145 139 5 0 1 0 - - -;
-#X text 205 187 <-Click on the propeties menu to display params;
-#X obj 338 111 cnv 15 200 40 empty empty empty 20 12 0 14 -232576 -66577
-0;
-#X text 398 112 PARAM ENABLED;
+#X msg 292 130 /wet \$1;
+#X floatatom 292 109 5 0 1 0 - - -, f 5;
+#X text 371 185 <-Click on the propeties menu to display params;
 #X obj 343 268 cnv 15 200 20 empty empty /distorsion/ 2 12 0 8 -258401
 -262144 0;
-#X obj 343 291 hsl 100 15 0 100 0 0 /distorsion/a /distorsion/a_ a
-105 7 0 8 -262144 -1 -1 7800 1;
-#X obj 337 135 tof/open_help tof/param;
-#X obj 17 184 mtl/distorsion~ /id distorsion;
+#X obj 344 297 hsl 100 15 0 1 0 0 /distorsion/wet /distorsion/wet_
+wet 105 7 0 8 -262144 -1 -1 4950 1;
 #X text 11 5 Description: f(x) = ax^3 + bx^2 + cx + d;
 #X text 11 23 Author: Unknown;
-#X obj 343 309 hsl 100 15 0 100 0 0 /distorsion/b /distorsion/b_ b
-105 7 0 8 -262144 -1 -1 900 1;
-#X obj 343 327 hsl 100 15 0 100 0 0 /distorsion/c /distorsion/c_ c
-105 7 0 8 -262144 -1 -1 7200 1;
-#X obj 343 345 hsl 100 15 0 100 0 0 /distorsion/d /distorsion/d_ d
-105 7 0 8 -262144 -1 -1 1000 1;
+#X obj 343 334 hsl 100 15 0 100 0 0 /distorsion/b /distorsion/b_ b
+105 7 0 8 -262144 -1 -1 4950 1;
+#X obj 343 352 hsl 100 15 0 100 0 0 /distorsion/c /distorsion/c_ c
+105 7 0 8 -262144 -1 -1 4950 1;
+#X obj 343 370 hsl 100 15 0 100 0 0 /distorsion/d /distorsion/d_ d
+105 7 0 8 -262144 -1 -1 4950 1;
 #X obj 20 133 osc~ 120;
-#X connect 2 0 10 2;
+#X obj 343 316 hsl 100 15 0 100 0 0 /distorsion/a /distorsion/a_ a
+105 7 0 8 -262144 -1 -1 4950 1;
+#X obj 16 184 mtl/distorsion~ /id distorsion 0.5 50 50 50 50;
+#X connect 2 0 14 2;
 #X connect 3 0 2 0;
-#X connect 10 0 0 0;
-#X connect 10 1 0 1;
-#X connect 17 0 10 0;
-#X connect 17 0 10 1;
+#X connect 12 0 14 0;
+#X connect 14 0 0 0;
+#X connect 14 1 0 1;

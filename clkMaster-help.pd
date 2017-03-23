@@ -1,11 +1,11 @@
-#N canvas 25 95 977 551 10;
+#N canvas 23 100 977 551 10;
 #X obj 270 225 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
 -1 -1;
 #X text 288 224 Beat indicator;
-#X floatatom 46 164 5 0 0 0 - - -;
+#X floatatom 46 164 5 0 0 0 - - -, f 5;
 #X text 87 163 Bpm (minimum of 30 \, defaults to 120);
-#X floatatom 46 262 8 0 0 1 step - -;
-#X floatatom 104 237 5 0 0 1 beat_interval(ms) - -;
+#X floatatom 46 262 8 0 0 1 step - -, f 8;
+#X floatatom 104 237 5 0 0 1 beat_interval(ms) - -, f 5;
 #X msg 472 147 external 1;
 #X text 45 282 24 steps ber beat (as in MIDI);
 #X text 469 112 You use an external sync signal by sending an "external
@@ -13,7 +13,7 @@
 #X text 24 31 Description: synchronizes all [clkSlave] abstractions
 that share the same "top" patch.;
 #X obj 46 208 mtl/clkMaster 120;
-#X floatatom 512 412 5 0 0 0 - - -;
+#X floatatom 512 412 5 0 0 0 - - -, f 5;
 #X obj 512 339 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
 -1 -1;
 #X text 27 59 tags: timing sequencing;
@@ -25,9 +25,9 @@ per beat.;
 -1 -1 4;
 #X obj 445 475 hradio 15 1 0 32 empty empty empty 0 -8 0 10 -262144
 -1 -1 9;
-#X msg 197 307 play;
+#X msg 194 320 play;
 #X msg 273 299 stop;
-#X floatatom 49 401 5 0 0 0 - - -;
+#X floatatom 49 401 5 0 0 0 - - -, f 5;
 #X obj 47 341 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
 -1;
 #X text 64 339 <- Bang to start playing a 16 step loop with 4 steps
@@ -35,7 +35,7 @@ per beat.;
 #X obj 512 376 mtl/clkSlave 4 16;
 #X msg 569 289 quantization \$1;
 #X obj 570 264 mtl/clk-quantization-help;
-#X msg 164 291 quantization \$1;
+#X msg 157 299 quantization \$1;
 #X obj 165 266 mtl/clk-quantization-help;
 #X obj 47 374 mtl/clkSlave 7 16;
 #X connect 2 0 10 0;

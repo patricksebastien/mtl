@@ -1,4 +1,4 @@
-#N canvas 314 224 742 589 10;
+#N canvas 310 154 742 589 10;
 #X obj 173 244 + 12;
 #X obj 173 275 -;
 #X obj 141 179 t b a;
@@ -25,7 +25,7 @@ but for floats);
 #X obj 171 299 expr fmod($f1 \, 12);
 #X obj 297 186 expr fmod($f1 \, 12);
 #X obj 365 69 iemlib/dollarg;
-#X obj 171 200 zexy/drip;
+#X obj 171 200 drip;
 #X connect 0 0 1 0;
 #X connect 1 0 21 0;
 #X connect 2 0 9 0;

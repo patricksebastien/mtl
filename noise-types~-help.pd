@@ -1,0 +1,54 @@
+#N canvas 1 82 1351 661 10;
+#X obj 163 262 mtl/out~;
+#X obj 483 187 hsl 100 15 0 1 0 0 /noise-types/whiteNoise /noise-types/whiteNoise_
+whiteNoise 105 7 0 8 -262144 -1 -1 0 1;
+#X obj 480 159 cnv 15 200 20 empty empty /noise-types~/ 2 12 0 8 -258401
+-262144 0;
+#X text 480 30 NOISE OF DIFFERENT VARIETIES;
+#X text 480 48 This short patch was developed to demonstrate the differences
+between various types of noise \, and how to create these types of
+noises in pd.;
+#X text 480 98 To create these different types of noises we have applied
+four orders of low-pass and high-pass filters to each of the appropriate
+channels.;
+#X text 15 8 Description: Noise of different Varieties.;
+#X text 14 23 tags: tools~;
+#X text 649 180 0Hz - 20kHz distribution;
+#X text 649 195 N/A;
+#X obj 483 218 hsl 100 15 0 1 0 0 /noise-types/blackNoise /noise-types/blackNoise_
+blackNoise 105 7 0 8 -262144 -1 -1 0 1;
+#X obj 482 254 hsl 100 15 0 1 0 0 /noise-types/brownNoise /noise-types/brownNoise_
+brownNoise 105 7 0 8 -262144 -1 -1 0 1;
+#X obj 483 284 hsl 100 15 0 1 0 0 /noise-types/redNoise /noise-types/redNoise_
+redNoise 105 7 0 8 -262144 -1 -1 0 1;
+#X obj 483 313 hsl 100 15 0 1 0 0 /noise-types/orangeNoise /noise-types/orangeNoise_
+orangeNoise 105 7 0 8 -262144 -1 -1 0 1;
+#X obj 483 345 hsl 100 15 0 1 0 0 /noise-types/yellowNoise /noise-types/yellowNoise_
+yellowNoise 105 7 0 8 -262144 -1 -1 0 1;
+#X obj 484 377 hsl 100 15 0 1 0 0 /noise-types/greenNoise /noise-types/greenNoise_
+greenNoise 105 7 0 8 -262144 -1 -1 0 1;
+#X obj 483 407 hsl 100 15 0 1 0 0 /noise-types/blueNoise /noise-types/blueNoise_
+blueNoise 105 7 0 8 -262144 -1 -1 0 1;
+#X obj 483 442 hsl 100 15 0 1 0 0 /noise-types/violetNoise /noise-types/violetNoise_
+violetNoise 105 7 0 8 -262144 -1 -1 0 1;
+#X text 649 209 0Hz - 50Hz frequencies;
+#X text 649 223 Explosion rumble \, near infrasonic;
+#X text 649 433 15kHz - 20kHz frequencies;
+#X text 649 399 7kHz - 15kHz frequencies;
+#X text 649 369 3kHz - 7kHz frequencies;
+#X text 649 338 1kHz - 3kHz frequencies;
+#X text 649 304 500Hz - 1000Hz frequencies;
+#X text 648 273 250Hz - 500Hz frequencies;
+#X text 648 240 50Hz - 250Hz frequencies;
+#X text 647 254 Thunder \, distant plane \, large objects;
+#X text 647 286 Airplane cabin \, train or car interior;
+#X text 648 317 River or city ambience;
+#X text 648 351 Rain or distant waterfall;
+#X text 648 382 Bacon frying or acid on concrete;
+#X text 648 412 Light breeze \, aerosol and hihats;
+#X text 648 446 Gas escaping or angry snake;
+#X obj 163 225 mtl/noise-types~ /id noise-types;
+#X text 15 37 src : Andy Farnell http://obiwannabe.co.uk/tutorials/html/tutorial_tea.html
+;
+#X connect 34 0 0 0;
+#X connect 34 0 0 1;

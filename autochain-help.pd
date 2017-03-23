@@ -1,4 +1,4 @@
-#N canvas 316 82 1041 661 10;
+#N canvas 314 82 1041 661 10;
 #X text 682 99 arg : name of object/abstraction;
 #X text 717 128 arguments for each object created;
 #X text 717 114 number of arguments by objet;
@@ -9,31 +9,31 @@
 #X msg 427 159 autochain c'est classe;
 #X obj 547 243 print;
 #X msg 430 122 rien a dire;
-#X floatatom 55 242 5 0 0 0 - - -;
-#X floatatom 118 242 5 0 0 0 - - -;
-#X floatatom 177 243 5 0 0 0 - - -;
-#X floatatom 242 244 5 0 0 0 - - -;
-#X floatatom 56 175 5 0 0 0 - - -;
-#X floatatom 117 179 5 0 0 0 - - -;
+#X floatatom 55 242 5 0 0 0 - - -, f 5;
+#X floatatom 118 242 5 0 0 0 - - -, f 5;
+#X floatatom 177 243 5 0 0 0 - - -, f 5;
+#X floatatom 242 244 5 0 0 0 - - -, f 5;
+#X floatatom 56 175 5 0 0 0 - - -, f 5;
+#X floatatom 117 179 5 0 0 0 - - -, f 5;
 #X obj 640 668 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
 1;
 #X obj 663 758 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
 -1 -1;
-#X floatatom 704 762 5 0 0 0 - - -;
+#X floatatom 704 762 5 0 0 0 - - -, f 5;
 #X obj 700 670 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
 -1 -1;
-#X floatatom 586 665 5 0 0 0 - - -;
+#X floatatom 586 665 5 0 0 0 - - -, f 5;
 #X obj 583 768 print change;
-#X floatatom 478 757 5 0 0 0 - - -;
-#X floatatom 422 755 5 0 0 0 - - -;
-#X floatatom 363 752 5 0 0 0 - - -;
-#X floatatom 363 673 5 0 0 0 - - -;
-#X floatatom 416 673 5 0 0 0 - - -;
-#X floatatom 469 672 5 0 0 0 - - -;
-#X floatatom 530 671 5 0 0 0 - - -;
-#X floatatom 760 762 5 0 0 0 - - -;
-#X floatatom 807 764 5 0 0 0 - - -;
-#X floatatom 519 757 5 0 0 0 - - -;
+#X floatatom 478 757 5 0 0 0 - - -, f 5;
+#X floatatom 422 755 5 0 0 0 - - -, f 5;
+#X floatatom 363 752 5 0 0 0 - - -, f 5;
+#X floatatom 363 673 5 0 0 0 - - -, f 5;
+#X floatatom 416 673 5 0 0 0 - - -, f 5;
+#X floatatom 469 672 5 0 0 0 - - -, f 5;
+#X floatatom 530 671 5 0 0 0 - - -, f 5;
+#X floatatom 760 762 5 0 0 0 - - -, f 5;
+#X floatatom 807 764 5 0 0 0 - - -, f 5;
+#X floatatom 519 757 5 0 0 0 - - -, f 5;
 #X text 197 714 mix autochain/autoabs;
 #X obj 366 705 autochain autoabs 3 max 1 70 max 1 100 min 1 200 > 1
 150 change 1 0 metro 1 100 counter 1 10 * 1 2.5 + 1 300;

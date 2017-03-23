@@ -1,4 +1,4 @@
-#N canvas 36 25 930 683 10;
+#N canvas 32 82 930 661 10;
 #X obj 24 126 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
 -1;
 #X text 22 22 description: Loads and stores soundfiles.;
@@ -22,14 +22,12 @@ index;
 -1;
 #X obj 46 223 openpanel;
 #X obj 24 587 mtl/player~;
-#X obj 419 17 cnv 15 350 80 empty empty empty 20 12 0 14 -232576 -66577
+#X obj 481 20 cnv 15 350 80 empty empty empty 20 12 0 14 -232576 -66577
 0;
-#X text 555 19 PARAM ENABLED;
-#X text 425 41 The list of loaded soundfiles can be saved and restored
+#X text 484 43 The list of loaded soundfiles can be saved and restored
 through the param system.;
 #X obj 538 154 tof/param file;
 #X text 104 222 "symbol": add the soundfile and output its data.;
-#X obj 490 75 tof/open_help tof/param;
 #X obj 234 347 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
 -1 -1;
 #X obj 234 366 openpanel;
@@ -50,30 +48,30 @@ of loaded soundfiles.;
 #X text 78 165 "add" soundfile: adds the indicated soundfile without
 outputing the sample.;
 #X obj 26 504 t b a;
-#X floatatom 189 476 5 0 0 0 - - -;
-#X text 274 510 Outlet 1: sample length samplerate table-left table-right
+#X floatatom 189 476 5 0 0 0 - - -, f 5;
+#X text 303 510 Outlet 1: sample length samplerate table-left table-right
 channels name;
 #X connect 0 0 12 0;
-#X connect 3 0 31 0;
-#X connect 4 0 31 0;
-#X connect 5 0 31 0;
-#X connect 6 0 31 0;
-#X connect 9 0 30 0;
-#X connect 10 0 20 0;
-#X connect 11 0 20 1;
+#X connect 3 0 29 0;
+#X connect 4 0 29 0;
+#X connect 5 0 29 0;
+#X connect 6 0 29 0;
+#X connect 9 0 28 0;
+#X connect 10 0 19 0;
+#X connect 11 0 19 1;
 #X connect 12 0 13 0;
-#X connect 13 0 31 0;
+#X connect 13 0 29 0;
 #X connect 14 0 15 0;
-#X connect 15 0 31 0;
+#X connect 15 0 29 0;
 #X connect 16 0 2 0;
 #X connect 16 1 2 1;
-#X connect 23 0 24 0;
-#X connect 24 0 31 1;
-#X connect 25 0 31 1;
-#X connect 27 0 31 0;
-#X connect 31 0 9 0;
-#X connect 31 0 36 0;
-#X connect 31 1 37 0;
-#X connect 31 2 29 0;
-#X connect 36 0 16 0;
-#X connect 36 1 16 0;
+#X connect 21 0 22 0;
+#X connect 22 0 29 1;
+#X connect 23 0 29 1;
+#X connect 25 0 29 0;
+#X connect 29 0 9 0;
+#X connect 29 0 34 0;
+#X connect 29 1 35 0;
+#X connect 29 2 27 0;
+#X connect 34 0 16 0;
+#X connect 34 1 16 0;

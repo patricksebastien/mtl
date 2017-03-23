@@ -1,17 +1,17 @@
-#N canvas 513 25 652 507 10;
+#N canvas 511 82 652 507 10;
 #X obj 11 60 bng 15 250 50 0 empty empty empty 0 -6 0 8 -262144 -1
 -1;
-#X symbolatom 11 451 80 0 0 0 - - -;
+#X symbolatom 11 451 80 0 0 0 - - -, f 80;
 #X obj 11 475 print;
 #X text 9 10 Description: Nice file browser.;
 #X text 223 202 <- Drag the slider to display all the contents of a
 folder.;
-#X floatatom 55 116 5 0 0 0 - - -;
+#X floatatom 55 116 5 0 0 0 - - -, f 5;
 #X text 92 115 You can select files by index.;
-#X floatatom 339 288 5 0 0 1 size - -;
+#X floatatom 339 288 5 0 0 1 size - -, f 5;
 #X obj 274 335 pack 0 10;
 #X obj 339 308 t b a;
-#X floatatom 274 288 5 0 2 1 font - -;
+#X floatatom 274 288 5 0 2 1 font - -, f 5;
 #X msg 274 358 text.font \$1 \$2;
 #X msg 275 382 select.colorRGB 125 125 125;
 #X text 453 382 Change the select color;

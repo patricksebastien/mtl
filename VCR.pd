@@ -57,7 +57,7 @@
 #X obj 65 295 clip 0 1;
 #X obj 64 317 pow 0.3;
 #X obj -35 348 expr $f3 + ((1-$f2) * ($f1-$f3));
-#X obj -240 185 zexy/demultiplex 0 1;
+#X obj -240 185 demultiplex 0 1;
 #X msg -223 213 0;
 #X msg -112 218 1;
 #X obj -44 377 maxlib/split -0.01 0.01;

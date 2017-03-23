@@ -1,4 +1,4 @@
-#N canvas 0 25 1272 692 10;
+#N canvas 1 82 1272 661 10;
 #X obj 66 300 outlet~;
 #X obj 227 308 outlet~;
 #X obj 27 47 inlet~;
@@ -8,9 +8,11 @@
 #X obj 974 183 b;
 #X obj 975 212 tof/param gui;
 #X obj 145 43 inlet~;
-#X obj 219 111 tof/param /pre-gain 0.5 /g slide 0.5 20;
-#X obj 108 208 creb/dist~;
-#X obj 179 206 creb/dist~;
+#X obj 219 144 tof/param /pre-gain 0.5 /g slide 0.5 20;
+#X obj 108 208 dist~;
+#X obj 200 209 dist~;
+#X obj 219 107 tof/argument 3;
+#X obj 219 79 loadbang;
 #X connect 2 0 10 0;
 #X connect 3 0 5 0;
 #X connect 5 0 4 0;
@@ -20,3 +22,5 @@
 #X connect 9 0 11 1;
 #X connect 10 0 0 0;
 #X connect 11 0 1 0;
+#X connect 12 0 9 0;
+#X connect 13 0 12 0;

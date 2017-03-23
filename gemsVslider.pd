@@ -1,4 +1,4 @@
-#N canvas 1 82 1364 661 10;
+#N canvas 1 82 1351 661 10;
 #X obj 842 290 outlet zone;
 #X obj 927 290 outlet clic;
 #X obj 752 290 outlet value;
@@ -162,7 +162,7 @@
 #X obj 410 97 r \$0-size;
 #X obj 136 289 r \$0-drag;
 #X obj 410 116 t b a a;
-#N canvas 0 0 449 380 rangeOUT 0;
+#N canvas 0 50 449 380 rangeOUT 0;
 #X obj 150 171 inlet;
 #X obj 200 171 inlet;
 #X obj 64 143 inlet;
@@ -286,7 +286,7 @@
 #X connect 52 0 14 0;
 #X connect 53 0 15 0;
 #X restore 916 504 pd test_position;
-#N canvas 644 150 380 593 display 1;
+#N canvas 644 150 380 593 display 0;
 #X obj -145 318 square;
 #X msg -58 273 \$1 \$2 0;
 #X obj -145 295 scale 1 \$4 \$5 0;
@@ -377,7 +377,6 @@
 #X connect 40 0 30 0;
 #X restore 915 526 pd display;
 #X obj -263 128 s \$0-input;
-#X obj -263 105 limit 0 1;
 #X obj -169 152 s \$0-name;
 #X obj -263 31 inlet;
 #X obj -37 157 s \$0-xy;
@@ -388,6 +387,7 @@
 #X obj -218 31 r \$2-vslider;
 #X obj -51 31 r \$2;
 #X obj -242 186 s \$0-pos;
+#X obj -263 105 maxlib/limit 0 1;
 #X connect 3 0 2 0;
 #X connect 4 0 0 0;
 #X connect 5 0 1 0;
@@ -459,14 +459,14 @@
 #X connect 71 0 72 0;
 #X connect 74 0 73 0;
 #X connect 75 0 32 0;
-#X connect 81 0 80 0;
-#X connect 83 0 88 0;
-#X connect 85 0 86 1;
-#X connect 86 0 84 0;
-#X connect 87 0 88 0;
-#X connect 88 0 81 0;
-#X connect 88 1 91 0;
-#X connect 88 2 82 0;
-#X connect 88 3 86 0;
-#X connect 89 0 88 0;
-#X connect 90 0 88 0;
+#X connect 82 0 87 0;
+#X connect 84 0 85 1;
+#X connect 85 0 83 0;
+#X connect 86 0 87 0;
+#X connect 87 0 91 0;
+#X connect 87 1 90 0;
+#X connect 87 2 81 0;
+#X connect 87 3 85 0;
+#X connect 88 0 87 0;
+#X connect 89 0 87 0;
+#X connect 91 0 80 0;

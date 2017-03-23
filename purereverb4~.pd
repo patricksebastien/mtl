@@ -1,14 +1,14 @@
-#N canvas 0 0 1272 685 10;
+#N canvas 1 82 1272 661 10;
 #X obj 55 403 outlet~;
 #X obj 48 57 inlet~;
 #X obj 108 66 inlet~;
 #X obj 115 403 outlet~;
 #X obj 1073 79 inlet params;
-#X obj 182 377 tof/param /wet 0 /g slider 0 1;
+#X obj 246 281 tof/param /wet 0 /g slider 0 1;
 #X obj 1073 125 print PARAM_NOTFOUND;
 #X obj 55 378 tof/crossfade~ 2;
-#X msg 219 407 \$1 5;
-#X obj 219 431 line~;
+#X msg 246 307 \$1 5;
+#X obj 246 331 line~;
 #X obj 1073 101 tof/param route;
 #X obj 1069 224 b;
 #X obj 1070 253 tof/param gui;
@@ -26,8 +26,8 @@
 #X obj 785 306 expr pow($f1 \, 2);
 #X obj 494 147 tof/param /dampgen 0 /g slider 0 1;
 #X obj 785 254 tof/param /feedback 0 /g slider 0 1;
-#N canvas 207 22 830 530 LEFT 0;
-#N canvas 0 22 522 372 comb-1 0;
+#N canvas 207 50 830 530 LEFT 0;
+#N canvas 0 50 522 372 comb-1 0;
 #X obj 216 112 r \$0-damping;
 #X obj 152 208 delwrite~ \$0-rev1 26;
 #X obj 154 146 lop~ 20000;
@@ -177,7 +177,7 @@
 #X connect 2 0 3 0;
 #X connect 5 0 3 0;
 #X restore 241 319 pd allpass-1;
-#N canvas 0 22 640 554 allpass-2 0;
+#N canvas 0 50 640 554 allpass-2 0;
 #X obj 186 65 inlet~;
 #X obj 245 422 *~ 0.5;
 #X obj 175 490 outlet~;
@@ -191,7 +191,7 @@
 #X connect 4 0 1 0;
 #X connect 4 0 2 0;
 #X restore 241 339 pd allpass-2;
-#N canvas 0 22 644 558 allpass-3 0;
+#N canvas 0 50 644 558 allpass-3 0;
 #X obj 186 65 inlet~;
 #X obj 245 422 *~ 0.5;
 #X obj 175 490 outlet~;
@@ -205,7 +205,7 @@
 #X connect 4 0 1 0;
 #X connect 4 0 2 0;
 #X restore 240 360 pd allpass-3;
-#N canvas 0 22 636 550 allpass-4 0;
+#N canvas 0 50 636 550 allpass-4 0;
 #X obj 186 65 inlet~;
 #X obj 245 422 *~ 0.5;
 #X obj 175 490 outlet~;
@@ -247,7 +247,7 @@
 #X connect 15 0 7 0;
 #X restore 146 190 pd LEFT;
 #N canvas 400 61 772 578 RIGHT 0;
-#N canvas 0 22 510 360 comb-1 0;
+#N canvas 0 50 510 360 comb-1 0;
 #X obj 220 172 r \$0-damping;
 #X obj 158 206 lop~ 20000;
 #X obj 158 229 *~ 0.5;
@@ -383,7 +383,7 @@
 #X connect 5 0 2 1;
 #X connect 6 0 1 0;
 #X restore 667 246 pd comb-8;
-#N canvas 0 22 640 554 allpass-1 0;
+#N canvas 0 50 640 554 allpass-1 0;
 #X obj 186 65 inlet~;
 #X obj 245 422 *~ 0.5;
 #X obj 175 490 outlet~;
@@ -401,7 +401,7 @@
 #X connect 5 0 6 0;
 #X connect 6 0 4 0;
 #X restore 240 381 pd allpass-1;
-#N canvas 0 22 652 566 allpass-2 0;
+#N canvas 0 50 652 566 allpass-2 0;
 #X obj 186 65 inlet~;
 #X obj 245 422 *~ 0.5;
 #X obj 175 490 outlet~;
@@ -419,7 +419,7 @@
 #X connect 5 0 6 0;
 #X connect 6 0 4 0;
 #X restore 240 401 pd allpass-2;
-#N canvas 0 22 656 570 allpass-3 0;
+#N canvas 0 50 656 570 allpass-3 0;
 #X obj 186 65 inlet~;
 #X obj 245 422 *~ 0.5;
 #X obj 175 490 outlet~;
@@ -437,7 +437,7 @@
 #X connect 5 0 6 0;
 #X connect 6 0 4 0;
 #X restore 239 422 pd allpass-3;
-#N canvas 0 22 644 558 allpass-4 0;
+#N canvas 0 50 644 558 allpass-4 0;
 #X obj 186 65 inlet~;
 #X obj 245 422 *~ 0.5;
 #X obj 175 490 outlet~;
@@ -481,9 +481,13 @@
 #X connect 15 0 5 0;
 #X connect 15 0 6 0;
 #X connect 15 0 7 0;
-#X restore 200 191 pd RIGHT;
+#X restore 209 190 pd RIGHT;
 #X obj 640 222 samplerate~;
 #X obj 640 186 loadbang;
+#X obj 590 120 tof/argument 5;
+#X obj 523 94 tof/argument 4;
+#X obj 471 73 tof/argument 3;
+#X obj 505 39 loadbang;
 #X connect 1 0 7 0;
 #X connect 1 0 27 0;
 #X connect 2 0 7 1;
@@ -512,3 +516,9 @@
 #X connect 28 0 7 3;
 #X connect 29 0 20 1;
 #X connect 30 0 29 0;
+#X connect 31 0 26 0;
+#X connect 32 0 25 0;
+#X connect 33 0 5 0;
+#X connect 34 0 31 0;
+#X connect 34 0 32 0;
+#X connect 34 0 33 0;

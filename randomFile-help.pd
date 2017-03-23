@@ -1,21 +1,20 @@
-#N canvas 2 96 569 638 10;
-#X obj 317 159 cnv 15 200 20 empty empty /rand_file/ 2 12 0 8 -258401
+#N canvas 1 82 1351 661 10;
+#X obj 515 35 cnv 15 200 20 empty empty /rand_file/ 2 12 0 8 -258401
 -262144 0;
-#X symbolatom 72 301 80 0 0 0 - - -;
-#X obj 67 202 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+#X symbolatom 68 275 80 0 0 0 - - -, f 80;
+#X obj 68 223 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
 -1;
 #X text 74 373 To set a directory send a message in the following format:
 ;
-#X text 152 414 comment;
 #X msg 120 394 symbol /my/audio/loop/directory;
 #X msg 120 420 symbol /my/audio/loop/directory/*.wav;
-#X text 354 420 only files ending in .wav;
-#X text 319 393 all files in directory;
+#X text 391 418 only files ending in .wav;
+#X text 352 393 all files in directory;
 #X text 74 462 To output a random filename \, send a bang;
 #X text 74 515 Ben Baker-Smith - 2010;
 #X obj 68 248 mtl/randomFile /id randomFile;
 #X text 74 532 tags: random;
-#X msg 215 189 /path symbol ~/*.*;
-#X connect 2 0 11 0;
-#X connect 11 0 1 0;
-#X connect 13 0 11 1;
+#X msg 268 215 /path symbol ~/*.*;
+#X connect 2 0 10 0;
+#X connect 10 0 1 0;
+#X connect 12 0 10 1;

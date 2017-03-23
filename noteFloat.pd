@@ -11,7 +11,7 @@
 #X obj 188 125 - 1;
 #X obj 180 91 list length;
 #X obj 108 237 ./speedToM;
-#X obj 59 148 zexy/demultiplex 0 1 2;
+#X obj 59 148 demultiplex 0 1 2;
 #X obj 188 176 list split 1;
 #X connect 0 0 1 0;
 #X connect 1 0 12 0;

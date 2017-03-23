@@ -2,17 +2,13 @@
 #X obj 1 -21 cnv 15 690 30 empty empty automatic-gain-control~ 2 12
 1 14 -233017 -66577 0;
 #X obj 70 255 mtl/out~;
-#X obj 122 427 cnv 15 200 40 empty empty empty 20 12 0 14 -232576 -66577
-0;
-#X text 182 428 PARAM ENABLED;
-#X obj 300 255 cnv 15 200 20 empty empty /automatic-gain-control/ 2
+#X obj 693 94 cnv 15 200 20 empty empty /automatic-gain-control/ 2
 12 0 8 -258401 -262144 0;
-#X text 286 205 <-Click on the propeties menu to display params;
-#X obj 121 450 tof/open_help tof/param;
+#X text 325 212 <-Click on the propeties menu to display params;
 #X obj 81 146 *~ 4;
 #X obj 51 89 osc~ 250;
 #X obj 153 17 vsl 15 128 0 10 0 0 empty empty empty 0 -9 0 10 -262144
--1 -1 0 1;
+-1 -1 5000 1;
 #X text 684 119 automatic-gain-control;
 #X text 685 132 tags: fx~;
 #X text 685 146 author = Rjdj;
@@ -22,9 +18,9 @@
 #X text 687 210 Description: e_agc tries to automatically figure out
 the best gain settings for the RjDj device you're running.;
 #X obj 70 208 mtl/automatic-gain-control~ /id agc;
-#X connect 7 0 17 0;
-#X connect 7 0 17 1;
-#X connect 8 0 7 0;
-#X connect 9 0 7 1;
-#X connect 17 0 1 0;
-#X connect 17 1 1 1;
+#X connect 4 0 14 0;
+#X connect 4 0 14 1;
+#X connect 5 0 4 0;
+#X connect 6 0 4 1;
+#X connect 14 0 1 0;
+#X connect 14 1 1 1;

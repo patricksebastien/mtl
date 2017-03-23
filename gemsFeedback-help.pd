@@ -1,16 +1,15 @@
-#N canvas 373 57 590 646 10;
-#X declare -lib Gem;
+#N canvas 371 82 590 646 10;
 #X obj 163 125 hsl 128 15 0 1 0 0 empty empty empty -2 -8 0 10 -262144
 -1 -1 11430 1;
-#X floatatom 160 143 5 0 0 0 - - -;
-#X floatatom 225 179 5 0 0 0 - - -;
+#X floatatom 160 143 5 0 0 0 - - -, f 5;
+#X floatatom 225 179 5 0 0 0 - - -, f 5;
 #X obj 86 240 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 1
 1;
 #X obj 86 208 loadbang;
 #X text 16 -2 Description: A more advanced video feedback loop using
 snapshots of the rendering window.;
 #X text 105 240 feedback on/off;
-#X obj 272 27 tgl 15 0 empty empty empty 0 -6 0 10 -262144 -1 -1 0
+#X obj 272 27 tgl 15 0 empty empty empty 0 -6 0 10 -262144 -1 -1 1
 1;
 #X text 20 44 tags: gems;
 #X obj 159 455 mtl/gemsMouse;
@@ -29,18 +28,17 @@ snapshots of the rendering window.;
 #X obj 255 578 circle 0.2;
 #X obj 256 547 colorRGB 0 1 0;
 #X text 270 173 feedback in/out;
-#X floatatom 274 213 5 0 0 0 - - -;
-#X floatatom 309 248 5 0 0 0 - - -;
+#X floatatom 274 213 5 0 0 0 - - -, f 5;
+#X floatatom 309 248 5 0 0 0 - - -, f 5;
 #X text 308 210 feedback left/right;
 #X text 346 247 feedback down/up;
-#X floatatom 332 312 5 0 0 0 - - -;
+#X floatatom 332 312 5 0 0 0 - - -, f 5;
 #X text 339 329 feedback rotate;
 #X text 340 370 Argument 1: feedback amount;
 #X text 343 406 Argument 3: feeback left/right;
 #X text 340 388 Argument 2: feedback in/out;
 #X text 345 424 Argument 4: feedback down/up;
 #X text 346 442 Argument 5: feedback rotate;
-#X obj 376 6 import Gem;
 #X connect 0 0 1 0;
 #X connect 1 0 16 1;
 #X connect 2 0 16 2;

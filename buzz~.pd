@@ -1,6 +1,6 @@
 #N canvas 1 84 1272 659 10;
 #X obj 138 32 inlet frequency;
-#X obj 133 627 outlet~;
+#X obj 200 620 outlet~;
 #X obj 846 159 inlet params;
 #X obj 846 205 print PARAM_NOTFOUND;
 #X obj 846 181 tof/param route;
@@ -14,13 +14,13 @@
 #X msg 251 152 1;
 #X obj 251 179 * 2;
 #X obj 251 217 + 1;
-#X obj 160 174 *~ 0.5;
+#X obj 153 177 *~ 0.5;
 #X obj 151 383 /~;
 #X obj 151 421 -~ 1;
 #X obj 329 236 /;
 #X obj 329 206 swap 1;
 #X obj 151 454 *~ 0;
-#X obj 182 509 *~;
+#X obj 180 506 *~;
 #N canvas 28 543 420 275 \$0-fix-discontinuity 0;
 #X obj 66 119 clip~ -0.0002 0.0002;
 #X obj 50 172 /~;
@@ -39,7 +39,7 @@
 #X obj 227 486 *~ -1;
 #X obj 228 510 +~ 1;
 #X text 269 511 <- reverse toggle (fills in discontinuity);
-#X text 305 43 number of harmonics;
+#X text 300 79 number of harmonics;
 #X text 787 445 buzz via dirichlet kernel:;
 #X text 781 468 cos(x)+cos(2x)+...+cos(nx) =;
 #X text 894 409 -;
@@ -51,11 +51,13 @@
 #X text 812 419 2n*sin(x/2);
 #X obj 152 305 cos~;
 #X obj 217 306 cos~;
-#X obj 100 282 sig~ 0.25;
+#X obj 82 259 sig~ 0.25;
 #X obj 272 537 mtl/adsr~ /id \$0-adsr;
-#X obj 163 150 sig~;
-#X obj 256 60 tof/param /harmonics 12 /g slider 1 100;
-#X obj 167 110 mtof;
+#X obj 153 146 sig~;
+#X obj 251 96 tof/param /harmonics 12 /g slider 1 100;
+#X obj 153 109 mtof;
+#X obj 291 54 tof/argument 3;
+#X obj 290 31 loadbang;
 #X connect 0 0 7 0;
 #X connect 2 0 4 0;
 #X connect 4 0 3 0;
@@ -94,3 +96,5 @@
 #X connect 40 0 15 0;
 #X connect 41 0 10 0;
 #X connect 42 0 40 0;
+#X connect 43 0 41 0;
+#X connect 44 0 43 0;

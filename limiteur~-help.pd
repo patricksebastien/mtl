@@ -7,12 +7,12 @@
 #X text 418 61 PARAM ENABLED;
 #X obj 355 187 cnv 15 200 20 empty empty /limiteur/ 2 12 0 8 -258401
 -262144 0;
-#X text 282 146 <-Click on the propeties menu to display params;
+#X text 307 150 <-Click on the propeties menu to display params;
 #X text 667 107 tags: fx~;
 #X obj 357 83 tof/open_help tof/param;
 #X obj 20 21 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0 1
 ;
-#N canvas 0 25 1280 695 chord 0;
+#N canvas 0 50 1280 695 chord 0;
 #X obj 87 97 -~ 0.5;
 #X obj 87 146 clip~ -0.5 0.5;
 #X obj 87 169 cos~;

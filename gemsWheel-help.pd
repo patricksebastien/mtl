@@ -1,9 +1,7 @@
-#N canvas 554 265 594 457 10;
-#X declare -lib Gem;
-#X declare -lib Gem;
+#N canvas 552 270 594 457 10;
 #X obj 45 91 gemhead;
-#X floatatom 147 247 5 0 0 1 duplications - -;
-#X obj 313 78 tgl 15 0 empty empty empty 0 -6 0 10 -262144 -1 -1 0
+#X floatatom 147 247 5 0 0 1 duplications - -, f 5;
+#X obj 313 78 tgl 15 0 empty empty empty 0 -6 0 10 -262144 -1 -1 1
 1;
 #X obj 157 57 loadbang;
 #X obj 158 111 metro 5000;
@@ -23,9 +21,8 @@
 #X text 18 21 Description: Makes a wheel out of duplicated geos.;
 #X obj 51 421 circle;
 #X obj 46 267 mtl/gemsWheel 4;
-#X obj 494 16 import Gem;
 #X obj 43 118 mtl/gemsStretch;
-#X connect 0 0 20 0;
+#X connect 0 0 19 0;
 #X connect 1 0 18 1;
 #X connect 2 0 9 0;
 #X connect 3 0 8 0;
@@ -40,4 +37,4 @@
 #X connect 15 0 11 1;
 #X connect 18 0 11 0;
 #X connect 18 1 12 0;
-#X connect 20 0 7 0;
+#X connect 19 0 7 0;

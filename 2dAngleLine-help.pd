@@ -26,7 +26,7 @@ quickest route.;
 #X obj 238 114 mtl/gemsWin;
 #X obj 345 113 mtl/gemsMouse;
 #X obj 21 92 mtl/2dAngleLine 5;
-#X obj 442 15 import Gem;
+
 #X connect 6 0 21 0;
 #X connect 7 0 8 0;
 #X connect 8 0 12 0;

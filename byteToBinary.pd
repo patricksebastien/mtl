@@ -39,7 +39,7 @@
 #X obj 437 53 t f f f f f f f f;
 #X obj 290 -25 f \$1;
 #X text 329 -25 Defaults to 0;
-#X obj 168 10 zexy/demultiplex 0 1;
+#X obj 168 10 demultiplex 0 1;
 #X connect 0 0 1 0;
 #X connect 1 0 9 0;
 #X connect 2 0 11 0;

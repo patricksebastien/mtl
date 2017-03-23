@@ -1,6 +1,4 @@
-#N canvas 22 82 657 661 10;
-#X declare -lib Gem;
-#X declare -lib Gem;
+#N canvas 20 82 657 661 10;
 #X obj 18 -58 cnv 15 400 80 empty empty empty 20 12 0 14 -254305 -66577
 0;
 #X obj 28 -49 cnv 15 380 60 empty empty empty 20 12 0 14 -262144 -66577
@@ -43,7 +41,6 @@ rotationY 135 10 0 10 -262144 -1 -1 6350 1;
 -1 -1 0 1;
 #X obj 582 -14 bng 15 250 50 0 /banane/reset /banane/reset_ Reset 17
 7 0 10 -262144 -1 -1;
-#X obj 440 -70 import Gem;
 #X obj 444 103 hsl 128 15 0 500 0 0 /banane/tsize /banane/tsize_ tsize
 135 10 0 10 -262144 -1 -1 254 1;
 #X obj 149 184 mtl/randomLetter;
@@ -63,11 +60,11 @@ positionY 135 10 0 10 -262144 -1 -1 6350 1;
 #X text 22 47 Description: Font Invaders_From_Space in the Gem window.;
 #X text 23 77 author : raphael isdant http://www.raphaelisdant.fr \,
 JKP http://jkp.antisocial.be \, Invaders_From_Space http://fontvir.us/fonts/invadersfromspace;
-#X obj 32 254 mtl/gemsFont-Invaders_From_Space3D /id banane -1 1 1 1;
+#X obj 32 254 gemsFont-Invaders_From_Space3D /id banane -1 1 1 1;
 #X text 47 235 nom \, posX \, posY \, tailleX \, tailleY \, positionX
 \, positionY;
 #X connect 6 0 15 0;
-#X connect 8 0 36 0;
-#X connect 25 0 36 1;
-#X connect 26 0 25 0;
-#X connect 32 0 26 0;
+#X connect 8 0 35 0;
+#X connect 24 0 35 1;
+#X connect 25 0 24 0;
+#X connect 31 0 25 0;

@@ -1,24 +1,19 @@
-#N canvas 463 326 696 362 10;
-#X obj -25 177 mtl/out~;
-#X text -27 31 tags: fx~;
-#X text 174 147 <-Click on the propeties menu to display params;
-#X obj 270 40 cnv 15 200 40 empty empty empty 20 12 0 14 -232576 -66577
-0;
-#X text 330 41 PARAM ENABLED;
-#X obj 272 174 cnv 15 200 20 empty empty /wave-shaper/ 2 12 0 8 -258401
+#N canvas 0 82 1366 662 10;
+#X obj 56 284 mtl/out~;
+#X text 597 52 tags: fx~;
+#X text 342 253 <-Click on the propeties menu to display params;
+#X obj 602 85 cnv 15 200 20 empty empty /wave-shaper/ 2 12 0 8 -258401
 -262144 0;
-#X obj 272 197 hsl 100 15 0 1 0 0 /wave-shaper/wet /wave-shaper/wet_
-wet 105 7 0 8 -262144 -1 -1 0 1;
-#X obj 272 215 hsl 100 15 0 1 0 0 /wave-shaper/amount /wave-shaper/amount_
-amount 105 7 0 8 -262144 -1 -1 0 1;
-#X obj 269 63 tof/open_help tof/param;
-#X obj 272 233 hsl 100 15 0 1 0 0 /wave-shaper/depth /wave-shaper/depth_
-depth 105 7 0 8 -262144 -1 -1 0 1;
-#X obj -27 146 mtl/wave-shaper~ /id wave-shaper;
-#X obj 272 251 hsl 100 15 0 1 0 0 /wave-shaper/limit /wave-shaper/limit_
-limit 105 7 0 8 -262144 -1 -1 0 1;
-#X text -29 12 Description: Wave-shaper;
-#X obj -11 75 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+#X obj 602 108 hsl 100 15 0 1 0 0 /wave-shaper/wet /wave-shaper/wet_
+wet 105 7 0 8 -262144 -1 -1 9900 1;
+#X obj 602 126 hsl 100 15 0 1 0 0 /wave-shaper/amount /wave-shaper/amount_
+amount 105 7 0 8 -262144 -1 -1 9900 1;
+#X obj 602 144 hsl 100 15 0 1 0 0 /wave-shaper/depth /wave-shaper/depth_
+depth 105 7 0 8 -262144 -1 -1 9900 1;
+#X obj 602 162 hsl 100 15 0 1 0 0 /wave-shaper/limit /wave-shaper/limit_
+limit 105 7 0 8 -262144 -1 -1 9900 1;
+#X text 595 33 Description: Wave-shaper;
+#X obj 70 182 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
 1;
 #N canvas 5 185 450 300 generate~ 0;
 #X obj 32 213 osc~ 200;
@@ -27,7 +22,7 @@ limit 105 7 0 8 -262144 -1 -1 0 1;
 #X obj 104 195 mtof;
 #X obj 32 132 + 20;
 #X obj 32 111 random 70;
-#X floatatom 83 69 5 0 0 0 - - -;
+#X floatatom 83 69 5 0 0 0 - - -, f 5;
 #X obj 32 261 outlet~;
 #X obj 103 261 outlet~;
 #X obj 30 14 inlet;
@@ -52,9 +47,10 @@ limit 105 7 0 8 -262144 -1 -1 0 1;
 #X connect 12 0 7 0;
 #X connect 13 0 11 0;
 #X connect 14 0 2 0;
-#X restore -11 100 pd generate~;
-#X connect 10 0 0 0;
-#X connect 10 1 0 1;
-#X connect 13 0 14 0;
-#X connect 14 0 10 0;
-#X connect 14 1 10 1;
+#X restore 70 207 pd generate~;
+#X obj 54 253 mtl/wave-shaper~ /id wave-shaper 1 1 1 1;
+#X connect 9 0 10 0;
+#X connect 10 0 11 0;
+#X connect 10 1 11 1;
+#X connect 11 0 0 0;
+#X connect 11 1 0 1;

@@ -1,4 +1,4 @@
-#N canvas 440 71 999 659 10;
+#N canvas 366 82 999 659 10;
 #X msg 362 169 60000;
 #X obj 361 203 /;
 #X obj 528 163 * 24;
@@ -58,7 +58,7 @@
 #X obj 366 502 send;
 #X msg 367 -91 symbol \$1CLK;
 #X text -10 -90 would like to add a bpm bang;
-#N canvas 0 0 450 300 bpm2ms 0;
+#N canvas 0 50 450 300 bpm2ms 0;
 #X obj 140 62 inlet;
 #X obj 140 122 /;
 #X obj 140 148 * 60;
@@ -84,7 +84,7 @@
 #X msg 629 -33 There is alreaday a [clkMaster] linked to this root
 patch!;
 #X msg 367 -47 set \$1;
-#X obj 249 326 zexy/multiplex 0 1;
+#X obj 249 326 multiplex 0 1;
 #X connect 0 0 1 0;
 #X connect 1 0 3 1;
 #X connect 2 0 1 1;

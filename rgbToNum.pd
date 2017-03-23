@@ -1,4 +1,4 @@
-#N canvas 522 154 616 538 10;
+#N canvas 520 159 616 538 10;
 #X obj 231 348 +;
 #X obj 167 420 +;
 #X obj 80 303 * -65536;
@@ -22,7 +22,7 @@
 #X obj 175 -15 iemlib/dollarg;
 #X msg 245 45 1;
 #X obj 173 13 sel 8bit int integer;
-#X obj 21 61 zexy/demultiplex 0 1;
+#X obj 21 61 demultiplex 0 1;
 #X connect 0 0 1 1;
 #X connect 1 0 5 0;
 #X connect 2 0 1 0;

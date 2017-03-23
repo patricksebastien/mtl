@@ -1,20 +1,16 @@
-#N canvas 391 251 305 333 10;
-#X obj 49 113 hsl 128 15 0 1 0 0 empty empty empty -2 -6 0 8 -262144
--1 -1 0 1;
-#X obj 86 146 hsl 128 15 0 1 0 0 empty empty empty -2 -6 0 8 -262144
--1 -1 0 1;
-#X obj 124 177 hsl 128 15 0 1 0 0 empty empty empty -2 -6 0 8 -262144
--1 -1 0 1;
+#N canvas 0 82 1366 662 10;
 #X text 9 26 Comment: Taken from Andy Farnell's work.;
 #X text 9 7 Description: Generates some crunchy clapping.;
-#X obj 46 203 mtl/applause~;
 #X obj 46 244 mtl/out~;
-#X text 118 159 density;
-#X text 80 127 grain;
-#X text 42 93 applaud;
 #X text 10 45 tags: synthesize~;
-#X connect 0 0 5 0;
-#X connect 1 0 5 1;
-#X connect 2 0 5 2;
-#X connect 5 0 6 1;
-#X connect 5 0 6 0;
+#X obj 425 115 cnv 15 200 20 empty empty /applause/ 2 12 0 8 -258401
+-262144 0;
+#X obj 428 144 hsl 100 15 0 1 0 0 /applause/applause /applause/applause_
+applause 105 7 0 8 -262144 -1 -1 4950 1;
+#X obj 428 162 hsl 100 15 0 1 0 0 /applause/grain /applause/grain_
+grain 105 7 0 8 -262144 -1 -1 4950 1;
+#X obj 428 180 hsl 100 15 0 1 0 0 /applause/density /applause/density_
+density 105 7 0 8 -262144 -1 -1 4950 1;
+#X obj 46 203 mtl/applause~ /id applause 0.5 0.5 0.5;
+#X connect 8 0 2 1;
+#X connect 8 0 2 0;

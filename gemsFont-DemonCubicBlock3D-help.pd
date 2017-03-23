@@ -1,73 +1,86 @@
-#N canvas 22 82 657 661 10;
-#X declare -lib Gem;
-#X declare -lib Gem;
-#X obj 18 -58 cnv 15 400 80 empty empty empty 20 12 0 14 -254305 -66577
+#N canvas 1 82 1351 661 10;
+#X obj 18 -58 cnv 15 500 40 empty empty empty 20 12 0 14 -254305 -66577
 0;
-#X obj 28 -49 cnv 15 380 60 empty empty empty 20 12 0 14 -262144 -66577
+#X obj 27 -48 cnv 15 480 20 empty empty empty 20 12 0 14 -262144 -66577
 0;
-#X obj 343 -14 tgl 15 1 empty empty empty 17 7 0 10 -262144 -1 -1 0
+#X obj 466 -46 tgl 15 1 empty empty empty 17 7 0 10 -262144 -1 -1 0
 1;
-#X obj 366 -14 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+#X obj 489 -46 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
 1;
-#X obj 17 224 cnv 15 400 100 empty empty empty 20 12 0 14 -254305 -66577
+#X obj 29 401 cnv 15 500 80 empty empty empty 20 12 0 14 -254305 -66577
 0;
-#X text 47 223 arguments:;
-#X obj 235 136 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+#X text 59 400 arguments:;
+#X text 59 412 nom \, posX \, posY \, tailleX \, tailleY;
+#X obj 43 488 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
 1;
-#X obj 439 -46 cnv 15 200 20 empty empty /banane/ 2 12 0 8 -258401
--262144 0;
-#X obj 32 151 mtl/gemsMouse;
-#X obj 437 174 cnv 15 200 90 empty empty empty 20 12 0 14 -233017 -66577
+#X obj 818 14 cnv 15 200 20 empty empty /banane/ 2 12 0 8 -258401 -262144
 0;
-#X text 438 170 couleur du texte (RVBA);
-#X obj 445 188 hsl 128 15 0 100 0 0 /banane/tcolorR /banane/tcolorR_
+#X obj 816 231 cnv 15 200 90 empty empty empty 20 12 0 14 -233017 -66577
+0;
+#X text 817 227 couleur du texte (RVBA);
+#X obj 824 245 hsl 128 15 0 100 0 0 /banane/tcolorR /banane/tcolorR_
 tcolorR 135 10 0 10 -262144 -1 -1 12700 1;
-#X obj 445 207 hsl 128 15 0 100 0 0 /banane/tcolorV /banane/tcolorV_
+#X obj 824 264 hsl 128 15 0 100 0 0 /banane/tcolorV /banane/tcolorV_
 tcolorV 135 10 0 10 -262144 -1 -1 12700 1;
-#X obj 445 226 hsl 128 15 0 100 0 0 /banane/tcolorB /banane/tcolorB_
+#X obj 824 283 hsl 128 15 0 100 0 0 /banane/tcolorB /banane/tcolorB_
 tcolorB 135 10 0 10 -262144 -1 -1 12700 1;
-#X obj 445 245 hsl 128 15 0 100 0 0 /banane/tcolorA /banane/tcolorA_
+#X obj 824 302 hsl 128 15 0 100 0 0 /banane/tcolorA /banane/tcolorA_
 tcolorA 135 10 0 10 -262144 -1 -1 12700 1;
-#X obj 235 158 mtl/gemsWin /dimen 640 480;
-#X obj 437 13 cnv 15 200 150 empty empty empty 20 12 0 14 -261234 -66577
+#X obj 43 510 mtl/gemsWin /dimen 640 480;
+#X obj 816 73 cnv 15 200 150 empty empty empty 20 12 0 14 -261234 -66577
 0;
-#X obj 444 20 hsl 128 15 -160 160 0 0 /banane/rotationX /banane/rotationX_
-rotationX 135 10 0 10 -262144 -1 -1 6350 1;
-#X obj 445 41 hsl 128 15 -160 160 0 0 /banane/rotationY /banane/rotationY_
-rotationY 135 10 0 10 -262144 -1 -1 6350 1;
-#X obj 438 -21 cnv 15 200 30 empty empty empty 20 12 0 14 -191407 -66577
+#X obj 823 80 hsl 128 15 -160 160 0 0 /banane/positionX /banane/positionX_
+positionX 135 10 0 10 -262144 -1 -1 5556 1;
+#X obj 824 101 hsl 128 15 -160 160 0 0 /banane/positionY /banane/positionY_
+positionY 135 10 0 10 -262144 -1 -1 7144 1;
+#X obj 817 39 cnv 15 200 30 empty empty empty 20 12 0 14 -191407 -66577
 0;
-#X obj 444 -14 tgl 15 0 /banane/on /banane/on_ On 17 7 0 10 -262144
+#X obj 823 46 tgl 15 0 /banane/on /banane/on_ On 17 7 0 10 -262144
+-1 -1 1 1;
+#X obj 857 46 tgl 15 0 /banane/drag /banane/drag_ Drag 17 7 0 10 -262144
 -1 -1 0 1;
-#X obj 478 -14 tgl 15 0 /banane/drag /banane/drag_ Drag 17 7 0 10 -262144
--1 -1 0 1;
-#X obj 582 -14 bng 15 250 50 0 /banane/reset /banane/reset_ Reset 17
+#X obj 961 46 bng 15 250 50 0 /banane/reset /banane/reset_ Reset 17
 7 0 10 -262144 -1 -1;
-#X obj 440 -70 import Gem;
-#X obj 444 103 hsl 128 15 0 500 0 0 /banane/tsize /banane/tsize_ tsize
-135 10 0 10 -262144 -1 -1 254 1;
-#X obj 149 184 mtl/randomLetter;
-#X obj 149 158 metro 100;
-#X text 22 62 tags: gems \, font;
-#X obj 444 62 hsl 128 15 -160 160 0 0 /banane/rotationZ /banane/rotationZ_
-rotationZ 135 10 0 10 -262144 -1 -1 6350 1;
-#X obj 445 82 hsl 128 15 -360 360 0 0 /banane/angle /banane/angle_
-angle 135 10 0 10 -262144 -1 -1 6350 1;
-#X obj 443 123 hsl 128 15 -160 160 0 0 /banane/positionX /banane/positionX_
-positionX 135 10 0 10 -262144 -1 -1 6350 1;
-#X obj 444 144 hsl 128 15 -160 160 0 0 /banane/positionY /banane/positionY_
-positionY 135 10 0 10 -262144 -1 -1 6350 1;
-#X obj 149 136 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+#X obj 823 121 hsl 128 15 0 800 0 0 /banane/tsize /banane/tsize_ tsize
+135 10 0 10 -262144 -1 -1 6350 1;
+#X text 10 9 tags: gems \, font;
+#X obj 69 181 mtl/seq1x8-nbx;
+#X obj 164 129 mtl/clkMaster 120;
+#X obj 69 135 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
 1;
-#X text 33 -48 [gemsfont-DemonCubicBlock-3D] : font DemonCubicBlock;
-#X text 22 47 Description: Font DemonCubicBlock in the Gem window.;
-#X text 23 77 author : raphael isdant http://www.raphaelisdant.fr \,
+#X obj 69 156 mtl/clkSlave 2 8;
+#X obj 44 87 mtl/gemsMouse;
+#X obj 129 306 mtl/randomLetter;
+#X obj 129 283 metro 100;
+#X msg 129 248 bang;
+#X msg 130 333 name \$1;
+#X obj 69 220 vsl 15 128 46 140 0 0 empty empty empty 0 -9 0 10 -262144
+-1 -1 0 1;
+#X msg 176 248 stop;
+#X text 11 -6 Description: Font DemonCubicBlock in the Gem window.;
+#X text 30 -48 [gemsfont-DemonCubicBlock] : font DemonCubicBlock;
+#X text 10 24 author : raphael isdant http://www.raphaelisdant.fr \,
 JKP http://jkp.antisocial.be \, DemonCubicBlock http://www.geocities.co.jp/SiliconValley/1286/;
-#X obj 32 254 mtl/gemsFont-DemonCubicBlock3D /id banane -1 1 1 1;
-#X text 47 235 nom \, posX \, posY \, tailleX \, tailleY \, positionX
-\, positionY;
-#X connect 6 0 15 0;
-#X connect 8 0 36 0;
-#X connect 25 0 36 1;
-#X connect 26 0 25 0;
-#X connect 32 0 26 0;
+#X obj 230 366 gemhead 50;
+#X obj 823 141 hsl 128 15 -160 160 0 0 /banane/rotationX /banane/rotationX_
+rotationX 135 10 0 10 -262144 -1 -1 6390 1;
+#X obj 824 162 hsl 128 15 -160 160 0 0 /banane/rotationY /banane/rotationY_
+rotationY 135 10 0 10 -262144 -1 -1 6350 1;
+#X obj 823 183 hsl 128 15 -160 160 0 0 /banane/rotationZ /banane/rotationZ_
+rotationZ 135 10 0 10 -262144 -1 -1 6350 1;
+#X obj 824 203 hsl 128 15 -360 360 0 0 /banane/angle /banane/angle_
+angle 135 10 0 10 -262144 -1 -1 6350 1;
+#X obj 43 430 mtl/gemsFont-DemonCubicBlock3D /id banane -20 20 400 100 100 100 100
+1;
+#X connect 7 0 15 0;
+#X connect 25 0 34 0;
+#X connect 27 0 28 0;
+#X connect 28 0 25 0;
+#X connect 29 0 44 0;
+#X connect 30 0 33 0;
+#X connect 31 0 30 0;
+#X connect 32 0 31 0;
+#X connect 33 0 44 0;
+#X connect 34 0 44 0;
+#X connect 35 0 31 0;
+#X connect 39 0 44 1;

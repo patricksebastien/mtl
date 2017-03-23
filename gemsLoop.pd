@@ -1,4 +1,4 @@
-#N canvas 496 227 1104 687 10;
+#N canvas 261 82 1104 661 10;
 #X obj 110 292 pix_buffer_write \$0loop;
 #X obj 478 -29 inlet on/off;
 #X obj -9 627 outlet gemlist;
@@ -27,7 +27,7 @@
 #X obj 475 1 route bang;
 #X msg 554 39 set 0 \, 1;
 #X text -29 -8 BUG: The default image overrides the main gemlist!;
-#N canvas 0 22 1022 686 videoplayer.guts 0;
+#N canvas 0 50 1022 686 videoplayer.guts 0;
 #X obj 337 600 outlet;
 #X obj 321 513 t f f;
 #X obj 307 345 f 1;
@@ -41,14 +41,14 @@
 #X obj 456 455 expr $f1*($f3-$f2)+$f2;
 #X obj 464 425 pack f 0 1;
 #X obj 139 612 outlet;
-#N canvas 0 22 478 328 fcounter 0;
+#N canvas 0 50 478 328 fcounter 0;
 #X obj 145 159 t f f f;
 #X obj 165 214 -;
 #X obj 182 184 int;
 #X obj 155 261 +;
 #X obj 110 21 inlet;
 #X obj 221 20 inlet;
-#N canvas 0 22 474 324 count 0;
+#N canvas 0 50 474 324 count 0;
 #X obj 84 48 inlet;
 #X obj 192 274 outlet;
 #X obj 89 80 route bang;
@@ -167,7 +167,7 @@
 #X obj 922 -15 inlet frame;
 #X obj -1 519 pix_buffer_read \$0loop;
 #X obj 139 212 t a b;
-#X obj 143 475 zexy/multiplex 0 1;
+#X obj 143 475 multiplex 0 1;
 #X connect 0 0 28 0;
 #X connect 1 0 25 0;
 #X connect 3 0 33 0;

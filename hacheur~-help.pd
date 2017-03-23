@@ -1,20 +1,16 @@
 #N canvas 1 82 1272 661 10;
 #X obj 125 315 mtl/out~;
 #X text 448 108 tags: fx~;
-#X text 273 284 <-Click on the propeties menu to display params;
-#X obj 420 178 cnv 15 200 40 empty empty empty 20 12 0 14 -232576 -66577
-0;
-#X text 480 179 PARAM ENABLED;
-#X obj 422 312 cnv 15 200 20 empty empty /hacheur/ 2 12 0 8 -258401
+#X text 427 284 <-Click on the propeties menu to display params;
+#X obj 441 139 cnv 15 200 20 empty empty /hacheur/ 2 12 0 8 -258401
 -262144 0;
-#X obj 425 341 hsl 100 15 0 1 0 0 /hacheur/freq /hacheur/freq_ frequency
-105 7 0 8 -262144 -1 -1 0 1;
-#X obj 419 201 tof/open_help tof/param;
-#X obj 425 359 hsl 100 15 0 100 0 0 /hacheur/duty /hacheur/duty_ duty_cycle
-105 7 0 8 -262144 -1 -1 0 1;
-#X obj 133 187 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+#X obj 444 168 hsl 100 15 0 1 0 0 /hacheur/freq /hacheur/freq_ frequency
+105 7 0 8 -262144 -1 -1 5800 1;
+#X obj 444 186 hsl 100 15 0 100 0 0 /hacheur/duty /hacheur/duty_ duty_cycle
+105 7 0 8 -262144 -1 -1 8050 1;
+#X obj 133 187 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 1
 1;
-#N canvas 0 25 1280 695 chord 0;
+#N canvas 0 50 1280 695 chord 0;
 #X obj 87 97 -~ 0.5;
 #X obj 87 146 clip~ -0.5 0.5;
 #X obj 87 169 cos~;
@@ -64,10 +60,10 @@
 #X connect 23 0 4 0;
 #X connect 24 0 23 1;
 #X restore 142 223 pd chord;
-#X obj 124 284 mtl/hacheur~ /id hacheur;
-#X text 448 91 Description: Hacheur;
-#X connect 9 0 10 0;
-#X connect 10 0 11 0;
-#X connect 10 0 11 1;
-#X connect 11 0 0 0;
-#X connect 11 1 0 1;
+#X text 446 94 Description: Hacheur;
+#X obj 124 284 mtl/hacheur~ /id hacheur 1 50;
+#X connect 6 0 7 0;
+#X connect 7 0 9 0;
+#X connect 7 0 9 1;
+#X connect 9 0 0 0;
+#X connect 9 1 0 1;

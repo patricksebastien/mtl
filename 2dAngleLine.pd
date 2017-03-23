@@ -28,7 +28,7 @@
 #X msg 277 569 \$1 \$2;
 #X msg 431 569 \$1 0;
 #X obj 8 106 expr (($f1*(-1))%360)*(-1);
-#X obj 401 462 zexy/demultiplex 0 1 2;
+#X obj 401 462 demultiplex 0 1 2;
 #X connect 0 0 7 0;
 #X connect 1 0 13 0;
 #X connect 2 0 3 0;

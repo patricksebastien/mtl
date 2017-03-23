@@ -1,4 +1,4 @@
-#N canvas 199 246 1022 520 10;
+#N canvas 197 223 1022 520 10;
 #N canvas 1 57 681 330 \$0-dynamicpatch 0;
 #X obj 150 40 route 0 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18
 19 20 21 22 23 24 25 26 27 28 29;
@@ -90,7 +90,7 @@ connect 1 0 0 0 \; \$2 connect 2 0 3 0 \; \$2 connect 3 0 4 0 \;;
 #X obj 79 85 tof/argument 1 1;
 #X obj 382 201 tof/argument 1 1;
 #X obj 530 150 tof/argument 1 1;
-#X obj 335 93 zexy/makesymbol pd-%s-dynamicpatch;
+#X obj 335 93 makesymbol pd-%s-dynamicpatch;
 #X connect 1 0 11 0;
 #X connect 2 0 31 0;
 #X connect 3 0 32 0;

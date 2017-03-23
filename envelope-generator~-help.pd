@@ -1,4 +1,4 @@
-#N canvas 1 82 1364 661 10;
+#N canvas 1 82 1351 661 10;
 #X obj 884 228 cnv 15 200 20 empty empty /envelope-generator/ 2 12
 0 8 -258401 -262144 0;
 #X obj 884 251 nbx 5 14 -1e+37 1e+37 0 0 /envelope-generator/min /envelope-generator/min_
@@ -11,24 +11,24 @@ reset 17 7 0 8 -262144 -1 -1;
 start 17 7 0 8 -262144 -1 -1;
 #X text 467 19 You need [ggee];
 #X obj 323 228 mtl/seq1x8;
-#X obj 56 313 openpanel;
-#X obj 56 293 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
--1;
-#X text 77 292 You can load a sound file in the internal stereo tables
+#X obj 182 312 openpanel;
+#X obj 182 292 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X text 203 291 You can load a sound file in the internal stereo tables
 ;
-#X msg 55 334 read \$1;
-#X text 117 315 (send a bang afterwards to play the loaded/selected
+#X msg 181 333 read \$1;
+#X text 243 314 (send a bang afterwards to play the loaded/selected
 file);
 #X obj 295 578 mtl/out~;
-#X obj 163 354 mtl/player~;
-#X obj 433 87 loadbang;
-#X text 530 138 Right inlet sets pattern;
+#X obj 289 353 mtl/player~;
+#X obj 467 162 loadbang;
+#X text 581 191 Right inlet sets pattern;
 #X obj 845 51 mtl/clkMaster 120;
-#X msg 433 143 1 0 1 1 1 1 1 1;
-#X obj 311 74 loadbang;
-#X obj 312 96 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 1
+#X msg 466 193 1 0 1 1 1 1 1 1;
+#X obj 324 139 loadbang;
+#X obj 325 161 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 1
 1;
-#X obj 310 118 mtl/clkSlave 2 8;
+#X obj 323 183 mtl/clkSlave 2 8;
 #X text 74 7 envelope generator \;;
 #X text 75 53 tags: control~;
 #X text 74 21 inspired from the ArgoPd library http://paresys.pagesperso-orange.fr/ARGOPd/index.html

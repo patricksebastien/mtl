@@ -1,25 +1,19 @@
 #N canvas 1 82 1272 661 10;
-#X obj 1 -21 cnv 15 690 30 empty empty scompress~ 2 12 1 14 -233017
--66577 0;
 #X obj 70 255 mtl/out~;
-#X obj 772 46 cnv 15 200 40 empty empty empty 20 12 0 14 -232576 -66577
-0;
-#X text 832 47 PARAM ENABLED;
 #X obj 462 357 cnv 15 200 20 empty empty /scompress/ 2 12 0 8 -258401
 -262144 0;
-#X text 255 209 <-Click on the propeties menu to display params;
-#X text 623 139 tags: fx~;
-#X obj 771 69 tof/open_help tof/param;
+#X text 371 207 <-Click on the propeties menu to display params;
+#X text 59 27 tags: fx~;
 #X text 832 199 .;
 #X obj 472 397 nbx 5 14 -1e+37 1e+37 0 0 /scompress/attack /scompress/attack_
-attack 0 -8 0 10 -262144 -1 -1 20 256;
-#X obj 473 430 nbx 5 14 -1e+37 1e+37 0 0 /scompress/release /scompress/release_
-release 0 -8 0 10 -262144 -1 -1 200 256;
-#X obj 474 463 nbx 5 14 -1e+37 1e+37 0 0 /scompress/ratio /scompress/ratio_
+attack 0 -8 0 10 -262144 -1 -1 10 256;
+#X obj 471 430 nbx 5 14 -1e+37 1e+37 0 0 /scompress/release /scompress/release_
+release 0 -8 0 10 -262144 -1 -1 100 256;
+#X obj 470 463 nbx 5 14 -1e+37 1e+37 0 0 /scompress/ratio /scompress/ratio_
 ratio 0 -8 0 10 -262144 -1 -1 1 256;
-#X obj 476 496 nbx 5 14 -1e+37 1e+37 0 0 /scompress/thresh /scompress/thresh_
+#X obj 469 493 nbx 5 14 -1e+37 1e+37 0 0 /scompress/thresh /scompress/thresh_
 thresh 0 -8 0 10 -262144 -1 -1 80 256;
-#N canvas 15 80 1265 714 REFERENCE 0;
+#N canvas 13 82 1265 661 REFERENCE 0;
 #X text 114 121 Name: e_scompress;
 #X text 114 141 Summary: loudness compress with sidechain.;
 #X text 114 394 Description: Loudness compressor with sidechain. To
@@ -28,8 +22,6 @@ inlets. Works with a delay of 256 samples.;
 #X text 114 524 Tags: Audio \, Dynamics;
 #X text 114 214 Inlet 0: Audio input signal;
 #X text 114 364 Outlet 1: Audio output signal;
-#X text 114 181 comment;
-#X text 114 454 comment;
 #X text 113 292 Control messages: attack <float>: time (ms) to reach
 desired reduction. release <float>: time (ms) taken to reach no reduction.
 ratio <float>: time (ms) amount of reduction over thresh. thresh <float>:
@@ -38,13 +30,13 @@ time (ms) input level at which reduction occurs.;
 #X text 114 257 Inlet 2: Sidechain input (if sidechain is not used
 connect input signal to this inlet).;
 #X coords 0 -1 1 1 450 450 1 100 100;
-#X restore 739 134 pd REFERENCE;
+#X restore 731 68 pd REFERENCE;
 #X obj 81 146 osc~ 250;
-#X obj 70 208 mtl/scompress~ /id scompress;
-#X text 628 114 Description: scompress;
-#X text 623 159 Author: rjdj;
-#X connect 14 0 15 0;
-#X connect 14 0 15 1;
-#X connect 14 0 15 2;
-#X connect 15 0 1 0;
-#X connect 15 1 1 1;
+#X text 58 8 Description: scompress;
+#X text 59 47 Author: rjdj;
+#X obj 70 208 mtl/scompress~ /id scompress 10 100 1 80;
+#X connect 10 0 13 0;
+#X connect 10 0 13 1;
+#X connect 10 0 13 2;
+#X connect 13 0 0 0;
+#X connect 13 1 0 1;

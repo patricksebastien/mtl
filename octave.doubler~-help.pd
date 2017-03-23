@@ -1,25 +1,18 @@
 #N canvas 1 82 1272 661 10;
-#X obj 1 -21 cnv 15 690 30 empty empty octave.doubler~ 2 12 1 14 -233017
--66577 0;
 #X obj 8 200 mtl/out~;
-#X obj 238 54 cnv 15 200 40 empty empty empty 20 12 0 14 -232576 -66577
-0;
-#X text 298 55 PARAM ENABLED;
-#X obj 235 181 cnv 15 200 20 empty empty /octave.doubler/ 2 12 0 8
+#X obj 490 314 cnv 15 200 20 empty empty /octave.doubler/ 2 12 0 8
 -258401 -262144 0;
-#X obj 238 210 hsl 100 15 0 1 0 0 /octave.doubler/wet /octave.doubler/wet_
-wet 105 7 0 8 -262144 -1 -1 0 1;
-#X text 244 152 <-Click on the propeties menu to display params;
-#X text 547 101 tags: fx~;
-#X obj 237 77 tof/open_help tof/param;
-#X obj 6 153 mtl/octave.doubler~ /id octave.doubler;
+#X obj 493 343 hsl 100 15 0 1 0 0 /octave.doubler/wet /octave.doubler/wet_
+wet 105 7 0 8 -262144 -1 -1 9900 1;
+#X text 305 153 <-Click on the propeties menu to display params;
+#X text 766 99 tags: fx~;
 #X obj 76 42 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0 1
 ;
 #N canvas 5 185 450 300 generate~ 0;
 #X obj 32 89 metro 400;
 #X obj 32 175 mtof;
 #X obj 104 195 mtof;
-#X floatatom 83 69 5 0 0 0 - - -;
+#X floatatom 83 69 5 0 0 0 - - -, f 5;
 #X obj 32 261 outlet~;
 #X obj 103 261 outlet~;
 #X obj 30 14 inlet;
@@ -48,9 +41,9 @@ wet 105 7 0 8 -262144 -1 -1 0 1;
 #X connect 13 0 9 0;
 #X connect 14 0 8 0;
 #X restore 76 67 pd generate~;
-#X text 545 72 Description :;
-#X text 543 116 Author: Miller Pucket;
-#X text 547 135 We already saw how to use ring modulation to alias
+#X text 764 70 Description :;
+#X text 762 114 Author: Miller Pucket;
+#X text 766 133 We already saw how to use ring modulation to alias
 a pitched sound down one octave. Here we do the reverse: filter out
 all odd harmonics using a variable-delay comb filter tuned one octave
 above the incoming sound. We use two taps into the delay line. The
@@ -60,9 +53,10 @@ measured period of the incoming sound. THese two are added. Odd harmonics
 are 180 degrees out of phase at the two taps and cancel. Even harmonics
 get through - so the sound goes up an octave \, without denaturing
 the timbre as a speed-up would.;
-#X text 624 72 G06 OCTAVE DOUBLING VIA VARIABLE COMB FILTER;
-#X connect 9 0 1 0;
-#X connect 9 1 1 1;
-#X connect 10 0 11 0;
-#X connect 11 0 9 0;
-#X connect 11 1 9 1;
+#X text 843 70 G06 OCTAVE DOUBLING VIA VARIABLE COMB FILTER;
+#X obj 6 153 mtl/octave.doubler~ /id octave.doubler 1;
+#X connect 5 0 6 0;
+#X connect 6 0 11 0;
+#X connect 6 1 11 1;
+#X connect 11 0 0 0;
+#X connect 11 1 0 1;

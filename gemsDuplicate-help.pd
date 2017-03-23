@@ -1,59 +1,55 @@
-#N canvas 1 82 889 661 10;
-#X declare -lib Gem;
-#X declare -lib Gem;
-#X obj 70 182 gemhead;
-#X obj 438 87 tgl 15 0 empty empty empty 0 -6 0 8 -262144 -1 -1 1 1
+#N canvas 605 98 707 533 10;
+#X obj 19 87 gemhead;
+#X obj 403 41 tgl 15 0 empty empty empty 0 -6 0 8 -262144 -1 -1 1 1
 ;
-#X text 57 96 You can change the number of iteration using the right
+#X floatatom 157 70 5 0 0 0 - - -, f 5;
+#X text 204 69 Number of iterations;
+#X text 8 2 You can change the number of iteration using the right
 inlet.;
-#X text 59 127 tags: gems;
-#X text 58 79 Description: Duplicates and separates a Gem chain.;
-#X obj 71 566 circle;
-#X obj 127 239 tof/increment;
-#X obj 127 268 /;
-#X obj 71 528 translateXYZ;
-#X obj 271 409 sin;
-#X obj 244 353 * 6.28319;
-#X obj 244 377 t f f;
-#X obj 182 402 cos;
-#X floatatom 246 458 5 0 0 1 diameter - -;
-#X obj 438 107 mtl/gemsWin /dimen 640 480 /anti-aliasing 1;
-#X obj 137 490 * 3;
-#X obj 181 493 * 3;
-#X obj 636 81 import Gem;
-#X obj 54 16 cnv 15 400 40 empty empty empty 20 12 0 14 -254305 -66577
-0;
-#X obj 64 25 cnv 15 380 20 empty empty empty 20 12 0 14 -262144 -66577
-0;
-#X obj 392 26 tgl 15 1 empty empty empty 17 7 0 10 -262144 -1 -1 0
-1;
-#X obj 415 26 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
-1;
-#X text 67 25 [gemsDuplicate];
-#X obj 768 90 cnv 15 200 20 empty empty /gemsDuplicate/ 2 12 0 8 -258401
--262144 0;
-#X obj 765 122 cnv 15 200 30 empty empty empty 20 12 0 14 -261234 -66577
-0;
-#X obj 772 129 hsl 128 15 0 160 0 0 /banane/nombre /banane/nombre_
-nombre 135 10 0 10 -262144 -1 -1 579 1;
-#X text 268 200 Outlet 2 bangs when rendering each duplication. Outlet
-3 bangs at the start of the rendering. Outlet 4 is the Number of iterations
-;
-#X obj 70 207 mtl/gemsDuplicate /id banane 10;
-#X connect 0 0 27 0;
-#X connect 1 0 14 0;
-#X connect 6 0 7 0;
-#X connect 7 0 10 0;
-#X connect 8 0 5 0;
-#X connect 9 0 16 0;
-#X connect 10 0 11 0;
-#X connect 11 0 12 0;
-#X connect 11 1 9 0;
-#X connect 12 0 15 0;
-#X connect 13 0 15 1;
-#X connect 13 0 16 1;
-#X connect 15 0 8 1;
-#X connect 16 0 8 2;
-#X connect 27 0 8 0;
-#X connect 27 1 6 0;
-#X connect 27 2 6 1;
+#X text 8 32 tags: gems;
+#X text 7 -16 Description: Duplicates and separates a Gem chain.;
+#X text 198 105 Outlet 2 bangs when rendering each duplication. Outlet
+3 bangs at the start of the rendering.;
+#X obj 20 471 circle;
+#X obj 19 112 mtl/gemsDuplicate 10;
+#X obj 76 144 tof/increment;
+#X obj 20 285 color;
+#X obj 157 94 t f f;
+#X obj 76 173 /;
+#X obj 76 257 mtl/hsvToRgb;
+#X obj 20 433 translateXYZ;
+#X msg 76 235 \$1 1 1;
+#X obj 220 314 sin;
+#X obj 76 209 t f f;
+#X obj 193 258 * 6.28319;
+#X obj 193 282 t f f;
+#X obj 131 307 cos;
+#X floatatom 195 363 5 0 0 1 diameter - -, f 5;
+#X obj 403 61 mtl/gemsWin /dimen 640 480 /anti-aliasing 1;
+#X obj 86 395 * 3;
+#X obj 130 398 * 3;
+#X connect 0 0 9 0;
+#X connect 1 0 23 0;
+#X connect 2 0 12 0;
+#X connect 9 0 11 0;
+#X connect 9 1 10 0;
+#X connect 9 2 10 1;
+#X connect 10 0 13 0;
+#X connect 11 0 15 0;
+#X connect 12 0 9 1;
+#X connect 12 1 13 1;
+#X connect 13 0 18 0;
+#X connect 14 0 11 1;
+#X connect 15 0 8 0;
+#X connect 16 0 14 0;
+#X connect 17 0 25 0;
+#X connect 18 0 16 0;
+#X connect 18 1 19 0;
+#X connect 19 0 20 0;
+#X connect 20 0 21 0;
+#X connect 20 1 17 0;
+#X connect 21 0 24 0;
+#X connect 22 0 24 1;
+#X connect 22 0 25 1;
+#X connect 24 0 15 1;
+#X connect 25 0 15 2;

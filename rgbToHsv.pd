@@ -257,7 +257,7 @@
 #X obj 428 144 / 255;
 #X obj 484 142 / 255;
 #X obj 382 174 pack f f f;
-#X obj 267 57 zexy/demultiplex 0 1;
+#X obj 267 57 demultiplex 0 1;
 #X obj 703 44 loadbang;
 #X obj 703 73 iemlib/dollarg;
 #X msg 773 133 1;

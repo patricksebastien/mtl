@@ -10,7 +10,7 @@
 #X obj 104 195 mtof;
 #X obj 32 132 + 20;
 #X obj 32 111 random 70;
-#X floatatom 83 69 5 0 0 0 - - -;
+#X floatatom 83 69 5 0 0 0 - - -, f 5;
 #X obj 32 261 outlet~;
 #X obj 103 261 outlet~;
 #X obj 30 14 inlet;
@@ -36,19 +36,15 @@
 #X connect 13 0 11 0;
 #X connect 14 0 2 0;
 #X restore 19 115 pd generate~;
-#X text 144 246 <-Click on the propeties menu to display params;
-#X obj 307 18 cnv 15 200 40 empty empty empty 20 12 0 14 -232576 -66577
-0;
-#X text 367 19 PARAM ENABLED;
+#X text 185 246 <-Click on the propeties menu to display params;
 #X obj 257 132 cnv 15 200 20 empty empty /round/ 2 12 0 8 -258401 -262144
 0;
-#X obj 306 41 tof/open_help tof/param;
 #X obj 260 160 hsl 128 15 0 500 0 0 /round/coarse /round/coarse_ coarse
-137 7 0 10 -262144 -1 -1 0 1;
-#X obj 18 247 mtl/round~ /id round;
+137 7 0 10 -262144 -1 -1 254 1;
 #X text 15 8 Description: Round ( sigpack external );
+#X obj 18 247 mtl/round~ /id round 10;
 #X connect 2 0 3 0;
-#X connect 3 0 10 0;
-#X connect 3 0 10 1;
-#X connect 10 0 0 0;
-#X connect 10 1 0 1;
+#X connect 3 0 8 0;
+#X connect 3 0 8 1;
+#X connect 8 0 0 0;
+#X connect 8 1 0 1;

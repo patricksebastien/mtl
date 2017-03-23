@@ -1,7 +1,7 @@
-#N canvas 613 417 736 483 10;
+#N canvas 611 260 736 483 10;
 #X obj 102 74 inlet;
 #X obj 107 138 outlet;
-#N canvas 351 209 844 670 moteur 1;
+#N canvas 351 209 844 670 moteur 0;
 #X obj 131 28 initbang;
 #X obj 110 83 dollarg;
 #X obj 220 181 l;
@@ -96,3 +96,10 @@
 #X connect 36 0 37 0;
 #X restore 103 285 pd moteur;
 #X obj 99 229 namecanvas \$0-autoabs;
+#X obj 150 0 inlet;
+#X obj 150 200 outlet;
+#X obj 150 100 cyclone/counter 3 12 0;
+#X connect 0 0 6 0;
+#X connect 4 0 6 0;
+#X connect 6 0 5 0;
+#X connect 6 0 1 0;

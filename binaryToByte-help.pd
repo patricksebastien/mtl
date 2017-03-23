@@ -1,5 +1,5 @@
-#N canvas 0 25 484 260 10;
-#X floatatom 88 197 5 0 0 0 - - -;
+#N canvas 1 82 484 260 10;
+#X floatatom 88 197 5 0 0 0 - - -, f 5;
 #X obj 88 109 tgl 15 0 empty empty empty 0 -6 0 8 -262144 -1 -1 0 1
 ;
 #X obj 111 131 tgl 15 0 empty empty empty 0 -6 0 8 -262144 -1 -1 0
@@ -20,7 +20,7 @@
 -1;
 #X text 108 106 This is the hot inlet!;
 #X text 46 133 Output;
-#X floatatom 330 190 5 0 0 0 - - -;
+#X floatatom 330 190 5 0 0 0 - - -, f 5;
 #X msg 330 116 0 1 0 0 1 1 0 1;
 #X msg 342 137 1 0 0 0 0 0 0 0;
 #X text 327 97 Lists work too!;

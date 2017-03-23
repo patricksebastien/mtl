@@ -1,6 +1,4 @@
-#N canvas 1 82 657 661 10;
-#X declare -lib Gem;
-#X declare -lib Gem;
+#N canvas 503 82 657 661 10;
 #X obj 18 -58 cnv 15 400 40 empty empty empty 20 12 0 14 -254305 -66577
 0;
 #X obj 28 -49 cnv 15 380 20 empty empty empty 20 12 0 14 -262144 -66577
@@ -9,24 +7,23 @@
 1;
 #X obj 353 -47 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
 1;
-#X obj 17 224 cnv 15 400 100 empty empty empty 20 12 0 14 -254305 -66577
+#X obj 18 174 cnv 15 400 100 empty empty empty 20 12 0 14 -254305 -66577
 0;
-#X floatatom 31 273 5 0 0 0 - - -;
-#X text 47 223 arguments:;
-#X obj 116 277 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+#X floatatom 32 223 5 0 0 0 - - -, f 5;
+#X text 48 173 arguments:;
+#X obj 117 227 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
 1;
-#X obj 202 277 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+#X obj 203 227 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
 1;
-#X text 28 288 sortie;
-#X text 28 300 entre [0-1];
-#X text 110 302 la zone;
-#X text 111 291 souris dans;
-#X text 196 293 clic dans;
-#X text 196 304 la zone;
-#X text 47 235 nom \, posX \, posY \, tailleX \, tailleY;
-#X text 264 292 TOUCHE "<" = DEPLACEMENT;
-#X text 282 303 + clic droit = TAILLE;
-#X text 504 331 <= gestion de la fenêtre gem;
+#X text 29 238 sortie;
+#X text 29 250 entre [0-1];
+#X text 111 252 la zone;
+#X text 112 241 souris dans;
+#X text 197 243 clic dans;
+#X text 197 254 la zone;
+#X text 48 185 nom \, posX \, posY \, tailleX \, tailleY;
+#X text 265 242 TOUCHE "<" = DEPLACEMENT;
+#X text 283 253 + clic droit = TAILLE;
 #X obj 174 119 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 1
 1;
 #X obj 439 -46 cnv 15 200 20 empty empty /gemsTable/ 2 12 0 8 -258401
@@ -35,65 +32,63 @@
 #X obj 436 108 cnv 15 200 90 empty empty empty 20 12 0 14 -233017 -66577
 0;
 #X text 436 105 couleur de fond inactif (RVBA);
-#X obj 445 124 hsl 128 15 0 100 0 0 /gemsTable/bcolorR /gemsTable/bcolorR_
-bcolorR 135 10 0 10 -262144 -1 -1 6350 1;
-#X obj 445 143 hsl 128 15 0 100 0 0 /gemsTable/bcolorV /gemsTable/bcolorV_
+#X obj 445 124 hsl 128 15 0 100 0 0 /waves/bcolorR /waves/bcolorR_
+bcolorR 135 10 0 10 -262144 -1 -1 10150 1;
+#X obj 445 143 hsl 128 15 0 100 0 0 /waves/bcolorV /waves/bcolorV_
 bcolorV 135 10 0 10 -262144 -1 -1 6350 1;
-#X obj 445 162 hsl 128 15 0 100 0 0 /gemsTable/bcolorB /gemsTable/bcolorB_
+#X obj 445 162 hsl 128 15 0 100 0 0 /waves/bcolorB /waves/bcolorB_
 bcolorB 135 10 0 10 -262144 -1 -1 6350 1;
-#X obj 445 181 hsl 128 15 0 100 0 0 /gemsTable/bcolorA /gemsTable/bcolorA_
+#X obj 445 181 hsl 128 15 0 100 0 0 /waves/bcolorA /waves/bcolorA_
 bcolorA 135 10 0 10 -262144 -1 -1 6350 1;
 #X obj 437 205 cnv 15 200 90 empty empty empty 20 12 0 14 -233017 -66577
 0;
 #X text 438 201 couleur du texte (RVBA);
-#X obj 445 219 hsl 128 15 0 100 0 0 /gemsTable/tcolorR /gemsTable/tcolorR_
-tcolorR 135 10 0 10 -262144 -1 -1 12700 1;
-#X obj 445 238 hsl 128 15 0 100 0 0 /gemsTable/tcolorV /gemsTable/tcolorV_
-tcolorV 135 10 0 10 -262144 -1 -1 12700 1;
-#X obj 445 257 hsl 128 15 0 100 0 0 /gemsTable/tcolorB /gemsTable/tcolorB_
+#X obj 445 219 hsl 128 15 0 100 0 0 /waves/tcolorR /waves/tcolorR_
+tcolorR 135 10 0 10 -262144 -1 -1 3600 1;
+#X obj 445 238 hsl 128 15 0 100 0 0 /waves/tcolorV /waves/tcolorV_
+tcolorV 135 10 0 10 -262144 -1 -1 7400 1;
+#X obj 445 257 hsl 128 15 0 100 0 0 /waves/tcolorB /waves/tcolorB_
 tcolorB 135 10 0 10 -262144 -1 -1 12700 1;
-#X obj 445 276 hsl 128 15 0 100 0 0 /gemsTable/tcolorA /gemsTable/tcolorA_
+#X obj 445 276 hsl 128 15 0 100 0 0 /waves/tcolorA /waves/tcolorA_
 tcolorA 135 10 0 10 -262144 -1 -1 12700 1;
 #X obj 438 302 cnv 15 200 90 empty empty empty 20 12 0 14 -233017 -66577
 0;
 #X text 440 298 couleur du contour (RVBA);
-#X obj 445 316 hsl 128 15 0 100 0 0 /gemsTable/wcolorR /gemsTable/wcolorR_
+#X obj 445 316 hsl 128 15 0 100 0 0 /waves/wcolorR /waves/wcolorR_
 wcolorR 135 10 0 10 -262144 -1 -1 12700 1;
-#X obj 445 335 hsl 128 15 0 100 0 0 /gemsTable/wcolorV /gemsTable/wcolorV_
+#X obj 445 335 hsl 128 15 0 100 0 0 /waves/wcolorV /waves/wcolorV_
 wcolorV 135 10 0 10 -262144 -1 -1 12700 1;
-#X obj 445 354 hsl 128 15 0 100 0 0 /gemsTable/wcolorB /gemsTable/wcolorB_
+#X obj 445 354 hsl 128 15 0 100 0 0 /waves/wcolorB /waves/wcolorB_
 wcolorB 135 10 0 10 -262144 -1 -1 12700 1;
-#X obj 445 373 hsl 128 15 0 100 0 0 /gemsTable/wcolorA /gemsTable/wcolorA_
+#X obj 445 373 hsl 128 15 0 100 0 0 /waves/wcolorA /waves/wcolorA_
 wcolorA 135 10 0 10 -262144 -1 -1 12700 1;
 #X obj 169 141 mtl/gemsWin /dimen 640 480;
 #X obj 437 493 cnv 15 200 60 empty empty empty 20 12 0 14 -204786 -66577
 0;
-#X obj 450 511 hsl 128 15 0 160 0 0 /gemsTable/width /gemsTable/width_
-width 135 10 0 10 -262144 -1 -1 79 1;
-#X obj 450 529 hsl 128 15 0 150 0 0 /gemsTable/tsize /gemsTable/tsize_
-tsize 135 10 0 10 -262144 -1 -1 254 1;
+#X obj 450 511 hsl 128 15 0 160 0 0 /waves/width /waves/width_ width
+135 10 0 10 -262144 -1 -1 794 1;
+#X obj 450 529 hsl 128 15 0 150 0 0 /waves/tsize /waves/tsize_ tsize
+135 10 0 10 -262144 -1 -1 423 1;
 #X text 440 490 Label;
 #X obj 437 13 cnv 15 200 90 empty empty empty 20 12 0 14 -261234 -66577
 0;
-#X obj 444 20 hsl 128 15 -160 160 0 0 /gemsTable/positionX /gemsTable/positionX_
-positionX 135 10 0 10 -262144 -1 -1 6350 1;
-#X obj 445 41 hsl 128 15 -160 160 0 0 /gemsTable/positionY /gemsTable/positionY_
-positionY 135 10 0 10 -262144 -1 -1 6350 1;
-#X obj 445 61 hsl 128 15 0 160 0 0 /gemsTable/sizeX /gemsTable/sizeX_
-sizeX 135 10 0 10 -262144 -1 -1 397 1;
-#X obj 445 81 hsl 128 15 0 160 0 0 /gemsTable/sizeY /gemsTable/sizeY_
-sizeY 135 10 0 10 -262144 -1 -1 397 1;
+#X obj 444 20 hsl 128 15 -160 160 0 0 /waves/positionX /waves/positionX_
+positionX 135 10 0 10 -262144 -1 -1 6810 1;
+#X obj 445 41 hsl 128 15 -160 160 0 0 /waves/positionY /waves/positionY_
+positionY 135 10 0 10 -262144 -1 -1 5990 1;
+#X obj 445 61 hsl 128 15 0 160 0 0 /waves/sizeX /waves/sizeX_ sizeX
+135 10 0 10 -262144 -1 -1 794 1;
+#X obj 445 81 hsl 128 15 0 160 0 0 /waves/sizeY /waves/sizeY_ sizeY
+135 10 0 10 -262144 -1 -1 1094 1;
 #X obj 438 -21 cnv 15 200 30 empty empty empty 20 12 0 14 -191407 -66577
 0;
-#X obj 444 -14 tgl 15 0 /gemsTable/on /gemsTable/on_ On 17 7 0 10 -262144
--1 -1 1 1;
-#X obj 478 -14 tgl 15 0 /gemsTable/drag /gemsTable/drag_ Drag 17 7
-0 10 -262144 -1 -1 0 1;
-#X obj 582 -14 bng 15 250 50 0 /gemsTable/reset /gemsTable/reset_ Reset
-17 7 0 10 -262144 -1 -1;
+#X obj 444 -14 tgl 15 0 /waves/on /waves/on_ On 17 7 0 10 -262144 -1
+-1 1 1;
+#X obj 478 -14 tgl 15 0 /waves/drag /waves/drag_ Drag 17 7 0 10 -262144
+-1 -1 0 1;
+#X obj 582 -14 bng 15 250 50 0 /waves/reset /waves/reset_ Reset 17
+7 0 10 -262144 -1 -1;
 #X text 10 9 tags: gems;
-#X text 11 24 author : raphael isdant http://www.raphaelisdant.fr;
-#X obj 440 -70 import Gem;
 #N canvas 339 331 403 304 communication 0;
 #X obj -5 -6 cnv 15 400 300 empty empty empty 20 12 0 14 -260758 -66577
 0;
@@ -109,7 +104,7 @@ sizeY 135 10 0 10 -262144 -1 -1 397 1;
 #X text 141 225 souris dans la zone;
 #X obj 14 223 hsl 50 15 0 1 0 0 empty empty empty -2 -8 0 10 -262144
 -1 -1 0 1;
-#X floatatom 11 250 5 0 0 0 - - -;
+#X floatatom 11 250 5 0 0 0 - - -, f 5;
 #X text 5 40 ____________________________________________________________
 ;
 #X text 7 167 ____________________________________________________________
@@ -139,29 +134,17 @@ sizeY 135 10 0 10 -262144 -1 -1 397 1;
 #X connect 17 0 3 0;
 #X connect 18 0 4 0;
 #X connect 20 0 21 0;
-#X restore 299 249 pd communication;
-#X obj 31 253 gemsTable waves -1 1 1 1;
-#X obj 646 -47 cnv 15 300 600 empty empty empty 20 12 0 14 -228856
--66577 0;
-#X obj 802 330 soundfiler;
-#X obj 802 281 openpanel;
-#N canvas 0 22 454 304 (subpatch) 0;
-#X array sample 301 float 0;
-#X coords 0 1 299 -1 200 100 1;
-#X restore 674 424 graph;
-#X msg 673 361 \; sample const 0;
-#X obj 673 342 bng 15 250 50 0 empty empty empty 17 7 0 10 -260097
--1 -1;
-#X msg 802 308 read -resize \$1 sample;
-#X floatatom 802 357 10 0 0 0 - - -;
-#N canvas 0 22 454 304 (subpatch) 0;
-#X array waves 300 float 0;
-#X coords 0 1 299 -1 200 100 1;
-#X restore 670 92 graph;
-#N canvas 150 434 450 300 analyse_signal 0;
+#X restore 295 180 pd communication;
+#X obj 24 332 cnv 15 300 300 empty empty empty 20 12 0 14 -228856 -66577
+0;
+#N canvas 0 50 454 304 (subpatch) 0;
+#X array waves 101120 float 0;
+#X coords 0 1 101119 -1 200 100 1;
+#X restore 48 471 graph;
+#N canvas 140 443 450 300 analyse_signal 0;
 #X obj 33 84 osc~ 400;
 #X obj 112 86 noise~;
-#X floatatom 33 60 5 0 0 0 - - -;
+#X floatatom 33 60 5 0 0 0 - - -, f 5;
 #X obj 33 185 tabwrite~ waves;
 #X obj 136 124 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
 1;
@@ -177,7 +160,7 @@ sizeY 135 10 0 10 -262144 -1 -1 397 1;
 #X obj 207 8 inlet;
 #X obj 306 141 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
 -1 -1;
-#X obj 58 119 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+#X obj 58 119 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 1
 0.571429;
 #X obj 207 116 * 10;
 #X obj 155 194 dac~;
@@ -214,80 +197,67 @@ sizeY 135 10 0 10 -262144 -1 -1 397 1;
 #X connect 19 0 20 0;
 #X connect 20 0 21 0;
 #X connect 21 0 3 0;
-#X restore 765 68 pd analyse_signal;
-#X obj 814 -20 tgl 15 0 empty empty empty 17 7 0 10 -260097 -1 -1 0
+#X restore 143 447 pd analyse_signal;
+#X obj 192 359 tgl 15 0 empty empty empty 17 7 0 10 -260097 -1 -1 0
 1;
-#X obj 864 -20 tgl 15 0 empty empty empty 17 7 0 10 -260097 -1 -1 0
+#X obj 242 359 tgl 15 0 empty empty empty 17 7 0 10 -260097 -1 -1 0
 1;
-#X text 802 -42 noise;
-#X text 762 -43 osc;
-#X text 861 -41 adc;
-#X text 819 253 importer un son...;
-#X obj 802 255 bng 15 250 50 0 empty empty empty 17 7 0 10 -260097
--1 -1;
-#X text 696 340 effacer;
-#X obj 765 9 vsl 15 50 0 1 0 0 empty empty empty 0 -9 0 10 -260097
--1 -1 0 1;
-#X obj 765 -20 tgl 15 0 empty empty empty 17 7 0 10 -260097 -1 -1 0
+#X text 180 337 noise;
+#X text 140 336 osc;
+#X text 239 338 adc;
+#X obj 143 388 vsl 15 50 0 1 0 0 empty empty empty 0 -9 0 10 -260097
+-1 -1 4900 1;
+#X obj 143 359 tgl 15 0 empty empty empty 17 7 0 10 -260097 -1 -1 1
 1;
-#X obj 814 8 vsl 15 50 0 1 0 0 empty empty empty 0 -9 0 10 -260097
+#X obj 192 387 vsl 15 50 0 1 0 0 empty empty empty 0 -9 0 10 -260097
 -1 -1 0 1;
-#X obj 864 8 vsl 15 50 0 1 0 0 empty empty empty 0 -9 0 10 -260097
+#X obj 242 387 vsl 15 50 0 1 0 0 empty empty empty 0 -9 0 10 -260097
 -1 -1 0 1;
-#X obj 780 9 vsl 15 50 60 2000 0 0 freq empty empty 0 -9 0 10 -191407
+#X obj 158 388 vsl 15 50 60 2000 0 0 freq empty empty 0 -9 0 10 -191407
 -1 -1 0 1;
-#X text 782 9 f;
-#X text 782 33 e;
-#X text 782 43 q;
-#X text 782 20 r;
-#X msg 671 281 set sample;
-#X obj 671 308 s waves-table;
-#X msg 664 9 set waves;
-#X obj 664 35 s waves-table;
-#X obj 664 -12 bng 15 250 50 0 empty empty empty 17 7 0 10 -260097
--1 -1;
-#X obj 671 258 bng 15 250 50 0 empty empty empty 17 7 0 10 -260097
--1 -1;
-#X text 686 -16 1-waves;
-#X text 691 257 2-sample;
+#X text 160 388 f;
+#X text 160 412 e;
+#X text 160 422 q;
+#X text 160 399 r;
+#X msg 42 388 set waves;
+#X obj 42 414 s waves-table;
+#X obj 42 367 bng 15 250 50 0 empty empty empty 17 7 0 10 -260097 -1
+-1;
+#X text 64 363 1-waves;
 #X obj 437 398 cnv 15 200 90 empty empty empty 20 12 0 14 -233017 -66577
 0;
-#X obj 445 412 hsl 128 15 0 100 0 0 /gemsTable/scolorR /gemsTable/scolorR_
+#X obj 445 412 hsl 128 15 0 100 0 0 /waves/scolorR /waves/scolorR_
 scolorR 135 10 0 10 -262144 -1 -1 12700 1;
-#X obj 445 431 hsl 128 15 0 100 0 0 /gemsTable/scolorV /gemsTable/scolorV_
+#X obj 445 431 hsl 128 15 0 100 0 0 /waves/scolorV /waves/scolorV_
 scolorV 135 10 0 10 -262144 -1 -1 12700 1;
-#X obj 445 450 hsl 128 15 0 100 0 0 /gemsTable/scolorB /gemsTable/scolorB_
+#X obj 445 450 hsl 128 15 0 100 0 0 /waves/scolorB /waves/scolorB_
 scolorB 135 10 0 10 -262144 -1 -1 12700 1;
-#X obj 445 469 hsl 128 15 0 100 0 0 /gemsTable/scolorA /gemsTable/scolorA_
+#X obj 445 469 hsl 128 15 0 100 0 0 /waves/scolorA /waves/scolorA_
 scolorA 135 10 0 10 -262144 -1 -1 12700 1;
 #X text 438 394 couleur du signal (RVBA);
-#X obj 523 -14 tgl 15 0 /gemsTable/mode /gemsTable/mode_ Mode 17 7
-0 10 -262144 -1 -1 0 1;
+#X obj 523 -14 tgl 15 0 /waves/mode /waves/mode_ Mode 17 7 0 10 -262144
+-1 -1 0 1;
 #X obj 437 556 cnv 15 200 60 empty empty Divers 20 12 0 14 -4032 -66577
 0;
-#X obj 451 576 hsl 128 15 1 1280 0 0 /gemsTable/buffer /gemsTable/buffer_
-buffer 135 10 0 10 -262144 -1 -1 983 1;
-#X obj 451 594 hsl 128 15 1 20 0 0 /gemsTable/zoom /gemsTable/zoom_
-zoom 135 10 0 10 -262144 -1 -1 0 1;
+#X obj 451 576 hsl 128 15 1 1280 0 0 /waves/buffer /waves/buffer_ buffer
+135 10 0 10 -262144 -1 -1 983 1;
+#X obj 451 594 hsl 128 15 1 20 0 0 /waves/zoom /waves/zoom_ zoom 135
+10 0 10 -262144 -1 -1 0 1;
 #X text 11 -6 Description: Tab le in the Gem window.;
 #X text 31 -49 [gemsTable] : gestion d'une Table dans gem;
-#X connect 19 0 40 0;
-#X connect 21 0 58 0;
-#X connect 58 0 5 0;
-#X connect 58 1 7 0;
-#X connect 58 2 8 0;
-#X connect 60 0 66 0;
-#X connect 61 0 65 0;
+#X obj 32 203 mtl/gemsTable /id waves -1 1 10 10 10 1;
+#X text 11 24 author : raphael isdant http://www.raphaelisdant.fr \,
+JKP http://jkp.antisocial.be;
+#X connect 18 0 39 0;
+#X connect 20 0 88 0;
+#X connect 58 0 65 0;
+#X connect 59 0 66 0;
+#X connect 63 0 57 0;
 #X connect 64 0 63 0;
-#X connect 65 0 60 0;
-#X connect 69 0 79 0;
-#X connect 70 0 80 0;
-#X connect 75 0 61 0;
-#X connect 77 0 68 0;
-#X connect 78 0 77 0;
-#X connect 79 0 68 1;
-#X connect 80 0 68 2;
-#X connect 86 0 87 0;
-#X connect 88 0 89 0;
-#X connect 90 0 88 0;
-#X connect 91 0 86 0;
+#X connect 65 0 57 1;
+#X connect 66 0 57 2;
+#X connect 72 0 73 0;
+#X connect 74 0 72 0;
+#X connect 88 0 5 0;
+#X connect 88 1 7 0;
+#X connect 88 2 8 0;

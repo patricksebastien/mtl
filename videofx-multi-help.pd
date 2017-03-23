@@ -1,21 +1,20 @@
-#N canvas 1 131 760 473 10;
-#X declare -lib Gem;
+#N canvas 672 153 760 473 10;
 #X obj 124 281 rectangle 4 3;
 #X text 87 30 videofx-muli \; ------------ \;;
 #X obj 124 126 gemhead;
-#X obj 538 85 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+#X obj 538 85 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 1
 1;
 #X obj 533 107 mtl/gemsWin /dimen 640 480;
 #X obj 546 201 cnv 15 200 20 empty empty /videofx-multi/ 2 12 0 8 -258401
 -262144 0;
 #X obj 548 234 hsl 128 15 0 20 0 0 /videofx-multi/contrast /videofx-multi/contrast_
-contrast 135 10 0 10 -262144 -1 -1 0 1;
+contrast 135 10 0 10 -262144 -1 -1 4900 1;
 #X obj 548 254 hsl 128 15 0 100 0 0 /videofx-multi/saturation /videofx-multi/saturation_
-saturation 135 10 0 10 -262144 -1 -1 0 1;
+saturation 135 10 0 10 -262144 -1 -1 1100 1;
 #X obj 546 276 tgl 15 0 /videofx-multi/invert /videofx-multi/invert_
 invert 17 7 0 10 -262144 -1 -1 0 1;
 #X obj 548 297 hsl 128 15 0 1 0 0 /videofx-multi/thresold /videofx-multi/thresold_
-thresold 135 10 0 10 -262144 -1 -1 0 1;
+thresold 135 10 0 10 -262144 -1 -1 10700 1;
 #X obj 548 318 hsl 128 15 0 1 0 0 /videofx-multi/blur /videofx-multi/blur_
 blur 135 10 0 10 -262144 -1 -1 0 1;
 #X obj 548 338 hsl 128 15 0 3 0 0 /videofx-multi/gain /videofx-multi/gain_
@@ -32,13 +31,13 @@ Alpha 135 10 0 10 -262144 -1 -1 12700 1;
 #X obj 125 188 mtl/gemsImages;
 #X obj 260 137 bng 15 250 50 0 empty empty empty 0 -6 0 8 -262144 -1
 -1;
-#X floatatom 202 96 5 0 0 0 - - -;
+#X floatatom 202 96 5 0 0 0 - - -, f 5;
 #X text 237 93 Select a previously loaded image;
 #X text 285 133 Open a panel to select an image;
 #X obj 124 228 mtl/videofx-multi /id videofx-multi;
 #X text 53 364 Comment: Based on Jerome Abel's work.;
+#X text 54 379 tags: gems \, video;
 #X text 52 345 Description: VideoFx-Multi;
-#X text 54 379 tags: gems;
 #X connect 2 0 17 0;
 #X connect 3 0 4 0;
 #X connect 16 0 0 0;

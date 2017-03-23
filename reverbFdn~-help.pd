@@ -1,4 +1,4 @@
-#N canvas 705 440 606 282 10;
+#N canvas 703 445 606 282 10;
 #X obj -2 0 cnv 15 600 30 empty empty fx.reverb.fdn~ 2 12 1 14 -233017
 -66577 0;
 #X text 440 32 Author: Miller Puckette;
@@ -20,7 +20,7 @@ a multichannel setup (they don't require addition computation power).
 #X obj 104 195 mtof;
 #X obj 32 132 + 20;
 #X obj 32 111 random 70;
-#X floatatom 83 69 5 0 0 0 - - -;
+#X floatatom 83 69 5 0 0 0 - - -, f 5;
 #X obj 32 261 outlet~;
 #X obj 103 261 outlet~;
 #X obj 30 14 inlet;
@@ -46,9 +46,6 @@ a multichannel setup (they don't require addition computation power).
 #X connect 13 0 11 0;
 #X connect 14 0 2 0;
 #X restore 15 118 pd generate~;
-#X obj 161 81 cnv 15 200 40 empty empty empty 20 12 0 14 -232576 -66577
-0;
-#X text 221 82 PARAM ENABLED;
 #X obj 374 81 cnv 15 200 20 empty empty /fdn/ 2 12 0 8 -258401 -262144
 0;
 #X obj 374 104 hsl 100 15 0 1 0 0 /fdn/wet /fdn/wet_ wet 105 7 0 8
@@ -59,7 +56,6 @@ a multichannel setup (they don't require addition computation power).
 105 7 0 8 -262144 -1 -1 8910 1;
 #X obj 374 158 hsl 100 15 0 127 0 0 /fdn/crossover /fdn/crossover_
 crossover 105 7 0 8 -262144 -1 -1 6236 1;
-#X obj 160 104 tof/open_help tof/param;
 #X connect 6 0 7 0;
 #X connect 6 1 7 1;
 #X connect 6 2 3 0;

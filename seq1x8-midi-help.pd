@@ -1,11 +1,11 @@
-#N canvas 1 82 1364 661 10;
+#N canvas 1 82 1351 661 10;
 #X obj 517 48 loadbang;
 #X text 522 307 Right outlet outputs the current pattern on every modification
 ;
 #X text 12 23 Description: An 8 step beat sequencer.;
-#X msg 514 409 6 0 6 0 6 0 6 0 6 0 6 0 6 0 6 0;
+#X msg 514 409 11 1 6 2 7 1 1 0 12 2 7 0 7 0 7 0;
 #X text 480 135 Right inlet sets pattern;
-#X floatatom 238 165 5 0 0 0 - - -;
+#X floatatom 238 165 5 0 0 0 - - -, f 5;
 #X obj 513 383 cyclone/prepend set;
 #X text 23 40 tags: sequencing;
 #X obj 239 95 loadbang;

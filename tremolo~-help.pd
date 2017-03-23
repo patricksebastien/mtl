@@ -1,27 +1,20 @@
 #N canvas 1 82 1272 661 10;
-#X obj 1 -21 cnv 15 690 30 empty empty tremolo~ 2 12 1 14 -233017 -66577
-0;
 #X obj 70 255 mtl/out~;
-#X obj 772 46 cnv 15 200 40 empty empty empty 20 12 0 14 -232576 -66577
+#X obj 514 9 cnv 15 200 20 empty empty /tremolo/ 2 12 0 8 -258401 -262144
 0;
-#X text 832 47 PARAM ENABLED;
-#X obj 462 357 cnv 15 200 20 empty empty /tremolo/ 2 12 0 8 -258401
--262144 0;
-#X text 225 213 <-Click on the propeties menu to display params;
-#X text 788 145 tags: fx~;
-#X obj 771 69 tof/open_help tof/param;
-#X obj 463 387 hsl 100 15 0 1 0 0 /tremolo/wet /tremolo/wet_ wet 105
-7 0 8 -262144 -1 -1 0 1;
+#X text 306 206 <-Click on the propeties menu to display params;
+#X text 774 143 tags: fx~;
+#X obj 515 39 hsl 100 15 0 1 0 0 /tremolo/wet /tremolo/wet_ wet 105
+7 0 8 -262144 -1 -1 9900 1;
 #X obj 912 113 cnv 15 250 536 empty empty empty 20 12 0 14 -228992
 -66577 0;
-#X text 788 167 Romain Vuillet;
-#X text 832 199 .;
+#X text 773 161 Romain Vuillet;
 #X obj 81 146 osc~ 250;
-#X obj 463 407 hsl 100 15 0 1 0 0 /tremolo/amplitude /tremolo/amplitude_
-amplitude 105 7 0 8 -262144 -1 -1 0 1;
-#X obj 463 427 hsl 100 15 1 30 0 0 /tremolo/frequency /tremolo/frequency_
-frequency 105 7 0 8 -262144 -1 -1 0 1;
-#X obj 462 447 hsl 100 15 1 1.4 0 0 /tremolo/signalcontrol /tremolo/signalcontrol_
+#X obj 515 59 hsl 100 15 0 1 0 0 /tremolo/amplitude /tremolo/amplitude_
+amplitude 105 7 0 8 -262144 -1 -1 9900 1;
+#X obj 515 79 hsl 100 15 1 30 0 0 /tremolo/frequency /tremolo/frequency_
+frequency 105 7 0 8 -262144 -1 -1 3072 1;
+#X obj 514 99 hsl 100 15 1 1.4 0 0 /tremolo/signalcontrol /tremolo/signalcontrol_
 signalcontrol 105 7 0 8 -262144 -1 -1 0 1;
 #X text 923 123 Le signal est module en amplitude;
 #X text 923 137 par le signal dont on controle;
@@ -37,9 +30,9 @@ signalcontrol 105 7 0 8 -262144 -1 -1 0 1;
 #X text 922 342 de passer progressivement d'une;
 #X text 922 359 enveloppe sinusoidale a une enve-;
 #X text 922 374 loppe de modulation presque carree;
-#X obj 70 208 mtl/tremolo~ /id tremolo;
 #X text 776 126 Description: tremolo;
-#X connect 12 0 30 0;
-#X connect 12 0 30 1;
-#X connect 30 0 1 0;
-#X connect 30 1 1 1;
+#X obj 70 208 mtl/tremolo~ /id tremolo 1 1 10 1;
+#X connect 7 0 26 0;
+#X connect 7 0 26 1;
+#X connect 26 0 0 0;
+#X connect 26 1 0 1;

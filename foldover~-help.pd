@@ -10,7 +10,7 @@
 #X obj 104 195 mtof;
 #X obj 32 132 + 20;
 #X obj 32 111 random 70;
-#X floatatom 83 69 5 0 0 0 - - -;
+#X floatatom 83 69 5 0 0 0 - - -, f 5;
 #X obj 32 261 outlet~;
 #X obj 103 261 outlet~;
 #X obj 30 14 inlet;
@@ -36,21 +36,17 @@
 #X connect 13 0 11 0;
 #X connect 14 0 2 0;
 #X restore 19 115 pd generate~;
-#X text 184 244 <-Click on the propeties menu to display params;
-#X obj 307 18 cnv 15 200 40 empty empty empty 20 12 0 14 -232576 -66577
-0;
-#X text 367 19 PARAM ENABLED;
+#X text 277 248 <-Click on the propeties menu to display params;
 #X obj 306 112 cnv 15 200 20 empty empty /foldover/ 2 12 0 8 -258401
 -262144 0;
-#X obj 306 41 tof/open_help tof/param;
 #X obj 306 138 hradio 15 1 0 2 /foldover/amp /foldover/amp__ amp 50
 7 0 10 -262144 -1 -1 0;
 #X obj 306 158 hradio 15 1 0 2 /foldover/sym /foldover/sym_ symetry
 50 7 0 10 -262144 -1 -1 0;
-#X obj 19 247 mtl/foldover~ /id foldover;
 #X text 15 8 Description: Foldover ( sigpack external );
+#X obj 17 246 mtl/foldover~ /id foldover 1 0;
 #X connect 2 0 3 0;
-#X connect 3 0 11 0;
-#X connect 3 0 11 1;
-#X connect 11 0 0 0;
-#X connect 11 1 0 1;
+#X connect 3 0 9 0;
+#X connect 3 0 9 1;
+#X connect 9 0 0 0;
+#X connect 9 1 0 1;

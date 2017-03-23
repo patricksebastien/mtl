@@ -26,7 +26,7 @@
 #X obj 423 158 tof/param custom /samples /nps;
 #X obj 561 35 inlet dump;
 #X obj 605 442 outlet dump;
-#X obj 266 386 zexy/demultiplex 0 1;
+#X obj 266 386 demultiplex 0 1;
 #X msg 606 95 1;
 #X obj 560 62 t b b b;
 #X msg 556 97 0;
@@ -120,7 +120,7 @@
 #X obj 52 -37 inlet;
 #X obj 42 37 unpack f s;
 #X obj 165 168 t l b;
-#X obj 33 202 zexy/demultiplex 0 1;
+#X obj 33 202 demultiplex 0 1;
 #X msg 194 208 0;
 #X obj 56 -4 t l b;
 #X msg 522 103 1;
@@ -131,7 +131,7 @@
 #X obj 493 531 outlet;
 #X obj 34 278 t f f f;
 #X obj 39 609 pack f s s s f;
-#X obj 87 432 zexy/demultiplex 0 1;
+#X obj 87 432 demultiplex 0 1;
 #X obj 208 392 > 1;
 #X obj 94 304 pack f \$0;
 #X obj 374 263 print [sampleFiler];

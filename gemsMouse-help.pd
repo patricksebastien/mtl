@@ -1,7 +1,5 @@
-#N canvas 0 82 1366 662 10;
-#X declare -lib Gem;
-#X declare -lib Gem;
-#X obj 17 91 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 1 1
+#N canvas 1 82 1351 661 10;
+#X obj 17 91 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0 1
 ;
 #X msg 17 350 -4.66667 4 0;
 #X msg 71 297 -4.66667 4 0;
@@ -17,7 +15,6 @@
 #X text 17 14 Description: sends out mouse events which occur in the
 GEM window. The coordinates match the coordinates of the GEM world.
 ;
-#X obj 441 17 import Gem;
 #X obj 17 133 mtl/gemsMouse;
 #X text 145 362 outlet: coordonnées + click centre;
 #X text 238 404 outlet: coordonnées + click droit;
@@ -28,9 +25,9 @@ GEM window. The coordinates match the coordinates of the GEM world.
 #X connect 8 0 1 0;
 #X connect 9 0 2 0;
 #X connect 10 0 3 0;
-#X connect 14 0 8 0;
-#X connect 14 0 17 0;
-#X connect 14 1 9 0;
-#X connect 14 1 18 0;
-#X connect 14 2 10 0;
-#X connect 14 2 19 0;
+#X connect 13 0 8 0;
+#X connect 13 0 16 0;
+#X connect 13 1 9 0;
+#X connect 13 1 17 0;
+#X connect 13 2 10 0;
+#X connect 13 2 18 0;

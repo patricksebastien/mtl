@@ -82,7 +82,7 @@
 #X restore 183 378 pd random;
 #X obj 187 356 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
 -1 -1;
-#X obj 409 11 import Gem;
+
 #X connect 0 0 3 0;
 #X connect 1 0 6 0;
 #X connect 7 0 6 1;

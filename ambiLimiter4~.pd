@@ -1,4 +1,4 @@
-#N canvas 1 57 924 510 10;
+#N canvas 1 82 924 510 10;
 #X msg 581 103 print;
 #X obj 53 370 *~;
 #X obj 84 370 *~;
@@ -13,11 +13,11 @@
 #X obj 124 411 outlet~ b;
 #X obj 197 411 outlet~ c;
 #X obj 270 414 outlet~ d;
-#X obj 246 250 zexy/limiter~ 1 2 3 4;
-#X obj 173 348 zexy/z~ 9;
-#X obj 141 350 zexy/z~ 9;
-#X obj 88 340 zexy/z~ 9;
-#X obj 53 350 zexy/z~ 9;
+#X obj 246 250 limiter~ 1 2 3 4;
+#X obj 247 324 z~ 9;
+#X obj 141 350 z~ 9;
+#X obj 102 284 z~ 9;
+#X obj 53 350 z~ 9;
 #X connect 0 0 14 0;
 #X connect 1 0 10 0;
 #X connect 2 0 11 0;

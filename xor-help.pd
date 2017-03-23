@@ -9,5 +9,5 @@
 1;
 #X obj 71 248 mtl/xor /id xor;
 #X text 336 300 Author: Emoc;
-#X text 334 316 tags: fx~;
+#X text 334 316 tags: tool;
 #X connect 4 0 3 0;

@@ -1,4 +1,4 @@
-#N canvas 2 89 450 300 10;
+#N canvas 1 82 1351 661 10;
 #X obj 165 136 !=;
 #X obj 142 96 t f f b;
 #X obj 164 41 inlet;
@@ -12,7 +12,7 @@
 #X msg 216 286 1;
 #X obj 207 127 value \$1;
 #X obj 45 127 value \$1;
-#X obj 128 158 zexy/demultiplex;
+#X obj 128 158 demultiplex;
 #X connect 0 0 13 1;
 #X connect 1 0 13 0;
 #X connect 1 1 0 0;

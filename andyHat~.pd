@@ -48,7 +48,7 @@
 #X obj 292 542 *~;
 #X obj 309 503 *~;
 #X obj 308 477 *~ 1;
-#N canvas 0 22 466 316 rh_scalelog 0;
+#N canvas 0 50 466 316 rh_scalelog 0;
 #X obj 20 155 exp;
 #X obj 20 107 *;
 #X obj 20 130 +;
@@ -83,7 +83,7 @@
 #X obj 292 566 *~ 0.3;
 #X msg 306 92 0.25;
 #X obj 449 37 r \$0-loadbang;
-#X text 455 173;
+#X text 455 173 comment;
 #X obj 401 12 tof/param /decay 0 /g slider 0 1;
 #X obj 16 90 tof/param /mod1 0 /g slider 0 1;
 #X obj 76 112 tof/param /mod2 0 /g slider 0 1;

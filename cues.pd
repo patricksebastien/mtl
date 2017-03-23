@@ -1,4 +1,4 @@
-#N canvas 146 166 868 556 10;
+#N canvas 144 171 868 556 10;
 #X obj 145 381 outlet cue_number;
 #X obj 400 -249 inlet reset;
 #X obj 584 247 textfile;
@@ -23,11 +23,11 @@
 #X obj 757 -15 iemlib/dollarg;
 #X msg 695 212 read \$1 cr \, rewind \, bang;
 #X obj 141 237 tof/increment;
-#X obj 414 -106 zexy/relay add clear;
 #X obj 500 -68 route read write;
 #X obj 627 50 symbol;
 #X msg 627 71 write \$1;
-#X connect 1 0 24 0;
+#X obj 412 -125 relay add clear;
+#X connect 1 0 27 0;
 #X connect 2 0 12 0;
 #X connect 2 1 6 0;
 #X connect 3 0 7 0;
@@ -56,11 +56,11 @@
 #X connect 21 0 13 0;
 #X connect 22 0 2 0;
 #X connect 23 0 9 0;
-#X connect 24 0 2 0;
-#X connect 24 1 2 0;
-#X connect 24 2 25 0;
-#X connect 25 0 13 0;
-#X connect 25 1 26 0;
-#X connect 25 2 8 0;
-#X connect 26 0 27 0;
+#X connect 24 0 13 0;
+#X connect 24 1 25 0;
+#X connect 24 2 8 0;
+#X connect 25 0 26 0;
+#X connect 26 0 2 0;
 #X connect 27 0 2 0;
+#X connect 27 1 2 0;
+#X connect 27 2 24 0;

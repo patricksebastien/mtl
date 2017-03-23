@@ -1,7 +1,7 @@
-#N canvas 0 25 1272 692 10;
-#X obj 66 300 outlet~;
+#N canvas 1 82 1272 661 10;
+#X obj 42 269 outlet~;
 #X obj 227 308 outlet~;
-#X obj 27 47 inlet~;
+#X obj 41 55 inlet~;
 #X obj 996 37 inlet params;
 #X obj 996 83 print PARAM_NOTFOUND;
 #X obj 996 59 tof/param route;
@@ -10,7 +10,9 @@
 #X obj 145 43 inlet~;
 #X obj 216 111 tof/param /denominate 0 /g radio 0 8;
 #X obj 207 229 sigpack/freqdiv~;
-#X obj 108 208 sigpack/freqdiv~;
+#X obj 41 208 sigpack/freqdiv~;
+#X obj 216 85 tof/argument 3;
+#X obj 216 60 loadbang;
 #X connect 2 0 11 0;
 #X connect 3 0 5 0;
 #X connect 5 0 4 0;
@@ -20,3 +22,5 @@
 #X connect 9 0 11 1;
 #X connect 10 0 1 0;
 #X connect 11 0 0 0;
+#X connect 12 0 9 0;
+#X connect 13 0 12 0;

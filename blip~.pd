@@ -1,5 +1,5 @@
-#N canvas 571 114 794 607 10;
-#N canvas 0 0 528 439 blip 0;
+#N canvas 567 124 794 607 10;
+#N canvas 0 50 528 439 blip 0;
 #X obj 153 236 osc~;
 #X obj 190 236 vline~;
 #X obj 189 262 *~;
@@ -51,12 +51,14 @@
 #X obj 123 250 *~ 0;
 #X obj 122 64 unpack f f;
 #X obj 178 94 / 127;
-#X obj 414 89 inlet params;
-#X obj 414 135 print PARAM_NOTFOUND;
-#X obj 414 111 tof/param route;
+#X obj 408 164 inlet params;
+#X obj 408 210 print PARAM_NOTFOUND;
+#X obj 408 186 tof/param route;
 #X obj 410 234 b;
-#X obj 411 263 tof/param gui;
-#X obj 279 -26 tof/param /decay 5 /g slider 5 1000;
+#X obj 410 257 tof/param gui;
+#X obj 264 80 tof/param /decay 5 /g slider 5 1000;
+#X obj 262 57 tof/argument 3;
+#X obj 264 29 loadbang;
 #X connect 0 0 8 0;
 #X connect 5 0 0 0;
 #X connect 6 0 0 1;
@@ -69,3 +71,5 @@
 #X connect 13 0 12 0;
 #X connect 14 0 15 0;
 #X connect 16 0 6 0;
+#X connect 17 0 16 0;
+#X connect 18 0 17 0;

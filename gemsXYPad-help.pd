@@ -1,6 +1,4 @@
 #N canvas 1 82 657 661 10;
-#X declare -lib Gem;
-#X declare -lib Gem;
 #X obj 18 -58 cnv 15 400 40 empty empty empty 20 12 0 14 -254305 -66577
 0;
 #X obj 28 -49 cnv 15 380 20 empty empty empty 20 12 0 14 -262144 -66577
@@ -25,8 +23,8 @@
 #X text 282 303 + clic droit = TAILLE;
 #X obj 174 119 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
 1;
-#X obj 439 -46 cnv 15 200 20 empty empty /bambi/ 2 12 0 8 -258401
--262144 0;
+#X obj 439 -46 cnv 15 200 20 empty empty /bambi/ 2 12 0 8 -258401 -262144
+0;
 #X obj 12 66 mtl/gemsMouse;
 #X obj 436 108 cnv 15 200 90 empty empty empty 20 12 0 14 -233017 -66577
 0;
@@ -64,10 +62,10 @@ wcolorA 135 10 0 10 -262144 -1 -1 12700 1;
 #X obj 169 141 mtl/gemsWin /dimen 640 480;
 #X obj 440 403 cnv 15 200 60 empty empty empty 20 12 0 14 -204786 -66577
 0;
-#X obj 453 421 hsl 128 15 0 160 0 0 /bambi/width /bambi/width_
-width 135 10 0 10 -262144 -1 -1 79 1;
-#X obj 453 439 hsl 128 15 0 150 0 0 /bambi/tsize /bambi/tsize_
-tsize 135 10 0 10 -262144 -1 -1 254 1;
+#X obj 453 421 hsl 128 15 0 160 0 0 /bambi/width /bambi/width_ width
+135 10 0 10 -262144 -1 -1 79 1;
+#X obj 453 439 hsl 128 15 0 150 0 0 /bambi/tsize /bambi/tsize_ tsize
+135 10 0 10 -262144 -1 -1 254 1;
 #X text 443 400 Label;
 #X obj 437 13 cnv 15 200 90 empty empty empty 20 12 0 14 -261234 -66577
 0;
@@ -75,21 +73,20 @@ tsize 135 10 0 10 -262144 -1 -1 254 1;
 positionX 135 10 0 10 -262144 -1 -1 6350 1;
 #X obj 445 41 hsl 128 15 -160 160 0 0 /bambi/positionY /bambi/positionY_
 positionY 135 10 0 10 -262144 -1 -1 6350 1;
-#X obj 445 61 hsl 128 15 0 160 0 0 /bambi/sizeX /bambi/sizeX_
-sizeX 135 10 0 10 -262144 -1 -1 397 1;
-#X obj 445 81 hsl 128 15 0 160 0 0 /bambi/sizeY /bambi/sizeY_
-sizeY 135 10 0 10 -262144 -1 -1 397 1;
+#X obj 445 61 hsl 128 15 0 160 0 0 /bambi/sizeX /bambi/sizeX_ sizeX
+135 10 0 10 -262144 -1 -1 397 1;
+#X obj 445 81 hsl 128 15 0 160 0 0 /bambi/sizeY /bambi/sizeY_ sizeY
+135 10 0 10 -262144 -1 -1 397 1;
 #X obj 438 -21 cnv 15 200 30 empty empty empty 20 12 0 14 -191407 -66577
 0;
-#X obj 444 -14 tgl 15 0 /bambi/on /bambi/on_ On 17 7 0 10 -262144
+#X obj 444 -14 tgl 15 0 /bambi/on /bambi/on_ On 17 7 0 10 -262144 -1
+-1 0 1;
+#X obj 478 -14 tgl 15 0 /bambi/drag /bambi/drag_ Drag 17 7 0 10 -262144
 -1 -1 0 1;
-#X obj 478 -14 tgl 15 0 /bambi/drag /bambi/drag_ Drag 17 7
-0 10 -262144 -1 -1 0 1;
-#X obj 582 -14 bng 15 250 50 0 /bambi/reset /bambi/reset_ Reset
-17 7 0 10 -262144 -1 -1;
+#X obj 582 -14 bng 15 250 50 0 /bambi/reset /bambi/reset_ Reset 17
+7 0 10 -262144 -1 -1;
 #X text 10 9 tags: gems;
 #X text 11 24 author : raphael isdant http://www.raphaelisdant.fr;
-#X obj 440 -70 import Gem;
 #N canvas 425 275 403 304 communication 0;
 #X obj -5 -6 cnv 15 400 300 empty empty empty 20 12 0 14 -260758 -66577
 0;
@@ -115,8 +112,8 @@ sizeY 135 10 0 10 -262144 -1 -1 397 1;
 #X text 9 253 sortie;
 #X text 9 264 entre [0-1];
 #X obj 11 216 unpack f f;
-#X floatatom 68 239 5 0 0 0 - - -;
-#X floatatom 11 238 5 0 0 0 - - -;
+#X floatatom 68 239 5 0 0 0 - - -, f 5;
+#X floatatom 11 238 5 0 0 0 - - -, f 5;
 #X obj 11 190 r bambi-value;
 #X obj 141 190 r bambi-zone;
 #X obj 281 190 r bambi-clic;
@@ -138,15 +135,15 @@ sizeY 135 10 0 10 -262144 -1 -1 397 1;
 #X text 30 330 sortie;
 #X text 30 342 entre [0-1];
 #X obj 33 299 unpack f f;
-#X floatatom 90 322 5 0 0 0 - - -;
-#X floatatom 33 321 5 0 0 0 - - -;
+#X floatatom 90 322 5 0 0 0 - - -, f 5;
+#X floatatom 33 321 5 0 0 0 - - -, f 5;
 #X text 31 -49 [gemsXYPad] : gestion d'un XYPad dans gem;
 #X text 11 -6 Description: Pad in the Gem window.;
-#X obj 31 253 gemsXYPad /id bambi -1 1 1 1;
+#X obj 31 253 mtl/gemsXYPad /id bambi -1 1 1 1;
 #X connect 15 0 36 0;
-#X connect 17 0 61 0;
-#X connect 56 0 58 0;
-#X connect 56 1 57 0;
-#X connect 61 0 56 0;
-#X connect 61 1 6 0;
-#X connect 61 2 7 0;
+#X connect 17 0 60 0;
+#X connect 55 0 57 0;
+#X connect 55 1 56 0;
+#X connect 60 0 55 0;
+#X connect 60 1 6 0;
+#X connect 60 2 7 0;

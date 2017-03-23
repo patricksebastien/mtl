@@ -1,17 +1,17 @@
-#N canvas 1 82 1364 661 10;
+#N canvas 1 82 1351 661 10;
 #X obj 26 143 mtl/out~;
 #X obj 26 87 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
 -1;
 #X text 16 40 tags: synthesize~;
 #X obj 249 141 hsl 100 15 0 1 0 0 /hihat/pitch /hihat/pitch_ pitch
-105 7 0 8 -262144 -1 -1 4950 1;
+105 7 0 8 -262144 -1 -1 7150 1;
 #X obj 246 112 cnv 15 200 20 empty empty /hihat/ 2 12 0 8 -258401 -262144
 0;
 #X obj 25 110 mtl/hihat~ /id hihat;
 #X obj 249 160 hsl 100 15 0 1 0 0 /hihat/ratioA /hihat/ratioA_ ratioA
-105 7 0 8 -262144 -1 -1 4950 1;
+105 7 0 8 -262144 -1 -1 5650 1;
 #X obj 249 179 hsl 100 15 0 1 0 0 /hihat/ratioB /hihat/ratioB_ ratioB
-105 7 0 8 -262144 -1 -1 4950 1;
+105 7 0 8 -262144 -1 -1 6150 1;
 #X obj 249 198 hsl 100 15 0 1 0 0 /hihat/noise /hihat/noise_ noise
 105 7 0 8 -262144 -1 -1 4950 1;
 #X obj 248 216 hsl 100 15 0 1 0 0 /hihat/noisepitch /hihat/noisepitch_

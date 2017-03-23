@@ -1,4 +1,4 @@
-#N canvas 1 82 1364 661 10;
+#N canvas 1 82 1351 661 10;
 #X obj 33 57 mtl/piano 1;
 #X obj 51 395 mtl/out~;
 #X obj 61 339 pack;
@@ -8,10 +8,12 @@
 #X obj 83 205 mtl/Midi-Channeliser /id Channeliser;
 #X obj 406 261 cnv 15 200 20 empty empty /Channeliser/ 2 12 0 8 -258401
 -262144 0;
-#X floatatom 101 297 5 0 0 0 - - -;
+#X floatatom 101 297 5 0 0 0 - - -, f 5;
 #X obj 410 289 hsl 100 15 1 16 0 0 /Channeliser/channel /Channeliser/channel_
-channel 105 7 0 8 -262144 -1 -1 4800 1;
-#X floatatom 192 311 5 0 0 0 - - -;
+channel 105 7 0 8 -262144 -1 -1 0 1;
+#X floatatom 192 311 5 0 0 0 - - -, f 5;
+#X obj 407 315 tgl 15 0 /Channeliser/on /Channeliser/on_ On/Off 17
+7 0 10 -262144 -1 -1 0 1;
 #X connect 0 0 3 0;
 #X connect 2 0 3 0;
 #X connect 3 0 1 0;

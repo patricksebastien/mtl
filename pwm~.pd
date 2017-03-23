@@ -12,16 +12,18 @@
 #X obj 223 307 *~ 1e+06;
 #X obj 243 177 * -1;
 #X obj 243 197 + 1;
-#X obj 243 127 clip 0 1;
-#X text 282 145 duty (on);
-#X obj 243 86 / 100;
-#X obj 243 25 tof/param /duty 1 /g slider 1 99;
+#X obj 243 146 clip 0 1;
+#X text 282 164 duty (on);
+#X obj 243 123 / 100;
+#X obj 243 100 tof/param /duty 1 /g slider 1 99;
 #X obj 652 36 inlet params;
 #X obj 652 82 print PARAM_NOTFOUND;
 #X obj 652 58 tof/param route;
 #X obj 648 181 b;
 #X obj 649 210 tof/param gui;
 #X obj 471 187 mtl/adsr~ /id \$0-adsr;
+#X obj 243 73 tof/argument 3;
+#X obj 243 50 loadbang;
 #X connect 0 0 3 0;
 #X connect 2 0 1 0;
 #X connect 3 0 5 0;
@@ -41,3 +43,5 @@
 #X connect 19 0 18 0;
 #X connect 20 0 21 0;
 #X connect 22 0 2 1;
+#X connect 23 0 16 0;
+#X connect 24 0 23 0;

@@ -50,8 +50,8 @@
 #X obj 308 200 t b b a b b;
 #X msg 226 159 2;
 #X obj 325 86 tof/argument 1 5;
-#X obj 48 111 zexy/demultiplex;
-#X obj 48 148 zexy/demultiplex 0 1 2;
+#X obj 48 111 demultiplex;
+#X obj 48 148 demultiplex 0 1 2;
 #X connect 0 0 21 0;
 #X connect 2 0 1 0;
 #X connect 2 1 3 0;

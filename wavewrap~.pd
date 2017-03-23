@@ -1,4 +1,4 @@
-#N canvas 0 25 1272 692 10;
+#N canvas 1 82 1272 661 10;
 #X obj 66 300 outlet~;
 #X obj 27 47 inlet~;
 #X obj 996 37 inlet params;
@@ -8,9 +8,11 @@
 #X obj 975 212 tof/param gui;
 #X obj 128 44 inlet~;
 #X obj 185 301 outlet~;
-#X obj 244 49 tof/param /wrap 0 /g slider 0 10;
+#X obj 229 116 tof/param /wrap 0 /g slider 0 10;
 #X obj 80 178 sigpack/wavewrap~;
 #X obj 181 226 sigpack/wavewrap~;
+#X obj 229 83 tof/argument \$3;
+#X obj 229 57 loadbang;
 #X connect 1 0 10 0;
 #X connect 2 0 4 0;
 #X connect 4 0 3 0;
@@ -20,3 +22,5 @@
 #X connect 9 0 11 1;
 #X connect 10 0 0 0;
 #X connect 11 0 8 0;
+#X connect 12 0 9 0;
+#X connect 13 0 12 0;

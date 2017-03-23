@@ -1,5 +1,4 @@
-#N canvas 172 88 875 621 10;
-#X declare -lib Gem;
+#N canvas 170 97 875 621 10;
 #X text 103 384 [pix_halftone] draws the input using the patterns of
 dots or diamonds that are found in newspaper photographs.;
 #X text 105 415 You can set the type of pattern \, the size and orientation
@@ -13,36 +12,36 @@ of the patterns and how blurry they are on-screen.;
 #X text 163 -69 videofx-halftone \; -------------------------- \; inlet
 1 : gemlist (with picture or movie) \; inlet 2 : command \; outlet
 : gemlist modified;
-#X obj 651 33 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+#X obj 651 33 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 1
 1;
 #X obj 646 55 mtl/gemsWin /dimen 640 480;
 #X obj 88 107 gemhead;
 #X obj 228 116 bng 15 250 50 0 empty empty empty 0 -6 0 8 -262144 -1
 -1;
-#X floatatom 170 75 5 0 0 0 - - -;
+#X floatatom 170 75 5 0 0 0 - - -, f 5;
 #X obj 89 138 mtl/gemsImages;
 #X text 205 72 Select a previously loaded image;
 #X text 253 112 Open a panel to select an image;
 #X obj 578 125 cnv 15 200 20 empty empty /videofx-halftone/ 2 12 0
 8 -258401 -262144 0;
-#X obj 120 241 mtl/videofx-halftone /id videofx-halftone;
 #X obj 576 216 hradio 15 1 0 5 /videofx-halftone/style /videofx-halftone/style_
-style 80 10 0 10 -262144 -1 -1 0;
+style 80 10 0 10 -262144 -1 -1 1;
 #X obj 579 155 nbx 5 14 0 100 0 0 /videofx-halftone/size /videofx-halftone/size_
-size 65 10 0 10 -262144 -1 -1 3 256;
+size 65 10 0 10 -262144 -1 -1 7 256;
 #X obj 579 176 nbx 5 14 -360 360 0 0 /videofx-halftone/angle /videofx-halftone/angle_
-angle 65 10 0 10 -262144 -1 -1 0 256;
+angle 65 10 0 10 -262144 -1 -1 1 256;
 #X obj 578 196 nbx 5 14 0 100 0 0 /videofx-halftone/smooth /videofx-halftone/smooth_
-smooth 65 10 0 10 -262144 -1 -1 0 256;
+smooth 65 10 0 10 -262144 -1 -1 1 256;
 #X obj 125 298 pix_texture;
 #X text 567 314 Comment: Based on Jerome Abel's work.;
 #X text 566 295 Description: VideoFx-Halftone;
-#X text 568 329 tags: gems;
+#X text 568 329 tags: gems \, video;
+#X obj 120 241 mtl/videofx-halftone /id videofx-halftone 7 1 1 1;
 #X connect 9 0 10 0;
 #X connect 11 0 14 0;
 #X connect 12 0 14 1;
 #X connect 13 0 14 1;
-#X connect 14 0 18 0;
-#X connect 18 0 23 0;
-#X connect 23 0 7 0;
+#X connect 14 0 26 0;
+#X connect 22 0 7 0;
+#X connect 26 0 22 0;
 #X coords 0 0 1 1 150 50 0;

@@ -90,7 +90,7 @@ image must be in front and rendered after other images.;
 #X text 191 218 Defaults to 6 7 for best results.;
 #X text 223 327 Arguments and 2-3 inlets : source mode number \, destination
 mode number;
-#X obj 791 5 import Gem;
+
 #X obj 103 334 mtl/gemsAlphaMode;
 #X obj 307 63 gemhead;
 #X text 27 118 2) Load blending image;

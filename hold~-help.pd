@@ -1,12 +1,13 @@
-#N canvas 0 0 508 403 10;
-#X obj 222 117 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
-1;
+#N canvas 1 82 1351 661 10;
 #X text 104 12 Description: Holds a signal to a fixed value.;
 #X obj 142 93 osc~ 0.5;
 #X text 106 30 tags: control~;
-#X obj 143 154 mtl/hold~;
 #X obj 145 254 cyclone/Scope~ 130 130 256 3 128 -1 1 0 0 0 0 102 255
 51 135 135 135 0;
-#X connect 0 0 4 1;
-#X connect 2 0 4 0;
-#X connect 4 0 5 0;
+#X obj 608 50 cnv 15 200 20 empty empty /hold~/ 2 12 0 8 -258401 -262144
+0;
+#X obj 609 82 tgl 15 0 /hold/hold /hold/hold_ hold 17 7 0 10 -262144
+-1 -1 1 1;
+#X obj 143 154 mtl/hold~ /id hold 1;
+#X connect 1 0 6 0;
+#X connect 6 0 3 0;

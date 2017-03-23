@@ -1,13 +1,12 @@
-#N canvas 1 82 1351 661 10;
-#X declare -lib Gem;
-#X declare -lib Gem;
-#X obj 46 100 gemhead;
-#X obj 220 95 tgl 15 0 empty empty empty 0 -6 0 10 -262144 -1 -1 0
+#N canvas 812 178 553 565 10;
+#X obj 19 78 gemhead;
+#X obj 193 73 tgl 15 0 empty empty empty 0 -6 0 10 -262144 -1 -1 1
 1;
-#X obj 46 127 alpha;
-#X obj 46 305 rotateXYZ;
-#X floatatom 88 267 5 0 0 0 - - -;
-#X text 743 198 Args:;
+#X obj 19 105 alpha;
+#X floatatom 138 348 5 0 0 1 num_of_z_repetitions - -, f 5;
+#X obj 19 283 rotateXYZ;
+#X floatatom 61 245 5 0 0 0 - - -, f 5;
+#X text 146 397 Args:;
 #N canvas 152 523 450 300 autorotate 0;
 #X obj 83 191 outlet;
 #X obj 80 41 inlet;
@@ -18,55 +17,37 @@
 #X connect 2 0 3 0;
 #X connect 3 0 4 0;
 #X connect 4 0 0 0;
-#X restore 97 240 pd autorotate;
-#X obj 98 195 loadbang;
-#X text 780 198 x repetitions (minimum of 1);
-#X text 781 214 y repetitions (minimum of 1);
-#X obj 43 548 cube 0.5;
-#X obj 220 115 mtl/gemsWin /dimen 320 240 /lighting 1;
-#X text 47 68 tags: gems;
-#X text 45 50 Description: Builds a cube out of duplicated geos.;
-#X obj 256 153 gemhead;
-#X text 783 229 z repetitions (minimum of 1);
-#X text 171 499 Outlet 2: relative x of geos being rendered;
-#X text 170 514 Outlet 3: relative y of geos being rendered;
-#X text 173 532 Outlet 4: relative z of geos being rendered;
-#X obj 759 43 import Gem;
-#X obj 257 186 world_light;
-#X obj 43 499 colorRGB 1 1 1 1;
-#X obj 46 159 mtl/gemsStretch;
-#X obj 758 80 cnv 15 200 20 empty empty /gemsCuber/ 2 12 0 8 -258401
--262144 0;
-#X obj 755 112 cnv 15 200 70 empty empty empty 20 12 0 14 -261234 -66577
-0;
-#X obj 762 119 hsl 128 15 0 160 0 0 /banane/nombreX /banane/nombreX_
-nombreX 135 10 0 10 -262144 -1 -1 79 1;
-#X obj 763 140 hsl 128 15 0 160 0 0 /banane/nombreY /banane/nombreY_
-nombreY 135 10 0 10 -262144 -1 -1 79 1;
-#X obj 44 6 cnv 15 400 40 empty empty empty 20 12 0 14 -254305 -66577
-0;
-#X obj 54 15 cnv 15 380 20 empty empty empty 20 12 0 14 -262144 -66577
-0;
-#X obj 382 16 tgl 15 1 empty empty empty 17 7 0 10 -262144 -1 -1 0
-1;
-#X obj 405 16 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
-1;
-#X text 57 15 [gemsCuber];
-#X obj 763 161 hsl 128 15 0 160 0 0 /banane/nombreZ /banane/nombreZ_
-nombreZ 135 10 0 10 -262144 -1 -1 79 1;
-#X obj 46 437 mtl/gemsCuber /id banane 12 12 12;
+#X restore 70 218 pd autorotate;
+#X obj 71 173 loadbang;
+#X floatatom 92 329 5 0 0 1 num_of_y_repetitions - -, f 5;
+#X floatatom 55 309 5 0 0 1 num_of_x_repetitions - -, f 5;
+#X text 161 412 x repetitions (minimum of 1);
+#X text 162 428 y repetitions (minimum of 1);
+#X obj 16 526 cube 0.5;
+#X obj 193 93 mtl/gemsWin /dimen 320 240 /lighting 1;
+#X text 15 30 tags: gems;
+#X text 14 14 Description: Builds a cube out of duplicated geos.;
+#X obj 356 145 gemhead;
+#X text 164 443 z repetitions (minimum of 1);
+#X text 144 477 Outlet 2: relative x of geos being rendered;
+#X text 143 492 Outlet 3: relative y of geos being rendered;
+#X text 146 510 Outlet 4: relative z of geos being rendered;
+#X obj 19 407 mtl/gemsCuber 2 2 2;
+#X obj 356 251 world_light;
+#X obj 16 477 colorRGB 1 1 1 1;
+#X obj 19 137 mtl/gemsStretch;
 #X connect 0 0 2 0;
-#X connect 1 0 11 0;
-#X connect 2 0 22 0;
-#X connect 3 0 33 0;
-#X connect 4 0 3 2;
-#X connect 4 0 3 1;
-#X connect 6 0 4 0;
-#X connect 7 0 6 0;
-#X connect 14 0 20 0;
-#X connect 21 0 10 0;
-#X connect 22 0 3 0;
-#X connect 33 0 21 0;
-#X connect 33 1 21 1;
-#X connect 33 2 21 2;
-#X connect 33 3 21 3;
+#X connect 1 0 14 0;
+#X connect 2 0 25 0;
+#X connect 3 0 22 3;
+#X connect 4 0 22 0;
+#X connect 5 0 4 2;
+#X connect 5 0 4 1;
+#X connect 7 0 5 0;
+#X connect 8 0 7 0;
+#X connect 9 0 22 2;
+#X connect 10 0 22 1;
+#X connect 17 0 23 0;
+#X connect 22 0 24 0;
+#X connect 24 0 13 0;
+#X connect 25 0 4 0;

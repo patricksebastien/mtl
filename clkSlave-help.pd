@@ -1,24 +1,24 @@
-#N canvas 1477 59 767 631 10;
+#N canvas 122 87 767 631 10;
 #X msg 59 187 play;
 #X msg 103 186 stop;
-#X floatatom 108 379 5 0 0 1 bpm - -;
-#X floatatom 62 451 5 0 0 1 step - -;
+#X floatatom 108 379 5 0 0 1 bpm - -, f 5;
+#X floatatom 62 451 5 0 0 1 step - -, f 5;
 #X obj 85 414 tgl 15 0 empty empty play_state 17 7 0 10 -262144 -1
--1 0 1;
+-1 1 1;
 #X obj 131 351 bng 15 250 50 0 empty empty loop 17 7 0 10 -262144 -1
 -1;
-#X floatatom 141 253 5 0 0 0 - - -;
+#X floatatom 141 253 5 0 0 0 - - -, f 5;
 #X obj 62 314 mtl/clkSlave;
 #X obj 452 59 mtl/clkMaster 120;
 #X text 143 173 Open(click) to read about quantization:;
 #X obj 146 195 mtl/clk-quantization-help;
-#X floatatom 452 83 7 0 0 1 - - -;
+#X floatatom 452 83 7 0 0 1 - - -, f 7;
 #X obj 552 87 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
 -1;
 #X msg 145 220 quantization \$1;
-#X floatatom 452 33 5 0 0 0 - - -;
+#X floatatom 452 33 5 0 0 0 - - -, f 5;
 #X text 56 41 Description: Follows the timing of a [clkMaster];
-#X floatatom 147 288 5 0 0 0 - - -;
+#X floatatom 147 288 5 0 0 0 - - -, f 5;
 #X text 58 63 tags: timing sequencing;
 #X text 248 323 Argumments:;
 #X text 176 254 number of steps per beat. Possible values: 1 \, 2 \,

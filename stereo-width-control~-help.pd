@@ -1,22 +1,18 @@
 #N canvas 1 82 1272 661 10;
 #X obj -226 190 mtl/out~;
-#X text 599 178 tags: fx~;
-#X text 80 155 <-Click on the propeties menu to display params;
-#X obj 201 41 cnv 15 200 40 empty empty empty 20 12 0 14 -232576 -66577
-0;
-#X text 261 42 PARAM ENABLED;
-#X obj 212 222 cnv 15 200 20 empty empty /stereo-width-control/ 2 12
+#X text -144 62 tags: fx~;
+#X text 142 159 <-Click on the propeties menu to display params;
+#X obj 145 87 cnv 15 200 20 empty empty /stereo-width-control/ 2 12
 0 8 -258401 -262144 0;
-#X obj 213 245 hsl 100 15 0 2 0 0 /stereo-width-control/width /stereo-width-control/width_
-width 105 7 0 8 -262144 -1 -1 0 1;
-#X text 594 138 Description:;
-#X text 591 152 taken from music-dsp;
-#X text 598 165 by Michael Gruhn;
-#X text 668 139 Stereo-Width-Control;
-#X obj 238 61 tof/open_help tof/param;
-#X obj -228 114 osc~ 250;
-#X obj -88 108 osc~ 240;
-#X text 606 215 This work is hereby placed in the public domain for
+#X obj 146 110 hsl 100 15 0 2 0 0 /stereo-width-control/width /stereo-width-control/width_
+width 105 7 0 8 -262144 -1 -1 4950 1;
+#X text -149 23 Description:;
+#X text -146 37 taken from music-dsp;
+#X text -145 50 by Michael Gruhn;
+#X text -57 23 Stereo-Width-Control;
+#X obj -229 118 osc~ 250;
+#X obj -50 118 osc~ 240;
+#X text 65 320 This work is hereby placed in the public domain for
 all purposes \, including use in commercial applications. 'width' is
 the stretch factor of the stereo field: width < 1: decrease in stereo
 width width = 1: no change width > 1: increase in stereo width width
@@ -24,8 +20,8 @@ width width = 1: no change width > 1: increase in stereo width width
 \; // then do this per sample m = (in_left + in_right)*0.5 \; s = (in_right
 - in_left )*coef_S \; out_left = m - s \; out_right = m + s \;;
 #X obj -230 158 mtl/stereo-width-control~ /id stereo-width-control
-;
-#X connect 12 0 15 0;
-#X connect 13 0 15 1;
-#X connect 15 0 0 0;
-#X connect 15 1 0 1;
+1;
+#X connect 9 0 12 0;
+#X connect 10 0 12 1;
+#X connect 12 0 0 0;
+#X connect 12 1 0 1;

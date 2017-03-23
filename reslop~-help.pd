@@ -2,21 +2,17 @@
 #X obj 1 -21 cnv 15 690 30 empty empty reslop~ 2 12 1 14 -233017 -66577
 0;
 #X obj 51 374 mtl/out~;
-#X obj 513 139 cnv 15 200 40 empty empty empty 20 12 0 14 -232576 -66577
-0;
-#X text 573 140 PARAM ENABLED;
 #X obj 269 398 cnv 15 200 20 empty empty /reslop/ 2 12 0 8 -258401
 -262144 0;
-#X text 218 326 <-Click on the propeties menu to display params;
+#X text 338 329 <-Click on the propeties menu to display params;
 #X text 509 221 tags: fx~;
-#X obj 512 162 tof/open_help tof/param;
 #X obj 270 428 hsl 100 15 0 1 0 0 /reslop/wet /reslop/wet_ wet 105
-7 0 8 -262144 -1 -1 0 1;
+7 0 8 -262144 -1 -1 9900 1;
 #X text 553 275 .;
 #X obj 271 448 hsl 100 15 0 100 0 0 /reslop/frequency /reslop/frequency_
-frequency 105 7 0 8 -262144 -1 -1 0 1;
+frequency 105 7 0 8 -262144 -1 -1 4950 1;
 #X obj 271 468 hsl 100 15 0 100 0 0 /reslop/q /reslop/q_ q 105 7 0
-8 -262144 -1 -1 0 1;
+8 -262144 -1 -1 4950 1;
 #X obj 75 169 vline~;
 #X obj 93 231 noise~;
 #X obj 75 253 *~;
@@ -25,10 +21,10 @@ frequency 105 7 0 8 -262144 -1 -1 0 1;
 #X msg 75 134 0.8 10 \, 0 20 10;
 #X obj 314 74 vsl 15 100 0 100 0 0 empty empty q_(peakiness) 0 -9 1
 10 -262144 -1 -1 0 1;
-#X floatatom 314 211 5 0 0 0 - - -;
+#X floatatom 314 211 5 0 0 0 - - -, f 5;
 #X obj 216 47 vsl 15 128 0 100 0 0 empty empty lowpass_frequency 0
 -9 1 10 -262144 -1 -1 0 1;
-#X floatatom 216 214 8 0 0 0 - - -;
+#X floatatom 216 214 8 0 0 0 - - -, f 8;
 #X msg 314 237 /q \$1;
 #N canvas 0 90 827 710 REFERENCE 0;
 #X text 114 121 Name: e_reslop;
@@ -48,20 +44,20 @@ to any other instances of the object.;
 #X coords 0 -1 1 1 450 450 1 100 100;
 #X restore 769 114 pd REFERENCE;
 #X msg 216 239 /frequency \$1;
-#X obj 50 327 mtl/reslop~ 2000 /id reslop;
 #X text 509 243 Author: Rjdj;
 #X text 509 201 Description: reslop;
-#X connect 12 0 14 0;
-#X connect 13 0 14 1;
-#X connect 14 0 24 0;
-#X connect 14 0 24 1;
-#X connect 15 0 16 0;
-#X connect 16 0 12 0;
-#X connect 17 0 18 0;
-#X connect 18 0 21 0;
-#X connect 19 0 20 0;
-#X connect 20 0 23 0;
-#X connect 21 0 24 2;
-#X connect 23 0 24 2;
-#X connect 24 0 1 0;
-#X connect 24 1 1 1;
+#X obj 50 327 mtl/reslop~ /id reslop 1 50 50;
+#X connect 9 0 11 0;
+#X connect 10 0 11 1;
+#X connect 11 0 23 0;
+#X connect 11 0 23 1;
+#X connect 12 0 13 0;
+#X connect 13 0 9 0;
+#X connect 14 0 15 0;
+#X connect 15 0 18 0;
+#X connect 16 0 17 0;
+#X connect 17 0 20 0;
+#X connect 18 0 23 2;
+#X connect 20 0 23 2;
+#X connect 23 0 1 0;
+#X connect 23 1 1 1;

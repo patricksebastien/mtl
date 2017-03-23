@@ -1,4 +1,4 @@
-#N canvas 112 194 902 377 10;
+#N canvas 110 199 902 377 10;
 #X obj 564 12 cnv 15 320 90 empty empty empty 20 12 0 14 -261682 -66577
 0;
 #X text 567 36 le 16 septembre 2009;
@@ -11,10 +11,7 @@
 #X obj 31 121 mtl/out~;
 #X text 26 -2 Description: distortion nonmonotone;
 #X text 28 14 tags: fx~;
-#X obj 321 13 cnv 15 200 40 empty empty empty 20 12 0 14 -232576 -66577
-0;
-#X text 381 14 PARAM ENABLED;
-#X text 232 95 <-Click on the propeties menu to display params;
+#X text 257 99 <-Click on the propeties menu to display params;
 #X obj 31 96 mtl/distoNonmonotone~ /id matju;
 #X obj 331 139 cnv 15 200 20 empty empty /matju/ 2 12 0 8 -258401 -262144
 0;
@@ -57,9 +54,8 @@ feedback 105 7 0 8 -262144 -1 -1 0 1;
 #X connect 5 0 4 0;
 #X connect 6 0 3 0;
 #X restore 32 66 pd loop_sample;
-#X obj 320 36 tof/open_help tof/param;
-#X connect 13 0 7 0;
-#X connect 13 1 7 1;
-#X connect 26 0 27 0;
-#X connect 27 0 13 0;
-#X connect 27 1 13 1;
+#X connect 11 0 7 0;
+#X connect 11 1 7 1;
+#X connect 24 0 25 0;
+#X connect 25 0 11 0;
+#X connect 25 1 11 1;

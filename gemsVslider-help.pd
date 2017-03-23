@@ -1,6 +1,4 @@
-#N canvas 1 82 657 661 10;
-#X declare -lib Gem;
-#X declare -lib Gem;
+#N canvas 1 82 735 549 10;
 #X obj 18 -58 cnv 15 400 40 empty empty empty 20 12 0 14 -254305 -66577
 0;
 #X obj 28 -49 cnv 15 380 20 empty empty empty 20 12 0 14 -262144 -66577
@@ -11,7 +9,7 @@
 1;
 #X obj 17 224 cnv 15 400 100 empty empty empty 20 12 0 14 -254305 -66577
 0;
-#X floatatom 31 273 5 0 0 0 - - -;
+#X floatatom 31 273 5 0 0 0 - - -, f 5;
 #X text 47 223 arguments:;
 #X obj 116 277 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
 1;
@@ -26,8 +24,8 @@
 #X text 47 235 nom \, posX \, posY \, tailleX \, tailleY;
 #X text 264 292 TOUCHE "<" = DEPLACEMENT;
 #X text 282 303 + clic droit = TAILLE;
-#X text 504 331 <= gestion de la fenêtre gem;
-#X obj 174 119 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+#X text 120 105 <= gestion de la fenêtre gem;
+#X obj 71 105 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
 1;
 #X obj 439 -46 cnv 15 200 20 empty empty /banane/ 2 12 0 8 -258401
 -262144 0;
@@ -65,13 +63,13 @@ wcolorV 135 10 0 10 -262144 -1 -1 12700 1;
 wcolorB 135 10 0 10 -262144 -1 -1 12700 1;
 #X obj 445 373 hsl 128 15 0 100 0 0 /banane/wcolorA /banane/wcolorA_
 wcolorA 135 10 0 10 -262144 -1 -1 12700 1;
-#X obj 169 141 mtl/gemsWin /dimen 640 480;
+#X obj 66 127 mtl/gemsWin /dimen 640 480;
 #X obj 437 397 cnv 15 200 60 empty empty empty 20 12 0 14 -204786 -66577
 0;
-#X obj 451 415 hsl 128 15 0 160 0 0 /banane/width /banane/width_
-width 135 10 0 10 -262144 -1 -1 79 1;
-#X obj 451 433 hsl 128 15 0 150 0 0 /banane/tsize /banane/tsize_
-tsize 135 10 0 10 -262144 -1 -1 254 1;
+#X obj 451 415 hsl 128 15 0 160 0 0 /banane/width /banane/width_ width
+135 10 0 10 -262144 -1 -1 79 1;
+#X obj 451 433 hsl 128 15 0 150 0 0 /banane/tsize /banane/tsize_ tsize
+135 10 0 10 -262144 -1 -1 254 1;
 #X text 441 394 Label;
 #X obj 437 13 cnv 15 200 90 empty empty empty 20 12 0 14 -261234 -66577
 0;
@@ -79,23 +77,22 @@ tsize 135 10 0 10 -262144 -1 -1 254 1;
 positionX 135 10 0 10 -262144 -1 -1 6350 1;
 #X obj 445 41 hsl 128 15 -160 160 0 0 /banane/positionY /banane/positionY_
 positionY 135 10 0 10 -262144 -1 -1 6350 1;
-#X obj 445 61 hsl 128 15 0 160 0 0 /banane/sizeX /banane/sizeX_
-sizeX 135 10 0 10 -262144 -1 -1 397 1;
-#X obj 445 81 hsl 128 15 0 160 0 0 /banane/sizeY /banane/sizeY_
-sizeY 135 10 0 10 -262144 -1 -1 397 1;
+#X obj 445 61 hsl 128 15 0 160 0 0 /banane/sizeX /banane/sizeX_ sizeX
+135 10 0 10 -262144 -1 -1 397 1;
+#X obj 445 81 hsl 128 15 0 160 0 0 /banane/sizeY /banane/sizeY_ sizeY
+135 10 0 10 -262144 -1 -1 397 1;
 #X obj 438 -21 cnv 15 200 30 empty empty empty 20 12 0 14 -191407 -66577
 0;
-#X obj 444 -14 tgl 15 0 /banane/on /banane/on_ On 17 7 0
-10 -262144 -1 -1 0 1;
-#X obj 478 -14 tgl 15 0 /banane/drag /banane/drag_ Drag 17
-7 0 10 -262144 -1 -1 0 1;
-#X obj 582 -14 bng 15 250 50 0 /banane/reset /banane/reset_
-Reset 17 7 0 10 -262144 -1 -1;
+#X obj 444 -14 tgl 15 0 /banane/on /banane/on_ On 17 7 0 10 -262144
+-1 -1 0 1;
+#X obj 478 -14 tgl 15 0 /banane/drag /banane/drag_ Drag 17 7 0 10 -262144
+-1 -1 0 1;
+#X obj 582 -14 bng 15 250 50 0 /banane/reset /banane/reset_ Reset 17
+7 0 10 -262144 -1 -1;
 #X text 11 -6 Description: Toggle in the Gem window.;
 #X text 10 9 tags: gems;
 #X text 11 24 author : raphael isdant http://www.raphaelisdant.fr;
-#X obj 440 -70 import Gem;
-#N canvas 345 316 403 304 communication 0;
+#N canvas 341 326 403 304 communication 0;
 #X obj -5 -6 cnv 15 400 300 empty empty empty 20 12 0 14 -260758 -66577
 0;
 #X obj 3 2 cnv 15 380 20 empty empty empty 20 12 0 14 -262144 -66577
@@ -110,7 +107,7 @@ Reset 17 7 0 10 -262144 -1 -1;
 #X text 141 225 souris dans la zone;
 #X obj 14 223 hsl 50 15 0 1 0 0 empty empty empty -2 -8 0 10 -262144
 -1 -1 0 1;
-#X floatatom 11 250 5 0 0 0 - - -;
+#X floatatom 11 250 5 0 0 0 - - -, f 5;
 #X text 5 40 ____________________________________________________________
 ;
 #X text 7 167 ____________________________________________________________
@@ -142,9 +139,12 @@ Reset 17 7 0 10 -262144 -1 -1;
 #X connect 20 0 21 0;
 #X restore 299 249 pd communication;
 #X text 31 -49 [gemsVslider] : gestion d'un slider dans gem;
-#X obj 31 253 gemsVslider /id banane -1 1 1 1;
+#X obj 102 182 hsl 128 15 0 1 0 0 empty empty empty -2 -8 0 10 -262144
+-1 -1 0 1;
+#X obj 31 253 mtl/gemsVslider /id banane -1 1 1 1;
 #X connect 19 0 40 0;
 #X connect 21 0 60 0;
+#X connect 59 0 60 0;
 #X connect 60 0 5 0;
 #X connect 60 1 7 0;
 #X connect 60 2 8 0;

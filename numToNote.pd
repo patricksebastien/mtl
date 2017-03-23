@@ -1,4 +1,4 @@
-#N canvas 1 84 1358 659 12;
+#N canvas 1 84 1351 659 12;
 #X obj 137 66 inlet;
 #X obj 137 122 % 12;
 #X obj 137 175 sel 0 1 2 3 4 5 6 7 8 9 10 11;
@@ -20,7 +20,7 @@
 #X obj 155 555 outlet;
 #X obj 222 381 makefilename %d;
 #X obj 179 466 pack s s;
-#X obj 165 503 tosymbol;
+#X obj 165 503 cyclone/tosymbol;
 #X connect 0 0 1 0;
 #X connect 0 0 3 0;
 #X connect 1 0 2 0;

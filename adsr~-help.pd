@@ -27,14 +27,14 @@ switching between sources or moving the playback head.;
 #X obj 643 88 cnv 15 200 20 empty empty /adsr/ 2 12 0 8 -258401 -262144
 0;
 #X obj 645 117 nbx 5 14 -1e+37 1e+37 0 0 /adsr/attack-time /adsr/attack-time_
-attack-time 65 7 0 10 -262144 -1 -1 211 256;
+attack-time 65 7 0 10 -262144 -1 -1 1 256;
 #X obj 200 417 mtl/adsr~ /id adsr 70 50 0.5 100;
 #X obj 645 136 nbx 5 14 -1e+37 1e+37 0 0 /adsr/decay-time /adsr/decay-time_
-decay-time 65 7 0 10 -262144 -1 -1 329 256;
+decay-time 65 7 0 10 -262144 -1 -1 226 256;
 #X obj 648 155 hsl 128 15 0 1 0 0 /adsr/sustain-level /adsr/sustain-level_
-sustain-level 135 5 0 10 -262144 -1 -1 8900 1;
+sustain-level 135 5 0 10 -262144 -1 -1 0 1;
 #X obj 646 175 nbx 5 14 -1e+37 1e+37 0 0 /adsr/release-time /adsr/release-time_
-release-time 65 7 0 10 -262144 -1 -1 193 256;
+release-time 65 7 0 10 -262144 -1 -1 468 256;
 #X obj 229 506 r \$0draw;
 #X obj 156 244 bng 15 250 50 0 empty empty empty 17 7 0 10 -258699
 -1 -1;

@@ -1,10 +1,10 @@
-#N canvas 0 0 1272 714 10;
+#N canvas 1 82 1272 661 10;
 #X obj 55 403 outlet~;
 #X obj 48 57 inlet~;
 #X obj 108 66 inlet~;
 #X obj 115 403 outlet~;
 #X obj 1073 79 inlet params;
-#X obj 182 377 tof/param /wet 0 /g slider 0 1;
+#X obj 219 382 tof/param /wet 0 /g slider 0 1;
 #X obj 1073 125 print PARAM_NOTFOUND;
 #X obj 55 378 tof/crossfade~ 2;
 #X msg 219 407 \$1 5;
@@ -12,7 +12,7 @@
 #X obj 1073 101 tof/param route;
 #X obj 1069 224 b;
 #X obj 1070 253 tof/param gui;
-#N canvas 0 0 1272 714 chorus 0;
+#N canvas 0 50 1272 714 chorus 0;
 #X obj 189 269 cos~;
 #X obj 189 292 +~ 1;
 #X obj 276 268 cos~;
@@ -124,8 +124,8 @@
 #X connect 44 0 45 1;
 #X connect 45 0 4 0;
 #X restore 137 221 pd chorus;
-#X obj 219 49 tof/param /frequency 0 /g slider 0 10;
-#N canvas 0 0 1272 714 chorus 0;
+#X obj 229 152 tof/param /frequency 0 /g slider 0 10;
+#N canvas 0 50 1272 714 chorus 0;
 #X obj 189 269 cos~;
 #X obj 189 292 +~ 1;
 #X obj 276 268 cos~;
@@ -237,7 +237,12 @@
 #X connect 44 0 39 0;
 #X connect 45 0 39 1;
 #X restore 232 225 pd chorus;
-#X obj 274 107 tof/param /modulation 0 /g slider 0 3;
+#X obj 257 179 tof/param /modulation 0 /g slider 0 3;
+#X obj 261 131 tof/argument 5;
+#X obj 233 108 tof/argument 4;
+#X obj 233 84 loadbang;
+#X obj 219 354 tof/argument 3;
+#X obj 219 330 loadbang;
 #X connect 1 0 7 0;
 #X connect 1 0 13 0;
 #X connect 2 0 7 1;
@@ -256,3 +261,9 @@
 #X connect 15 0 7 3;
 #X connect 16 0 13 2;
 #X connect 16 0 15 2;
+#X connect 17 0 16 0;
+#X connect 18 0 14 0;
+#X connect 19 0 17 0;
+#X connect 19 0 18 0;
+#X connect 20 0 5 0;
+#X connect 21 0 20 0;

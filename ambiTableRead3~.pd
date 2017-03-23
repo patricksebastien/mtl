@@ -1,4 +1,4 @@
-#N canvas 1 57 964 548 10;
+#N canvas 1 82 964 548 10;
 #X obj 23 67 inlet~;
 #X obj 108 290 tabread4~ \$1-x;
 #X obj 18 290 tabread4~ \$1-w;
@@ -17,9 +17,9 @@
 #X obj 113 494 outlet~ y;
 #X obj 205 494 outlet~ y;
 #X obj 645 115 tof/arguments comma;
-#X obj 27 238 zexy/makesymbol %s-w;
-#X obj 142 211 zexy/makesymbol %s-x;
-#X obj 236 239 zexy/makesymbol %s-y;
+#X obj 27 238 makesymbol %s-w;
+#X obj 142 211 makesymbol %s-x;
+#X obj 236 239 makesymbol %s-y;
 #X connect 0 0 1 0;
 #X connect 0 0 2 0;
 #X connect 0 0 3 0;

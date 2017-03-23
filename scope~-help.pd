@@ -1,0 +1,55 @@
+#N canvas 1 82 1351 661 10;
+#X text 116 65 Low Frequency Oscillator;
+#X text 176 84 Rate (Hz);
+#X obj 120 87 nbx 5 14 -1e+37 1e+37 0 0 empty \$0-rate empty 0 -8 0
+10 -262144 -1 -1 0 256;
+#X obj 60 274 cos~;
+#X obj 105 228 +~;
+#X obj 105 274 cos~;
+#X obj 60 320 +~, f 8;
+#X obj 60 349 *~ 0.5;
+#X obj 60 46 phasor~ 110;
+#X text 7 275 cos(ωt);
+#X text 137 275 cos(ωt+α);
+#X obj 120 106 phasor~ 0.1;
+#X obj 120 128 *~ 2;
+#X obj 120 150 -~ 1;
+#X obj 120 172 abs~;
+#X text 39 228 ωt;
+#X text 130 227 ωt+α;
+#X text 126 194 α;
+#X text 117 320 cos(ωt) + cos(ωt+α);
+#X text 406 39 The oscilloscope offers a visual representation of the
+amplitude of a signal over time. The horizontal axis represents time
+in samples. The vertical axis represents the amplitude of the signal.
+The optimal tick time to visualize a specific frequency is around a
+multiple of the period \, 1000 divided by the frequency., f 77;
+#X obj 55 648 mtl/out~;
+#X text 408 19 pad.scope~;
+#X text 407 116 author : Pierre Guillot - https://github.com/pierreguillot
+;
+#X text 406 131 tags: info~;
+#X obj 408 150 cnv 15 200 20 empty empty /scope/ 2 12 0 8 -258401 -262144
+0;
+#X obj 468 209 nbx 5 14 2 1e+37 0 0 /scope/buffer /scope/buffer_ Buffer_Size
+0 -8 0 10 -262144 -1 -1 512 256;
+#X obj 408 176 tgl 15 0 /scope/state /scope/state_ State 17 7 0 10
+-262144 -1 -1 1 1;
+#X obj 406 209 nbx 5 14 2 1e+37 0 0 /scope/tick /scope/tick_ Tick_Time
+0 -8 0 10 -262144 -1 -1 64 256;
+#X obj 539 208 nbx 5 14 0.1 1e+37 0 0 /scope/range /scope/range_ Amplitude_Range
+0 -8 0 10 -262144 -1 -1 1 256;
+#X obj 85 376 mtl/scope~ /id scope;
+#X connect 2 0 11 0;
+#X connect 3 0 6 0;
+#X connect 4 0 5 0;
+#X connect 5 0 6 1;
+#X connect 6 0 7 0;
+#X connect 7 0 20 0;
+#X connect 7 0 29 0;
+#X connect 8 0 3 0;
+#X connect 8 0 4 0;
+#X connect 11 0 12 0;
+#X connect 12 0 13 0;
+#X connect 13 0 14 0;
+#X connect 14 0 4 1;

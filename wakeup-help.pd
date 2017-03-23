@@ -1,7 +1,7 @@
-#N canvas 1 82 1364 661 10;
+#N canvas 1 82 1351 661 10;
 #X obj 227 270 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
 1;
-#X symbolatom 314 270 10 0 0 0 - - -;
+#X symbolatom 314 270 10 0 0 0 - - -, f 10;
 #X text 384 270 <- current time;
 #X text 467 19 You need [zexy/time];
 #X msg 229 160 1330;

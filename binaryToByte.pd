@@ -1,4 +1,4 @@
-#N canvas 0 0 844 526 10;
+#N canvas 1 82 844 526 10;
 #X obj 586 97 & 1;
 #X obj 188 60 inlet;
 #X obj 257 59 inlet;
@@ -31,7 +31,7 @@
 #X obj 249 440 f;
 #X obj 28 47 route bang list;
 #X obj 192 10 unpack f f f f f f f f;
-#X obj 257 353 zexy/drip;
+#X obj 257 353 drip;
 #X connect 0 0 24 7;
 #X connect 1 0 14 0;
 #X connect 2 0 13 0;

@@ -1,4 +1,4 @@
-#N canvas 1200 39 637 654 10;
+#N canvas 728 82 637 654 10;
 #X obj 30 19 inlet;
 #X obj 104 621 outlet;
 #X obj 355 33 inlet;
@@ -10,8 +10,8 @@
 #X obj 345 122 int;
 #X obj 338 405 zexy/length;
 #X obj 302 203 != 0;
-#X obj 111 237 zexy/demultiplex 0 1;
-#X obj 179 414 zexy/demultiplex 0 1;
+#X obj 111 237 demultiplex 0 1;
+#X obj 179 414 demultiplex 0 1;
 #X obj 364 250 < 0;
 #X obj 367 465 +;
 #X obj 212 315 moocow/any2string 0 -1;

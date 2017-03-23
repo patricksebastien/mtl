@@ -1,21 +1,23 @@
-#N canvas 1 82 1351 661 10;
-#X declare -lib Gem;
-#X declare -lib Gem;
-#X obj 59 164 gemhead;
-#X obj 59 106 tgl 15 0 empty empty empty 0 -6 0 8 -262144 -1 -1 0 1
+#N canvas 192 87 482 540 10;
+#X obj 26 115 gemhead;
+#X obj 26 57 tgl 15 0 empty empty empty 0 -6 0 8 -262144 -1 -1 1 1
 ;
-#X obj 59 513 pix_texture;
-#X obj 83 192 bng 15 250 50 0 empty empty empty 0 -6 0 8 -262144 -1
+#X obj 26 464 pix_texture;
+#X obj 50 143 bng 15 250 50 0 empty empty empty 0 -6 0 8 -262144 -1
 -1;
-#X obj 59 548 square;
-#X text 52 60 Description: multiple cropping and mapping;
-#X obj 59 475 rotateXYZ;
-#X obj 59 125 mtl/gemsWin /dimen 320 240;
-#X obj 59 242 mtl/gemsMovies;
-#X text 100 191 Load a movie;
-#X msg 112 212 1;
-#X text 143 214 Play it;
-#N canvas 0 0 450 300 rotation 0;
+#X floatatom 156 284 5 0 0 0 - - -, f 5;
+#X floatatom 91 256 5 0 0 0 - - -, f 5;
+#X obj 26 499 square;
+#X text 135 256 X elements;
+#X text 200 285 Y elements;
+#X text 22 9 Description: multiple cropping and mapping;
+#X obj 26 426 rotateXYZ;
+#X obj 26 76 mtl/gemsWin /dimen 320 240;
+#X obj 26 193 mtl/gemsMovies;
+#X text 67 142 Load a movie;
+#X msg 79 163 1;
+#X text 110 165 Play it;
+#N canvas 0 50 450 300 rotation 0;
 #X obj 156 158 line;
 #X obj 155 116 metro 5000;
 #X msg 155 137 0 \, 360 5000;
@@ -45,43 +47,27 @@
 #X connect 11 0 3 0;
 #X connect 12 0 8 0;
 #X connect 12 0 9 0;
-#X restore 76 450 pd rotation;
-#X obj 76 429 tgl 15 0 empty empty empty 0 -6 0 8 -262144 -1 -1 1 1
+#X restore 43 401 pd rotation;
+#X obj 43 380 tgl 15 0 empty empty empty 0 -6 0 8 -262144 -1 -1 1 1
 ;
-#X text 94 429 <- Rotation animation;
-#X obj 76 404 loadbang;
-#X text 245 364 Arguments: initial number of x and y elements;
-#X text 49 73 tags: gems;
-#X obj 745 42 import Gem;
-#X obj 59 266 mtl/gemsStretch;
-#X obj 544 97 cnv 15 200 20 empty empty /gemsCropMap/ 2 12 0 8 -258401
--262144 0;
-#X obj 541 129 cnv 15 200 50 empty empty empty 20 12 0 14 -261234 -66577
-0;
-#X obj 548 136 hsl 128 15 0 160 0 0 /banane/nombreX /banane/nombreX_
-nombreX 135 10 0 10 -262144 -1 -1 7900 1;
-#X obj 549 157 hsl 128 15 0 160 0 0 /banane/nombreY /banane/nombreY_
-nombreY 135 10 0 10 -262144 -1 -1 2400 1;
-#X obj 50 3 cnv 15 400 40 empty empty empty 20 12 0 14 -254305 -66577
-0;
-#X obj 60 12 cnv 15 380 20 empty empty empty 20 12 0 14 -262144 -66577
-0;
-#X obj 395 13 tgl 15 1 empty empty empty 17 7 0 10 -262144 -1 -1 0
-1;
-#X obj 418 13 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
-1;
-#X text 63 12 [gemsCropMap];
-#X obj 61 359 mtl/gemsCropMap /id banane 8 6;
-#X connect 0 0 8 0;
-#X connect 1 0 7 0;
-#X connect 2 0 4 0;
-#X connect 3 0 8 1;
-#X connect 6 0 2 0;
-#X connect 8 0 19 0;
-#X connect 10 0 8 2;
-#X connect 12 0 6 1;
-#X connect 12 1 6 2;
-#X connect 13 0 12 0;
-#X connect 15 0 13 0;
-#X connect 19 0 29 0;
-#X connect 29 0 6 0;
+#X text 61 380 <- Rotation animation;
+#X obj 43 355 loadbang;
+#X text 166 312 Arguments: initial number of x and y elements;
+#X obj 26 312 mtl/gemsCropMap 8 6;
+#X text 23 24 tags: gems;
+#X obj 26 217 mtl/gemsStretch;
+#X connect 0 0 12 0;
+#X connect 1 0 11 0;
+#X connect 2 0 6 0;
+#X connect 3 0 12 1;
+#X connect 4 0 21 2;
+#X connect 5 0 21 1;
+#X connect 10 0 2 0;
+#X connect 12 0 23 0;
+#X connect 14 0 12 2;
+#X connect 16 0 10 1;
+#X connect 16 1 10 2;
+#X connect 17 0 16 0;
+#X connect 19 0 17 0;
+#X connect 21 0 10 0;
+#X connect 23 0 21 0;

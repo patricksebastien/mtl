@@ -1,9 +1,9 @@
-#N canvas 1 85 1358 659 12;
+#N canvas 1 84 1358 659 12;
 #X obj 221 315 mtl/numToNote;
 #X obj 222 165 vsl 15 128 0 127 0 0 empty empty empty 0 -9 0 10 -262144
 -1 -1 0 1;
 #X symbolatom 221 362 20 0 0 0 - - -;
+#X text 78 93 tags: midi \, conversion;
 #X text 78 76 Description: Converts a number into Note.;
-#X text 78 93 tags: conversion;
 #X connect 0 0 2 0;
 #X connect 1 0 0 0;

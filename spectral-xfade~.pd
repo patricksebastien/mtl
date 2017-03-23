@@ -1,18 +1,18 @@
 #N canvas 1 82 1272 661 10;
-#X obj 136 564 outlet~;
-#X obj 185 564 outlet~;
-#X obj 160 372 tof/crossfade~ 2;
+#X obj 71 457 outlet~;
+#X obj 179 469 outlet~;
+#X obj 71 379 tof/crossfade~ 2;
 #X obj 1015 106 inlet params;
 #X obj 1015 152 print PARAM_NOTFOUND;
-#X obj 452 218 tof/param /wet 0 /g slider 0 1;
-#X obj 485 264 line~;
-#X msg 485 243 \$1 5;
+#X obj 407 242 tof/param /wet 0 /g slider 0 1;
+#X obj 407 287 line~;
+#X msg 407 266 \$1 5;
 #X obj 1015 128 tof/param route;
-#X obj 1008 183 b;
-#X obj 1009 212 tof/param gui;
-#X obj 70 72 inlet~;
-#X obj 138 73 inlet~;
-#X obj 329 81 tof/param /morff 0 /g slider 0 1;
+#X obj 1015 177 b;
+#X obj 1015 204 tof/param gui;
+#X obj 64 159 inlet~;
+#X obj 132 160 inlet~;
+#X obj 311 181 tof/param /morff 0 /g slider 0 1;
 #N canvas 617 205 627 595 spectralxfade 0;
 #X obj 21 56 inlet~;
 #X obj 80 565 outlet~;
@@ -80,7 +80,7 @@
 #X connect 27 0 1 0;
 #X connect 29 0 21 1;
 #X connect 29 0 26 1;
-#X restore 142 210 pd spectralxfade;
+#X restore 136 297 pd spectralxfade;
 #N canvas 617 205 627 595 spectralxfade 0;
 #X obj 21 56 inlet~;
 #X obj 80 565 outlet~;
@@ -148,8 +148,8 @@
 #X connect 27 0 1 0;
 #X connect 29 0 21 1;
 #X connect 29 0 26 1;
-#X restore 260 209 pd spectralxfade;
-#N canvas 0 0 450 300 (subpatch) 0;
+#X restore 254 296 pd spectralxfade;
+#N canvas 0 50 450 300 (subpatch) 0;
 #X array \$0-hann 4096 float 1;
 #A 0 0 4.70877e-06 9.41753e-06 1.41263e-05 1.88351e-05 2.3514e-05 2.82228e-05
 3.29316e-05 3.76403e-05 5.17666e-05 6.58631e-05 7.99894e-05 9.41157e-05
@@ -684,7 +684,11 @@
 2.34842e-05 1.88053e-05 1.40965e-05 9.38773e-06 4.70877e-06;
 #X coords 0 1 4095 0 300 100 1;
 #X restore 398 417 graph;
-#X obj 347 122 tof/param /mfirst 0 /g tgl;
+#X obj 341 209 tof/param /mfirst 0 /g tgl;
+#X obj 417 146 tof/argument 5;
+#X obj 378 118 tof/argument 4;
+#X obj 354 91 tof/argument 3;
+#X obj 364 63 loadbang;
 #X connect 2 0 0 0;
 #X connect 2 1 1 0;
 #X connect 3 0 8 0;
@@ -705,3 +709,9 @@
 #X connect 15 0 2 3;
 #X connect 17 0 14 3;
 #X connect 17 0 15 3;
+#X connect 18 0 13 0;
+#X connect 19 0 17 0;
+#X connect 20 0 5 0;
+#X connect 21 0 18 0;
+#X connect 21 0 19 0;
+#X connect 21 0 20 0;

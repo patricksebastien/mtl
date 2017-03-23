@@ -1,4 +1,4 @@
-#N canvas 0 25 1280 695 10;
+#N canvas 1 82 1280 661 10;
 #X obj 18 136 inlet~;
 #X obj 84 129 inlet~;
 #X obj 477 83 inlet params;
@@ -6,7 +6,7 @@
 #X obj 477 105 tof/param route;
 #X obj 473 228 b;
 #X obj 474 257 tof/param gui;
-#N canvas 0 25 1272 692 bodyresonance 0;
+#N canvas 1 82 1272 661 bodyresonance 0;
 #X obj 293 485 outlet~;
 #X obj 413 64 * 0.8;
 #X obj 183 247 delwrite~ \$0-clockbodyl 100;
@@ -51,10 +51,9 @@
 #X text 282 215 damping;
 #X obj 182 217 *~ 0.3;
 #X obj 395 219 *~ 0.3;
-#X text 235 60 body resonance;
+#X text 208 48 body resonance;
 #X obj 413 86 + 0.1;
 #X obj 330 49 inlet~;
-#X text 308 27;
 #X obj 360 488 outlet~;
 #X obj 413 42 inlet;
 #X connect 1 0 17 0;
@@ -64,7 +63,7 @@
 #X connect 5 0 3 0;
 #X connect 5 1 4 1;
 #X connect 6 0 15 0;
-#X connect 6 0 20 0;
+#X connect 6 0 19 0;
 #X connect 7 0 6 0;
 #X connect 9 0 7 0;
 #X connect 9 1 6 1;
@@ -76,7 +75,7 @@
 #X connect 17 0 5 0;
 #X connect 17 0 10 0;
 #X connect 18 0 8 0;
-#X connect 21 0 1 0;
+#X connect 20 0 1 0;
 #X restore 63 225 pd bodyresonance;
 #X obj 176 140 tof/param /size 0 /g slider 0 1;
 #X obj 38 367 outlet~;
@@ -85,6 +84,9 @@
 #X obj 64 293 tof/crossfade~ 2;
 #X msg 244 242 \$1 5;
 #X obj 244 266 line~;
+#X obj 239 100 tof/argument 4;
+#X obj 209 76 tof/argument 3;
+#X obj 209 53 loadbang;
 #X connect 0 0 7 0;
 #X connect 0 0 12 0;
 #X connect 1 0 7 1;
@@ -100,3 +102,7 @@
 #X connect 12 1 10 0;
 #X connect 13 0 14 0;
 #X connect 14 0 12 4;
+#X connect 15 0 8 0;
+#X connect 16 0 11 0;
+#X connect 17 0 15 0;
+#X connect 17 0 16 0;

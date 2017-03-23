@@ -1,7 +1,7 @@
 #N canvas 1 82 1272 661 10;
 #X obj 22 280 mtl/out~;
 #X text 15 50 tags: fx~;
-#X obj 19 90 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0 1
+#X obj 19 90 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 1 1
 ;
 #N canvas 5 185 450 300 generate~ 0;
 #X obj 32 213 osc~ 200;
@@ -10,7 +10,7 @@
 #X obj 104 195 mtof;
 #X obj 32 132 + 20;
 #X obj 32 111 random 70;
-#X floatatom 83 69 5 0 0 0 - - -;
+#X floatatom 83 69 5 0 0 0 - - -, f 5;
 #X obj 32 261 outlet~;
 #X obj 103 261 outlet~;
 #X obj 30 14 inlet;
@@ -36,29 +36,25 @@
 #X connect 13 0 11 0;
 #X connect 14 0 2 0;
 #X restore 19 115 pd generate~;
-#X text 224 243 <-Click on the propeties menu to display params;
-#X obj 307 18 cnv 15 200 40 empty empty empty 20 12 0 14 -232576 -66577
-0;
-#X text 367 19 PARAM ENABLED;
+#X text 319 253 <-Click on the propeties menu to display params;
 #X obj 650 71 cnv 15 200 20 empty empty /FFTExpander/ 2 12 0 8 -258401
 -262144 0;
 #X obj 652 99 hsl 100 15 0 1 0 0 /FFTExpander/squelch /FFTExpander/squelch_
-squelch 105 7 0 8 -262144 -1 -1 0 1;
-#X obj 306 41 tof/open_help tof/param;
+squelch 105 7 0 8 -262144 -1 -1 9900 1;
 #X obj 649 119 hradio 15 1 0 11 /FFTExpander/FFT-size /FFTExpander/FFT-size_
 FFT-size 175 7 0 10 -262144 -1 -1 10;
 #X obj 650 142 hradio 15 1 0 4 /FFTExpander/FFT-overlap /FFTExpander/FFT-overlap_
 FFT-overlap 75 7 0 10 -262144 -1 -1 3;
 #X obj 119 126 noise~;
 #X obj 119 166 *~ 0.3;
-#X obj 21 246 mtl/FFTExpander~ /id FFTExpander;
 #X text 15 8 Description: FFT Expander;
 #X text 14 29 Author: Gerard Paresys;
+#X obj 21 246 mtl/FFTExpander~ /id FFTExpander 1 10 3;
 #X connect 2 0 3 0;
-#X connect 3 0 14 0;
-#X connect 3 0 14 1;
-#X connect 12 0 13 0;
-#X connect 13 0 14 0;
-#X connect 13 0 14 1;
-#X connect 14 0 0 0;
-#X connect 14 1 0 1;
+#X connect 3 0 13 0;
+#X connect 3 0 13 1;
+#X connect 9 0 10 0;
+#X connect 10 0 13 0;
+#X connect 10 0 13 1;
+#X connect 13 0 0 0;
+#X connect 13 1 0 1;

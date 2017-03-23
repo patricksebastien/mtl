@@ -1,4 +1,4 @@
-#N canvas 1030 52 1018 711 10;
+#N canvas 1 82 1018 661 10;
 #X obj 344 420 cyclone/coll;
 #C restore;
 #X obj 77 -19 inlet try_to_add;
@@ -54,7 +54,7 @@
 #X obj 258 147 unpack f s;
 #X obj 260 201 spigot;
 #X obj 544 84 t b a b;
-#X obj 344 450 zexy/demultiplex 0 1 2 3 4;
+#X obj 344 450 demultiplex 0 1 2 3 4;
 #X connect 0 0 54 0;
 #X connect 1 0 27 0;
 #X connect 2 0 10 0;

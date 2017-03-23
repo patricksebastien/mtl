@@ -1,4 +1,4 @@
-#N canvas 1 82 1364 661 10;
+#N canvas 1 82 1351 661 10;
 #X obj 842 290 outlet zone;
 #X obj 927 290 outlet clic;
 #X obj 752 290 outlet value;
@@ -79,14 +79,13 @@
 #X text -277 -19 author : raphael isdant http://www.raphaelisdant.fr
 ;
 #X obj -263 128 s \$0-input;
-#X obj -263 105 limit 0 1;
 #X obj -263 31 inlet;
 #X obj -145 153 s \$0-xy;
 #X obj -124 101 r \$0-vis;
 #X obj -145 131 spigot 1;
 #X obj -227 154 s \$0-pos;
 #X obj -135 32 r \$0-hslider;
-#N canvas 1 82 1364 661 init 1;
+#N canvas 1 82 1351 661 init 0;
 #X obj 119 73 \$0;
 #X obj 119 -7 \$4;
 #X obj 119 21 == 0;
@@ -172,7 +171,7 @@
 #X obj 410 97 r \$0-size;
 #X obj 136 289 r \$0-drag;
 #X obj 410 116 t b a a;
-#N canvas 0 0 449 380 rangeOUT 0;
+#N canvas 0 50 449 380 rangeOUT 0;
 #X obj 150 171 inlet;
 #X obj 200 171 inlet;
 #X obj 64 143 inlet;
@@ -392,6 +391,7 @@
 #X obj -196 177 s \$0-name;
 #X obj -218 31 r \$2-hslider;
 #X obj -51 31 r \$2;
+#X obj -263 105 maxlib/limit 0 1;
 #X connect 3 0 2 0;
 #X connect 4 0 0 0;
 #X connect 5 0 1 0;
@@ -463,14 +463,14 @@
 #X connect 71 0 72 0;
 #X connect 74 0 73 0;
 #X connect 75 0 32 0;
-#X connect 78 0 77 0;
-#X connect 79 0 88 0;
-#X connect 81 0 82 1;
-#X connect 82 0 80 0;
-#X connect 84 0 88 0;
-#X connect 88 0 78 0;
-#X connect 88 1 83 0;
-#X connect 88 2 89 0;
-#X connect 88 3 82 0;
-#X connect 90 0 88 0;
-#X connect 91 0 88 0;
+#X connect 78 0 87 0;
+#X connect 80 0 81 1;
+#X connect 81 0 79 0;
+#X connect 83 0 87 0;
+#X connect 87 0 91 0;
+#X connect 87 1 82 0;
+#X connect 87 2 88 0;
+#X connect 87 3 81 0;
+#X connect 89 0 87 0;
+#X connect 90 0 87 0;
+#X connect 91 0 77 0;

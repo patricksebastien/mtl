@@ -1,4 +1,4 @@
-#N canvas 0 0 1272 685 10;
+#N canvas 1 82 1272 661 10;
 #X obj 222 577 outlet~;
 #X obj 188 154 inlet~;
 #X obj 278 149 inlet~;
@@ -9,13 +9,13 @@
 #X obj 739 414 tof/param gui;
 #X obj 237 541 -~;
 #X obj 392 537 +~;
-#X obj 487 57 tof/param /width 0 /g slider 0 180;
+#X obj 477 119 tof/param /width 0 /g slider 0 180;
 #X obj 252 441 *~;
 #X obj 389 439 *~;
 #X obj 327 442 *~;
 #X obj 447 443 *~;
-#N canvas 0 0 1251 714 init 0;
-#N canvas 0 0 450 300 (subpatch) 0;
+#N canvas 0 50 1251 714 init 0;
+#N canvas 0 50 450 300 (subpatch) 0;
 #X array \$0-tab-sin 180 float 1;
 #A 0 0.841471 0.0174436 0.0348818 0.0523094 0.0697212 0.0871117 0.104476
 0.121808 0.139103 0.156356 0.173561 0.190713 0.207808 0.224839 0.241802
@@ -42,7 +42,7 @@
 0.0713097 0.0538998 0.0364732 0.00159255;
 #X coords 0 1 179 -1 200 140 1;
 #X restore 107 69 graph;
-#N canvas 0 0 450 300 (subpatch) 0;
+#N canvas 0 50 450 300 (subpatch) 0;
 #X array \$0-tab-cos 180 float 1;
 #A 0 0.540302 0.999848 0.999391 0.998631 0.997567 0.996199 0.994527
 0.992554 0.990278 0.987701 0.984823 0.981646 0.97817 0.974396 0.970326
@@ -76,8 +76,8 @@
 #X obj 652 379 t f b;
 #X obj 881 420 f;
 #X obj 832 379 t f b;
-#X floatatom 897 452 5 0 0 0 - - -;
-#X floatatom 819 432 5 0 0 0 - - -;
+#X floatatom 897 452 5 0 0 0 - - -, f 5;
+#X floatatom 819 432 5 0 0 0 - - -, f 5;
 #X floatatom 776 241 0 0 0 0 - - -;
 #X obj 776 215 + 1;
 #X msg 776 111 bang;
@@ -94,8 +94,8 @@
 #X text 813 110 <--- click here to start;
 #X obj 776 163 metro 1;
 #X obj 685 143 select 180;
-#X floatatom 676 272 5 0 0 0 - - -;
-#X floatatom 604 364 5 0 0 0 - - -;
+#X floatatom 676 272 5 0 0 0 - - -, f 5;
+#X floatatom 604 364 5 0 0 0 - - -, f 5;
 #X obj 645 318 expr (cos((3.14*$f1)/180));
 #X obj 817 319 expr (sin((3.14*$f1)/180));
 #X obj 623 489 tabwrite \$0-tab-cos;
@@ -136,6 +136,8 @@
 #X msg 367 208 \$1 100;
 #X obj 507 230 line~;
 #X msg 507 208 \$1 100;
+#X obj 477 91 tof/argument 3;
+#X obj 477 67 loadbang;
 #X connect 1 0 11 0;
 #X connect 1 0 13 0;
 #X connect 2 0 12 0;
@@ -159,3 +161,5 @@
 #X connect 21 0 12 1;
 #X connect 21 0 13 1;
 #X connect 22 0 21 0;
+#X connect 23 0 10 0;
+#X connect 24 0 23 0;

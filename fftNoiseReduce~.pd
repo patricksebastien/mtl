@@ -1,4 +1,4 @@
-#N canvas 0 25 1272 692 10;
+#N canvas 1 82 1272 661 10;
 #X obj 18 136 inlet~;
 #X obj 84 129 inlet~;
 #X obj 477 83 inlet params;
@@ -8,9 +8,9 @@
 #X obj 474 257 tof/param gui;
 #X obj 38 367 outlet~;
 #X obj 139 366 outlet~;
-#N canvas 0 25 1272 692 FFTnoisreduce 1;
+#N canvas 0 50 1272 692 FFTnoisreduce 0;
 #X obj 102 348 outlet~;
-#N canvas 433 22 750 668 fft-analysis 0;
+#N canvas 433 50 750 668 fft-analysis 0;
 #X obj 35 589 *~;
 #X obj 143 305 *~;
 #X obj 158 150 *~;
@@ -38,7 +38,7 @@
 #X text 203 395 protect against division by zero;
 #X text 179 426 compute sqrt((s-m)/s) where "s";
 #X obj 98 499 /~ 1536;
-#N canvas 0 22 462 312 rh_scalelog 0;
+#N canvas 0 50 462 312 rh_scalelog 0;
 #X obj 20 155 exp;
 #X obj 20 107 *;
 #X obj 20 130 +;
@@ -105,7 +105,7 @@
 #X connect 34 0 27 0;
 #X connect 34 0 28 0;
 #X restore 97 216 pd fft-analysis;
-#N canvas 0 22 478 328 (subpatch) 0;
+#N canvas 0 50 478 328 (subpatch) 0;
 #X array \$0-mask-g 512 float 1;
 #A 0 98.4791 116.622 128.841 129.413 129.69 131.724 126.402 135.68
 136.329 152.469 156.602 145.045 133.918 126.809 125.493 133.496 148.018
@@ -167,7 +167,7 @@
 ;
 #X coords 0 0 1 1 400 300 0;
 #X restore 732 104 graph;
-#N canvas 0 22 673 347 (subpatch) 0;
+#N canvas 0 50 673 347 (subpatch) 0;
 #X array \$0-hann-g 1024 float 1;
 #A 0 0 9.41753e-06 3.76701e-05 8.4728e-05 0.000150621 0.000235319 0.000338852
 0.000461191 0.000602335 0.000762284 0.000941008 0.00113854 0.00135487
@@ -306,7 +306,7 @@
 #X restore 731 75 graph;
 #X text 781 75 \$0-hann-g;
 #X text 784 104 \$0-mask-g;
-#N canvas 0 22 478 328 (subpatch) 0;
+#N canvas 0 50 478 328 (subpatch) 0;
 #X array \$0-mask-d 512 float 1;
 #A 0 98.4791 116.622 128.841 129.413 129.69 131.724 126.402 135.68
 136.329 152.469 156.602 145.045 133.918 126.809 125.493 133.496 148.018
@@ -368,7 +368,7 @@
 ;
 #X coords 0 0 1 1 400 300 0;
 #X restore 731 157 graph;
-#N canvas 0 22 673 347 (subpatch) 0;
+#N canvas 0 50 673 347 (subpatch) 0;
 #X array \$0-hann-d 1024 float 1;
 #A 0 0 9.41753e-06 3.76701e-05 8.4728e-05 0.000150621 0.000235319 0.000338852
 0.000461191 0.000602335 0.000762284 0.000941008 0.00113854 0.00135487
@@ -508,7 +508,7 @@
 #X text 780 128 \$0-hann-d;
 #X text 783 157 \$0-mask-d;
 #X obj 336 130 inlet amount;
-#N canvas 433 22 750 668 fft-analysis 0;
+#N canvas 433 50 750 668 fft-analysis 0;
 #X obj 35 589 *~;
 #X obj 143 305 *~;
 #X obj 158 150 *~;
@@ -536,7 +536,7 @@
 #X text 203 395 protect against division by zero;
 #X text 179 426 compute sqrt((s-m)/s) where "s";
 #X obj 98 499 /~ 1536;
-#N canvas 0 22 462 312 rh_scalelog 0;
+#N canvas 0 50 462 312 rh_scalelog 0;
 #X obj 20 155 exp;
 #X obj 20 107 *;
 #X obj 20 130 +;
@@ -614,6 +614,8 @@
 #X connect 13 0 11 0;
 #X restore 63 225 pd FFTnoisreduce;
 #X obj 179 134 tof/param /amount 0 /g slider 0 1;
+#X obj 179 112 tof/argument 3;
+#X obj 179 88 loadbang;
 #X connect 0 0 9 0;
 #X connect 1 0 9 1;
 #X connect 2 0 4 0;
@@ -622,3 +624,5 @@
 #X connect 9 0 7 0;
 #X connect 9 1 8 0;
 #X connect 10 0 9 2;
+#X connect 11 0 10 0;
+#X connect 12 0 11 0;

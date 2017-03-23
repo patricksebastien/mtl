@@ -1,4 +1,4 @@
-#N canvas 364 465 756 308 10;
+#N canvas 362 435 756 308 10;
 #X msg 59 96 2 6 3;
 #X obj 134 157 * 2;
 #X obj 59 229 print RESULT;
@@ -12,7 +12,7 @@ a list.;
 #X obj 434 158 mtl/listOp;
 #X obj 59 155 mtl/listOp;
 #X obj 203 153 mtl/listOp;
-#X obj 279 155 zexy/makesymbol tube_%s;
+#X obj 286 155 makesymbol tube_%s;
 #X connect 0 0 10 0;
 #X connect 1 0 10 1;
 #X connect 3 0 11 0;

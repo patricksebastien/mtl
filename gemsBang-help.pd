@@ -1,6 +1,4 @@
-#N canvas 468 82 679 661 10;
-#X declare -lib Gem;
-#X declare -lib Gem;
+#N canvas 653 82 679 661 10;
 #X obj 33 19 cnv 15 400 40 empty empty empty 20 12 0 14 -254305 -66577
 0;
 #X obj 43 28 cnv 15 380 20 empty empty empty 20 12 0 14 -262144 -66577
@@ -11,18 +9,17 @@
 1;
 #X obj 32 301 cnv 15 400 100 empty empty empty 20 12 0 14 -254305 -66577
 0;
-#X text 62 300 arguments:;
-#X obj 131 354 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+#X text 59 295 arguments:;
+#X obj 131 361 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
 1;
-#X obj 217 354 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+#X obj 217 361 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
 1;
-#X text 125 379 la zone;
-#X text 126 368 souris dans;
-#X text 211 370 clic dans;
-#X text 211 381 la zone;
-#X text 62 312 nom \, posX \, posY \, tailleX \, tailleY;
-#X text 279 369 TOUCHE "<" = DEPLACEMENT;
-#X text 297 380 + clic droit = TAILLE;
+#X text 125 386 la zone;
+#X text 126 375 souris dans;
+#X text 211 377 clic dans;
+#X text 211 388 la zone;
+#X text 279 376 TOUCHE "<" = DEPLACEMENT;
+#X text 297 387 + clic droit = TAILLE;
 #N canvas 369 366 403 205 communication 0;
 #X obj -5 -6 cnv 15 400 200 empty empty empty 20 12 0 14 -260758 -66577
 0;
@@ -35,7 +32,7 @@
 #X text 275 90 clic dans la zone;
 #X text 141 89 souris dans la zone;
 #X text 9 88 état du bouton;
-#X floatatom 12 150 5 0 0 0 - - -;
+#X floatatom 12 150 5 0 0 0 - - -, f 5;
 #X text 9 3 Envoi / réception des messages suivant le nom de l'objet:
 ;
 #X obj 12 110 r biscuit-value;
@@ -51,14 +48,12 @@
 #X connect 11 0 2 0;
 #X connect 12 0 7 0;
 #X connect 14 0 13 0;
-#X restore 328 334 pd communication;
+#X restore 86 499 pd communication;
 #X text 519 503 <= gestion de la fenêtre gem;
 #X obj 189 196 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 1
 1;
 #X obj 454 31 cnv 15 200 20 empty empty /biscuit/ 2 12 0 8 -258401
 -262144 0;
-#X obj 101 247 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
--1 -1;
 #X obj 27 143 mtl/gemsMouse;
 #X obj 451 185 cnv 15 200 90 empty empty empty 20 12 0 14 -233017 -66577
 0;
@@ -75,13 +70,13 @@ bcolorA 135 10 0 10 -262144 -1 -1 6350 1;
 0;
 #X text 453 277 couleur de fond actif (RVBA);
 #X obj 460 297 hsl 128 15 0 100 0 0 /biscuit/bcolor2R /biscuit/bcolor2R_
-bcolor2R 135 10 0 10 -262144 -1 -1 3175 1;
+bcolor2R 135 10 0 10 -262144 -1 -1 12700 1;
 #X obj 460 315 hsl 128 15 0 100 0 0 /biscuit/bcolor2V /biscuit/bcolor2V_
-bcolor2V 135 10 0 10 -262144 -1 -1 3175 1;
+bcolor2V 135 10 0 10 -262144 -1 -1 12700 1;
 #X obj 460 333 hsl 128 15 0 100 0 0 /biscuit/bcolor2B /biscuit/bcolor2B_
-bcolor2B 135 10 0 10 -262144 -1 -1 3175 1;
+bcolor2B 135 10 0 10 -262144 -1 -1 12700 1;
 #X obj 460 351 hsl 128 15 0 100 0 0 /biscuit/bcolor2A /biscuit/bcolor2A_
-bcolor2A 135 10 0 10 -262144 -1 -1 3175 1;
+bcolor2A 135 10 0 10 -262144 -1 -1 12700 1;
 #X obj 452 377 cnv 15 200 90 empty empty empty 20 12 0 14 -233017 -66577
 0;
 #X text 453 373 couleur du texte (RVBA);
@@ -108,20 +103,20 @@ wcolorA 135 10 0 10 -262144 -1 -1 12700 1;
 #X obj 452 569 cnv 15 200 60 empty empty empty 20 12 0 14 -204786 -66577
 0;
 #X obj 466 587 hsl 128 15 0 160 0 0 /biscuit/width /biscuit/width_
-width 135 10 0 10 -262144 -1 -1 79 1;
+width 135 10 0 10 -262144 -1 -1 794 1;
 #X obj 466 605 hsl 128 15 0 150 0 0 /biscuit/tsize /biscuit/tsize_
 tsize 135 10 0 10 -262144 -1 -1 254 1;
 #X text 456 566 Label;
 #X obj 452 90 cnv 15 200 90 empty empty empty 20 12 0 14 -261234 -66577
 0;
 #X obj 459 97 hsl 128 15 -160 160 0 0 /biscuit/positionX /biscuit/positionX_
-positionX 135 10 0 10 -262144 -1 -1 6350 1;
+positionX 135 10 0 10 -262144 -1 -1 6310 1;
 #X obj 460 118 hsl 128 15 -160 160 0 0 /biscuit/positionY /biscuit/positionY_
-positionY 135 10 0 10 -262144 -1 -1 6350 1;
+positionY 135 10 0 10 -262144 -1 -1 6390 1;
 #X obj 460 138 hsl 128 15 0 160 0 0 /biscuit/sizeX /biscuit/sizeX_
-sizeX 135 10 0 10 -262144 -1 -1 397 1;
+sizeX 135 10 0 10 -262144 -1 -1 794 1;
 #X obj 460 158 hsl 128 15 0 160 0 0 /biscuit/sizeY /biscuit/sizeY_
-sizeY 135 10 0 10 -262144 -1 -1 397 1;
+sizeY 135 10 0 10 -262144 -1 -1 794 1;
 #X obj 451 54 cnv 15 200 30 empty empty empty 20 12 0 14 -191407 -66577
 0;
 #X obj 459 63 tgl 15 0 /biscuit/on /biscuit/on_ On 17 7 0 10 -262144
@@ -133,15 +128,15 @@ sizeY 135 10 0 10 -262144 -1 -1 397 1;
 #X text 25 86 tags: gems;
 #X text 26 101 author : raphael isdant http://www.raphaelisdant.fr
 ;
-#X obj 455 7 import Gem;
-#X obj 46 368 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+#X obj 46 375 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
 -1;
 #X text 46 28 [gemsBang] : gestion d'un bang dans gem;
 #X text 26 71 Description: Bang in the Gem window.;
-#X obj 46 330 mtl/gemsBang /id biscuit -1 1 1 1;
-#X connect 17 0 45 0;
-#X connect 19 0 65 0;
-#X connect 20 0 65 0;
-#X connect 65 0 62 0;
-#X connect 65 1 6 0;
-#X connect 65 2 7 0;
+#X obj 46 337 mtl/gemsBang /id biscuit -1 1 10 10 10 0;
+#X text 60 307 nom \, posX \, posY \, tailleX \, tailleY \, sizeX \,
+sizeY \, width \, on;
+#X connect 16 0 43 0;
+#X connect 18 0 62 0;
+#X connect 62 0 59 0;
+#X connect 62 1 6 0;
+#X connect 62 2 7 0;

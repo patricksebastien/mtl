@@ -1,4 +1,4 @@
-#N canvas 559 244 617 442 10;
+#N canvas 555 254 617 442 10;
 #X text 423 2 Version: 2007-09-15;
 #X text 423 17 Author: Roman Haefeli;
 #X text 26 3 Description: Peakfilter with signal frequency and Q control
@@ -9,7 +9,7 @@
 #X text 29 406 Comment: modulate q with a pad-synth as input to get
 nice sounds;
 #X obj 30 247 mtl/out~;
-#X obj 31 44 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0 1
+#X obj 31 44 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 1 1
 ;
 #N canvas 5 185 450 300 generate~ 0;
 #X obj 32 213 osc~ 200;
@@ -18,7 +18,7 @@ nice sounds;
 #X obj 104 195 mtof;
 #X obj 32 132 + 20;
 #X obj 32 111 random 70;
-#X floatatom 83 69 5 0 0 0 - - -;
+#X floatatom 83 69 5 0 0 0 - - -, f 5;
 #X obj 32 261 outlet~;
 #X obj 103 261 outlet~;
 #X obj 30 14 inlet;
@@ -49,25 +49,21 @@ nice sounds;
 #X text 354 79 inlet0-1: signal (input);
 #X text 354 96 inlet2: param;
 #X text 354 113 outlet0-1: signal (output);
-#X obj 30 210 mtl/filterPeakSig~ /id fps;
 #X obj 350 251 cnv 15 200 20 empty empty /fps/ 2 12 0 8 -258401 -262144
 0;
 #X obj 350 274 hsl 100 15 0 1 0 0 /fps/wet /fps/wet_ wet 105 7 0 8
--262144 -1 -1 0 1;
+-262144 -1 -1 9900 1;
 #X obj 350 292 hsl 100 15 1 1000 0 0 /fps/frequency /fps/frequency_
-frequency 105 7 0 8 -262144 -1 -1 10 1;
+frequency 105 7 0 8 -262144 -1 -1 7345 1;
 #X obj 350 310 hsl 100 15 0 100 0 0 /fps/q /fps/q_ q 105 7 0 8 -262144
--1 -1 0 1;
-#X text 201 207 <-Click on the propeties menu to display params;
-#X obj 349 161 cnv 15 200 40 empty empty empty 20 12 0 14 -232576 -66577
-0;
-#X text 409 162 PARAM ENABLED;
+-1 -1 420 1;
+#X text 285 210 <-Click on the propeties menu to display params;
 #X text 24 18 tags: fx~;
-#X obj 348 184 tof/open_help tof/param;
+#X obj 30 210 mtl/filterPeakSig~ /id fps 1 500 80;
 #X connect 7 0 8 0;
-#X connect 8 0 14 0;
+#X connect 8 0 20 0;
 #X connect 8 1 10 0;
-#X connect 8 1 14 1;
-#X connect 14 0 6 0;
-#X connect 14 1 9 0;
-#X connect 14 1 6 1;
+#X connect 8 1 20 1;
+#X connect 20 0 6 0;
+#X connect 20 1 9 0;
+#X connect 20 1 6 1;

@@ -1,6 +1,4 @@
-#N canvas 15 82 679 661 10;
-#X declare -lib Gem;
-#X declare -lib Gem;
+#N canvas 11 82 679 661 10;
 #X obj 33 19 cnv 15 400 40 empty empty empty 20 12 0 14 -254305 -66577
 0;
 #X obj 43 28 cnv 15 380 20 empty empty empty 20 12 0 14 -262144 -66577
@@ -24,72 +22,71 @@
 #X text 518 406 <= gestion de la fenêtre gem;
 #X obj 144 123 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
 1;
-#X obj 454 31 cnv 15 200 20 empty empty /quadra/ 2 12 0 8 -258401
--262144 0;
+#X obj 454 31 cnv 15 200 20 empty empty /quadra/ 2 12 0 8 -258401 -262144
+0;
 #X obj 27 143 mtl/gemsMouse;
 #X obj 451 185 cnv 15 200 90 empty empty empty 20 12 0 14 -233017 -66577
 0;
 #X text 451 182 couleur de fond inactif (RVBA);
 #X obj 460 201 hsl 128 15 0 100 0 0 /quadra/bcolorR /quadra/bcolorR_
-bcolorR 135 10 0 10 -262144 -1 -1 0 1;
+bcolorR 135 10 0 10 -262144 -1 -1 6350 1;
 #X obj 460 220 hsl 128 15 0 100 0 0 /quadra/bcolorV /quadra/bcolorV_
-bcolorV 135 10 0 10 -262144 -1 -1 0 1;
+bcolorV 135 10 0 10 -262144 -1 -1 6350 1;
 #X obj 460 239 hsl 128 15 0 100 0 0 /quadra/bcolorB /quadra/bcolorB_
-bcolorB 135 10 0 10 -262144 -1 -1 0 1;
+bcolorB 135 10 0 10 -262144 -1 -1 6350 1;
 #X obj 460 258 hsl 128 15 0 100 0 0 /quadra/bcolorA /quadra/bcolorA_
-bcolorA 135 10 0 10 -262144 -1 -1 0 1;
+bcolorA 135 10 0 10 -262144 -1 -1 6350 1;
 #X obj 451 280 cnv 15 200 90 empty empty empty 20 12 0 14 -233017 -66577
 0;
 #X text 452 276 couleur du texte (RVBA);
 #X obj 459 294 hsl 128 15 0 100 0 0 /quadra/tcolorR /quadra/tcolorR_
-tcolorR 135 10 0 10 -262144 -1 -1 0 1;
+tcolorR 135 10 0 10 -262144 -1 -1 12700 1;
 #X obj 459 313 hsl 128 15 0 100 0 0 /quadra/tcolorV /quadra/tcolorV_
-tcolorV 135 10 0 10 -262144 -1 -1 0 1;
+tcolorV 135 10 0 10 -262144 -1 -1 12700 1;
 #X obj 459 332 hsl 128 15 0 100 0 0 /quadra/tcolorB /quadra/tcolorB_
-tcolorB 135 10 0 10 -262144 -1 -1 0 1;
+tcolorB 135 10 0 10 -262144 -1 -1 12700 1;
 #X obj 459 351 hsl 128 15 0 100 0 0 /quadra/tcolorA /quadra/tcolorA_
-tcolorA 135 10 0 10 -262144 -1 -1 0 1;
+tcolorA 135 10 0 10 -262144 -1 -1 12700 1;
 #X obj 452 377 cnv 15 200 90 empty empty empty 20 12 0 14 -233017 -66577
 0;
 #X text 454 373 couleur du contour (RVBA);
 #X obj 459 391 hsl 128 15 0 100 0 0 /quadra/wcolorR /quadra/wcolorR_
-wcolorR 135 10 0 10 -262144 -1 -1 0 1;
+wcolorR 135 10 0 10 -262144 -1 -1 12700 1;
 #X obj 459 410 hsl 128 15 0 100 0 0 /quadra/wcolorV /quadra/wcolorV_
-wcolorV 135 10 0 10 -262144 -1 -1 0 1;
+wcolorV 135 10 0 10 -262144 -1 -1 12700 1;
 #X obj 459 429 hsl 128 15 0 100 0 0 /quadra/wcolorB /quadra/wcolorB_
-wcolorB 135 10 0 10 -262144 -1 -1 0 1;
+wcolorB 135 10 0 10 -262144 -1 -1 12700 1;
 #X obj 459 448 hsl 128 15 0 100 0 0 /quadra/wcolorA /quadra/wcolorA_
-wcolorA 135 10 0 10 -262144 -1 -1 0 1;
+wcolorA 135 10 0 10 -262144 -1 -1 12700 1;
 #X obj 139 145 mtl/gemsWin /dimen 640 480;
 #X obj 451 472 cnv 15 200 60 empty empty empty 20 12 0 14 -204786 -66577
 0;
-#X obj 465 490 hsl 128 15 0 160 0 0 /quadra/width /quadra/width_
-width 135 10 0 10 -262144 -1 -1 0 1;
-#X obj 465 508 hsl 128 15 0 150 0 0 /quadra/tsize /quadra/tsize_
-tsize 135 10 0 10 -262144 -1 -1 0 1;
+#X obj 465 490 hsl 128 15 0 160 0 0 /quadra/width /quadra/width_ width
+135 10 0 10 -262144 -1 -1 79 1;
+#X obj 465 508 hsl 128 15 0 150 0 0 /quadra/tsize /quadra/tsize_ tsize
+135 10 0 10 -262144 -1 -1 254 1;
 #X text 455 469 Label;
 #X obj 452 90 cnv 15 200 90 empty empty empty 20 12 0 14 -261234 -66577
 0;
 #X obj 459 97 hsl 128 15 -160 160 0 0 /quadra/positionX /quadra/positionX_
-positionX 135 10 0 10 -262144 -1 -1 0 1;
+positionX 135 10 0 10 -262144 -1 -1 6350 1;
 #X obj 460 118 hsl 128 15 -160 160 0 0 /quadra/positionY /quadra/positionY_
-positionY 135 10 0 10 -262144 -1 -1 0 1;
-#X obj 460 138 hsl 128 15 0 160 0 0 /quadra/sizeX /quadra/sizeX_
-sizeX 135 10 0 10 -262144 -1 -1 0 1;
-#X obj 460 158 hsl 128 15 0 160 0 0 /quadra/sizeY /quadra/sizeY_
-sizeY 135 10 0 10 -262144 -1 -1 0 1;
+positionY 135 10 0 10 -262144 -1 -1 6350 1;
+#X obj 460 138 hsl 128 15 0 160 0 0 /quadra/sizeX /quadra/sizeX_ sizeX
+135 10 0 10 -262144 -1 -1 397 1;
+#X obj 460 158 hsl 128 15 0 160 0 0 /quadra/sizeY /quadra/sizeY_ sizeY
+135 10 0 10 -262144 -1 -1 397 1;
 #X obj 453 56 cnv 15 200 30 empty empty empty 20 12 0 14 -191407 -66577
 0;
-#X obj 459 63 tgl 15 0 /quadra/on /quadra/on_ On 17 7 0
-10 -262144 -1 -1 0 1;
-#X obj 493 63 tgl 15 0 /quadra/drag /quadra/drag_ Drag
-17 7 0 10 -262144 -1 -1 0 1;
-#X obj 597 63 bng 15 250 50 0 /quadra/reset /quadra/reset_
-Reset 17 7 0 10 -262144 -1 -1;
+#X obj 459 63 tgl 15 0 /quadra/on /quadra/on_ On 17 7 0 10 -262144
+-1 -1 0 1;
+#X obj 493 63 tgl 15 0 /quadra/drag /quadra/drag_ Drag 17 7 0 10 -262144
+-1 -1 0 1;
+#X obj 597 63 bng 15 250 50 0 /quadra/reset /quadra/reset_ Reset 17
+7 0 10 -262144 -1 -1;
 #X text 25 86 tags: gems;
 #X text 26 101 author : raphael isdant http://www.raphaelisdant.fr
 ;
-#X obj 455 7 import Gem;
 #X obj 271 214 pix_video;
 #X text 274 252 texture ID;
 #X obj 271 195 gemhead;
@@ -114,7 +111,7 @@ Reset 17 7 0 10 -262144 -1 -1;
 #X text 275 90 clic dans la zone;
 #X text 141 89 souris dans la zone;
 #X text 9 88 état du bouton;
-#X floatatom 12 150 5 0 0 0 - - -;
+#X floatatom 12 150 5 0 0 0 - - -, f 5;
 #X text 9 3 Envoi / réception des messages suivant le nom de l'objet:
 ;
 #X obj 12 130 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
@@ -133,10 +130,10 @@ Reset 17 7 0 10 -262144 -1 -1;
 #X restore 280 316 pd communication;
 #X obj 5 331 mtl/gemsFreeForm /id quadra;
 #X connect 14 0 35 0;
-#X connect 16 0 65 0;
-#X connect 52 0 55 0;
-#X connect 54 0 52 0;
-#X connect 55 1 65 1;
-#X connect 65 0 58 0;
-#X connect 65 1 6 0;
-#X connect 65 2 7 0;
+#X connect 16 0 64 0;
+#X connect 51 0 54 0;
+#X connect 53 0 51 0;
+#X connect 54 1 64 1;
+#X connect 64 0 57 0;
+#X connect 64 1 6 0;
+#X connect 64 2 7 0;

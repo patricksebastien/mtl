@@ -1,4 +1,4 @@
-#N canvas 0 25 1272 692 10;
+#N canvas 1 82 1272 661 10;
 #X obj 59 387 outlet~;
 #X obj 53 164 inlet~;
 #X obj 113 164 inlet~;
@@ -8,7 +8,7 @@
 #X obj 477 105 tof/param route;
 #X obj 473 228 b;
 #X obj 474 257 tof/param gui;
-#N canvas 0 25 1272 692 eq3 0;
+#N canvas 0 50 1272 692 eq3 0;
 #X obj 76 35 inlet~;
 #X obj 76 90 biquad~ 1.86972 -0.872325 0.000650245 0.00130049 0.000650245
 ;
@@ -51,7 +51,7 @@
 #X connect 17 0 13 1;
 #X connect 18 0 12 1;
 #X restore 118 264 pd eq3;
-#N canvas 0 25 1272 692 eq3 0;
+#N canvas 0 50 1272 692 eq3 0;
 #X obj 76 35 inlet~;
 #X obj 76 90 biquad~ 1.86972 -0.872325 0.000650245 0.00130049 0.000650245
 ;
@@ -94,9 +94,13 @@
 #X connect 17 0 13 1;
 #X connect 18 0 12 1;
 #X restore 180 268 pd eq3;
-#X obj 210 94 tof/param /low 0 /g slider 0 1;
-#X obj 223 122 tof/param /mid 0 /g slider 0 1;
-#X obj 245 147 tof/param /high 0 /g slider 0 1;
+#X obj 188 156 tof/param /low 0 /g slider 0 1;
+#X obj 201 184 tof/param /mid 0 /g slider 0 1;
+#X obj 223 209 tof/param /high 0 /g slider 0 1;
+#X obj 260 121 tof/argument 5;
+#X obj 233 97 tof/argument 4;
+#X obj 199 77 tof/argument 4;
+#X obj 201 44 loadbang;
 #X connect 1 0 9 0;
 #X connect 2 0 10 0;
 #X connect 4 0 6 0;
@@ -110,3 +114,9 @@
 #X connect 12 0 10 2;
 #X connect 13 0 9 3;
 #X connect 13 0 10 3;
+#X connect 14 0 13 0;
+#X connect 15 0 12 0;
+#X connect 16 0 11 0;
+#X connect 17 0 14 0;
+#X connect 17 0 15 0;
+#X connect 17 0 16 0;

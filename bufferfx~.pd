@@ -1,17 +1,17 @@
-#N canvas 488 391 726 371 10;
-#X obj 54 279 outlet~;
-#X obj 48 66 inlet~;
-#X obj 108 66 inlet~;
-#X obj 114 279 outlet~;
-#X obj 477 83 inlet params;
-#X obj 181 253 tof/param /wet 0 /g slider 0 1;
-#X obj 477 129 print PARAM_NOTFOUND;
-#X obj 54 254 tof/crossfade~ 2;
-#X msg 218 283 \$1 5;
-#X obj 218 307 line~;
-#X obj 477 105 tof/param route;
-#X obj 473 228 b;
-#X obj 474 257 tof/param gui;
+#N canvas 1 82 1351 661 10;
+#X obj 120 437 outlet~;
+#X obj 114 224 inlet~;
+#X obj 174 224 inlet~;
+#X obj 180 437 outlet~;
+#X obj 543 241 inlet params;
+#X obj 247 411 tof/param /wet 0 /g slider 0 1;
+#X obj 543 287 print PARAM_NOTFOUND;
+#X obj 120 412 tof/crossfade~ 2;
+#X msg 284 441 \$1 5;
+#X obj 284 465 line~;
+#X obj 543 263 tof/param route;
+#X obj 539 386 b;
+#X obj 540 415 tof/param gui;
 #N canvas 487 68 730 557 bufferfx 0;
 #X obj 173 588 outlet~;
 #X obj 14 237 inlet~;
@@ -31,7 +31,7 @@
 #X obj 254 240 line;
 #X msg 254 214 \$1 20;
 #X obj 116 126 hsl 128 8 30 1000 0 1 empty empty update -2 5 0 10 -262144
--1 -1 2671 1;
+-1 -1 0 1;
 #X obj 280 148 hsl 128 8 3 70 0 1 empty empty length -2 5 0 10 -262144
 -1 -1 0 1;
 #X obj 158 47 inlet;
@@ -72,9 +72,9 @@
 #X connect 25 0 27 1;
 #X connect 26 0 25 0;
 #X connect 27 0 4 0;
-#X restore 96 207 pd bufferfx;
-#X obj 175 70 tof/param /length 3 /g slider 3 70;
-#X obj 180 106 tof/param /update 30 /g slider 30 1000;
+#X restore 162 365 pd bufferfx;
+#X obj 241 228 tof/param /length 3 /g slider 3 70;
+#X obj 246 264 tof/param /update 30 /g slider 30 1000;
 #N canvas 487 68 730 557 bufferfx 0;
 #X obj 173 588 outlet~;
 #X obj 14 237 inlet~;
@@ -96,7 +96,7 @@
 #X obj 116 126 hsl 128 8 30 1000 0 1 empty empty update -2 5 0 10 -262144
 -1 -1 0 1;
 #X obj 280 148 hsl 128 8 3 70 0 1 empty empty length -2 5 0 10 -262144
--1 -1 5118 1;
+-1 -1 0 1;
 #X obj 158 47 inlet;
 #X obj 158 72 * 7.8;
 #X obj 249 50 inlet length;
@@ -135,7 +135,11 @@
 #X connect 25 0 26 0;
 #X connect 26 0 27 1;
 #X connect 27 0 4 0;
-#X restore 203 205 pd bufferfx;
+#X restore 269 363 pd bufferfx;
+#X obj 310 193 tof/argument 5;
+#X obj 285 164 tof/argument 4;
+#X obj 251 132 tof/argument 3;
+#X obj 251 109 loadbang;
 #X connect 1 0 7 0;
 #X connect 1 0 13 0;
 #X connect 2 0 7 1;
@@ -154,3 +158,9 @@
 #X connect 15 0 13 1;
 #X connect 15 0 16 1;
 #X connect 16 0 7 3;
+#X connect 17 0 15 0;
+#X connect 18 0 14 0;
+#X connect 19 0 5 0;
+#X connect 20 0 17 0;
+#X connect 20 0 18 0;
+#X connect 20 0 19 0;

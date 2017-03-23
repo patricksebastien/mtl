@@ -1,37 +1,53 @@
-#N canvas 524 25 703 543 10;
+#N canvas 1 82 1351 661 10;
 #X text 56 72 Comment: Taken from Andy Farnell's work.;
 #X text 58 52 Description: Generates different colored noises.;
 #X obj 57 143 vsl 15 128 0 127 0 0 empty empty empty 0 -8 0 8 -33289
 -262144 -1 0 1;
 #X obj 122 142 vsl 15 128 0 127 0 0 empty empty empty 0 -8 0 8 -90881
--262144 -1 0 1;
+-262144 -1 6300 1;
 #X obj 195 141 vsl 15 128 0 127 0 0 empty empty empty 0 -8 0 8 -258699
--262144 -1 0 1;
+-262144 -1 11200 1;
 #X obj 299 140 vsl 15 128 0 127 0 0 empty empty empty 0 -8 0 8 -260818
 -262144 -1 0 1;
-#X obj 381 138 vsl 15 128 0 127 0 0 empty empty empty 0 -8 0 8 -241291
+#X obj 380 140 vsl 15 128 0 127 0 0 empty empty empty 0 -8 0 8 -241291
 -262144 -1 0 1;
 #X obj 463 138 vsl 15 128 0 127 0 0 empty empty empty 0 -8 0 8 -24198
--262144 -1 0 1;
+-262144 -1 7700 1;
 #X obj 544 137 vsl 15 128 0 127 0 0 empty empty empty 0 -8 0 8 -62784
 -262144 -1 0 1;
 #X obj 641 133 vsl 15 128 0 127 0 0 empty empty empty 0 -8 0 8 -250685
 -262144 -1 0 1;
 #X text 56 85 Version: 2;
-#X text 330 345 All inputs are 0-127;
+#X text 346 347 All inputs are 0-127;
 #X obj 218 347 mtl/coloredNoise~;
 #X obj 218 384 mtl/out~;
 #X obj 381 384 cyclone/Scope~ 130 130 256 3 128 -1 1 0 0 0 0 102 255
 51 135 135 135 0;
 #X text 70 105 tags: synthesize~;
-#X connect 2 0 12 0;
-#X connect 3 0 12 1;
-#X connect 4 0 12 2;
-#X connect 5 0 12 3;
-#X connect 6 0 12 4;
-#X connect 7 0 12 5;
-#X connect 8 0 12 6;
-#X connect 9 0 12 7;
+#X msg 50 302 /freq1 \$1;
+#X msg 116 301 /freq2 \$1;
+#X msg 186 300 /freq3 \$1;
+#X msg 252 300 /freq4 \$1;
+#X msg 330 299 /freq5 \$1;
+#X msg 396 298 /freq6 \$1;
+#X msg 466 298 /freq7 \$1;
+#X msg 533 297 /freq8 \$1;
+#X connect 2 0 16 0;
+#X connect 3 0 17 0;
+#X connect 4 0 18 0;
+#X connect 5 0 19 0;
+#X connect 6 0 20 0;
+#X connect 7 0 21 0;
+#X connect 8 0 22 0;
+#X connect 9 0 23 0;
 #X connect 12 0 13 0;
 #X connect 12 0 13 1;
 #X connect 12 0 14 0;
+#X connect 16 0 12 0;
+#X connect 17 0 12 0;
+#X connect 18 0 12 0;
+#X connect 19 0 12 0;
+#X connect 20 0 12 0;
+#X connect 21 0 12 0;
+#X connect 22 0 12 0;
+#X connect 23 0 12 0;

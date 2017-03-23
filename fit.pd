@@ -36,7 +36,7 @@
 #X msg 365 355 0;
 #X msg 408 578 1 \$1;
 #X obj 412 605 /;
-#X obj 327 534 zexy/demultiplex 0 1;
+#X obj 327 534 demultiplex 0 1;
 #X connect 0 0 1 0;
 #X connect 1 0 2 0;
 #X connect 2 0 3 0;

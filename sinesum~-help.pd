@@ -1,0 +1,41 @@
+#N canvas 1 82 1351 661 10;
+#X obj 34 300 mtl/out~;
+#X obj 483 187 hsl 100 15 0 127 0 0 /sinesum/harmonic1 /sinesum/harmonic1_
+harmonic1 105 7 0 8 -262144 -1 -1 9900 1;
+#X obj 480 159 cnv 15 200 20 empty empty /sinesum~/ 2 12 0 8 -258401
+-262144 0;
+#X text 15 8 Description: s-sinesum~ makes complex \, harmonically
+rich sinusoids \, .;
+#X text 12 37 tags: synthe~;
+#X obj 34 263 sinesum~ /id sinesum;
+#X obj 483 207 hsl 100 15 0 127 0 0 /sinesum/harmonic2 /sinesum/harmonic2_
+harmonic2 105 7 0 8 -262144 -1 -1 1500 1;
+#X obj 484 227 hsl 100 15 0 127 0 0 /sinesum/harmonic3 /sinesum/harmonic3_
+harmonic3 105 7 0 8 -262144 -1 -1 8900 1;
+#X obj 484 247 hsl 100 15 0 127 0 0 /sinesum/harmonic4 /sinesum/harmonic4_
+harmonic4 105 7 0 8 -262144 -1 -1 7439 1;
+#X obj 485 268 hsl 100 15 0 127 0 0 /sinesum/harmonic5 /sinesum/harmonic5_
+harmonic5 105 7 0 8 -262144 -1 -1 5339 1;
+#X obj 485 288 hsl 100 15 0 127 0 0 /sinesum/harmonic6 /sinesum/harmonic6_
+harmonic6 105 7 0 8 -262144 -1 -1 2039 1;
+#X obj 486 308 hsl 100 15 0 127 0 0 /sinesum/harmonic7 /sinesum/harmonic7_
+harmonic7 105 7 0 8 -262144 -1 -1 4839 1;
+#X obj 486 328 hsl 100 15 0 127 0 0 /sinesum/harmonic8 /sinesum/harmonic8_
+harmonic8 105 7 0 8 -262144 -1 -1 1939 1;
+#X obj 486 349 hsl 100 15 0 127 0 0 /sinesum/harmonic9 /sinesum/harmonic9_
+harmonic9 105 7 0 8 -262144 -1 -1 6139 1;
+#X obj 486 369 hsl 100 15 0 127 0 0 /sinesum/harmonic10 /sinesum/harmonic10_
+harmonic10 105 7 0 8 -262144 -1 -1 3639 1;
+#X obj 487 389 hsl 100 15 0 127 0 0 /sinesum/harmonic11 /sinesum/harmonic11_
+harmonic11 105 7 0 8 -262144 -1 -1 2139 1;
+#X obj 487 409 hsl 100 15 0 127 0 0 /sinesum/harmonic12 /sinesum/harmonic12_
+harmonic12 105 7 0 8 -262144 -1 -1 2139 1;
+#X obj 52 191 notein;
+#X obj 41 56 mtl/piano 1;
+#X obj 52 220 pack;
+#X connect 5 0 0 0;
+#X connect 5 0 0 1;
+#X connect 17 0 19 0;
+#X connect 17 1 19 1;
+#X connect 18 0 5 0;
+#X connect 19 0 5 0;
