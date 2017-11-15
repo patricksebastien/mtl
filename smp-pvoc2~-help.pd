@@ -1,0 +1,34 @@
+#N canvas 0 98 1920 982 10;
+#X obj 141 348 dac~;
+#X msg 141 272 ./test.wav;
+#X obj 927 96 cnv 15 200 20 empty empty /smp-pvoc2/ 2 12 0 8 -258401
+-262144 0;
+#X obj 930 219 hsl 128 15 0 1 0 0 /smp-pvoc2/position /smp-pvoc2/position_
+position 135 10 0 10 -262144 -1 -1 0 1;
+#X obj 928 138 hradio 15 1 0 5 /smp-pvoc2/window_size /smp-pvoc2/window_size_
+window_size 0 -8 0 10 -262144 -1 -1 2;
+#X obj 931 158 hsl 128 15 0 1 0 0 /smp-pvoc2/duration /smp-pvoc2/duration_
+duration 135 10 0 10 -262144 -1 -1 12700 1;
+#X obj 931 178 hsl 128 15 1 300 0 0 /smp-pvoc2/bpm /smp-pvoc2/bpm_
+bpm 135 10 0 10 -262144 -1 -1 4205 1;
+#X obj 930 198 hsl 128 15 1 1000 0 0 /smp-pvoc2/pitchpercent /smp-pvoc2/pitchpercent_
+pitch 135 10 0 10 -262144 -1 -1 1259 1;
+#X msg 306 249 /position 0;
+#X obj 153 245 openpanel;
+#X obj 153 225 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X msg 318 272 /position 1;
+#X obj 141 313 smp-pvoc2~ /id smp-pvoc2;
+#X text 37 72 tags: play~;
+#X text 39 26 Description: Phase Vocoder pitch and playback speed can
+be changed while the sample plays. taken from the pd documentation.
+, f 124;
+#X text 38 42 Author: HardOff url : http://www.pdpatchrepo.info/hurleur/DIY2.zip
+, f 52;
+#X connect 1 0 12 0;
+#X connect 8 0 12 1;
+#X connect 9 0 12 0;
+#X connect 10 0 9 0;
+#X connect 11 0 12 1;
+#X connect 12 0 0 0;
+#X connect 12 1 0 1;

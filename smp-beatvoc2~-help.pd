@@ -1,0 +1,35 @@
+#N canvas 0 98 1920 982 10;
+#X obj 147 313 dac~;
+#X obj 754 113 cnv 15 200 20 empty empty /smp-beatvoc2/ 2 12 0 8 -258401
+-262144 0;
+#X obj 757 257 hsl 128 15 0 1 0 0 /smp-beatvoc2/crossfade /smp-beatvoc2/crossfade_
+crossfade 135 10 0 10 -262144 -1 -1 3175 1;
+#X obj 755 155 hradio 15 1 0 7 /smp-beatvoc2/window_size /smp-beatvoc2/window_size_
+window_size 0 -8 0 10 -262144 -1 -1 2;
+#X obj 758 175 hsl 128 15 0 1 0 0 /smp-beatvoc2/duration /smp-beatvoc2/duration_
+duration 135 10 0 10 -262144 -1 -1 12700 1;
+#X obj 758 195 hsl 128 15 1 300 0 0 /smp-beatvoc2/bpm /smp-beatvoc2/bpm_
+bpm 135 10 0 10 -262144 -1 -1 4205 1;
+#X obj 757 215 hsl 128 15 1 1000 0 0 /smp-beatvoc2/pitchpercent /smp-beatvoc2/pitchpercent_
+pitch 135 10 0 10 -262144 -1 -1 1259 1;
+#X obj 757 236 hsl 128 15 0 1 0 0 /smp-beatvoc2/position /smp-beatvoc2/position_
+position 135 10 0 10 -262144 -1 -1 12700 1;
+#X msg 146 238 ./test.wav;
+#X msg 486 240 /position 0;
+#X obj 163 204 openpanel;
+#X obj 163 184 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X msg 486 213 /position 1;
+#X text 41 72 tags: play~;
+#X text 39 26 Description: Player;
+#X text 38 42 Author: HardOff url : http://www.pdpatchrepo.info/hurleur/DIY2.zip
+, f 52;
+#X obj 146 283 mtl/smp-beatvoc2~ /id smp-beatvoc2 1 1 100 100 2 0.25
+;
+#X connect 8 0 16 0;
+#X connect 9 0 16 1;
+#X connect 10 0 16 0;
+#X connect 11 0 10 0;
+#X connect 12 0 16 1;
+#X connect 16 0 0 0;
+#X connect 16 1 0 1;
