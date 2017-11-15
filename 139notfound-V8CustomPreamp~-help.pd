@@ -1,0 +1,38 @@
+#N canvas 554 276 1366 662 10;
+#X obj 19 252 mtl/out~;
+#X text 13 68 tags: fx~;
+#X msg 412 139 /wet \$1;
+#X floatatom 412 118 5 0 1 0 - - -, f 5;
+#X text 487 191 <-Click on the propeties menu to display params;
+#X obj 343 268 cnv 15 200 20 empty empty /V8CustomPreamp/ 2 12 0 8
+-258401 -262144 0;
+#X obj 344 297 hsl 100 15 0 1 0 0 /V8CustomPreamp/wet /V8CustomPreamp/wet_
+wet 105 7 0 8 -262144 -1 -1 1980 1;
+#X obj 343 334 hsl 100 15 0.1 10 0 0 /V8CustomPreamp/middle /V8CustomPreamp/middle_
+middle 105 7 0 8 -262144 -1 -1 400 1;
+#X obj 343 352 hsl 100 15 0.1 10 0 0 /V8CustomPreamp/bass /V8CustomPreamp/bass_
+bass 105 7 0 8 -262144 -1 -1 400 1;
+#X obj 343 370 hsl 100 15 0 1 0 0 /V8CustomPreamp/gain /V8CustomPreamp/gain_
+gain 105 7 0 8 -262144 -1 -1 4950 1;
+#X obj 343 316 hsl 100 15 0.1 10 0 0 /V8CustomPreamp/treble /V8CustomPreamp/treble_
+treble 105 7 0 8 -262144 -1 -1 400 1;
+#X obj 340 450 tgl 15 0 /V8CustomPreamp/option /V8CustomPreamp/option_
+option 17 7 0 10 -262144 -1 -1 1 1;
+#X obj 19 133 osc~ 440;
+#X text 11 5 Description: UKM800 Preamp;
+#X obj 343 390 hsl 100 15 0 1 0 0 /V8CustomPreamp/master /V8CustomPreamp/master_
+master 105 7 0 8 -262144 -1 -1 990 1;
+#X obj 343 410 hsl 100 15 0 1 0 0 /V8CustomPreamp/presence /V8CustomPreamp/presence_
+presence 105 7 0 8 -262144 -1 -1 9900 1;
+#X obj 343 430 hsl 100 15 0 1 0 0 /V8CustomPreamp/deep /V8CustomPreamp/deep_
+deep 105 7 0 8 -262144 -1 -1 990 1;
+#X text 11 23 Author: 139notfound url : http://139notfound.blogspot.fr/2017/04/puredatav8custom-preamp.html
+, f 79;
+#X obj 16 184 mtl/139notfound-V8CustomPreamp~ /id V8CustomPreamp 0.5
+0.5 0.5 0.5 0.5 1 0.1 0.1 1 0.2;
+#X connect 2 0 18 2;
+#X connect 3 0 2 0;
+#X connect 12 0 18 0;
+#X connect 12 0 18 1;
+#X connect 18 0 0 0;
+#X connect 18 1 0 1;

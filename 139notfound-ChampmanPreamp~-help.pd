@@ -1,0 +1,32 @@
+#N canvas 554 276 1366 662 10;
+#X obj 19 252 mtl/out~;
+#X text 13 68 tags: fx~;
+#X msg 412 139 /wet \$1;
+#X floatatom 412 118 5 0 1 0 - - -, f 5;
+#X text 487 191 <-Click on the propeties menu to display params;
+#X obj 343 268 cnv 15 200 20 empty empty /ChampmanPreamp/ 2 12 0 8
+-258401 -262144 0;
+#X obj 344 297 hsl 100 15 0 1 0 0 /ChampmanPreamp/wet /ChampmanPreamp/wet_
+wet 105 7 0 8 -262144 -1 -1 9900 1;
+#X obj 343 334 hsl 100 15 0.1 10 0 0 /ChampmanPreamp/middle /ChampmanPreamp/middle_
+middle 105 7 0 8 -262144 -1 -1 400 1;
+#X obj 343 352 hsl 100 15 0.1 10 0 0 /ChampmanPreamp/bass /ChampmanPreamp/bass_
+bass 105 7 0 8 -262144 -1 -1 400 1;
+#X obj 343 389 hsl 100 15 0 1 0 0 /ChampmanPreamp/master /ChampmanPreamp/master_
+master 105 7 0 8 -262144 -1 -1 9900 1;
+#X obj 343 316 hsl 100 15 0.1 10 0 0 /ChampmanPreamp/treble /ChampmanPreamp/treble_
+treble 105 7 0 8 -262144 -1 -1 400 1;
+#X obj 19 133 osc~ 440;
+#X text 11 5 Description: UKM450 Preamp;
+#X obj 343 370 hsl 100 15 0 1 0 0 /ChampmanPreamp/gain /ChampmanPreamp/gain_
+gain 105 7 0 8 -262144 -1 -1 4950 1;
+#X text 11 23 Author: 139notfound url : http://139notfound.blogspot.fr/2017/02/puredatachampman-preamp.html
+, f 77;
+#X obj 12 184 mtl/139notfound-ChampmanPreamp~ /id ChampmanPreamp 0.5
+0.5 0.5 0.5 0.5 1 1;
+#X connect 2 0 15 2;
+#X connect 3 0 2 0;
+#X connect 11 0 15 0;
+#X connect 11 0 15 1;
+#X connect 15 0 0 0;
+#X connect 15 1 0 1;

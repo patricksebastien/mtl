@@ -1,0 +1,34 @@
+#N canvas 554 276 1366 662 10;
+#X obj 16 252 mtl/out~;
+#X text 13 68 tags: fx~;
+#X msg 412 139 /wet \$1;
+#X floatatom 412 118 5 0 1 0 - - -, f 5;
+#X text 434 194 <-Click on the propeties menu to display params;
+#X obj 343 268 cnv 15 200 20 empty empty /1390Preamp/ 2 12 0 8 -258401
+-262144 0;
+#X obj 344 297 hsl 100 15 0 1 0 0 /1390Preamp/wet /1390Preamp/wet_
+wet 105 7 0 8 -262144 -1 -1 9900 1;
+#X obj 343 334 hsl 100 15 0.1 10 0 0 /1390Preamp/middle /1390Preamp/middle_
+middle 105 7 0 8 -262144 -1 -1 400 1;
+#X obj 343 352 hsl 100 15 0.1 10 0 0 /1390Preamp/bass /1390Preamp/bass_
+bass 105 7 0 8 -262144 -1 -1 400 1;
+#X obj 344 391 hsl 100 15 0 1 0 0 /1390Preamp/master /1390Preamp/master_
+master 105 7 0 8 -262144 -1 -1 4950 1;
+#X obj 343 316 hsl 100 15 0.1 10 0 0 /1390Preamp/treble /1390Preamp/treble_
+treble 105 7 0 8 -262144 -1 -1 400 1;
+#X obj 17 133 osc~ 440;
+#X text 11 5 Description: 1390 Preamp;
+#X obj 338 430 hradio 15 1 1 3 /1390Preamp/choice /1390Preamp/choice_
+choice 0 -8 0 10 -262144 -1 -1 1;
+#X obj 343 370 hsl 100 15 0 1 0 0 /UKM450Preamp/gain /UKM450Preamp/gain_
+gain 105 7 0 8 -262144 -1 -1 0 1;
+#X obj 16 184 mtl/139notfound-1390Preamp~ /id 1390Preamp 0.5 0.5 0.5
+0.5 0.5 1 1 1;
+#X text 11 23 Author: 139notfound url : http://139notfound.blogspot.fr/2017/02/puredata1390-preamp.html
+, f 70;
+#X connect 2 0 15 2;
+#X connect 3 0 2 0;
+#X connect 11 0 15 0;
+#X connect 11 0 15 1;
+#X connect 15 0 0 0;
+#X connect 15 1 0 1;

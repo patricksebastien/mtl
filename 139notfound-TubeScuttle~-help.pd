@@ -1,0 +1,30 @@
+#N canvas 554 276 1366 662 10;
+#X obj 19 252 mtl/out~;
+#X text 13 68 tags: fx~;
+#X msg 412 139 /wet \$1;
+#X floatatom 412 118 5 0 1 0 - - -, f 5;
+#X text 487 181 <-Click on the propeties menu to display params;
+#X obj 343 268 cnv 15 200 20 empty empty /TubeScuttle/ 2 12 0 8 -258401
+-262144 0;
+#X obj 344 297 hsl 100 15 0 1 0 0 /TubeScuttle/wet /TubeScuttle/wet_
+wet 105 7 0 8 -262144 -1 -1 0 1;
+#X obj 343 334 hsl 100 15 0.1 1 0 0 /TubeScuttle/tone /TubeScuttle/tone_
+tone 105 7 0 8 -262144 -1 -1 0 1;
+#X obj 343 352 hsl 100 15 0.1 1 0 0 /TubeScuttle/level /TubeScuttle/level_
+level 105 7 0 8 -262144 -1 -1 0 1;
+#X obj 343 316 hsl 100 15 0.1 10 0 0 /TubeScuttle/drive /TubeScuttle/drive_
+drive 105 7 0 8 -262144 -1 -1 0 1;
+#X obj 340 372 tgl 15 0 /TubeScuttle/gainup /TubeScuttle/gainup_ gainup
+17 7 0 10 -262144 -1 -1 0 1;
+#X obj 19 133 osc~ 440;
+#X text 11 5 Description: TubeScuttle;
+#X obj 12 184 mtl/139notfound-TubeScuttle~ /id TubeScuttle 0.5 0.5
+0.5 1 1 0.1, f 65;
+#X text 11 22 Author: 139notfound url : http://139notfound.blogspot.fr/2017/03/puredatatube-scuttleoverdrive.html
+, f 85;
+#X connect 2 0 13 2;
+#X connect 3 0 2 0;
+#X connect 11 0 13 0;
+#X connect 11 0 13 1;
+#X connect 13 0 0 0;
+#X connect 13 1 0 1;

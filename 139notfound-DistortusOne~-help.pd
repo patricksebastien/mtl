@@ -1,0 +1,33 @@
+#N canvas 554 276 1366 662 10;
+#X obj 19 252 mtl/out~;
+#X text 13 68 tags: fx~;
+#X msg 412 139 /wet \$1;
+#X floatatom 412 118 5 0 1 0 - - -, f 5;
+#X text 483 187 <-Click on the propeties menu to display params;
+#X obj 343 268 cnv 15 200 20 empty empty /DistortusOne/ 2 12 0 8 -258401
+-262144 0;
+#X obj 344 297 hsl 100 15 0 10 0 0 /DistortusOne/dist /DistortusOne/dist_
+dist 105 7 0 8 -262144 -1 -1 990 1;
+#X obj 344 353 hsl 100 15 0.1 1 0 0 /DistortusOne/wet /DistortusOne/wet_
+wet 105 7 0 8 -262144 -1 -1 0 1;
+#X obj 344 316 hsl 100 15 0.01 1 0 0 /DistortusOne/level /DistortusOne/level_
+level 105 7 0 8 -262144 -1 -1 900 1;
+#X obj 19 133 osc~ 440;
+#X obj 43 341 dac~;
+#X text 11 5 Description: DistortusOne;
+#X obj 344 334 hsl 100 15 0.1 1 0 0 /DistortusOne/tone /DistortusOne/tone_
+tone 105 7 0 8 -262144 -1 -1 0 1;
+#X obj 341 373 tgl 15 0 /DistortusOne/gainup /DistortusOne/gainup gainup
+17 7 0 10 -262144 -1 -1 0 1;
+#X text 11 23 Author: 139notfound url : http://139notfound.blogspot.fr/2017/03/piuredatadistotus-onedistortion.html
+;
+#X obj 15 184 mtl/139notfound-DistortusOne~ /id DistortusOne 1 0.1
+0.1 0.1;
+#X connect 0 0 10 0;
+#X connect 0 1 10 1;
+#X connect 2 0 15 2;
+#X connect 3 0 2 0;
+#X connect 9 0 15 0;
+#X connect 9 0 15 1;
+#X connect 15 0 0 0;
+#X connect 15 1 0 1;

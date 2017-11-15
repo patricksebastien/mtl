@@ -1,0 +1,41 @@
+#N canvas 554 276 1366 662 10;
+#X obj 44 366 mtl/out~;
+#X text 13 68 tags: fx~;
+#X msg 384 286 /wet \$1;
+#X floatatom 384 265 5 0 1 0 - - -, f 5;
+#X text 434 314 <-Click on the propeties menu to display params;
+#X obj 574 402 cnv 15 200 20 empty empty /RangeMaestro/ 2 12 0 8 -258401
+-262144 0;
+#X obj 575 431 hsl 100 15 0 1 0 0 /RangeMaestro/wet /RangeMaestro/wet_
+wet 105 7 0 8 -262144 -1 -1 990 1;
+#X obj 575 468 hsl 100 15 0.1 1 0 0 /RangeMaestro/range /RangeMaestro/range_
+range 105 7 0 8 -262144 -1 -1 9900 1;
+#X obj 575 450 hsl 100 15 0.01 1 0 0 /RangeMaestro/boost /RangeMaestro/boost_
+boost 105 7 0 8 -262144 -1 -1 9900 1;
+#X obj 43 279 osc~ 440;
+#X text 11 5 Description: Range Maestro;
+#X obj 571 490 vradio 15 1 1 3 /RangeMaestro/choice /RangeMaestro/choice_
+empty 0 -8 0 10 -262144 -1 -1 1;
+#X text 594 489 Treble;
+#X text 594 505 Mid;
+#X text 594 520 Full;
+#X obj 45 442 dac~;
+#X text 12 87 Description : Range Maestro is a booster effect. In other
+words \, a booster creates Distortion sound by loading the next patch
+by increasing the volume. Therefore \, if you connect the booster directly
+to dac~ and increase the volume \, there is a danger of serious damage
+to your speaker. In order to solve this \, it is recommended to connect
+an amp simulator etc. behind the booster. I have created some necessary
+patches \, so please use it. Thank you.;
+#X obj 44 314 mtl/139notfound-RangeMaestro~ /id RangeMaestro 1 1 1
+0.1;
+#X text 11 23 Author: 139notfound url : http://139notfound.blogspot.fr/2017/08/puredatarange-maestrotreble-booster.html
+, f 88;
+#X connect 0 0 15 0;
+#X connect 0 1 15 1;
+#X connect 2 0 17 2;
+#X connect 3 0 2 0;
+#X connect 9 0 17 0;
+#X connect 9 0 17 1;
+#X connect 17 0 0 0;
+#X connect 17 1 0 1;

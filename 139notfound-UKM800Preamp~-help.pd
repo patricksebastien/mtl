@@ -1,0 +1,34 @@
+#N canvas 554 276 1366 662 10;
+#X obj 19 252 mtl/out~;
+#X text 13 68 tags: fx~;
+#X msg 412 139 /wet \$1;
+#X floatatom 412 118 5 0 1 0 - - -, f 5;
+#X text 487 191 <-Click on the propeties menu to display params;
+#X obj 343 268 cnv 15 200 20 empty empty /UKM800Preamp/ 2 12 0 8 -258401
+-262144 0;
+#X obj 344 297 hsl 100 15 0 1 0 0 /UKM800Preamp/wet /UKM800Preamp/wet_
+wet 105 7 0 8 -262144 -1 -1 3890 1;
+#X obj 343 334 hsl 100 15 0.1 10 0 0 /UKM800Preamp/middle /UKM800Preamp/middle_
+middle 105 7 0 8 -262144 -1 -1 7200 1;
+#X obj 343 352 hsl 100 15 0.1 10 0 0 /UKM800Preamp/bass /UKM800Preamp/bass_
+bass 105 7 0 8 -262144 -1 -1 9700 1;
+#X obj 343 370 hsl 100 15 0 1 0 0 /UKM800Preamp/gain /UKM800Preamp/gain_
+gain 105 7 0 8 -262144 -1 -1 6150 1;
+#X obj 343 316 hsl 100 15 0.1 10 0 0 /UKM800Preamp/treble /UKM800Preamp/treble_
+treble 105 7 0 8 -262144 -1 -1 2000 1;
+#X obj 340 409 tgl 15 0 /UKM450Preamp/modern /UKM450Preamp/modern_
+modern 17 7 0 10 -262144 -1 -1 1 1;
+#X obj 19 133 osc~ 440;
+#X text 11 5 Description: UKM800 Preamp;
+#X obj 343 390 hsl 100 15 0 1 0 0 /UKM800Preamp/master /UKM800Preamp/master_
+master 105 7 0 8 -262144 -1 -1 5700 1;
+#X text 11 23 Author: 139notfound url : http://139notfound.blogspot.fr/2017/02/puredataukm800-preamp.html
+, f 73;
+#X obj 15 184 mtl/139notfound-UKM800Preamp~ /id UKM800Preamp 0.5 0.5
+0.5 0.5 0.5 1 1 0.1;
+#X connect 2 0 16 2;
+#X connect 3 0 2 0;
+#X connect 12 0 16 0;
+#X connect 12 0 16 1;
+#X connect 16 0 0 0;
+#X connect 16 1 0 1;
