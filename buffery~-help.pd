@@ -1,4 +1,4 @@
-#N canvas 1 82 1364 661 10;
+#N canvas 417 272 1364 661 10;
 #X text 979 91 hard.off@gmail.com 2008;
 #X text 978 75 rough pd re-creation of dfx 'buffer override' plugin
 ;

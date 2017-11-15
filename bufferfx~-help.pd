@@ -6,7 +6,7 @@
 -262144 0;
 #X obj 25 352 hsl 100 15 0 1 0 0 /bufferfx/wet /bufferfx/wet_ wet 105
 7 0 8 -262144 -1 -1 9900 1;
-#X obj -228 89 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 1
+#X obj -228 89 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
 1;
 #N canvas 0 50 1280 720 generate~ 0;
 #X obj 90 124 metro 400;
@@ -35,11 +35,11 @@
 #X connect 11 1 8 0;
 #X restore -228 114 pd generate~;
 #X text -232 24 Description:;
-#X text -155 26 Bufferfx;
+#X text -138 24 Bufferfx;
 #X obj 25 371 hsl 100 15 30 1000 0 0 /bufferfx/update /bufferfx/update_
-update 105 7 0 8 -262144 -1 -1 7897 1;
+update 105 7 0 8 -262144 -1 -1 4797 1;
 #X obj 24 390 hsl 100 15 3 70 0 0 /bufferfx/length /bufferfx/length_
-length 105 7 0 8 -262144 -1 -1 6534 1;
+length 105 7 0 8 -262144 -1 -1 1034 1;
 #X obj -228 159 mtl/bufferfx~ /id bufferfx 1 10 500;
 #X connect 5 0 6 0;
 #X connect 6 0 11 0;

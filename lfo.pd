@@ -1,4 +1,4 @@
-#N canvas 1 84 1351 659 10;
+#N canvas 1 98 1351 659 10;
 #N canvas 1 87 495 243 tables 0;
 #X obj 65 43 table \$0-sine 1026;
 #X obj 65 64 table \$0-tri 1026;
@@ -111,8 +111,8 @@
 #X connect 21 3 17 0;
 #X connect 23 0 20 0;
 #X connect 24 0 23 0;
-#X restore 213 449 pd select-wave;
-#X obj 213 478 outlet;
+#X restore 50 483 pd select-wave;
+#X obj 50 512 outlet;
 #N canvas 172 83 586 377 LICENSE-GPL 0;
 #X text 57 88 This program is free software: you can redistribute it
 and/or modify it under the terms of the GNU General Public License
@@ -134,7 +134,7 @@ License along with this program. If not \, see <http://www.gnu.org/licenses/>.
 #X obj 856 191 tof/param route;
 #X obj 852 314 b;
 #X obj 853 343 tof/param gui;
-#X obj 213 419 mtl/mphasor /id \$0-mphasor;
+#X obj 50 453 mtl/mphasor /id \$0-mphasor;
 #X obj 167 200 tof/param /on 0 /g tgl 0 1;
 #X obj 197 251 tof/param /updates 0 /g slider 1 1000;
 #X obj 225 302 tof/param /phase 0 /g slider 0 1;
@@ -148,6 +148,7 @@ License along with this program. If not \, see <http://www.gnu.org/licenses/>.
 #X obj 450 122 tof/argument 4;
 #X obj 424 99 tof/argument 3;
 #X obj 456 76 loadbang;
+#X obj 50 99 inlet;
 #X connect 1 0 2 0;
 #X connect 4 0 6 0;
 #X connect 6 0 5 0;
@@ -157,10 +158,10 @@ License along with this program. If not \, see <http://www.gnu.org/licenses/>.
 #X connect 11 0 15 0;
 #X connect 12 0 16 0;
 #X connect 13 0 17 0;
-#X connect 14 0 9 0;
-#X connect 15 0 9 0;
-#X connect 16 0 9 0;
-#X connect 17 0 9 0;
+#X connect 14 0 9 1;
+#X connect 15 0 9 1;
+#X connect 16 0 9 1;
+#X connect 17 0 9 1;
 #X connect 18 0 13 0;
 #X connect 19 0 12 0;
 #X connect 20 0 11 0;
@@ -169,3 +170,4 @@ License along with this program. If not \, see <http://www.gnu.org/licenses/>.
 #X connect 22 0 19 0;
 #X connect 22 0 20 0;
 #X connect 22 0 21 0;
+#X connect 23 0 9 0;

@@ -1,6 +1,6 @@
-#N canvas 1 84 1351 659 10;
+#N canvas 97 353 1351 659 10;
 #X obj 354 213 hsl 128 15 0 1 0 0 empty empty 0...1 10 7 1 10 -262144
--1 -1 5534 1;
+-1 -1 1796 1;
 #X obj 297 265 timer;
 #X obj 297 243 t b b;
 #X floatatom 297 289 5 0 0 0 - - -, f 5;
@@ -29,16 +29,18 @@ between 0...1 with variable frequency and update period.;
 #X obj 744 89 tgl 15 0 /mphasor/on /mphasor/on_ on 17 7 0 10 -262144
 -1 -1 1 1;
 #X obj 747 108 hsl 128 15 1 1000 0 0 /mphasor/frequency /mphasor/frequency_
-frequency 135 10 0 10 -262144 -1 -1 44 1;
+frequency 135 10 0 10 -262144 -1 -1 244 1;
 #X obj 747 127 hsl 128 15 1 1000 0 0 /mphasor/updates /mphasor/updates_
-updates 135 10 0 10 -262144 -1 -1 6344 1;
+updates 135 10 0 10 -262144 -1 -1 44 1;
 #X obj 747 146 hsl 128 15 0 1 0 0 /mphasor/phase /mphasor/phase_ phase
 135 10 0 10 -262144 -1 -1 12700 1;
 #X text 357 434 tags: control;
 #X obj 351 147 mtl/mphasor /id mphasor 1 500 500 1;
+#X msg 351 80 symbol reset;
 #X connect 1 0 3 0;
 #X connect 2 0 1 0;
 #X connect 2 1 1 1;
 #X connect 4 0 0 0;
 #X connect 14 0 4 0;
 #X connect 14 0 2 0;
+#X connect 15 0 14 0;

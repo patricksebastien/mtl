@@ -1,4 +1,4 @@
-#N canvas 1 84 1351 659 10;
+#N canvas 1 98 1351 659 10;
 #X text -395 20 c_lfo - message rate LFO with various waveforms;
 #N canvas 147 50 1101 659 REFERENCE 0;
 #X text 114 142 Summary: message rate LFO with various waveforms;
@@ -29,20 +29,26 @@ to the second inlet.;
 #X obj 87 209 cnv 15 200 20 empty empty /lfo/ 2 12 0 8 -258401 -262144
 0;
 #X obj 88 129 hsl 128 15 0 1 0 0 empty empty empty -2 -8 0 10 -262144
--1 -1 532 1;
+-1 -1 4785 1;
 #X obj 89 239 tgl 15 0 /lfo/on /lfo/on_ on 17 7 0 10 -262144 -1 -1
 1 1;
 #X obj 92 258 hsl 128 15 1 1000 0 0 /lfo/frequency /lfo/frequency_
-frequency 135 10 0 10 -262144 -1 -1 6344 1;
+frequency 135 10 0 10 -262144 -1 -1 1844 1;
 #X obj 92 277 hsl 128 15 1 1000 0 0 /lfo/updates /lfo/updates_ updates
-135 10 0 10 -262144 -1 -1 6344 1;
+135 10 0 10 -262144 -1 -1 444 1;
 #X obj 92 296 hsl 128 15 0 1 0 0 /lfo/phase /lfo/phase_ phase 135 10
 0 10 -262144 -1 -1 12700 1;
 #X text -393 37 tags: musical;
 #X obj 85 161 outlet;
 #X obj 88 329 hradio 15 1 0 4 /lfo/waveform /lfo/waveform_ Waveform
-0 -8 0 10 -262144 -1 -1 2;
+0 -8 0 10 -262144 -1 -1 0;
 #X text 177 331 0 - sine 1 - triangle 2 - saw 3 - square;
 #X obj 85 100 mtl/lfo /id lfo 1 500 1 500 2;
+#X msg 340 51 /on 1;
+#X msg 288 50 /on 0;
+#X msg 85 70 symbol reset;
 #X connect 3 0 9 0;
 #X connect 12 0 3 0;
+#X connect 13 0 12 1;
+#X connect 14 0 12 1;
+#X connect 15 0 12 0;

@@ -1,4 +1,4 @@
-#N canvas 1 82 1016 661 10;
+#N canvas 1 98 1016 661 10;
 #X obj 315 159 cnv 15 200 20 empty empty /xor/ 2 12 0 8 -258401 -262144
 0;
 #X obj 317 187 tgl 15 0 /xor/porte1 /xor/porte1_ porte-1 17 7 0 10
