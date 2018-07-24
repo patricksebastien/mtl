@@ -4,13 +4,21 @@
 
 Video demo: http://vimeo.com/
 
-# Installation
+## Features:
+* This collections groups abstractions by their functions rather than their author.
+* It classifies many popular abstractions and externals through a unified help system
+* It provides a unified architecture for:
+** Timing or synchronizing events, sounds and video
+** Saving the state of a patch at different scopes
+** Loading, managing, configuring and playing sound samples
+** Playing and managing movie files
+** The creation of dynamic 3D structures
 
-1) Download(https://github.com/patricksebastien/mtl/archive/master.zip) or clone 
-2) add this folder to your *pd* path
-3) open the *mtlBrowser.pd*
+## Installation
 
-# Original information
+1) [Download](https://github.com/patricksebastien/mtl/archive/master.zip) or clone 
+2) Add this folder to your *pd* path
+3) Open the *mtlBrowser.pd*
 
-http://puredata.info/Members/mtl/
+[Original (outdated) documentation](http://puredata.info/Members/mtl/)
 
