@@ -8,11 +8,11 @@ Video demo: http://vimeo.com/
 * This collections groups abstractions by their functions rather than their author.
 * It classifies many popular abstractions and externals through a unified help system
 * It provides a unified architecture for:
-** Timing or synchronizing events, sounds and video
-** Saving the state of a patch at different scopes
-** Loading, managing, configuring and playing sound samples
-** Playing and managing movie files
-** The creation of dynamic 3D structures
+  * Timing or synchronizing events, sounds and video
+  * Saving the state of a patch at different scopes
+  * Loading, managing, configuring and playing sound samples
+  * Playing and managing movie files
+  * The creation of dynamic 3D structures
 
 ## Installation
 
