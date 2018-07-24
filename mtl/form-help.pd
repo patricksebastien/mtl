@@ -1,6 +1,6 @@
-#N canvas 391 85 515 557 10;
+#N canvas 495 51 515 557 10;
 #X msg 289 125 a a b a;
-#X obj 132 98 tgl 15 0 empty empty empty 0 -6 0 8 -262144 -1 -1 0 1
+#X obj 132 98 tgl 15 0 empty empty empty 0 -6 0 8 -262144 -1 -1 1 1
 ;
 #X obj 290 99 loadbang;
 #X msg 282 212 a b a c a b a;
@@ -32,9 +32,8 @@ part.;
 #X obj 143 196 mtl/form;
 #X text 22 -53 Description: States machine looping through a sequence
 of states;
-#X obj 143 221 cyclone/prepend set;
-#X msg 143 247;
 #X text 25 -21 tags: musical behavior;
+#X symbolatom 144 252 10 0 0 0 - - -, f 10;
 #X connect 0 0 23 1;
 #X connect 1 0 4 0;
 #X connect 2 0 0 0;
@@ -48,5 +47,4 @@ of states;
 #X connect 17 0 23 0;
 #X connect 18 0 17 0;
 #X connect 22 0 23 1;
-#X connect 23 0 25 0;
-#X connect 25 0 26 0;
+#X connect 23 0 26 0;

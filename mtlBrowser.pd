@@ -1,35 +1,35 @@
-#N canvas 135 365 384 164 10;
+#N canvas 101 170 384 164 10;
 #X obj 185 19 vsl 15 115 0 175 0 0 \$0_slider_s0 \$0_slider_r0 empty
 0 -8 0 8 -1 -228856 -228856 11400 0;
-#X obj 3 47 hradio 15 1 0 12 \$0_hr_2_s0 \$0_hr_2_r0 MIDI 2 8 1 9 -1
--1 -262140 0;
+#X obj 3 47 hradio 15 1 0 12 \$0_hr_2_s0 \$0_hr_2_r0 MIDI 2 8 1 11
+-1 -1 -262140 1;
 #X obj 3 62 hradio 15 1 0 12 \$0_hr_3_s0 \$0_hr_3_r0 ambisonic 2 8
-1 9 -1 -1 -262140 0;
+1 11 -1 -1 -262140 1;
 #X obj 3 77 hradio 15 1 0 12 \$0_hr_4_s0 \$0_hr_4_r0 behavior 2 8 1
-9 -1 -1 -262140 0;
+11 -1 -1 -262140 0;
 #X obj 3 92 hradio 15 1 0 12 \$0_hr_5_s0 \$0_hr_5_r0 control 2 8 1
-9 -1 -1 -262140 0;
+11 -1 -1 -262140 1;
 #X obj 3 107 hradio 15 1 0 12 \$0_hr_6_s0 \$0_hr_6_r0 control~ 2 8
-1 9 -1 -1 -262140 0;
+1 11 -1 -1 -262140 0;
 #X obj 3 122 hradio 15 1 0 12 \$0_hr_7_s0 \$0_hr_7_r0 conversion 2
-8 1 9 -1 -1 -262140 0;
+8 1 11 -1 -1 -262140 1;
 #X obj 384 19 vsl 15 115 0 175 0 0 \$0_slider_s \$0_slider_r empty
 0 -8 0 8 -1 -228856 -1 11400 0;
-#X obj 202 17 hradio 15 1 0 12 \$0_hr_0_s \$0_hr_0_r empty 2 8 1 9
+#X obj 202 17 hradio 15 1 0 12 \$0_hr_0_s \$0_hr_0_r empty 2 8 1 11
+-1 -1 -262140 1;
+#X obj 202 32 hradio 15 1 0 12 \$0_hr_1_s \$0_hr_1_r empty 2 8 1 11
 -1 -1 -262140 0;
-#X obj 202 32 hradio 15 1 0 12 \$0_hr_1_s \$0_hr_1_r empty 2 8 1 9
+#X obj 202 47 hradio 15 1 0 12 \$0_hr_2_s \$0_hr_2_r empty 2 8 1 11
+-1 -1 -262140 3;
+#X obj 202 62 hradio 15 1 0 12 \$0_hr_3_s \$0_hr_3_r empty 2 8 1 11
 -1 -1 -262140 0;
-#X obj 202 47 hradio 15 1 0 12 \$0_hr_2_s \$0_hr_2_r empty 2 8 1 9
+#X obj 202 77 hradio 15 1 0 12 \$0_hr_4_s \$0_hr_4_r empty 2 8 1 11
 -1 -1 -262140 0;
-#X obj 202 62 hradio 15 1 0 12 \$0_hr_3_s \$0_hr_3_r empty 2 8 1 9
+#X obj 202 92 hradio 15 1 0 12 \$0_hr_5_s \$0_hr_5_r empty 2 8 1 11
 -1 -1 -262140 0;
-#X obj 202 77 hradio 15 1 0 12 \$0_hr_4_s \$0_hr_4_r empty 2 8 1 9
+#X obj 202 107 hradio 15 1 0 12 \$0_hr_6_s \$0_hr_6_r empty 2 8 1 11
 -1 -1 -262140 0;
-#X obj 202 92 hradio 15 1 0 12 \$0_hr_5_s \$0_hr_5_r empty 2 8 1 9
--1 -1 -262140 0;
-#X obj 202 107 hradio 15 1 0 12 \$0_hr_6_s \$0_hr_6_r empty 2 8 1 9
--1 -1 -262140 0;
-#X obj 202 122 hradio 15 1 0 12 \$0_hr_7_s \$0_hr_7_r empty 2 8 1 9
+#X obj 202 122 hradio 15 1 0 12 \$0_hr_7_s \$0_hr_7_r empty 2 8 1 11
 -1 -1 -262140 0;
 #N canvas 556 42 877 475 ./browser 0;
 #N canvas 108 100 887 645 coll 0;
@@ -362,24 +362,24 @@
 #X obj 473 542 t b a;
 #X obj 381 -2 t b b f b b;
 #X obj 502 49 sel 1 0;
-#X msg 618 120 read core.txt cr \, flush;
 #X obj 168 515 multiplex 0 1;
 #X obj 169 543 demultiplex 0 1;
 #X obj 511 124 msgfile;
 #X msg 476 83 read mtl/core.txt cr \, flush \, read mtl/love.txt cr
 \, flush;
+#X msg 618 120 read mtl/core.txt cr \, flush;
 #X connect 0 0 20 0;
 #X connect 1 0 25 0;
 #X connect 2 0 20 0;
 #X connect 3 0 8 0;
 #X connect 3 1 5 0;
 #X connect 4 0 9 0;
-#X connect 4 0 28 2;
+#X connect 4 0 27 2;
 #X connect 5 0 9 0;
-#X connect 5 0 28 2;
+#X connect 5 0 27 2;
 #X connect 7 0 20 0;
 #X connect 8 0 20 0;
-#X connect 9 0 29 1;
+#X connect 9 0 28 1;
 #X connect 11 0 12 0;
 #X connect 12 0 23 0;
 #X connect 13 0 17 0;
@@ -391,8 +391,8 @@
 #X connect 17 0 7 0;
 #X connect 18 0 25 0;
 #X connect 19 0 20 0;
-#X connect 20 0 28 0;
-#X connect 20 1 28 1;
+#X connect 20 0 27 0;
+#X connect 20 1 27 1;
 #X connect 21 0 10 0;
 #X connect 22 0 6 0;
 #X connect 23 1 20 0;
@@ -403,14 +403,14 @@
 #X connect 25 1 19 0;
 #X connect 25 2 26 0;
 #X connect 25 4 0 0;
-#X connect 26 0 31 0;
-#X connect 26 1 27 0;
-#X connect 27 0 30 0;
-#X connect 28 0 29 0;
-#X connect 29 0 21 0;
-#X connect 29 1 24 0;
-#X connect 30 0 14 0;
-#X connect 31 0 30 0;
+#X connect 26 0 30 0;
+#X connect 26 1 31 0;
+#X connect 27 0 28 0;
+#X connect 28 0 21 0;
+#X connect 28 1 24 0;
+#X connect 29 0 14 0;
+#X connect 30 0 29 0;
+#X connect 31 0 29 0;
 #X restore 321 63 pd readTags;
 #N canvas 172 267 827 449 coll 0;
 #X obj 23 -42 inlet;
@@ -656,7 +656,7 @@
 #X obj 87 116 + 9;
 #X msg 286 350 \; \$2_hr_\$1_r label_font \$3 \$4;
 #X obj 298 67 loadbang;
-#X msg 294 99 9;
+#X msg 294 99 11;
 #X obj 96 166 t b f f;
 #X msg 177 184 set \$1;
 #X connect 1 0 5 0;
@@ -708,10 +708,10 @@
 #X connect 28 0 30 0;
 #X connect 30 0 29 0;
 #X restore 277 -7 pd ./browser;
-#X obj 3 17 hradio 15 1 0 12 \$0_hr_0_s0 \$0_hr_0_r0 2d 2 8 1 9 -1
--1 -262140 0;
-#X obj 3 33 hradio 15 1 0 12 \$0_hr_1_s0 \$0_hr_1_r0 3d 2 8 1 9 -1
--1 -262140 0;
+#X obj 3 17 hradio 15 1 0 12 \$0_hr_0_s0 \$0_hr_0_r0 2d 2 8 1 11 -1
+-1 -262140 1;
+#X obj 3 33 hradio 15 1 0 12 \$0_hr_1_s0 \$0_hr_1_r0 3d 2 8 1 11 -1
+-1 -262140 1;
 #X obj 3 -7 cnv 15 198 22 empty empty TAG 1 12 1 12 -16645 -228856
 0;
 #X obj 202 -7 cnv 15 197 22 empty empty CLASS/ABSTRACTION 0 12 1 12
@@ -723,4 +723,4 @@
 #X obj 183 143 cnv 10 10 10 empty empty http://puredata.info/Members/mtl/
 0 6 0 7 -16645 -99865 0;
 #X obj 80 144 hradio 8 1 0 4 \$0font \$0 font 34 4 0 8 -162280 -262144
--258401 0;
+-258401 2;
