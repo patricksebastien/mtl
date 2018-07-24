@@ -1,0 +1,52 @@
+              Goddess symbols font, by AnonMoos
+
+This "dingbat" font contains personal interpretations of some Goddess
+and quasi-goddess symbols (not only relatively traditional symbols,
+but also some new variations and proposals).  The symbols must be in a
+fairly abstract visual form due to the limitations of standard font
+formats (which only allow for specifying shapes in an undetermined
+foreground color and an undetermined background color).  The font code
+is declared to be licensed with the SIL Open Font License, while the
+abstract symbol shapes are in the public domain.  (The text of the
+license is embedded in the TrueType font file.)  The following files
+are distributed with my version of the font:
+
+  GoddessSymbols.txt -- this basic documentation file
+  GoddessSymbols.rtf -- Full documentation in RTF format (won't
+                       display correctly unless font is installed)
+
+  GDSSY___.PFB -- Main file for the Type 1 PostScript version of font
+  GDSSY___.PFM -- Type 1 metrics file for Windows
+  GDSSY___.AFM -- Type 1 metrics file for Unix/Linux
+
+  GoddessSymbols.ttf -- File for Truetype version of this font
+
+  GoddessSymbols.sfd - FontForge source file containing cubic Bezier
+                       curve data used to generate Truetype file
+
+Install the chosen version of the font using the standard procedures
+under your operating system.  In MS Windows, it is often easiest to
+copy the TrueType file into the system Fonts folder (accessible under
+the "Settings" or "Control Panel" options in the Start menu).
+
+To install the font under Unix/Linux X, copy either the TTF file or
+the pair of AFM file plus PFB file into an appropriate font directory,
+and make sure that the font directory's configuration file includes a
+line appropriately similar to one of these two (depending on which
+font format you're choosing to install):
+
+gdssy___.pfb -misc-GoddessSymbols-medium-r-normal--0-0-0-0-p-0-iso8859-1
+GoddessSymbols.ttf -misc-GoddessSymbols-medium-r-normal--0-0-0-0-p-0-iso8859-1
+
+The precise details, and whether some of these steps can be automated,
+depend on the exact configuration of the software (see the "X" system
+documentation for your computer).
+
+Symbols in this font include triple spirals, triple moon,
+Cretan-inspired (labrys, labyrinth, Minoan snake priestess/goddess),
+Robert Graves inspired ("White Goddess"/"Seven Days in New Crete"),
+spiral goddess, and others.
+
+For individual characters and their meanings, see the RTF full
+documentation file.
+
