@@ -2,7 +2,7 @@
 
 *mtl* is a group of abstractions that make Pure Data a lot easier to use!
 
-Video demo: http://vimeo.com/
+Video demo: https://vimeo.com/8042803
 
 ## Features:
 * This collections groups abstractions by their functions rather than their author.
