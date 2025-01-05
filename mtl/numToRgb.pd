@@ -24,7 +24,7 @@
 #X obj 283 591 / 255;
 #X obj 350 592 / 255;
 #X obj 391 505 demultiplex 0 1;
-#X obj 967 316 iemlib/dollarg;
+#X obj 967 316 dollarg;
 #X connect 0 0 1 0;
 #X connect 1 0 13 0;
 #X connect 1 1 2 0;

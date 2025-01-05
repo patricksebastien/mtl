@@ -13,7 +13,7 @@
 #X obj 183 44 mtl/gemsMouse;
 #X obj 391 140 table \$0x 10;
 #X obj 392 168 table \$0y 10;
-#X obj 222 136 iemlib/modulo_counter 10;
+#X obj 222 136 modulo_counter 10;
 #X obj 182 107 t l b;
 #X obj 124 140 unpack f f;
 #X obj 121 185 tabwrite \$0x;

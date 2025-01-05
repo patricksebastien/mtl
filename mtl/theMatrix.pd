@@ -143,7 +143,7 @@
 #X msg 804 163 1 1;
 #X obj 489 434 iemmatrix/mtx_print;
 #X obj 379 604 iemmatrix/mtx_size;
-#X obj 765 104 iemlib/dollarg;
+#X obj 765 104 dollarg;
 #X obj 249 366 iemmatrix/matrix;
 #X obj 39 294 s \$0matrix;
 #X obj 84 271 s \$0demux;

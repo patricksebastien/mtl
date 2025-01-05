@@ -42,7 +42,7 @@
 #X msg 161 434 bytes \$1;
 #X msg 21 393 samplerate \$1;
 #X obj 37 434 ./smpToMs;
-#X obj 31 166 iemlib/soundfile_info;
+#X obj 31 166 soundfile_info;
 #X connect 0 0 20 0;
 #X connect 12 0 0 0;
 #X connect 13 0 18 0;

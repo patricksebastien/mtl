@@ -9,7 +9,7 @@
 #X obj 22 10 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
 -1;
 #X obj 22 44 openpanel;
-#X obj 22 99 iemlib/soundfile_info;
+#X obj 22 99 soundfile_info;
 #X msg 22 69 read \$1;
 #X text 19 -56 Description: Tries to guess the bpm and beat count of
 a loop.;

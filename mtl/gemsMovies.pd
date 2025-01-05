@@ -62,7 +62,7 @@ r \$1frame \, obj 10 65 s \$2out \, obj 110 65 s \$2info \, obj 220
 #X obj 340 310 r \$0empty;
 #X obj 228 94 r \$0empty;
 #X obj 174 229 pack f \$0;
-#X obj 101 470 iemlib/iem_send;
+#X obj 101 470 iem_send;
 #X obj 211 261 t l l;
 #X msg 101 424 colorspace RGBA \, open \$1;
 #X obj 101 385 symbol;
@@ -151,9 +151,9 @@ r \$1frame \, obj 10 65 s \$2out \, obj 110 65 s \$2info \, obj 220
 #X obj 414 525 outlet info;
 #X obj 66 -76 route float bang;
 #X obj 361 -9 tof/path;
-#X obj -58 424 iemlib/iem_send \$0out;
+#X obj -58 424 iem_send \$0out;
 #X msg 234 341 set \$1in;
-#X obj 247 465 iemlib/iem_send;
+#X obj 247 465 iem_send;
 #X msg 389 384 set \$1frame;
 #X obj 465 -100 inlet frame;
 #X msg 522 271 \$1;

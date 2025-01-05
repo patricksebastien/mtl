@@ -93,8 +93,8 @@
 0;
 #X obj 101 101 cnv 5 129 7 empty \$0left vu~ 2 8 0 10 -128992 -1 0
 ;
-#X obj 128 216 iemlib/peakenv~ 1000;
-#X obj 271 207 iemlib/peakenv~ 1000;
+#X obj 128 216 peakenv~ 1000;
+#X obj 271 207 peakenv~ 1000;
 #X obj 519 179 metro 100;
 #X connect 0 0 4 0;
 #X connect 0 0 11 0;

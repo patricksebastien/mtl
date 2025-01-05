@@ -47,7 +47,7 @@ are loaded.;
 #X symbolatom 206 424 50 0 0 0 - - -, f 50;
 #X text 510 423 filename;
 #X obj 10 354 mtl/gemsMovies;
-#X obj 95 160 iemlib/init 1;
+#X obj 95 160 init 1;
 #X text 206 446 frame rate(fps) \, defaults to 20 with old versions
 of Gem;
 #X connect 0 0 42 2;

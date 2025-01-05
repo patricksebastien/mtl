@@ -8,7 +8,7 @@
 #X obj 39 260 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
 -1;
 #X obj 39 90 metro 500;
-#X obj 40 49 iemlib/init 1;
+#X obj 40 49 init 1;
 #X text 11 10 Description: let a bang pass sometimes.;
 #X text 166 229 Bangs pass 20% of the time;
 #X text 205 166 Bangs pass 50% of the time;

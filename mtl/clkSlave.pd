@@ -112,12 +112,12 @@
 #X msg 229 46 0 4;
 #X obj 40 155 spigot;
 #X msg 273 48 1 0;
-#X obj 38 420 iemlib/modulo_counter;
+#X obj 38 420 modulo_counter;
 #X obj 243 558 tof/increment;
 #X obj 797 -131 loadbang;
 #X msg 341 126 set \$1CLK;
 #X obj 341 100 tof/getdollarzero root;
-#X obj 341 153 iemlib/iem_receive;
+#X obj 341 153 iem_receive;
 #X obj 213 -64 sel 0 1;
 #X obj 772 -3 s _NEWCLK;
 #X obj 799 -110 t b b b b b;

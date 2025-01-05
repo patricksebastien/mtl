@@ -4,7 +4,7 @@
 #X obj 50 304 catch~ \$0out;
 #X obj 49 346 outlet~;
 #X obj 360 56 loadbang;
-#X obj 360 104 iemlib/dollarg;
+#X obj 360 104 dollarg;
 #X obj 361 139 list split 1;
 #N canvas 1263 179 497 429 \$0i 0;
 #X restore 47 179 pd \$0i;

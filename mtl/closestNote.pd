@@ -24,7 +24,7 @@ but for floats);
 #X obj 173 223 expr fmod($f1 \, 12);
 #X obj 171 299 expr fmod($f1 \, 12);
 #X obj 297 186 expr fmod($f1 \, 12);
-#X obj 365 69 iemlib/dollarg;
+#X obj 365 69 dollarg;
 #X obj 171 200 drip;
 #X connect 0 0 1 0;
 #X connect 1 0 21 0;

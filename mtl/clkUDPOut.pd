@@ -11,7 +11,7 @@
 #X obj 35 47 tof/getdollarzero root;
 #X obj 240 179 tof/argument 1 localhost;
 #X obj 303 214 tof/argument 2 8247;
-#X obj 35 139 iemlib/iem_receive;
+#X obj 35 139 iem_receive;
 #X msg 35 112 set \$1CLK;
 #X obj 226 122 s NEWCLK;
 #X obj 336 121 t b b b b;

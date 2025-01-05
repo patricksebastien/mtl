@@ -38,7 +38,7 @@
 #X obj 119 61 / 127;
 #X obj 175 31 loadbang;
 #X obj 178 59 tof/argument 1 100;
-#X obj 31 279 iemlib/bpq2~ 1000 1 3000;
+#X obj 31 279 bpq2~ 1000 1 3000;
 #X connect 0 0 1 0;
 #X connect 1 0 3 1;
 #X connect 2 0 36 0;

@@ -16,7 +16,7 @@
 #X msg 608 268 set \$1;
 #X obj 469 277 t b a;
 #X obj 451 313 flatspace/arraysize;
-#X obj 643 220 iemlib/dollarg;
+#X obj 643 220 dollarg;
 #X connect 0 0 12 0;
 #X connect 1 0 0 1;
 #X connect 2 0 0 1;

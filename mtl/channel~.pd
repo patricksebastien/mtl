@@ -22,8 +22,8 @@
 #X obj 345 548 line~;
 #X msg 345 528 \$1 10;
 #X msg 724 419 set MTLAUX\$1R;
-#X obj 236 185 iemlib/hml_shelf~ 0 200 0 4000 0 50;
-#X obj 466 181 iemlib/hml_shelf~ 0 200 0 4000 0 50;
+#X obj 236 185 hml_shelf~ 0 200 0 4000 0 50;
+#X obj 466 181 hml_shelf~ 0 200 0 4000 0 50;
 #X obj 534 116 tof/param /hi 0 /g knob -20 20;
 #X obj 485 78 tof/param /mid 0 /g knob -20 20;
 #X obj 276 101 tof/param /low 0 /g knob -20 20;

@@ -82,15 +82,15 @@ iemguts/canvasargs tools
 iemguts/canvasindex tools
 iemguts/canvasobjectposition tools
 iemguts/canvasposition tools
-iemlib/dollarg initialization patch
-iemlib/fade~ control~
-iemlib/iem_anything data
-iemlib/iem_receive routing 
-iemlib/iem_send routing 
-iemlib/init initialization
-iemlib/modulo_counter counter
-iemlib/mp3play~ play~
-iemlib/soundfile_info file~ info~
+dollarg initialization patch
+fade~ control~
+iem_anything data
+iem_receive routing 
+iem_send routing 
+init initialization
+modulo_counter counter
+mp3play~ play~
+soundfile_info file~ info~
 int data math
 line~ control~
 line~ timing

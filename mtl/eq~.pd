@@ -47,7 +47,7 @@
 #X obj 358 -40 inlet;
 #X obj 263 -41 inlet;
 #X obj 309 -41 inlet;
-#X obj 74 140 iemlib/hml_shelf~ 6 100 0 4000 -6 200;
+#X obj 74 140 hml_shelf~ 6 100 0 4000 -6 200;
 #X connect 0 0 38 6;
 #X connect 2 0 16 0;
 #X connect 3 0 13 0;
@@ -113,7 +113,7 @@
 #X obj 263 -41 inlet;
 #X obj 309 -41 inlet;
 #X floatatom 336 187 5 0 0 0 - - -;
-#X obj 74 140 iemlib/hml_shelf~ 6 100 0 4000 -6 200;
+#X obj 74 140 hml_shelf~ 6 100 0 4000 -6 200;
 #X connect 0 0 39 6;
 #X connect 2 0 16 0;
 #X connect 3 0 13 0;

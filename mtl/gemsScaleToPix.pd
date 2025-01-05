@@ -109,7 +109,7 @@
 #X obj 771 296 value GEMSH;
 #X obj 311 193 list trim;
 #X obj 66 533 outlet;
-#X obj 318 134 iemlib/dollarg;
+#X obj 318 134 dollarg;
 #X obj 430 70 t b b;
 #X connect 0 0 2 0;
 #X connect 1 0 2 1;

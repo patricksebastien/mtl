@@ -115,7 +115,7 @@
 #X connect 20 1 15 1;
 #X restore 250 400 pd load_soundfile;
 #N canvas 1624 126 637 738 check_soundfile 0;
-#X obj 164 141 iemlib/soundfile_info;
+#X obj 164 141 soundfile_info;
 #X msg 166 115 read \$1;
 #X obj 52 -37 inlet;
 #X obj 42 37 unpack f s;

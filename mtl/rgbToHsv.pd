@@ -259,7 +259,7 @@
 #X obj 382 174 pack f f f;
 #X obj 267 57 demultiplex 0 1;
 #X obj 703 44 loadbang;
-#X obj 703 73 iemlib/dollarg;
+#X obj 703 73 dollarg;
 #X msg 773 133 1;
 #X obj 701 101 sel 8bit int integer;
 #X connect 0 0 17 1;

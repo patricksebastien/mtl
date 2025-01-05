@@ -19,7 +19,7 @@
 #X obj 218 220 clip 0 255;
 #X obj 319 220 clip 0 255;
 #X obj 175 -44 loadbang;
-#X obj 175 -15 iemlib/dollarg;
+#X obj 175 -15 dollarg;
 #X msg 245 45 1;
 #X obj 173 13 sel 8bit int integer;
 #X obj 21 61 demultiplex 0 1;

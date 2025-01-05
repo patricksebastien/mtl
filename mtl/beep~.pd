@@ -13,7 +13,7 @@
 #X obj 235 149 t a b;
 #X obj 65 158 f 60;
 #X obj 476 31 list split 1;
-#X obj 478 -4 iemlib/dollarg;
+#X obj 478 -4 dollarg;
 #X obj 295 35 mtl/noteSplit;
 #X obj 234 355 mtl/adsr~ /id \$0-adsr 5 0 1 5;
 #X connect 0 0 6 0;

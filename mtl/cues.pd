@@ -20,7 +20,7 @@
 #X obj 90 -118 inlet;
 #X obj 122 91 unpack f;
 #X text 814 138 write one;
-#X obj 757 -15 iemlib/dollarg;
+#X obj 757 -15 dollarg;
 #X msg 695 212 read \$1 cr \, rewind \, bang;
 #X obj 141 237 tof/increment;
 #X obj 500 -68 route read write;

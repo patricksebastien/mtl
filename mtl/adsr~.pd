@@ -22,7 +22,7 @@
 #X obj 286 405 +;
 #X obj 494 559 outlet attack+decay_done;
 #X msg 146 403 \$1 \$3 \, \$2 \$4 \$3;
-#X obj 178 498 iemlib/fade~ _sin;
+#X obj 178 498 fade~ _sin;
 #X obj 820 155 inlet params;
 #X obj 820 201 print PARAM_NOTFOUND;
 #X obj 820 177 tof/param route;

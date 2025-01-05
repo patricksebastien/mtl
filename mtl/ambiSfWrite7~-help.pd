@@ -13,7 +13,7 @@
 #X obj 150 111 metro 20;
 #X floatatom 206 88 5 0 0 0 - - -;
 #X obj 146 178 outlet;
-#X obj 145 150 iemlib/modulo_counter 360;
+#X obj 145 150 modulo_counter 360;
 #X connect 0 0 1 0;
 #X connect 1 0 4 0;
 #X connect 2 0 1 1;
@@ -27,7 +27,7 @@
 1;
 #X text 296 269 recording status;
 #X text 45 139 example sound;
-#X obj 183 77 iemlib/init 1;
+#X obj 183 77 init 1;
 #X text 9 25 tags: ambisonic;
 #X obj 272 241 mtl/ambiSfWrite7~;
 #X obj 49 205 mtl/ambiMonoToWxy~ angle 0;

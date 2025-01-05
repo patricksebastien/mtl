@@ -7,7 +7,7 @@
 #X obj 111 188 change -1;
 #X obj 332 44 loadbang;
 #X obj 223 60 sel symbol;
-#X obj 332 78 iemlib/dollarg;
+#X obj 332 78 dollarg;
 #X obj 329 113 cyclone/tosymbol;
 #X connect 1 0 2 0;
 #X connect 1 1 7 0;

@@ -3,7 +3,7 @@
 #X obj 112 246 outlet;
 #X obj 112 111 list trim;
 #X obj 119 156 moocow/any2bytes 0 -1;
-#X obj 290 127 iemlib/dollarg;
+#X obj 290 127 dollarg;
 #X obj 297 86 loadbang;
 #X obj 144 195 list append;
 #X connect 0 0 2 0;

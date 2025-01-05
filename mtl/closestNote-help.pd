@@ -48,7 +48,7 @@ being too high.;
 #X obj 10 337 mtl/closestNote 0 2 4 7 9;
 #X obj 564 501 mtl/closestNote 0 2 4 7 9;
 #X obj 10 270 t b;
-#X obj 10 292 iemlib/modulo_counter 14 0;
+#X obj 10 292 modulo_counter 14 0;
 #X obj 11 96 mtl/clkMaster 120;
 #X obj 10 178 loadbang;
 #X obj 10 207 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1

@@ -39,7 +39,7 @@
 -1;
 #X obj 23 696 rectangle;
 #X obj 424 86 mtl/gemsWin /dimen 320 240;
-#X obj 327 399 iemlib/init 1;
+#X obj 327 399 init 1;
 #X obj 23 632 mtl/gemsMovies;
 #X text 333 533 Smooth: 0-1;
 #X text 495 185 tags: ui;

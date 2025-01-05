@@ -128,14 +128,14 @@
 #X connect 21 0 12 0;
 #X restore 485 536 pd size&color;
 #X obj 566 166 != 0;
-#X obj 367 426 iemlib/peakenv~ 1000;
-#X obj 481 401 iemlib/peakenv~ 1000;
+#X obj 367 426 peakenv~ 1000;
+#X obj 481 401 peakenv~ 1000;
 #X obj 682 161 r pd;
 #X obj 677 202 route dsp;
 #X obj 617 544 outlet;
 #X obj 589 511 max;
-#X obj 621 398 iemlib/peakenv~ 1000;
-#X obj 761 374 iemlib/peakenv~ 1000;
+#X obj 621 398 peakenv~ 1000;
+#X obj 761 374 peakenv~ 1000;
 #X obj 633 447 snapshot~;
 #X obj 736 454 snapshot~;
 #X obj 646 339 t b b;

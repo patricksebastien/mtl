@@ -110,7 +110,7 @@
 #X obj 564 446 loadbang;
 #X msg 634 535 1;
 #X obj 562 503 sel 8bit int integer;
-#X obj 564 475 iemlib/dollarg;
+#X obj 564 475 dollarg;
 #X obj 259 491 demultiplex 0 1;
 #X connect 0 0 35 0;
 #X connect 0 1 2 0;

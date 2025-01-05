@@ -1,7 +1,7 @@
 #N canvas 911 205 1009 686 10;
 #X obj 2 -141 inlet speed;
 #X obj 420 350 outlet done;
-#X obj 420 56 iemlib/dollarg;
+#X obj 420 56 dollarg;
 #X obj 420 31 loadbang;
 #X obj 503 30 inlet loop;
 #X obj 420 80 tof/listUnfold;
@@ -135,7 +135,7 @@
 #X obj 87 117 soundfiler;
 #X obj 185 -179 inlet;
 #X obj 74 379 outlet;
-#X obj 183 -97 iemlib/soundfile_info;
+#X obj 183 -97 soundfile_info;
 #X msg 183 -124 read \$1;
 #X obj 582 -41 table \$0R 3;
 #X obj 183 190 demultiplex 0 1;
