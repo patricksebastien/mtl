@@ -17,8 +17,10 @@ Video demo: https://vimeo.com/8042803
 ## Installation
 
 1) [Download](https://github.com/patricksebastien/mtl/archive/master.zip) or clone 
-2) Add this folder to your *pd* path
-3) Open the *mtlBrowser.pd*
+2) Add to Pd Documents Directory or Pd search path
+3) Install via Deken: tof, zexy, iemlib, cyclone, maxlib
+4) Create a patch and [declare -lib tof, zexy, iemlib, cyclone, maxlib] 
+5) Add [mtlBrowser]
 
 [Original (outdated) documentation](http://puredata.info/Members/mtl/)
 
